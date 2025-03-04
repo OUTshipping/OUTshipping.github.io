@@ -1,0 +1,706 @@
+<!-- 标准引用方式 -->
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Triple Goats</title>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" as="style" onload="this.rel='stylesheet'">
+    <link rel="preload" href="companylogo.jpg" as="image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <style>
+        /* 全局样式 */
+        :root {
+            --primary-color: #001f3f; 
+            --secondary-color: #ffffff; 
+            --accent-color: #0074D9; 
+            --dark-color: #000000; 
+            --card-bg-color: #002a54; 
+            --card-hover-color: #001f3f; 
+            --text-color: #ffffff; 
+        }
+
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: var(--primary-color);
+            color: var(--secondary-color);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--text-color);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            transition: transform 0.3s;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+        }
+
+        header {
+            background: var(--primary-color);
+            color: var(--secondary-color);
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            transition: transform 0.3s, filter 0.3s;
+        }
+
+        .logo img {
+            width: 80px;
+            margin-right: 10px;
+        }
+
+        .logo .logo-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .logo h1 {
+            font-size: 36px;
+            margin: 0 0 3px 0;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            color: var(--accent-color);
+        }
+
+        .logo .slogan {
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: var(--secondary-color);
+            user-select: none;
+            font-family: 'Roboto', sans-serif;
+            margin-top: 0;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .menu-toggle span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: var(--secondary-color);
+            margin: 4px 0;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+            background-color: var(--secondary-color);
+        }
+
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+            background-color: var(--secondary-color);
+        }
+
+        nav {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-grow: 1;
+        }
+
+        nav a {
+            color: var(--text-color);
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        nav a:hover {
+            transform: scale(1.1);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown .dropbtn {
+            color: var(--text-color);
+            padding: 8px 15px;
+            border-radius: 5px;
+            display: inline-block;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .dropdown:hover .dropbtn {
+            transform: scale(1.1);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            width: 200px;
+            text-align: center;
+            border-radius: 5px;
+            top: 100%;
+            left: 0;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 10px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+            font-size: 14px;
+        }
+
+        .dropdown-content a:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .top-social-media {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            padding: 20px 0;
+        }
+
+        .bottom-social-media {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            padding: 20px 0;
+            background: var(--primary-color);
+        }
+
+        .social-item img {
+            width: 30px;
+            height: 30px;
+            object-fit: cover;
+            transition: transform 0.3s, filter 0.3s;
+        }
+
+        .social-item img:hover {
+            transform: scale(1.1) rotate(20deg);
+            filter: brightness(1.2);
+        }
+
+        .social-item img:active {
+            transform: scale(0.9) rotate(-15deg);
+        }
+
+        .hero {
+            position: relative;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: var (--secondary-color);
+            text-align: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('hero-bg.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .vehicle-list {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 31, 63, 0.8);
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: nowrap;
+            z-index: 1000;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .vehicle-list a {
+            color: var(--secondary-color);
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.3s;
+            margin: 0 10px;
+        }
+
+        .vehicle-list a:hover {
+            text-decoration: underline;
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.1);
+            margin: 0 5px;
+        }
+
+        .vehicle-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .vehicle-card {
+            background: var(--card-bg-color);
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+            padding-bottom: 20px;
+            overflow: hidden;
+            position: relative;
+            text-align: center;
+        }
+
+        .vehicle-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+            background-color: var(--card-hover-color);
+        }
+
+        .vehicle-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .vehicle-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .vehicle-card h3 {
+            font-size: 20px;
+            color: var(--text-color);
+            margin: 10px 0;
+            text-transform: uppercase;
+        }
+
+        .vehicle-card p {
+            font-size: 14px;
+            line-height: 1.5;
+            color: var(--text-color);
+            margin: 10px 0;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--text-color);
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background-color: #0055aa;
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .map-container {
+            padding: 30px 0;
+            background: var(--primary-color);
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .map-header {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .map-header h2 {
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+
+        .map-header .map-subtitle {
+            font-size: 16px;
+            color: var(--secondary-color);
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 30px 20px;
+            background: var(--primary-color);
+            text-align: center;
+        }
+
+        .contact-info h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .contact-info .btn {
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: flex;
+            }
+
+            nav {
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0.8);
+                display: none;
+                transition: all 0.3s ease;
+                z-index: 1001;
+            }
+
+            nav.active {
+                top: 112px;
+                display: flex;
+            }
+
+            nav a {
+                padding: 15px;
+                text-align: center;
+            }
+
+            .dropdown-content {
+                position: static;
+                background-color: rgba(0, 0, 0, 0.5);
+                box-shadow: none;
+                width: 100%;
+                text-align: center;
+            }
+
+            .dropdown-content a {
+                padding: 15px;
+                border-bottom: 1px solid #ddd;
+            }
+
+            .dropdown-content a:last-child {
+                border-bottom: none;
+            }
+
+            .dropdown-content {
+                display: none;
+            }
+
+            .dropdown.active .dropdown-content {
+                display: block;
+            }
+
+            .dropdown .dropbtn {
+                margin-left: -15px;
+                width: 100%;
+            }
+
+            .top-social-media {
+                display: none;
+            }
+
+            .vehicle-section {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+
+            .vehicle-card img {
+                height: 250px;
+            }
+
+            .btn {
+                font-size: 14px;
+                padding: 10px 15px;
+                box-shadow: none;
+                margin-top: 10px;
+            }
+
+            .contact-info {
+                padding: 10px;
+            }
+
+            .contact-info h3 {
+                font-size: 20px;
+            }
+
+            .contact-info p {
+                font-size: 14px;
+            }
+
+            .contact-info .btn {
+                font-size: 14px;
+                padding: 10px 15px;
+                margin-top: 10px;
+            }
+
+            body {
+                overflow-x: hidden;
+            }
+
+            main {
+                padding: 20px 10px;
+            }
+
+            .map-content {
+                margin: 30px 0;
+                height: 350px;
+            }
+
+            .vehicle-list {
+                display: none;
+            }
+
+            nav a {
+                color: var(--secondary-color);
+            }
+
+            .dropdown-content a {
+                color: var(--secondary-color);
+            }
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: var(--primary-color);
+            color: var(--secondary-color);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* 电脑端字体颜色 */
+        @media (min-width: 768px) {
+            nav a[href="testdrive.html"],
+            nav a[href="about.html"],
+            nav a[href="contact.html"] {
+                color: var(--dark-color);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="home.html" class="logo">
+            <img src="companylogo.jpg" alt="Triple Goats Logo" loading="lazy">
+            <div class="logo-text">
+                <h1>Triple Goats</h1>
+                <p class="slogan">GREEN ENERGY GREEN LIFE</p>
+            </div>
+        </a>
+        <nav id="nav-menu">
+            <a href="inventory.html">INVENTORY</a>
+            <a href="charging.html">CHARGING</a>
+            <a href="services.html">SERVICES</a>
+            <div class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">DISCOVER</a>
+                <div class="dropdown-content">
+                    <a href="testdrive.html">TEST DRIVE</a>
+                    <a href="about.html">ABOUT</a>
+                    <a href="contact.html">CONTACT</a>
+                </div>
+            </div>
+        </nav>
+        <div class="top-social-media">
+            <a href="https://www.instagram.com/tg_auto_rwanda/" class="social-item"><img src="ins.jpg" alt="Instagram" loading="lazy"></a>
+            <a href="https://x.com/Triple_Goats" class="social-item"><img src="X.jpg" alt="Twitter" loading="lazy"></a>
+            <a href="https://www.facebook.com/TripleGoats" class="social-item"><img src="facebook.jpg" alt="Facebook" loading="lazy"></a>
+            <a href="https://www.tiktok.com/@tg.auto.rwanda" class="social-item"><img src="tiktok.jpg" alt="TikTok" loading="lazy"></a>
+        </div>
+        <div class="menu-toggle" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <div class="hero">
+        <video autoplay muted loop preload="auto" poster="hero-poster.jpg" loading="lazy">
+            <source src="movie.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <nav class="vehicle-list">
+            <a href="inventory.html?type=sedan">Sedan</a>
+            <a href="inventory.html?type=suv">SUV</a>
+            <a href="inventory.html?type=pickup">Pickup</a>
+            <a href="inventory.html?type=truck">Truck</a>
+            <a href="inventory.html?type=refrigerated">Refrigerated</a>
+            <a href="inventory.html?type=bus">Bus</a>
+            <a href="inventory.html?type=van">Van</a>
+        </nav>
+    </div>
+
+    <section class="vehicle-section">
+        <!-- Add your vehicle cards here -->
+        <div class="vehicle-card">
+            <img src="sedan.jpg" alt="Sedan">
+            <h3>Sedan</h3>
+            <p>Stylish and fuel-efficient sedans for everyday use.</p>
+            <a href="inventory.html?type=sedan" class="btn">
+                <i class="fas fa-eye" style="margin-right:5px;"></i>View
+            </a>
+        </div>
+        <div class="vehicle-card">
+            <img src="suv.jpg" alt="SUV">
+            <h3>SUV</h3>
+            <p>Explore our wide range of high-performance SUVs.</p>
+            <a href="inventory.html?type=suv" class="btn">
+                <i class="fas fa-eye" style="margin-right:5px;"></i>View
+            </a>
+        </div>
+        <div class="vehicle-card">
+            <img src="pickup.jpg" alt="Pickup">
+            <h3>Pickup</h3>
+            <p>Powerful and reliable pickups to meet all your needs.</p>
+            <a href="inventory.html?type=pickup" class="btn">
+                <i class="fas fa-eye" style="margin-right:5px;"></i>View
+            </a>
+        </div>
+        <div class="vehicle-card">
+            <img src="truck.jpg" alt="Truck">
+            <h3>Truck</h3>
+            <p>High-capacity trucks suitable for long-distance transportation.</p>
+            <a href="inventory.html?type=truck" class="btn">
+                <i class="fas fa-eye" style="margin-right:5px;"></i>View
+            </a>
+        </div>
+        <div class="vehicle-card">
+            <img src="refrigerated.jpg" alt="Refrigerated">
+            <h3>Refrigerated</h3>
+            <p>Refrigerated vehicles for transporting perishable goods.</p>
+            <a href="inventory.html?type=refrigerated" class="btn">
+                <i class="fas fa-eye" style="margin-right:5px;"></i>View
+            </a>
+        </div>
+        <div class="vehicle-card">
+            <img src="bus.jpg" alt="Bus">
+            <h3>Bus</h3>
+            <p>Comfortable and spacious buses for group transportation.</p>
+            <a href="inventory.html?type=bus" class="btn">
+                <i class="fas fa-eye" style="margin-right:5px;"></i>View
+            </a>
+        </div>
+        <div class="vehicle-card">
+            <img src="van.jpg" alt="Van">
+            <h3>Van</h3>
+            <p>Efficient and economical vans to support your business.</p>
+            <a href="inventory.html?type=van" class="btn">
+                <i class="fas fa-eye" style="margin-right:5px;"></i>View
+            </a>
+        </div>
+    </section>
+
+    <div class="map-container">
+        <div class="map-header">
+            <h2>Find Us on the Map</h2>
+            <p class="map-subtitle">Discover Our Convenient Location</p>
+        </div>
+        <iframe style="width: 100%;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.418287609195!2d30.098935373674106!3d-1.9874280979946188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dcb909c976d39b%3A0x85b1db1ad0e495c5!2z5Y-B576K5rG96L2mIFRnIEVsZWN0cmljIENhciBNYXJrZXQ!5e0!3m2!1szh-CN!2srw!4v1739448007802!5m2!1szh-CN!2srw" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <div class="contact-info">
+        <h3>Contact Us</h3>
+        <p>
+            <a href="https://wa.me/250785084313" target="_blank" class="whatsapp-link">Phone: +250 785 084 313</a> /
+            <a href="https://wa.me/250794104908" target="_blank" class="whatsapp-link">+250 794 104 908</a>
+        </p>
+        <p>Email: tgautomobilee@gmail.com</p>
+        <p>Address: KK 15 Rd, Kicukiro, Kigali</p>
+        <a href="testdrive.html" class="btn">Schedule a Test Drive</a>
+    </div>
+
+    <div class="bottom-social-media">
+        <a href="https://www.instagram.com/tg_auto_rwanda/" class="social-item"><img src="ins.jpg" alt="Instagram" loading="lazy"></a>
+        <a href="https://x.com/Triple_Goats" class="social-item"><img src="X.jpg" alt="Twitter" loading="lazy"></a>
+        <a href="https://www.facebook.com/TripleGoats" class="social-item"><img src="facebook.jpg" alt="Facebook" loading="lazy"></a>
+        <a href="https://www.tiktok.com/@tg.auto.rwanda" class="social-item"><img src="tiktok.jpg" alt="TikTok" loading="lazy"></a>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Triple Goats. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', () => {
+            document.getElementById('nav-menu').classList.toggle('active');
+            document.getElementById('menu-toggle').classList.toggle('active');
+        });
+
+        document.querySelector('.dropdown').addEventListener('click', (event) => {
+            event.stopPropagation();
+            document.querySelector('.dropdown').classList.toggle('active');
+        });
+
+        document.addEventListener('click', (event) => {
+            const dropdown = document.querySelector('.dropdown');
+            if (!dropdown.contains(event.target)) {
+                dropdown.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

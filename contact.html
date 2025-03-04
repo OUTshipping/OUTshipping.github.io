@@ -1,0 +1,491 @@
+<!-- 标准引用方式 -->
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Triple Goats</title>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" as="style" onload="this.rel='stylesheet'">
+    <link rel="preload" href="companylogo.jpg" as="image">
+    <style>
+        :root {
+            --primary-color: #001f3f;
+            --secondary-color: #ffffff;
+            --accent-color: #0074D9;
+            --dark-color: #000000;
+        }
+
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: var(--primary-color);
+            color: var(--secondary-color);
+            line-height: 1.6;
+        }
+
+        a { text-decoration: none; color: var(--accent-color); }
+        img { max-width: 100%; height: auto; transition: transform 0.3s; }
+        img:hover { transform: scale(1.05); }
+
+        header {
+            background: var(--primary-color);
+            color: var(--secondary-color);
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            transition: transform 0.3s, filter 0.3s;
+        }
+        .logo img { width: 60px; margin-right: 10px; }
+        .logo h1 { font-size: 36px; margin: 0 0 3px 0; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); }
+        .logo .slogan { font-size: 12px; font-weight: bold; text-transform: uppercase; color: var(--secondary-color); user-select: none; margin-top: 0; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 5px;
+        }
+        .menu-toggle span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: var(--secondary-color);
+            margin: 4px 0;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+        .menu-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); background-color: var(--secondary-color); }
+        .menu-toggle.active span:nth-child(2) { opacity: 0; }
+        .menu-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); background-color: var(--secondary-color); }
+
+        nav {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-grow: 1;
+        }
+        nav a {
+            color: var(--secondary-color);
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        nav a:hover { transform: scale(1.1); background: rgba(255, 255, 255, 0.1); }
+
+        .dropdown {
+            position: relative;
+        }
+        .dropdown .dropbtn {
+            padding: 8px 15px;
+            border-radius: 5px;
+            display: inline-block;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .dropdown:hover .dropbtn { transform: scale(1.1); background: rgba(255, 255, 255, 0.1); }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            width: 200px;
+            text-align: center;
+            border-radius: 5px;
+            top: 100%;
+            left: 0;
+        }
+        .dropdown:hover .dropdown-content { display: block; }
+        .dropdown-content a {
+            display: block;
+            padding: 10px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+            font-size: 14px;
+            color: black; /* 电脑端字体颜色为黑色 */
+        }
+        .dropdown-content a:last-child { border-bottom: none; }
+        .dropdown-content a:hover { background-color: #ddd; }
+
+        .top-social-media { display: flex; justify-content: center; gap: 15px; padding: 20px 0; }
+        .bottom-social-media { display: flex; justify-content: center; gap: 15px; padding: 20px 0; background: var(--primary-color); }
+        .social-item img {
+            width: 30px; height: 30px; object-fit: cover;
+            transition: transform 0.3s, filter 0.3s;
+        }
+        .social-item img:hover { transform: scale(1.1) rotate(20deg); filter: brightness(1.2); }
+
+        .hero {
+            position: relative;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: var(--secondary-color);
+            text-align: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('contact.png');
+            background-size: cover;
+            background-position: center;
+        }
+        .hero h1 { font-size: 48px; margin-bottom: 20px; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); }
+        .hero p { font-size: 24px; margin-bottom: 30px; }
+
+        .info-cards {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            padding: 40px 20px;
+            background: var(--primary-color);
+        }
+        .card {
+            background: var(--secondary-color);
+            color: var(--primary-color);
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            flex: 1;
+            max-width: 100%;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .card:hover { transform: scale(1.05); }
+
+        .card-content {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            padding: 10px 0;
+        }
+        .card-icon {
+            width: 60px;
+            height: 60px;
+            background-color: var(--accent-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            font-size: 24px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .card-icon img {
+            max-width: 80%;
+            max-height: 80%;
+        }
+        .card-details {
+            flex: 1;
+            text-align: left;
+        }
+        .card-details h3 {
+            font-size: 24px;
+            margin: 0;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        .card-details p {
+            font-size: 16px;
+            line-height: 1.5;
+            margin: 5px;
+        }
+
+        main {
+            padding: 50px 20px;
+            background: var(--primary-color);
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .form-container,
+        .map-container {
+            flex: 1; /* 确保它们在弹性盒子布局中均匀分布 */
+            background: var(--secondary-color);
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        #map {
+            width: 100%;
+            height: 100%; /* 确保地图填充容器 */
+        }
+
+        .embedded-form {
+            width: 100%;
+            height: 600px;
+        }
+
+        .contact-info {
+            text-align: center;
+            margin: 0 auto;
+            max-width: 100%;
+            padding: 20px;
+            background-color: transparent;
+            border-radius: 0;
+            box-shadow: none;
+        }
+        .contact-info h3 { font-size: 24px; margin: 20px 0; color: var(--secondary-color); }
+        .contact-info p { font-size: 16px; margin: 10px 0; color: var(--secondary-color); }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--secondary-color);
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            transition: background-color 0.3s, transform 0.3s;
+            text-decoration: none;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .btn:hover {
+            background-color: #0055aa;
+            transform: scale(1.1);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .whatsapp-link {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .black-phone {
+            color: #000000;
+            text-decoration: none;
+        }
+
+        .black-number {
+            color: #000000;
+        }
+
+        .white-number {
+            color: #ffffff;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .menu-toggle { display: flex; }
+            nav {
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0.8);
+                display: none;
+                transition: all 0.3s ease;
+                z-index: 1001;
+            }
+            nav.active { top: 112px; display: flex; }
+            nav a { padding: 15px; text-align: center; }
+            .dropdown-content { position: static; background-color: rgba(0, 0, 0, 0.5); box-shadow: none; width: 100%; text-align: center; }
+            .dropdown-content a { padding: 15px; border-bottom: 1px solid #ddd; }
+            .dropdown-content a:last-child { border-bottom: none; }
+            .dropdown.active .dropdown-content { display: block; }
+            .dropdown .dropbtn { margin-left: -15px; width: 100%; }
+            .top-social-media { display: none; }
+            .info-cards { flex-direction: column; }
+            .card {  padding: 20px; border-radius: 15px; }
+            main {
+                flex-direction: column;
+            }
+            .form-container, .map-container {
+
+                padding: 20px;
+            }
+            .contact-info {
+                padding: 15px;
+            }
+            .contact-info .contact-details p, .contact-info .btn {
+                font-size: 14px;
+            }
+            .btn {
+                padding: 8px 15px;
+            }
+            .contact-details {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 5px;
+            }
+            .contact-details p {
+                width: 100%;
+                word-break: break-word;
+            }
+            .btn {
+                margin: 10px auto;
+            }
+            .map-container {
+                padding: 10px;
+            }
+
+            /* 移动端字体颜色 */
+            .dropdown-content a {
+                color: white; /* 移动端字体颜色为白色 */
+            }
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: var(--primary-color);
+            color: var(--secondary-color);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="home.html" class="logo">
+            <img src="companylogo.jpg" alt="Triple Goats Logo" loading="lazy">
+            <div class="logo-text">
+                <h1>Triple Goats</h1>
+                <p class="slogan">GREEN ENERGY GREEN LIFE</p>
+            </div>
+        </a>
+        <nav id="nav-menu">
+            <a href="inventory.html">INVENTORY</a>
+            <a href="charging.html">CHARGING</a>
+            <a href="services.html">SERVICES</a>
+            <div class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">DISCOVER</a>
+                <div class="dropdown-content">
+                    <a href="testdrive.html">TEST DRIVE</a>
+                    <a href="about.html">ABOUT</a>
+                    <a href="contact.html">CONTACT</a>
+                </div>
+            </div>
+        </nav>
+        <div class="top-social-media">
+            <a href="https://www.instagram.com/tg_auto_rwanda/" class="social-item"><img src="ins.jpg" alt="Instagram" loading="lazy"></a>
+            <a href="https://x.com/Triple_Goats" class="social-item"><img src="X.jpg" alt="Twitter" loading="lazy"></a>
+            <a href="https://www.facebook.com/TripleGoats" class="social-item"><img src="facebook.jpg" alt="Facebook" loading="lazy"></a>
+            <a href="https://www.tiktok.com/@tg.auto.rwanda" class="social-item"><img src="tiktok.jpg" alt="TikTok" loading="lazy"></a>
+        </div>
+        <div class="menu-toggle" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <div class="hero">
+        <h1>Get in Touch</h1>
+        <p>We are here to help you with any questions or concerns</p>
+    </div>
+
+    <div class="info-cards">
+        <div class="card">
+            <div class="card-content">
+                <div class="card-icon">
+                    <img src="phone-icon.png" alt="Phone Icon" class="card-icon">
+                </div>
+                <div class="card-details">
+                    <h3>Contact</h3>
+                    <p><a href="https://wa.me/250785084313" target="_blank">Phone: +250 785 084 313</a> / <a href="https://wa.me/250794104908" target="_blank">+250 794 104 908</a></p>
+                    <p>Email: tgautomobile@gmail.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <div class="card-icon">
+                    <img src="location-icon.png" alt="Location Icon" class="card-icon">
+                </div>
+                <div class="card-details">
+                    <h3>Location</h3>
+                    <p>Address: KK 15 Rd, Kicukiro, Kigali</p>
+                    <p>City: Kigali</p>
+                    <p>Country: Rwanda</p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <div class="card-icon">
+                    <img src="time-icon.png" alt="Time Icon" class="card-icon">
+                </div>
+                <div class="card-details">
+                    <h3>Business Hours</h3>
+                    <p>Monday - Friday: 9:00 AM - 6:00 PM UTC+2</p>
+                    <p>Weekend: Closed</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <div class="form-container">
+            <div class="embedded-form">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdGsQemQKBRHJn9ODs3DbSn4E9PFRtMUwcW2boTwIPgcnfJQA/viewform?embedded=true" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">Your browser does not support iframes.</iframe>
+            </div>
+        </div>
+
+        <div class="map-container">
+            <div id="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15949.673151412455!2d30.08305617980293!3d-1.9874279969959143!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dcb909c976d39b%3A0x85b1db1ad0e495c5!2z5Y-B576K5rG96L2mIFRnIEVsZWN0cmljIENhciBNYXJrZXQ!5e0!3m2!1szh-CN!2srw!4v1739439963365!5m2!1szh-CN!2srw" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </main>
+
+    <div class="contact-info">
+        <h3>Contact Us</h3>
+        <div class="contact-details">
+            <p>
+                <a href="https://wa.me/250785084313" target="_blank" class="black-phone white-number">Phone: +250 785 084 313</a>/
+                <a href="https://wa.me/250794104908" target="_blank" class="whatsapp-link white-number">+250 794 104 908</a>
+            </p>
+            <p>Email: tgautomobile@gmail.com</p>
+            <p>Address: KK 15 Rd, Kicukiro, Kigali</p>
+        </div>
+        <a href="https://wa.me/250785084313" target="_blank" class="btn">Schedule a Test Drive</a>
+    </div>
+
+    <div class="bottom-social-media">
+        <a href="https://www.instagram.com/tg_auto_rwanda/" class="social-item"><img src="ins.jpg" alt="Instagram" loading="lazy"></a>
+        <a href="https://x.com/Triple_Goats" class="social-item"><img src="X.jpg" alt="Twitter" loading="lazy"></a>
+        <a href="https://www.facebook.com/TripleGoats" class="social-item"><img src="facebook.jpg" alt="Facebook" loading="lazy"></a>
+        <a href="https://www.tiktok.com/@tg.auto.rwanda" class="social-item"><img src="tiktok.jpg" alt="TikTok" loading="lazy"></a>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Triple Goats. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuToggle = document.getElementById('menu-toggle');
+            const navMenu = document.getElementById('nav-menu');
+            const dropdown = document.querySelector('.dropdown');
+
+            menuToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                menuToggle.classList.toggle('active');
+            });
+
+            dropdown.addEventListener('click', (event) => {
+                event.stopPropagation();
+                dropdown.classList.toggle('active');
+            });
+
+            document.addEventListener('click', (event) => {
+                if (!dropdown.contains(event.target)) {
+                    dropdown.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
