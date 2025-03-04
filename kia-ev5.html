@@ -649,6 +649,21 @@
                 color: var(--secondary-color); /* 白色 */
             }
         }
+
+        .back-link {
+            display: none;
+            font-size: 30px; /* 调整字体大小 */
+            color: #ffffff; /* 改为白色 */
+            text-decoration: none;
+            margin-bottom: 10px;
+            text-align: left; /* 靠左对齐 */
+        }
+
+        @media (max-width: 768px) {
+            .back-link {
+                display: block;
+            }
+        }
     </style>
 </head>
 <body>
@@ -687,6 +702,7 @@
     </header>
 
     <main>
+        <a href="inventory.html" class="back-link">＜ back</a>
         <div class="vehicle-info">
             <div class="vehicle-images">
                 <div class="carousel-container">
@@ -715,27 +731,27 @@
                 <table>
                     <tbody>
                         <tr>
-                            <th>YEAR</th>
+                            <th><i class="fas fa-calendar-alt"></i> YEAR</th>
                             <td>2024</td>
                         </tr>
                         <tr>
-                            <th>MAKE</th>
+                            <th><i class="fas fa-car"></i> MAKE</th>
                             <td>KIA</td>
                         </tr>
                         <tr>
-                            <th>MODEL</th>
+                            <th><i class="fas fa-car-side"></i> MODEL</th>
                             <td>EV5</td>
                         </tr>
                         <tr>
-                            <th>RANGE</th>
+                            <th><i class="fas fa-road"></i> RANGE</th>
                             <td>530 KM</td>
                         </tr>
                         <tr>
-                            <th>SEATS</th>
+                            <th><i class="fas fa-users"></i> SEATS</th>
                             <td>5</td>
                         </tr>
                         <tr>
-                            <th>CONFIGURATION</th>
+                            <th><i class="fas fa-cogs"></i> CONFIGURATION</th>
                             <td>Basic</td>
                         </tr>
                     </tbody>

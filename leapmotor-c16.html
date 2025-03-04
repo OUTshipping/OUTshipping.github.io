@@ -649,6 +649,21 @@
                 color: var(--secondary-color); /* 白色 */
             }
         }
+
+        .back-link {
+            display: none;
+            font-size: 30px; /* 调整字体大小 */
+            color: #ffffff; /* 改为白色 */
+            text-decoration: none;
+            margin-bottom: 10px;
+            text-align: left; /* 靠左对齐 */
+        }
+
+        @media (max-width: 768px) {
+            .back-link {
+                display: block;
+            }
+        }
     </style>
 </head>
 <body>
@@ -687,6 +702,7 @@
     </header>
 
     <main>
+        <a href="inventory.html" class="back-link">＜ back</a>
         <div class="vehicle-info">
             <div class="vehicle-images">
                 <div class="carousel-container">
