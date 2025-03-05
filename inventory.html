@@ -22,7 +22,6 @@
             --card-bg-color: #FFFFFF;
             --card-hover-color: #001f3f;
             --text-color: #001f3f;
-        }
 
         /* 基本样式 */
         body {
@@ -442,11 +441,18 @@
                 display: none;
             }
 
-            .vehicle-section {
-                flex-wrap: wrap;
-                justify-content: flex-start;
-                gap: 10px;
-            }
+.vehicle-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .vehicle-section {
+    justify-content: center;
+  }
+}
 
             .vehicle-card {
                 width: 100%;
@@ -742,26 +748,43 @@
         }
 
         /* 响应式筛选器按钮 */
-        @media (max-width: 768px) {
-            .filter-buttons-container {
-                flex-direction: column;
-                align-items: flex-start;
-            }
+@media (max-width: 768px) {
+  .filter-buttons-container {
+    width: 100%;
+    padding: 10px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .custom-select {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 10px;
+  }
 
-            .filter-btn {
-                width: 100%;
-                max-width: none;
-                margin: 5px 0;
-                padding: 8px 15px;
-                font-size: 10px;
-            }
+  .filter-btn {
+    width: 100%;
+    margin: 0;
+    padding: 8px 15px;
+    font-size: 10px;
+    flex: 0 1 100%;
+  }
 
-            .type-filter {
-                width: 100%;
-                margin-right: 0;
-                padding: 8px 15px;
-                font-size: 10px;
-            }
+  .type-filter {
+    width: 100%;
+    margin: 0;
+    padding: 8px 15px;
+    font-size: 10px;
+    flex: 0 1 100%;
+  }
+
+  #type-options {
+    width: 100%;
+    max-width: 300px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
         }
 
         /* 联系我们按钮样式 */
@@ -811,7 +834,6 @@
 
         .select-selected {
             background-color: #0055aa;
-            width: 290px;
             color: white;
             padding: 10px;
             border: none;
@@ -1777,4 +1799,5 @@
 </script>
 
 
-</body></html>
+</body>
+</html>
