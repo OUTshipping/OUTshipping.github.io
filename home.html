@@ -240,7 +240,8 @@
             height: 100%;
             object-fit: cover;
             z-index: -1;
-            pointer-events: none;
+            pointer-events: none; /* 让视频无法选中 */
+            user-select: none; /* 禁止用户选择视频 */
         }
 
         .vehicle-list {
