@@ -240,8 +240,7 @@
             height: 100%;
             object-fit: cover;
             z-index: -1;
-            pointer-events: none; /* 让视频无法选中 */
-            user-select: none; /* 禁止用户选择视频 */
+            pointer-events: none;
         }
 
         .vehicle-list {
@@ -584,7 +583,7 @@
     </header>
 
     <div class="hero">
-        <video autoplay muted loop preload="auto" poster="hero-poster.jpg" loading="lazy">
+        <video autoplay muted loop preload="auto" style="display: none;">
             <source src="movie.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
