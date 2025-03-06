@@ -22,6 +22,7 @@
             --card-bg-color: #FFFFFF;
             --card-hover-color: #001f3f;
             --text-color: #001f3f;
+        }
 
         /* 基本样式 */
         body {
@@ -235,8 +236,12 @@
             flex-wrap: wrap;
             gap: 20px;
             justify-content: center;
-            padding: 0 10px;
+            padding: 0 15px;
             background: var(--primary-color);
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            box-sizing: border-box;
         }
 
         /* 车辆卡片样式 */
@@ -441,18 +446,11 @@
                 display: none;
             }
 
-.vehicle-section {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
-
-@media (max-width: 768px) {
-  .vehicle-section {
-    justify-content: center;
-  }
-}
+            .vehicle-section {
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                gap: 10px;
+            }
 
             .vehicle-card {
                 width: 100%;
@@ -523,14 +521,21 @@
             display: flex;
             flex-direction: column;
             gap: 20px;
-            width: 80%;
+            width: 94%;
+            max-width: 1200px;
             margin: 40px auto;
+            padding: 0 3%;
+            box-sizing: border-box;
         }
 
         /* 过滤器标题样式 */
         .filter-title-section {
             display: flex;
             justify-content: flex-start;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
 
         .filter-title {
@@ -562,31 +567,37 @@
         /* 过滤器按钮容器样式 */
         .filter-buttons-container {
             display: flex;
-            flex-wrap: nowrap;
-            gap: 20px;
-            padding: 0 15px;
+            gap: 12px;
+            padding: 15px 20px;
             background: linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.05));
-            border-radius: 10px;
-            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
-            padding: 15px;
-            width: 100%;
+            border-radius: 8px;
+            box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1);
+            width: 94%;
+            max-width: 1200px;
+            margin: 0 auto;
+            align-items: center;
+            justify-content: space-between;
+            box-sizing: border-box;
         }
 
         /* 过滤器按钮样式 */
         .filter-btn {
-            display: inline-block;
-            padding: 12px 22px;
-            font-size: 12px;
+            flex: 1 1 0%;
+            display: flex;
+            padding: 12px;
+            font-size: 14px;
             font-weight: bold;
             color: var(--secondary-color);
             background: linear-gradient(135deg, var(--accent-color) 30%, var(--accent-color-dark) 70%);
             border: none;
-            border-radius: 10px;
+            border-radius: 8px;
             transition: all 0.3s;
             cursor: pointer;
-            text-align: center;
-            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-            position: relative;
+            justify-content: center;
+            align-items: center;
+            white-space: nowrap;
+            margin: 0;
+            box-sizing: border-box;
         }
 
         .filter-btn:hover {
@@ -743,48 +754,29 @@
         }
 
         /* 信息键最小宽度 */
-        .vehicle-card .info-key {
-            min-width: 70px;
-        }
+.vehicle-card .info-key,
+.vehicle-card .info-value {
+  font-weight: bold;
+}
 
         /* 响应式筛选器按钮 */
-@media (max-width: 768px) {
-  .filter-buttons-container {
-    width: 100%;
-    padding: 10px;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-  
-  .custom-select {
-    width: 100%;
-    max-width: 100%;
-    margin: 0 auto 10px;
-  }
+        @media (max-width: 768px) {
+            .filter-buttons-container {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 10px;
+            }
 
-  .filter-btn {
-    width: 100%;
-    margin: 0;
-    padding: 8px 15px;
-    font-size: 10px;
-    flex: 0 1 100%;
-  }
-
-  .type-filter {
-    width: 100%;
-    margin: 0;
-    padding: 8px 15px;
-    font-size: 10px;
-    flex: 0 1 100%;
-  }
-
-  #type-options {
-    width: 100%;
-    max-width: 300px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-}
+            .custom-select,
+            .filter-btn {
+                width: 100%;
+                margin: 0;
+                padding: 12px;
+                font-size: 14px;
+                min-width: auto;
+                flex: 1 1 auto;
+                box-sizing: border-box;
+            }
         }
 
         /* 联系我们按钮样式 */
@@ -825,20 +817,32 @@
         /* 自定义选择框样式 */
         .custom-select {
             position: relative;
-            display: inline-block;
-            width: calc(40% - 10px);
-            max-width: 300px;
-            margin-right: 20px;
-            vertical-align: top;
+            flex: 1 1 0%;
+            min-width: 160px;
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            box-sizing: border-box;
         }
 
         .select-selected {
             background-color: #0055aa;
             color: white;
-            padding: 10px;
+            padding: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             border: none;
-            border-radius: 5px;
+            border-radius: 8px;
             cursor: pointer;
+            box-sizing: border-box;
+            font-size: 14px;
+            font-weight: bold;
+            transition: all 0.3s;
+            width: 100%;
+            min-width: auto;
         }
 
         .select-items div {
@@ -867,12 +871,20 @@
 
         .select-items {
             position: absolute;
-            display: none;
-            background-color: white;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            z-index: 10;
+            top: calc(100% + 5px);
+            left: 0;
             width: 100%;
-            margin-top: 5px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            z-index: 1000;
+            display: none;
+            border: 1px solid rgba(0,0,0,0.1);
+            box-sizing: border-box;
+        }
+        
+        .custom-select {
+            position: relative;
         }
 
         .select-items div {
@@ -1112,15 +1124,15 @@
             <div class="filter-buttons-container">
                 <div class="custom-select">
                     <div class="select-selected" onclick="toggleSelect(event)">All Types</div>
-                    <div class="select-items" id="type-options" style="display: none; width: 310px;">
-                        <div onclick="selectOption(this)">All Types</div>
-                        <div onclick="selectOption(this)">Sedan</div>
+                    <div class="select-items" id="type-options" style="display: none; ">
+                        <div onclick="selectOption(this)">ALL TYPES</div>
+                        <div onclick="selectOption(this)">SEDAN</div>
                         <div onclick="selectOption(this)">SUV</div>
-                        <div onclick="selectOption(this)">Pickup</div>
-                        <div onclick="selectOption(this)">Truck</div>
-                        <div onclick="selectOption(this)">Refrigerated</div>
-                        <div onclick="selectOption(this)">Bus</div>
-                        <div onclick="selectOption(this)">Van</div>
+                        <div onclick="selectOption(this)">PICKUP</div>
+                        <div onclick="selectOption(this)">TRUCK</div>
+                        <div onclick="selectOption(this)">REFRIGERATED</div>
+                        <div onclick="selectOption(this)">BUS</div>
+                        <div onclick="selectOption(this)">VAN</div>
                     </div>
                 </div>
                 <button class="filter-btn active" data-filter="highest-price">Highest Price</button>
@@ -1132,7 +1144,7 @@
         </div>
         <h2>Available Vehicles</h2>
         <div class="no-vehicle-alert" style="display: none;">Sorry, there is no model available now.</div>
-        <div class="vehicle-section"><a href="song-plus.html" class="vehicle-card" data-type="suv" data-price="45000000" data-color="#FFFFFF" data-range="520" data-seats="5">
+        <div class="vehicle-section"><a href="song-plus.html" class="vehicle-card" data-type="SUV" data-price="45000000" data-color="#FFFFFF" data-range="520" data-seats="5">
                 <img src="song.jpg" alt="2024 BYD Song Plus" loading="lazy">
                 <div class="card-content">
                     <h3>2024 BYD Song Plus</h3>
@@ -1282,7 +1294,7 @@
                         <i class="fas fa-eye" style="margin-right:5px;"></i>View
                     </button>
                 </div>
-            </a><a href="id4-crozz.html" class="vehicle-card" data-type="suv" data-price="45000000" data-color="#FFFFFF" data-range="442" data-seats="5">
+            </a><a href="id4-crozz.html" class="vehicle-card" data-type="SUV" data-price="45000000" data-color="#FFFFFF" data-range="442" data-seats="5">
                 <img src="ID.4 CROZZ.png" alt="2024 ID.4 Crozz" loading="lazy">
                 <div class="card-content">
                     <h3>2024 ID.4 Crozz</h3>
@@ -1331,7 +1343,7 @@
                         <i class="fas fa-eye" style="margin-right:5px;"></i>View
                     </button>
                 </div>
-            </a><a href="leapmotor-c16.html" class="vehicle-card" data-type="suv" data-price="47000000" data-color="#000000" data-range="910" data-seats="6">
+            </a><a href="leapmotor-c16.html" class="vehicle-card" data-type="SUV" data-price="47000000" data-color="#000000" data-range="910" data-seats="6">
                 <img src="C16.jpg" alt="2024 Leapmotor C16" loading="lazy">
                 <div class="card-content">
                     <h3>2024 Leapmotor C16</h3>
@@ -1380,7 +1392,7 @@
                         <i class="fas fa-eye" style="margin-right:5px;"></i>View
                     </button>
                 </div>
-            </a><a href="kia-ev5.html" class="vehicle-card" data-type="suv" data-price="45000000" data-color="#808080" data-range="530" data-seats="5">
+            </a><a href="kia-ev5.html" class="vehicle-card" data-type="SUV" data-price="45000000" data-color="#808080" data-range="530" data-seats="5">
                 <img src="EV5.jpg" alt="2024 KIA Ev5" loading="lazy">
                 <div class="card-content">
                     <h3>2024 KIA Ev5</h3>
@@ -1527,7 +1539,7 @@
                         <i class="fas fa-eye" style="margin-right:5px;"></i>View
                     </button>
                 </div>
-            </a><a href="toyota-corolla-cross-frontlander.html" class="vehicle-card" data-type="suv" data-price="45000000" data-color="#000000" data-range="530" data-seats="5">
+            </a><a href="toyota-corolla-cross-frontlander.html" class="vehicle-card" data-type="SUV" data-price="45000000" data-color="#000000" data-range="530" data-seats="5">
                 <img src="highland.jpg" alt="2024 Toyota Corolla Cross Frontlanderland" loading="lazy">
                 <div class="card-content">
                     <h3>2024 Toyota Frontlander</h3>
@@ -1611,10 +1623,10 @@
 
         // 点击选项后选择车辆类型
         function selectOption(option) {
-            const selectedType = option.textContent.trim().toLowerCase();
-            document.querySelector('.custom-select .select-selected').textContent = selectedType === 'all types' ? 'All Types' : selectedType;
+            const selectedType = option.textContent.trim().toUpperCase();
+    document.querySelector('.custom-select .select-selected').textContent = selectedType === 'ALL TYPES' ? 'ALL TYPES' : selectedType.toUpperCase();
             document.getElementById('type-options').style.display = 'none';
-            currentType = selectedType === 'all types' ? 'all' : selectedType; // 更新 currentType
+            currentType = selectedType === 'ALL TYPES' ? 'all' : selectedType; // 更新 currentType
             applyFilters(); // 应用筛选
         }
 
@@ -1645,7 +1657,7 @@
             // 根据类型筛选
             if (currentType !== 'all') {
                 filteredVehicles = filteredVehicles.filter(vehicle => {
-                    return vehicle.dataset.type.toLowerCase() === currentType;
+                    return vehicle.dataset.type.toUpperCase() === currentType.toUpperCase();
                 });
             }
 
@@ -1799,5 +1811,4 @@
 </script>
 
 
-</body>
-</html>
+</body></html>
