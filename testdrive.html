@@ -55,7 +55,20 @@
         }
 
         .logo img { width: 80px; margin-right: 10px; }
-        .logo h1 { font-size: 36px; margin: 0 0 3px 0; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); }
+        .logo-text h1 { font-size: 36px; margin: 0 0 3px 0; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); }
+        .logo-text .slogan { font-size: 12px; font-weight: bold; text-transform: uppercase; color: var(--secondary-color); user-select: none; margin-top: 0; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); }
+
+    @media (max-width: 480px) {
+        .logo img {
+            width: 60px;
+        }
+        .logo-text h1 {
+            font-size: 24px;
+        }
+        .logo-text .slogan {
+            font-size: 8px;
+        }
+    }
         .logo .slogan { font-size: 12px; font-weight: bold; text-transform: uppercase; color: var(--secondary-color); user-select: none; margin-top: 0; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); }
 
         .menu-toggle {
@@ -163,7 +176,7 @@
         /* Hero Section */
         .hero {
             position: relative;
-            height: 80vh;
+            height: 60vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -235,7 +248,7 @@
                 transition: all 0.3s ease;
                 z-index: 1001;
             }
-            nav.active { top: 112px; display: flex; }
+            nav.active { top: 81.5px; display: flex; }
             nav a { padding: 15px; text-align: center; }
             .dropdown-content { position: static; background-color: rgba(0, 0, 0, 0.5); box-shadow: none; width: 100%; text-align: center; }
             .dropdown-content a { padding: 15px; border-bottom: 1px solid #ddd; color: var(--secondary-color); }
@@ -378,14 +391,45 @@
                 menuToggle.classList.toggle('active');
             });
 
-            dropdown.addEventListener('click', (event) => {
-                event.stopPropagation();
+            // 添加移动端菜单状态跟踪
+            let isMobileMenuOpen = false;
+            
+            // 统一处理菜单开关
+            function toggleDropdown() {
                 dropdown.classList.toggle('active');
+                isMobileMenuOpen = !isMobileMenuOpen;
+            }
+
+            // 同时支持touch和click事件
+            dropdown.addEventListener('touchstart', (event) => {
+                if (window.innerWidth <= 768) { // 仅移动端生效
+                    event.preventDefault();
+                    toggleDropdown();
+                }
+            });
+
+            dropdown.addEventListener('click', (event) => {
+                if (window.innerWidth > 768) { // 桌面端保持原有逻辑
+                    event.stopPropagation();
+                    dropdown.classList.toggle('active');
+                } else { // 移动端处理
+                    event.stopPropagation();
+                    toggleDropdown();
+                }
+            });
+
+            // 优化外部点击关闭逻辑
+            document.addEventListener('touchstart', (event) => {
+                if (isMobileMenuOpen && !dropdown.contains(event.target)) {
+                    dropdown.classList.remove('active');
+                    isMobileMenuOpen = false;
+                }
             });
 
             document.addEventListener('click', (event) => {
-                if (!dropdown.contains(event.target)) {
+                if (!dropdown.contains(event.target) && window.innerWidth <= 768) {
                     dropdown.classList.remove('active');
+                    isMobileMenuOpen = false;
                 }
             });
         });

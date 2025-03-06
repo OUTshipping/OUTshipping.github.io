@@ -402,7 +402,7 @@
             }
 
             nav.active {
-                top: 112px;
+                top: 81.5px;
                 display: flex;
             }
 
@@ -507,6 +507,30 @@
             padding: 10px 0;
             background: var(--primary-color);
             color: var(--secondary-color);
+        }
+
+        /* 新增涟漪动画关键帧 */
+        @keyframes ripple {
+            from {
+                transform: scale(0);
+                opacity: 1;
+            }
+            to {
+                transform: scale(2);
+                opacity: 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo img {
+                width: 60px !important;
+            }
+            .logo-text h1 {
+                font-size: 24px !important;
+            }
+            .logo-text .slogan {
+                font-size: 8px !important;
+            }
         }
 
         /* 主要内容区域样式 */
@@ -1741,10 +1765,41 @@
         // 处理汉堡菜单点击
         const menuToggle = document.getElementById('menu-toggle');
         const navMenu = document.getElementById('nav-menu');
+        const dropdown = document.querySelector('.dropdown');
+        let isMobileMenuOpen = false;
 
+        const toggleDropdown = () => {
+            dropdown.classList.toggle('active');
+            isMobileMenuOpen = !isMobileMenuOpen;
+        };
+
+        const handleDropdown = (event) => {
+            if (window.innerWidth > 768) {
+                event.stopPropagation();
+                dropdown.classList.toggle('active');
+            } else {
+                event.preventDefault();
+                toggleDropdown();
+            }
+        };
+
+        const closeDropdown = (event) => {
+            if (!dropdown.contains(event.target)) {
+                dropdown.classList.remove('active');
+                isMobileMenuOpen = false;
+            }
+        };
+
+        // 事件绑定
         menuToggle.addEventListener('click', () => {
             navMenu.classList.toggle('active');
+            menuToggle.classList.toggle('active');
         });
+
+        dropdown.addEventListener('touchstart', handleDropdown);
+        dropdown.addEventListener('click', handleDropdown);
+        document.addEventListener('touchstart', closeDropdown);
+        document.addEventListener('click', closeDropdown);
     </script>
     <script>
     document.addEventListener('DOMContentLoaded', function() {

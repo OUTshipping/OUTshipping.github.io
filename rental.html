@@ -387,7 +387,7 @@
             }
 
             nav.active {
-                top: 112px;
+                top: 81.5px;
                 display: flex;
             }
 
@@ -472,6 +472,18 @@
             padding: 10px 0;
             background: var(--primary-color);
             color: var(--secondary-color);
+        }
+
+        @media (max-width: 480px) {
+            .logo img {
+                width: 60px !important;
+            }
+            .logo-text h1 {
+                font-size: 24px !important;
+            }
+            .logo-text .slogan {
+                font-size: 8px !important;
+            }
         }
 
         /* 确保 Rental Services 文字居中 */
@@ -599,23 +611,38 @@
                 menuToggle.classList.toggle('active');
             });
 
-            // 下拉菜单切换
-            dropdown.addEventListener('click', (event) => {
-                event.stopPropagation(); // 阻止事件冒泡
-                dropdown.classList.toggle('active');
-            });
+            // 移动端菜单状态跟踪
+            let isMobileMenuOpen = false;
 
-            // 全局点击事件，关闭下拉菜单
-            document.addEventListener('click', (event) => {
+            const toggleDropdown = () => {
+                dropdown.classList.toggle('active');
+                isMobileMenuOpen = !isMobileMenuOpen;
+            };
+
+            // 统一事件处理
+            const handleDropdown = (event) => {
+                if (window.innerWidth > 768) {
+                    event.stopPropagation();
+                    dropdown.classList.toggle('active');
+                } else {
+                    event.preventDefault();
+                    toggleDropdown();
+                }
+            };
+
+            dropdown.addEventListener('touchstart', handleDropdown);
+            dropdown.addEventListener('click', handleDropdown);
+
+            // 统一关闭逻辑
+            const closeDropdown = (event) => {
                 if (!dropdown.contains(event.target)) {
                     dropdown.classList.remove('active');
+                    isMobileMenuOpen = false;
                 }
-            });
+            };
 
-            // 点击下拉菜单内容时，不关闭菜单
-            dropdownContent.addEventListener('click', (event) => {
-                event.stopPropagation();
-            });
+            document.addEventListener('touchstart', closeDropdown);
+            document.addEventListener('click', closeDropdown);
         });
     </script>
 </body>

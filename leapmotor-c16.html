@@ -245,7 +245,7 @@
             }
 
             nav.active {
-                top: 112px;
+                top: 81.5px;
                 display: flex;
             }
 
@@ -324,6 +324,18 @@
             padding: 10px 0;
             background: var(--primary-color);
             color: var(--secondary-color);
+        }
+
+        @media (max-width: 480px) {
+            .logo img {
+                width: 60px !important;
+            }
+            .logo-text h1 {
+                font-size: 24px !important;
+            }
+            .logo-text .slogan {
+                font-size: 8px !important;
+            }
         }
 
         /* 主要内容区域样式 */

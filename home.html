@@ -415,7 +415,7 @@
             }
 
             nav.active {
-                top: 112px;
+                top: 81.5px;
                 display: flex;
             }
 
@@ -523,6 +523,31 @@
 
             .hero video {
                 height: 100%; /* 修改为100%以确保视频在移动端完整显示 */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo img {
+                width: 40px;
+                margin-right: 8px;
+            }
+            .logo h1 {
+                font-size: 24px;
+            }
+            .logo .slogan {
+                font-size: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo img {
+                width: 60px;
+            }
+            .logo-text h1 {
+                font-size: 24px;
+            }
+            .logo-text .slogan {
+                font-size: 8px;
             }
         }
 
@@ -694,15 +719,48 @@
             document.getElementById('menu-toggle').classList.toggle('active');
         });
 
+        // 添加移动端菜单状态跟踪
+        let isMobileMenuOpen = false;
+        
+        // 统一处理菜单开关
+        function toggleDropdown() {
+            const dropdown = document.querySelector('.dropdown');
+            dropdown.classList.toggle('active');
+            isMobileMenuOpen = !isMobileMenuOpen;
+        }
+
+        // 同时支持touch和click事件
+        document.querySelector('.dropdown').addEventListener('touchstart', (event) => {
+            if (window.innerWidth <= 768) { // 仅移动端生效
+                event.preventDefault();
+                toggleDropdown();
+            }
+        });
+
         document.querySelector('.dropdown').addEventListener('click', (event) => {
-            event.stopPropagation();
-            document.querySelector('.dropdown').classList.toggle('active');
+            if (window.innerWidth > 768) { // 桌面端保持原有逻辑
+                event.stopPropagation();
+                document.querySelector('.dropdown').classList.toggle('active');
+            } else { // 移动端处理
+                event.stopPropagation();
+                toggleDropdown();
+            }
+        });
+
+        // 优化外部点击关闭逻辑
+        document.addEventListener('touchstart', (event) => {
+            const dropdown = document.querySelector('.dropdown');
+            if (isMobileMenuOpen && !dropdown.contains(event.target)) {
+                dropdown.classList.remove('active');
+                isMobileMenuOpen = false;
+            }
         });
 
         document.addEventListener('click', (event) => {
             const dropdown = document.querySelector('.dropdown');
-            if (!dropdown.contains(event.target)) {
+            if (!dropdown.contains(event.target) && window.innerWidth <= 768) {
                 dropdown.classList.remove('active');
+                isMobileMenuOpen = false;
             }
         });
     </script>

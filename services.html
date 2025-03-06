@@ -216,7 +216,7 @@
         /* 英雄区 */
         .hero {
             position: relative;
-            height: 80vh;
+            height: 60vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -442,7 +442,7 @@
             }
 
             nav.active {
-                top: 112px;
+                top: 81.5px;
                 display: flex;
             }
 
@@ -503,6 +503,18 @@
             background: var(--primary-color);
             color: var(--secondary-color);
             z-index: 1000; /* 确保页脚在背景图之上 */
+        }
+
+        @media (max-width: 480px) {
+            .logo img {
+                width: 60px !important;
+            }
+            .logo-text h1 {
+                font-size: 24px !important;
+            }
+            .logo-text .slogan {
+                font-size: 8px !important;
+            }
         }
 
         main {
@@ -650,21 +662,46 @@
                 navMenu.classList.toggle('active');
                 menuToggle.classList.toggle('active');
             });
+// 移动端菜单状态跟踪
+let isMobileMenuOpen = false;
 
-            dropdown.addEventListener('click', (event) => {
-                event.stopPropagation();
-                dropdown.classList.toggle('active');
-            });
+const toggleDropdown = () => {
+    dropdown.classList.toggle('active');
+    isMobileMenuOpen = !isMobileMenuOpen;
+};
 
-            document.addEventListener('click', (event) => {
-                if (!dropdown.contains(event.target)) {
-                    dropdown.classList.remove('active');
-                }
+// 统一事件处理
+const handleDropdown = (event) => {
+    if (window.innerWidth > 768) {
+        event.stopPropagation();
+        dropdown.classList.toggle('active');
+    } else {
+        event.preventDefault();
+        toggleDropdown();
+    }
+};
+
+dropdown.addEventListener('touchstart', handleDropdown);
+dropdown.addEventListener('click', handleDropdown);
+
+// 统一关闭逻辑
+const closeDropdown = (event) => {
+    if (!dropdown.contains(event.target)) {
+        dropdown.classList.remove('active');
+        isMobileMenuOpen = false;
+    }
+};
+
+document.addEventListener('touchstart', closeDropdown);
+document.addEventListener('click', closeDropdown);
             });
 
             dropdownContent.addEventListener('click', () => {
                 dropdown.classList.remove('active');
-            });
+        });
+
+        dropdownContent.addEventListener('click', () => {
+            dropdown.classList.remove('active');
         });
     </script>
 </body>
