@@ -1634,7 +1634,7 @@
     </div>
 
     <footer>
-        <p>© 2024 Triple Goats. All rights reserved.</p>
+        <p>© 2025 Triple Goats. All rights reserved..</p>
     </footer>
 
     <script>
@@ -1802,27 +1802,49 @@
         document.addEventListener('click', closeDropdown);
     </script>
     <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    // 统一筛选逻辑函数
+    function syncUrlParams() {
         const urlParams = new URLSearchParams(window.location.search);
-        const type = urlParams.get('type');
+        if(currentType && currentType !== 'all') {
+            urlParams.set('type', currentType.toLowerCase());
+        } else {
+            urlParams.delete('type');
+        }
+        window.history.replaceState({}, '', `?${urlParams.toString()}`);
+    }
 
-        if (type) {
-            // 根据type参数过滤车辆
-            if (type === 'all') {
-                // 显示所有车辆
-                document.querySelectorAll('.vehicle-card').forEach(card => {
-                    card.style.display = 'block';
-                });
-            } else {
-                // 显示特定类型的车辆
-                document.querySelectorAll('.vehicle-card').forEach(card => {
-                    if (card.dataset.type === type) {
-                        card.style.display = 'block';
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-            }
+    // 更新applyFilters函数
+    function applyFilters() {
+        let filteredVehicles = sortedVehicles;
+
+        // 根据类型筛选
+        if (currentType !== 'all') {
+            filteredVehicles = filteredVehicles.filter(vehicle => {
+                return vehicle.dataset.type.toUpperCase() === currentType.toUpperCase();
+            });
+        }
+
+        // 更新URL参数
+        syncUrlParams();
+
+        // 显示筛选结果
+        updateVehicleDisplay(filteredVehicles);
+    }
+
+    // 初始化时处理URL参数
+    document.addEventListener('DOMContentLoaded', () => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const typeParam = urlParams.get('type');
+        
+        if (typeParam) {
+            currentType = typeParam.toUpperCase();
+            const typeOptions = document.querySelectorAll('.custom-select .select-items div');
+            typeOptions.forEach(option => {
+                if(option.textContent.trim().toUpperCase() === currentType) {
+                    document.querySelector('.custom-select .select-selected').textContent = option.textContent.trim();
+                }
+            });
+            applyFilters();
         }
     });
 </script>

@@ -535,11 +535,12 @@
     </header>
 
     <main id="vehicles">
-        <h2>Rental Services</h2>
-        <div class="vehicle-section">
-            <!-- Vehicle Content -->
-        </div>
-    </main>
+    <h2>Rental Services</h2>
+    <div class="vehicle-section">
+        <!-- Vehicle Content -->
+    </div>
+    <p style="color: yellow; text-align: center; margin: 20px 0; font-weight: bold;">Please note: The current car rental regulations are still being drafted, and the specific terms are subject to the final announcement.</p>
+</main>
 
     <div class="table-section">
         <div class="table-container">
@@ -595,7 +596,7 @@
     </div>
 
     <footer>
-        <p>&copy; 2024 Triple Goats. All rights reserved.</p>
+        <p>&copy; 2025 Triple Goats. All rights reserved..</p>
     </footer>
 
     <script>
@@ -605,13 +606,13 @@
             const dropdown = document.querySelector('.dropdown');
             const dropdownContent = document.querySelector('.dropdown-content');
 
-            // 菜单切换
+            // Menu toggle
             menuToggle.addEventListener('click', () => {
                 navMenu.classList.toggle('active');
                 menuToggle.classList.toggle('active');
             });
 
-            // 移动端菜单状态跟踪
+            // Mobile menu state tracking
             let isMobileMenuOpen = false;
 
             const toggleDropdown = () => {
@@ -619,7 +620,7 @@
                 isMobileMenuOpen = !isMobileMenuOpen;
             };
 
-            // 统一事件处理
+            // Unified event handling
             const handleDropdown = (event) => {
                 if (window.innerWidth > 768) {
                     event.stopPropagation();
@@ -633,7 +634,7 @@
             dropdown.addEventListener('touchstart', handleDropdown);
             dropdown.addEventListener('click', handleDropdown);
 
-            // 统一关闭逻辑
+            // Unified close logic
             const closeDropdown = (event) => {
                 if (!dropdown.contains(event.target)) {
                     dropdown.classList.remove('active');

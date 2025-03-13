@@ -204,22 +204,45 @@
         /* Button Styles (Modified to match services.html) */
         .btn {
             display: inline-block;
-            background-color: var(--accent-color);
+            background: linear-gradient(135deg, var(--accent-color) 0%, #0055aa 100%);
             color: var(--secondary-color);
-            padding: 12px 20px;
-            border-radius: 8px;
-            font-size: 16px;
+            padding: 15px 30px;
+            border-radius: 12px;
+            font-size: 18px;
             font-weight: bold;
             text-align: center;
-            transition: background-color 0.3s, transform 0.3s;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             text-decoration: none;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 6px 15px rgba(0, 116, 217, 0.3);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
         }
 
         .btn:hover {
-            background-color: #0055aa;
-            transform: scale(1.1);
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: 0 8px 25px rgba(0, 116, 217, 0.5);
+            background: linear-gradient(135deg, #0074D9 0%, #003366 100%);
+        }
+
+        .btn::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255, 255, 255, 0.2),
+                transparent
+            );
+            transition: 0.5s;
+        }
+
+        .btn:hover::after {
+            left: 100%;
         }
 
         /* Contact Info Section */
@@ -377,7 +400,7 @@
     </div>
 
     <footer>
-        <p>&copy; 2024 Triple Goats. All rights reserved.</p>
+        <p>&copy; 2025 Triple Goats. All rights reserved..</p>
     </footer>
 
     <script>
