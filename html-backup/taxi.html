@@ -1,0 +1,86 @@
+<!-- 标准引用方式 -->
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taxi Service - Scheduled Maintenance</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 50px;
+            background: #fff;
+            border: 1px solid #dee2e6;
+            border-radius: 4px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+        .construction-message {
+            padding: 35px;
+            background: #e9ecef;
+            border: 2px solid #ced4da;
+            border-radius: 4px;
+            color: #2b2d32;
+            font-size: 20px;
+            line-height: 1.6;
+            margin: 60px 0;
+            letter-spacing: 0.5px;
+        }
+        .construction-message::before {
+            content: "ⓘ";
+            font-size: 28px;
+            margin-right: 15px;
+            vertical-align: middle;
+            color: #0d6efd;
+        }
+        .official-notice {
+            margin-top: 40px;
+            font-size: 14px;
+            color: #6c757d;
+            border-top: 1px solid #dee2e6;
+            padding-top: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Taxi Service</h1>
+        <div class="construction-message">
+            Notice: System maintenance in progress. We apologize for the inconvenience.<br>
+            Expected completion: TBD
+        </div>
+        <div class="official-notice">
+            <p>For urgent inquiries, please contact our 24/7 support:</p>
+            <p>📞Phone: +250 785 084 313 / +250 794 104 908  | 📧 support@taxiservice.com</p>
+            <p style="margin-top:15px;">©2025 Triple Goats. All rights reserved.</p>
+        </div>
+        <!--
+        <div class="form-group">
+            <input type="text" id="start" placeholder="请输入起点地址" required>
+        </div>
+        <div class="form-group">
+            <input type="text" id="end" placeholder="请输入终点地址" required>
+        </div>
+        <div class="form-group">
+            <button onclick="calculateRoute()">规划路线</button>
+        </div>
+        <div id="result"></div>
+        <div id="map"></div>
+        <a href="testdrive.html" class="btn">Schedule a Test Drive</a>
+        -->
+    </div>
+
+    <!-- 保留地图API引用 -->
+    <script src="https://webapi.amap.com/maps?v=1.4.15&key=e23e0feab19b5d9c3543ab59274a4bb8"></script>
+</body>
+</html>
