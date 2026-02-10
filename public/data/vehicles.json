@@ -262,37 +262,6 @@
     ]
   },
   {
-    "id": 9,
-    "slug": "toyota-corolla-cross-frontlander",
-    "enabled": true,
-    "name": "2025 Toyota Frontlander",
-    "type": "SUV",
-    "range": 530,
-    "seats": 5,
-    "configuration": "Basic",
-    "coverImage": "/frontlander/frontlander.jpg",
-    "colors": [
-      "#000000"
-    ],
-    "description": "The Toyota Corolla Cross Frontlander is a versatile SUV designed for both urban and off-road driving. It offers a range of 400 km, seating for up to 5 passengers, and a premium configuration. With its powerful engine and advanced safety features, the Corolla Cross Frontlander is perfect for families and adventurers alike.",
-    "specs": {
-      "year": "2025",
-      "make": "Toyota",
-      "model": "Corolla Cross Frontlander",
-      "category": "Premium",
-      "batteryCapacity": "N/A"
-    },
-    "detailImages": [
-      "/frontlander/frontlander.jpg",
-      "/frontlander/frontlander (1).jpg",
-      "/frontlander/frontlander (2).jpg",
-      "/frontlander/frontlander (3).jpg",
-      "/frontlander/frontlander (4).jpg",
-      "/frontlander/frontlander (5).jpg",
-      "/frontlander/frontlander (6).jpg"
-    ]
-  },
-  {
     "id": 10,
     "slug": "byd-tang-l",
     "enabled": true,
