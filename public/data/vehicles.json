@@ -68,40 +68,6 @@
     ]
   },
   {
-    "id": 3,
-    "slug": "toyota-bz3",
-    "enabled": false,
-    "name": "2025 Toyota Bz3",
-    "type": "SEDAN",
-    "range": 517,
-    "seats": 5,
-    "configuration": "Basic",
-    "coverImage": "/bz3.jpg",
-    "colors": [
-      "#808080"
-    ],
-    "description": "The TOYOTA BZ3 is a stylish and modern electric vehicle designed for urban driving. It comes with a 300 hp motor, offering a maximum range of 517 km and a sophisticated interior for up to 5 passengers. With advanced safety features and a sleek design, the BZ3 is perfect for urban environments and eco-conscious drivers.",
-    "specs": {
-      "year": "2025",
-      "make": "TOYOTA",
-      "model": "BZ3",
-      "category": "PASSENGER",
-      "batteryCapacity": "56.3 kWh"
-    },
-    "detailImages": [
-      "/bz3/bz3.jpg",
-      "/bz3/bz3 (2).jpg",
-      "/bz3/bz3 (3).jpg",
-      "/bz3/bz3 (4).jpg",
-      "/bz3/bz3 (5).jpg",
-      "/bz3/bz3 (6).jpg",
-      "/bz3/bz3 (7).jpg",
-      "/bz3/bz3 (8).jpg",
-      "/bz3/bz3 (9).jpg",
-      "/bz3/bz3 (10).jpg"
-    ]
-  },
-  {
     "id": 4,
     "slug": "id4-crozz",
     "enabled": true,
