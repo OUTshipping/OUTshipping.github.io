@@ -2,7 +2,7 @@
   {
     "id": 1,
     "slug": "song-plus",
-    "enabled": false,
+    "enabled": true,
     "name": "2025 BYD Song Plus",
     "type": "SUV",
     "range": 520,
@@ -597,31 +597,6 @@
       "/shanhait2/shanhait2 (10).jpg",
       "/shanhait2/shanhait2 (11).jpg",
       "/shanhait2/shanhait2 (12).jpg"
-    ]
-  },
-  {
-    "id": 18,
-    "slug": "toyota-corolla-cross-highland",
-    "enabled": true,
-    "name": "2025 Toyota Highland",
-    "type": "SUV",
-    "range": 530,
-    "seats": 5,
-    "configuration": "Basic",
-    "coverImage": "/highland.jpg",
-    "colors": [
-      "#000000"
-    ],
-    "description": "The Toyota Highland is a versatile SUV designed for both family and commercial use. It comes with a 450 hp motor, offering a maximum range of 530 km and a spacious interior for up to 5 passengers. With advanced safety features and a sleek design, the Highland is perfect for various needs.",
-    "specs": {
-      "year": "2025",
-      "make": "Toyota",
-      "model": "Highland",
-      "category": "SUV",
-      "batteryCapacity": "N/A"
-    },
-    "detailImages": [
-      "/highland.jpg"
     ]
   }
 ]
