@@ -2,14 +2,19 @@
   {
     "id": 1,
     "slug": "song-plus",
-    "enabled": true,
+    "enabled": false,
     "name": "2025 BYD Song Plus",
     "type": "SUV",
     "range": 520,
     "seats": 5,
     "configuration": "Basic",
     "coverImage": "/song.jpg",
-    "colors": ["#FFFFFF", "#000000", "#808080", "#D3D3D3"],
+    "colors": [
+      "#FFFFFF",
+      "#000000",
+      "#808080",
+      "#D3D3D3"
+    ],
     "description": "The BYD Song Plus is a versatile SUV designed for both family and commercial use. It comes with a 450 hp motor, offering a maximum range of 520 km and a spacious interior for up to 5 passengers. With advanced safety features and a sleek design, the Song Plus is perfect for various needs.",
     "specs": {
       "year": "2025",
@@ -41,7 +46,9 @@
     "seats": 6,
     "configuration": "Basic",
     "coverImage": "/V6E.jpg",
-    "colors": ["#FFFFFF"],
+    "colors": [
+      "#FFFFFF"
+    ],
     "description": "Farizon V6E is an electric light truck designed for urban logistics. It offers a spacious cargo area, a range of up to 305 km, and advanced safety features. Ideal for businesses looking for efficient and eco-friendly transportation solutions.",
     "specs": {
       "year": "2025",
@@ -70,7 +77,9 @@
     "seats": 5,
     "configuration": "Basic",
     "coverImage": "/bz3.jpg",
-    "colors": ["#808080"],
+    "colors": [
+      "#808080"
+    ],
     "description": "The TOYOTA BZ3 is a stylish and modern electric vehicle designed for urban driving. It comes with a 300 hp motor, offering a maximum range of 517 km and a sophisticated interior for up to 5 passengers. With advanced safety features and a sleek design, the BZ3 is perfect for urban environments and eco-conscious drivers.",
     "specs": {
       "year": "2025",
@@ -102,7 +111,10 @@
     "seats": 5,
     "configuration": "Basic",
     "coverImage": "/ID.4 CROZZ.png",
-    "colors": ["#000000", "#0011ff"],
+    "colors": [
+      "#000000",
+      "#0011ff"
+    ],
     "description": "The ID.4 CROZZ Pure Enjoyment Edition is an urban-friendly electric SUV that combines style, comfort, and efficiency. It features a 204hp electric motor, a range of up to 442km, and a spacious interior for up to 5 passengers. With its advanced safety features and modern design, it is the perfect choice for eco-conscious drivers who value both practicality and sustainability.",
     "specs": {
       "year": "2025",
@@ -132,7 +144,9 @@
     "seats": 6,
     "configuration": "Basic",
     "coverImage": "/C16.jpg",
-    "colors": ["#000000"],
+    "colors": [
+      "#000000"
+    ],
     "description": "The LEAPMOTOR C16 is a premium SUV designed for comfort and long-distance travel. It offers an impressive range of 910 km, spacious seating for up to 6 passengers, and a luxurious interior. With advanced safety features and a sleek design, the C16 is perfect for families and those seeking a premium driving experience.",
     "specs": {
       "year": "2025",
@@ -161,7 +175,9 @@
     "seats": 5,
     "configuration": "Basic",
     "coverImage": "/EV5.jpg",
-    "colors": ["#808080"],
+    "colors": [
+      "#808080"
+    ],
     "description": "The KIA EV5 is a compact SUV designed for urban driving. It offers a range of 530 km, seating for up to 5 passengers, and a basic configuration. With its efficient electric motor and modern design, the EV5 is perfect for city commuters looking for a reliable and eco-friendly vehicle.",
     "specs": {
       "year": "2025",
@@ -193,7 +209,9 @@
     "seats": 5,
     "configuration": "Basic",
     "coverImage": "/SEAGULL.jpg",
-    "colors": ["#000000"],
+    "colors": [
+      "#000000"
+    ],
     "description": "The BYD SEAGULL is a compact SUV designed for urban driving. It offers a range of 300 km, seating for up to 5 passengers, and a basic configuration. With its efficient electric motor and modern design, the SEAGULL is perfect for city commuters looking for a reliable and eco-friendly vehicle.",
     "specs": {
       "year": "2025",
@@ -222,7 +240,9 @@
     "seats": 5,
     "configuration": "Basic",
     "coverImage": "/yuanplus.jpg",
-    "colors": ["#808080"],
+    "colors": [
+      "#808080"
+    ],
     "description": "The BYD YUAN PLUS is a compact SUV designed for urban driving. It offers a range of 510 km, seating for up to 5 passengers, and a basic configuration. With its efficient electric motor and modern design, the YUAN PLUS is perfect for city commuters looking for a reliable and eco-friendly vehicle.",
     "specs": {
       "year": "2025",
@@ -251,7 +271,9 @@
     "seats": 5,
     "configuration": "Basic",
     "coverImage": "/frontlander/frontlander.jpg",
-    "colors": ["#000000"],
+    "colors": [
+      "#000000"
+    ],
     "description": "The Toyota Corolla Cross Frontlander is a versatile SUV designed for both urban and off-road driving. It offers a range of 400 km, seating for up to 5 passengers, and a premium configuration. With its powerful engine and advanced safety features, the Corolla Cross Frontlander is perfect for families and adventurers alike.",
     "specs": {
       "year": "2025",
@@ -280,7 +302,11 @@
     "seats": 7,
     "configuration": "Premium",
     "coverImage": "/tangl/tangl.jpg",
-    "colors": ["#000000", "#FFFFFF", "#808080"],
+    "colors": [
+      "#000000",
+      "#FFFFFF",
+      "#808080"
+    ],
     "description": "The BYD TANG L is a premium large SUV designed for families and long-distance travel. It offers an impressive range of 600 km, spacious seating for up to 7 passengers, and a luxurious interior. With advanced safety features and powerful performance, the TANG L is perfect for those seeking comfort and capability.",
     "specs": {
       "year": "2025",
@@ -317,7 +343,9 @@
     "seats": 7,
     "configuration": "Commercial",
     "coverImage": "/v7e/v7e.jpg",
-    "colors": ["#FFFFFF"],
+    "colors": [
+      "#FFFFFF"
+    ],
     "description": "The FARIZON V7E is a versatile electric van designed for commercial and family use. It offers a range of 350 km, spacious seating for up to 7 passengers, and excellent cargo capacity. Ideal for businesses and large families seeking an efficient and practical electric vehicle.",
     "specs": {
       "year": "2025",
@@ -354,7 +382,11 @@
     "seats": 5,
     "configuration": "Premium",
     "coverImage": "/randa/randa.jpg",
-    "colors": ["#000000", "#808080", "#FFFFFF"],
+    "colors": [
+      "#000000",
+      "#808080",
+      "#FFFFFF"
+    ],
     "description": "The GEELY RADAR JINGGANG is a premium electric pickup truck combining rugged capability with advanced technology. It offers an impressive range of 550 km, comfortable seating for 5 passengers, and powerful performance. Perfect for those who need both work capability and modern electric vehicle features.",
     "specs": {
       "year": "2025",
@@ -390,7 +422,10 @@
     "seats": 5,
     "configuration": "Premium",
     "coverImage": "/bz3x/bz3x.jpg",
-    "colors": ["#FFFFFF", "#000000"],
+    "colors": [
+      "#FFFFFF",
+      "#000000"
+    ],
     "description": "The TOYOTA BZ3X is a premium electric SUV that combines Toyota's legendary reliability with cutting-edge electric technology. With a range of 580 km, seating for 5 passengers, and advanced safety systems, the BZ3X represents the future of sustainable mobility.",
     "specs": {
       "year": "2025",
@@ -427,7 +462,10 @@
     "seats": 5,
     "configuration": "Basic",
     "coverImage": "/c10/c10.jpg",
-    "colors": ["#808080", "#000000"],
+    "colors": [
+      "#808080",
+      "#000000"
+    ],
     "description": "The LEAPMOTOR C10 is a smart electric SUV designed for modern drivers. It offers a range of 530 km, comfortable seating for 5 passengers, and innovative technology features. With its sleek design and competitive pricing, the C10 is an excellent choice for tech-savvy buyers.",
     "specs": {
       "year": "2025",
@@ -460,7 +498,11 @@
     "seats": 5,
     "configuration": "Basic",
     "coverImage": "/icar03/icar03.jpg",
-    "colors": ["#FF6B6B", "#4ECDC4", "#FFE66D"],
+    "colors": [
+      "#FF6B6B",
+      "#4ECDC4",
+      "#FFE66D"
+    ],
     "description": "The ICAR 03 is a youthful and stylish electric SUV designed for urban adventurers. It offers a range of 400 km, seating for 5 passengers, and vibrant color options. With its affordable price and fun-to-drive character, the ICAR 03 is perfect for young professionals and families.",
     "specs": {
       "year": "2025",
@@ -493,7 +535,10 @@
     "seats": 6,
     "configuration": "Commercial",
     "coverImage": "/icarv23/icarv23.jpg",
-    "colors": ["#FFFFFF", "#000000"],
+    "colors": [
+      "#FFFFFF",
+      "#000000"
+    ],
     "description": "The ICAR V23 is a practical electric van designed for both commercial and family use. It offers a range of 380 km, spacious seating for 6 passengers, and versatile cargo configurations. Perfect for small businesses and growing families who need space and efficiency.",
     "specs": {
       "year": "2025",
@@ -526,7 +571,10 @@
     "seats": 5,
     "configuration": "Commercial",
     "coverImage": "/shanhait2/shanhait2.jpg",
-    "colors": ["#000000", "#FFFFFF"],
+    "colors": [
+      "#000000",
+      "#FFFFFF"
+    ],
     "description": "The JETOUR SHANHAI T2 is a rugged electric pickup truck designed for both work and adventure. It offers a range of 420 km, seating for 5 passengers, and impressive towing capacity. With its durable construction and off-road capability, the SHANHAI T2 is perfect for those who demand versatility.",
     "specs": {
       "year": "2025",
@@ -561,7 +609,9 @@
     "seats": 5,
     "configuration": "Basic",
     "coverImage": "/highland/highland.jpg",
-    "colors": ["#000000"],
+    "colors": [
+      "#000000"
+    ],
     "description": "The Toyota Highland is a versatile SUV designed for both family and commercial use. It comes with a 450 hp motor, offering a maximum range of 530 km and a spacious interior for up to 5 passengers. With advanced safety features and a sleek design, the Highland is perfect for various needs.",
     "specs": {
       "year": "2025",
@@ -581,4 +631,3 @@
     ]
   }
 ]
-
