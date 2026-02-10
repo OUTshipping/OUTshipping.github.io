@@ -392,7 +392,7 @@ async function confirmDelete(vehicle) {
   await saveAllVehicles('Delete vehicle: ' + vehicle.name)
 }
 
-// 保存所有车辆数据到 GitHub
+// 保存所有车辆数据到 GitHub（含 SHA 不匹配自动重试）
 async function saveAllVehicles(commitMsg) {
   try {
     const content = JSON.stringify(vehicles.value, null, 2)
@@ -400,7 +400,22 @@ async function saveAllVehicles(commitMsg) {
     vehiclesFileSha.value = result.content.sha
     showStatus('Saved successfully! Site will update in 1-2 minutes.', 'success')
   } catch (err) {
-    showStatus('Save failed: ' + err.message, 'error')
+    // SHA 不匹配时自动重试：重新获取最新 SHA 再保存一次
+    if (err.message && err.message.includes('does not match')) {
+      try {
+        showStatus('SHA mismatch, retrying...', 'info')
+        const { sha: latestSha } = await getFileContent(token, 'public/data/vehicles.json')
+        vehiclesFileSha.value = latestSha
+        const content = JSON.stringify(vehicles.value, null, 2)
+        const result = await updateFile(token, 'public/data/vehicles.json', content, vehiclesFileSha.value, commitMsg)
+        vehiclesFileSha.value = result.content.sha
+        showStatus('Saved successfully! Site will update in 1-2 minutes.', 'success')
+      } catch (retryErr) {
+        showStatus('Save failed after retry: ' + retryErr.message, 'error')
+      }
+    } else {
+      showStatus('Save failed: ' + err.message, 'error')
+    }
   }
 }
 
@@ -488,6 +503,7 @@ onMounted(() => {
 .admin-page {
   min-height: 100vh;
   background: #f0f2f5;
+  color: #333;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
