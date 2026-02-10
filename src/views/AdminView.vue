@@ -26,6 +26,9 @@
         <h1>Vehicle Management</h1>
         <div class="header-actions">
           <button class="btn-add" @click="openAddForm">+ Add Vehicle</button>
+          <button class="btn-deploy" @click="handleDeploy" :disabled="deploying">
+            {{ deploying ? 'Deploying...' : 'Deploy to Live Site' }}
+          </button>
           <button class="btn-logout" @click="handleLogout">Logout</button>
         </div>
       </header>
@@ -189,7 +192,7 @@
 
 <script setup>
 import { ref, reactive, onMounted } from 'vue'
-import { validateToken, getFileContent, updateFile, uploadImage } from '@/utils/github.js'
+import { validateToken, getFileContent, updateFile, uploadImage, deployToMain } from '@/utils/github.js'
 
 // 认证状态
 const authenticated = ref(false)
@@ -208,6 +211,7 @@ const showForm = ref(false)
 const isEditing = ref(false)
 const editingId = ref(null)
 const saving = ref(false)
+const deploying = ref(false)
 const coverInput = ref(null)
 const detailInput = ref(null)
 
@@ -419,6 +423,20 @@ async function saveAllVehicles(commitMsg) {
   }
 }
 
+// 一键部署到前台网站（将 source 分支数据同步到 main 分支）
+async function handleDeploy() {
+  if (!confirm('确认将当前数据部署到前台网站？')) return
+  deploying.value = true
+  try {
+    await deployToMain(token)
+    showStatus('Deployed successfully! Live site will update in ~1 minute.', 'success')
+  } catch (err) {
+    showStatus('Deploy failed: ' + err.message, 'error')
+  } finally {
+    deploying.value = false
+  }
+}
+
 // 保存车辆（新增或编辑）
 async function saveVehicle() {
   if (!form.name || !form.slug || !form.type) {
@@ -613,6 +631,20 @@ onMounted(() => {
 }
 
 .btn-add:hover { background: #219a52; }
+
+.btn-deploy {
+  background: #0074D9;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-deploy:hover { background: #005fa3; }
+.btn-deploy:disabled { background: #999; cursor: not-allowed; }
 
 .btn-logout {
   background: #e74c3c;

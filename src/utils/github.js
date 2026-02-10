@@ -3,6 +3,7 @@
 
 const REPO_API = 'https://api.github.com/repos/OUTshipping/OUTshipping.github.io'
 const BRANCH = 'source'
+const MAIN_BRANCH = 'main'
 
 /**
  * 构建请求头
@@ -162,3 +163,47 @@ export async function deleteFile(token, path, sha, message) {
   return await res.json()
 }
 
+/**
+ * 将 source 分支的 vehicles.json 部署到 main 分支
+ * 直接通过 GitHub API 跨分支同步数据文件，无需本地构建
+ * @param {string} token - GitHub PAT
+ * @returns {Promise<object>} GitHub API 响应
+ */
+export async function deployToMain(token) {
+  // 1. 读取 source 分支上的 vehicles.json 原始 Base64 内容
+  const sourceRes = await fetch(`${REPO_API}/contents/public/data/vehicles.json?ref=${BRANCH}`, {
+    headers: getHeaders(token)
+  })
+  if (!sourceRes.ok) {
+    throw new Error(`读取 source 分支数据失败: ${sourceRes.status} ${sourceRes.statusText}`)
+  }
+  const sourceData = await sourceRes.json()
+  const base64Content = sourceData.content.replace(/\n/g, '')
+
+  // 2. 获取 main 分支上 data/vehicles.json 的当前 SHA
+  const mainRes = await fetch(`${REPO_API}/contents/data/vehicles.json?ref=${MAIN_BRANCH}`, {
+    headers: getHeaders(token)
+  })
+  if (!mainRes.ok) {
+    throw new Error(`读取 main 分支数据失败: ${mainRes.status} ${mainRes.statusText}`)
+  }
+  const mainData = await mainRes.json()
+  const mainSha = mainData.sha
+
+  // 3. 将 source 的内容写入 main 分支
+  const updateRes = await fetch(`${REPO_API}/contents/data/vehicles.json`, {
+    method: 'PUT',
+    headers: getHeaders(token),
+    body: JSON.stringify({
+      message: 'deploy: sync vehicles data to live site',
+      content: base64Content,
+      sha: mainSha,
+      branch: MAIN_BRANCH
+    })
+  })
+  if (!updateRes.ok) {
+    const err = await updateRes.json()
+    throw new Error(`部署到 main 失败: ${err.message}`)
+  }
+  return await updateRes.json()
+}
