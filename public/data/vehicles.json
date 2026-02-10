@@ -460,7 +460,7 @@
   {
     "id": 15,
     "slug": "icar-03",
-    "enabled": true,
+    "enabled": false,
     "name": "2025 ICAR 03",
     "type": "SUV",
     "range": 400,
@@ -497,7 +497,7 @@
   {
     "id": 16,
     "slug": "icar-v23",
-    "enabled": true,
+    "enabled": false,
     "name": "2025 ICAR V23",
     "type": "VAN",
     "range": 380,
