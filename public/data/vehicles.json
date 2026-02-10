@@ -533,7 +533,7 @@
   {
     "id": 17,
     "slug": "jetour-shanhai-t2",
-    "enabled": false,
+    "enabled": true,
     "name": "2025 Jetour Shanhai T2",
     "type": "TRUCK",
     "range": 420,
