@@ -2,7 +2,7 @@
   {
     "id": 1,
     "slug": "song-plus",
-    "enabled": true,
+    "enabled": false,
     "name": "2025 BYD Song Plus",
     "type": "SUV",
     "range": 520,
@@ -609,7 +609,9 @@
     "seats": 5,
     "configuration": "Basic",
     "coverImage": "/highland.jpg",
-    "colors": ["#000000"],
+    "colors": [
+      "#000000"
+    ],
     "description": "The Toyota Highland is a versatile SUV designed for both family and commercial use. It comes with a 450 hp motor, offering a maximum range of 530 km and a spacious interior for up to 5 passengers. With advanced safety features and a sleek design, the Highland is perfect for various needs.",
     "specs": {
       "year": "2025",
