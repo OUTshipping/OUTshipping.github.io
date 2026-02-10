@@ -57,97 +57,37 @@ const router = createRouter({
       name: 'SUV',
       component: () => import('@/views/SUVView.vue')
     },
-    // 车辆详情页
+    // 动态车辆详情页
     {
-      path: '/song-plus',
-      name: 'SongPlus',
-      component: () => import('@/views/vehicles/SongPlusView.vue')
+      path: '/vehicle/:slug',
+      name: 'VehicleDetail',
+      component: () => import('@/views/VehicleDynamicView.vue')
     },
+    // 后台管理页面
     {
-      path: '/byd-seagull',
-      name: 'BYDSeagull',
-      component: () => import('@/views/vehicles/BYDSeagullView.vue')
+      path: '/admin',
+      name: 'Admin',
+      component: () => import('@/views/AdminView.vue')
     },
-    {
-      path: '/byd-yuan-plus',
-      name: 'BYDYuanPlus',
-      component: () => import('@/views/vehicles/BYDYuanPlusView.vue')
-    },
-    {
-      path: '/toyota-bz3',
-      name: 'ToyotaBZ3',
-      component: () => import('@/views/vehicles/ToyotaBZ3View.vue')
-    },
-    {
-      path: '/id4-crozz',
-      name: 'ID4Crozz',
-      component: () => import('@/views/vehicles/ID4CrozzView.vue')
-    },
-    {
-      path: '/leapmotor-c16',
-      name: 'LeapmotorC16',
-      component: () => import('@/views/vehicles/LeapmotorC16View.vue')
-    },
-    {
-      path: '/kia-ev5',
-      name: 'KIAEV5',
-      component: () => import('@/views/vehicles/KIAEV5View.vue')
-    },
-    {
-      path: '/farizon-v6e',
-      name: 'FarizonV6E',
-      component: () => import('@/views/vehicles/FarizonV6EView.vue')
-    },
-    {
-      path: '/toyota-corolla-cross-frontlander',
-      name: 'ToyotaFrontlander',
-      component: () => import('@/views/vehicles/ToyotaFrontlanderView.vue')
-    },
-    {
-      path: '/toyota-corolla-cross-highland',
-      name: 'ToyotaHighland',
-      component: () => import('@/views/vehicles/ToyotaHighlandView.vue')
-    },
-    {
-      path: '/byd-tang-l',
-      name: 'BYDTangL',
-      component: () => import('@/views/vehicles/BYDTangLView.vue')
-    },
-    {
-      path: '/farizon-v7e',
-      name: 'FarizonV7E',
-      component: () => import('@/views/vehicles/FarizonV7EView.vue')
-    },
-    {
-      path: '/geely-randa',
-      name: 'GeelyRanda',
-      component: () => import('@/views/vehicles/GeelyRandaView.vue')
-    },
-    {
-      path: '/toyota-bz3x',
-      name: 'ToyotaBZ3X',
-      component: () => import('@/views/vehicles/ToyotaBZ3XView.vue')
-    },
-    {
-      path: '/leapmotor-c10',
-      name: 'LeapmotorC10',
-      component: () => import('@/views/vehicles/LeapmotorC10View.vue')
-    },
-    {
-      path: '/icar-03',
-      name: 'ICAR03',
-      component: () => import('@/views/vehicles/ICAR03View.vue')
-    },
-    {
-      path: '/icar-v23',
-      name: 'ICARV23',
-      component: () => import('@/views/vehicles/ICARV23View.vue')
-    },
-    {
-      path: '/jetour-shanhai-t2',
-      name: 'JetourShanhaiT2',
-      component: () => import('@/views/vehicles/JetourShanhaiT2View.vue')
-    }
+    // 旧路径兼容重定向
+    { path: '/song-plus', redirect: '/vehicle/song-plus' },
+    { path: '/farizon-v6e', redirect: '/vehicle/farizon-v6e' },
+    { path: '/toyota-bz3', redirect: '/vehicle/toyota-bz3' },
+    { path: '/id4-crozz', redirect: '/vehicle/id4-crozz' },
+    { path: '/leapmotor-c16', redirect: '/vehicle/leapmotor-c16' },
+    { path: '/kia-ev5', redirect: '/vehicle/kia-ev5' },
+    { path: '/byd-seagull', redirect: '/vehicle/byd-seagull' },
+    { path: '/byd-yuan-plus', redirect: '/vehicle/byd-yuan-plus' },
+    { path: '/toyota-corolla-cross-frontlander', redirect: '/vehicle/toyota-corolla-cross-frontlander' },
+    { path: '/toyota-corolla-cross-highland', redirect: '/vehicle/toyota-corolla-cross-highland' },
+    { path: '/byd-tang-l', redirect: '/vehicle/byd-tang-l' },
+    { path: '/farizon-v7e', redirect: '/vehicle/farizon-v7e' },
+    { path: '/geely-randa', redirect: '/vehicle/geely-randa' },
+    { path: '/toyota-bz3x', redirect: '/vehicle/toyota-bz3x' },
+    { path: '/leapmotor-c10', redirect: '/vehicle/leapmotor-c10' },
+    { path: '/icar-03', redirect: '/vehicle/icar-03' },
+    { path: '/icar-v23', redirect: '/vehicle/icar-v23' },
+    { path: '/jetour-shanhai-t2', redirect: '/vehicle/jetour-shanhai-t2' }
   ],
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {

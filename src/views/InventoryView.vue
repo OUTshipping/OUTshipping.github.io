@@ -119,195 +119,8 @@ const sortFilters = [
   { value: 'seats-descending', label: 'Seats Descending' }
 ]
 
-const vehicles = ref([
-  {
-    id: 1,
-    name: '2025 BYD Song Plus',
-    type: 'SUV',
-    range: 520,
-    seats: 5,
-    configuration: 'Basic',
-    colors: ['#FFFFFF', '#000000', '#808080', '#D3D3D3'],
-    image: '/song.jpg',
-    link: '/song-plus'
-  },
-  {
-    id: 2,
-    name: '2025 Farizon V6E',
-    type: 'VAN',
-    range: 305,
-    seats: 6,
-    configuration: 'Basic',
-    colors: ['#FFFFFF'],
-    image: '/V6E.jpg',
-    link: '/farizon-v6e'
-  },
-  {
-    id: 3,
-    name: '2025 Toyota Bz3',
-    type: 'SEDAN',
-    range: 517,
-    seats: 5,
-    configuration: 'Basic',
-    colors: ['#808080'],
-    image: '/bz3.jpg',
-    link: '/toyota-bz3'
-  },
-  {
-    id: 4,
-    name: '2025 ID.4 Crozz',
-    type: 'SUV',
-    range: 442,
-    seats: 5,
-    configuration: 'Basic',
-    colors: ['#FFFFFF'],
-    image: '/ID.4 CROZZ.png',
-    link: '/id4-crozz'
-  },
-  {
-    id: 5,
-    name: '2025 Leapmotor C16',
-    type: 'SUV',
-    range: 910,
-    seats: 6,
-    configuration: 'Basic',
-    colors: ['#000000'],
-    image: '/C16.jpg',
-    link: '/leapmotor-c16'
-  },
-  {
-    id: 6,
-    name: '2025 KIA Ev5',
-    type: 'SUV',
-    range: 530,
-    seats: 5,
-    configuration: 'Basic',
-    colors: ['#808080'],
-    image: '/EV5.jpg',
-    link: '/kia-ev5'
-  },
-  {
-    id: 7,
-    name: '2025 BYD Seagull',
-    type: 'SUV',
-    range: 300,
-    seats: 5,
-    configuration: 'Basic',
-    colors: ['#000000'],
-    image: '/SEAGULL.jpg',
-    link: '/byd-seagull'
-  },
-  {
-    id: 8,
-    name: '2025 BYD Yuan Plus',
-    type: 'SUV',
-    range: 510,
-    seats: 5,
-    configuration: 'Basic',
-    colors: ['#808080'],
-    image: '/yuanplus.jpg',
-    link: '/byd-yuan-plus'
-  },
-  {
-    id: 9,
-    name: '2025 Toyota Frontlander',
-    type: 'SUV',
-    range: 530,
-    seats: 5,
-    configuration: 'Basic',
-    colors: ['#000000'],
-    image: '/highland.jpg',
-    link: '/toyota-corolla-cross-frontlander'
-  },
-  {
-    id: 10,
-    name: '2025 BYD TANG L',
-    type: 'SUV',
-    range: 600,
-    seats: 7,
-    configuration: 'Premium',
-    colors: ['#000000', '#FFFFFF', '#808080'],
-    image: '/tangl/tangl.jpg',
-    link: '/byd-tang-l'
-  },
-  {
-    id: 11,
-    name: '2025 FARIZON V7E',
-    type: 'VAN',
-    range: 350,
-    seats: 7,
-    configuration: 'Commercial',
-    colors: ['#FFFFFF'],
-    image: '/v7e/v7e.jpg',
-    link: '/farizon-v7e'
-  },
-  {
-    id: 12,
-    name: '2025 GEELY RADAR JINGGANG',
-    type: 'PICKUP',
-    range: 550,
-    seats: 5,
-    configuration: 'Premium',
-    colors: ['#000000', '#808080', '#FFFFFF'],
-    image: '/randa/randa.jpg',
-    link: '/geely-randa'
-  },
-  {
-    id: 13,
-    name: '2025 TOYOTA BZ3X',
-    type: 'SUV',
-    range: 580,
-    seats: 5,
-    configuration: 'Premium',
-    colors: ['#FFFFFF', '#000000'],
-    image: '/bz3x/bz3x.jpg',
-    link: '/toyota-bz3x'
-  },
-  {
-    id: 14,
-    name: '2025 LEAPMOTOR C10',
-    type: 'SUV',
-    range: 530,
-    seats: 5,
-    configuration: 'Basic',
-    colors: ['#808080', '#000000'],
-    image: '/c10/c10.jpg',
-    link: '/leapmotor-c10'
-  },
-  {
-    id: 15,
-    name: '2025 ICAR 03',
-    type: 'SUV',
-    range: 400,
-    seats: 5,
-    configuration: 'Basic',
-    colors: ['#FF6B6B', '#4ECDC4', '#FFE66D'],
-    image: '/icar03/icar03.jpg',
-    link: '/icar-03'
-  },
-  {
-    id: 16,
-    name: '2025 ICAR V23',
-    type: 'VAN',
-    range: 380,
-    seats: 6,
-    configuration: 'Commercial',
-    colors: ['#FFFFFF', '#000000'],
-    image: '/icarv23/icarv23.jpg',
-    link: '/icar-v23'
-  },
-  {
-    id: 17,
-    name: '2025 JETOUR SHANHAI T2',
-    type: 'TRUCK',
-    range: 420,
-    seats: 5,
-    configuration: 'Commercial',
-    colors: ['#000000', '#FFFFFF'],
-    image: '/shanhait2/shanhait2.jpg',
-    link: '/jetour-shanhai-t2'
-  }
-])
+// 车辆数据从 JSON 文件动态加载
+const vehicles = ref([])
 
 const selectedTypeLabel = computed(() => selectedType.value)
 
@@ -369,12 +182,34 @@ watch(() => route.query.type, (newType) => {
   }
 }, { immediate: true })
 
-onMounted(() => {
+onMounted(async () => {
+  // 从 JSON 文件加载车辆数据
+  try {
+    const res = await fetch('/data/vehicles.json')
+    const data = await res.json()
+    // 过滤已启用的车辆，并映射字段以兼容模板
+    vehicles.value = data
+      .filter(v => v.enabled)
+      .map(v => ({
+        id: v.id,
+        name: v.name,
+        type: v.type,
+        range: v.range,
+        seats: v.seats,
+        configuration: v.configuration,
+        colors: v.colors,
+        image: v.coverImage,
+        link: `/vehicle/${v.slug}`
+      }))
+  } catch (err) {
+    console.error('加载车辆数据失败:', err)
+  }
+
   // 处理URL参数
   if (route.query.type) {
     selectedType.value = route.query.type.toUpperCase()
   }
-  
+
   // 点击外部关闭下拉菜单
   document.addEventListener('click', (e) => {
     if (!e.target.closest('.custom-select')) {
