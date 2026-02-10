@@ -34,4 +34,5 @@ jobs:
           publish_dir: ./dist
           publish_branch: main
           cname: tgautomobile.com
+          force_orphan: true
 
