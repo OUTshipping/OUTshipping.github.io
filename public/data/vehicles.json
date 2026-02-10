@@ -497,7 +497,7 @@
   {
     "id": 16,
     "slug": "icar-v23",
-    "enabled": false,
+    "enabled": true,
     "name": "2025 ICAR V23",
     "type": "VAN",
     "range": 380,
