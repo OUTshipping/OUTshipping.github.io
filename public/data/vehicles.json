@@ -70,7 +70,7 @@
   {
     "id": 3,
     "slug": "toyota-bz3",
-    "enabled": true,
+    "enabled": false,
     "name": "2025 Toyota Bz3",
     "type": "SEDAN",
     "range": 517,
