@@ -185,7 +185,7 @@ watch(() => route.query.type, (newType) => {
 onMounted(async () => {
   // 从 JSON 文件加载车辆数据
   try {
-    const res = await fetch('/data/vehicles.json')
+    const res = await fetch('https://raw.githubusercontent.com/OUTshipping/OUTshipping.github.io/source/public/data/vehicles.json')
     const data = await res.json()
     // 过滤已启用的车辆，并映射字段以兼容模板
     vehicles.value = data

@@ -42,7 +42,7 @@ async function loadVehicle(slug) {
   error.value = null
   vehicle.value = null
   try {
-    const res = await fetch('/data/vehicles.json')
+    const res = await fetch('https://raw.githubusercontent.com/OUTshipping/OUTshipping.github.io/source/public/data/vehicles.json')
     if (!res.ok) throw new Error('无法加载车辆数据')
     const vehicles = await res.json()
     const found = vehicles.find(v => v.slug === slug && v.enabled)
