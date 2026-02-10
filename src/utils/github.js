@@ -83,7 +83,7 @@ export async function updateFile(token, path, content, sha, message) {
   })
   if (!res.ok) {
     const err = await res.json()
-    throw new Error(`更新文件失败: ${err.message}`)
+    throw new Error(`更新文件失败: ${err.message || JSON.stringify(err)}`)
   }
   return await res.json()
 }
@@ -108,7 +108,7 @@ export async function createFile(token, path, content, message) {
   })
   if (!res.ok) {
     const err = await res.json()
-    throw new Error(`创建文件失败: ${err.message}`)
+    throw new Error(`创建文件失败: ${err.message || JSON.stringify(err)}`)
   }
   return await res.json()
 }
@@ -122,6 +122,7 @@ export async function createFile(token, path, content, message) {
  * @returns {Promise<object>} GitHub API 响应
  */
 export async function uploadImage(token, path, base64Content, message) {
+  // 1. 上传到 source 分支
   const res = await fetch(`${REPO_API}/contents/${path}`, {
     method: 'PUT',
     headers: getHeaders(token),
@@ -133,9 +134,43 @@ export async function uploadImage(token, path, base64Content, message) {
   })
   if (!res.ok) {
     const err = await res.json()
-    throw new Error(`上传图片失败: ${err.message}`)
+    throw new Error(`上传图片失败: ${err.message || JSON.stringify(err)}`)
   }
-  return await res.json()
+  const result = await res.json()
+
+  // 2. 同步上传到 main 分支（去掉 public/ 前缀，让前台能直接访问）
+  if (path.startsWith('public/')) {
+    const mainPath = path.replace(/^public\//, '')
+    try {
+      // 先检查 main 分支上是否已存在该文件（需要 SHA 才能覆盖）
+      let mainSha = undefined
+      const checkRes = await fetch(`${REPO_API}/contents/${mainPath}?ref=${MAIN_BRANCH}`, {
+        headers: getHeaders(token)
+      })
+      if (checkRes.ok) {
+        const existing = await checkRes.json()
+        mainSha = existing.sha
+      }
+
+      const body = {
+        message: `deploy: ${message}`,
+        content: base64Content,
+        branch: MAIN_BRANCH
+      }
+      if (mainSha) body.sha = mainSha
+
+      await fetch(`${REPO_API}/contents/${mainPath}`, {
+        method: 'PUT',
+        headers: getHeaders(token),
+        body: JSON.stringify(body)
+      })
+    } catch (e) {
+      // main 分支同步失败不阻断流程，仅输出警告
+      console.warn('图片同步到 main 分支失败:', e)
+    }
+  }
+
+  return result
 }
 
 /**
@@ -158,7 +193,7 @@ export async function deleteFile(token, path, sha, message) {
   })
   if (!res.ok) {
     const err = await res.json()
-    throw new Error(`删除文件失败: ${err.message}`)
+    throw new Error(`删除文件失败: ${err.message || JSON.stringify(err)}`)
   }
   return await res.json()
 }
@@ -203,7 +238,7 @@ export async function deployToMain(token) {
   })
   if (!updateRes.ok) {
     const err = await updateRes.json()
-    throw new Error(`部署到 main 失败: ${err.message}`)
+    throw new Error(`部署到 main 失败: ${err.message || JSON.stringify(err)}`)
   }
   return await updateRes.json()
 }
