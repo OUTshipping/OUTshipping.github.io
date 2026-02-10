@@ -2,7 +2,7 @@
   {
     "id": 1,
     "slug": "song-plus",
-    "enabled": false,
+    "enabled": true,
     "name": "2025 BYD Song Plus",
     "type": "SUV",
     "range": 520,
@@ -497,7 +497,7 @@
   {
     "id": 16,
     "slug": "icar-v23",
-    "enabled": false,
+    "enabled": true,
     "name": "2025 ICAR V23",
     "type": "VAN",
     "range": 380,
