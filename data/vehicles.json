@@ -68,40 +68,6 @@
     ]
   },
   {
-    "id": 3,
-    "slug": "toyota-bz3",
-    "enabled": true,
-    "name": "2025 Toyota Bz3",
-    "type": "SEDAN",
-    "range": 517,
-    "seats": 5,
-    "configuration": "Basic",
-    "coverImage": "/bz3.jpg",
-    "colors": [
-      "#808080"
-    ],
-    "description": "The TOYOTA BZ3 is a stylish and modern electric vehicle designed for urban driving. It comes with a 300 hp motor, offering a maximum range of 517 km and a sophisticated interior for up to 5 passengers. With advanced safety features and a sleek design, the BZ3 is perfect for urban environments and eco-conscious drivers.",
-    "specs": {
-      "year": "2025",
-      "make": "TOYOTA",
-      "model": "BZ3",
-      "category": "PASSENGER",
-      "batteryCapacity": "56.3 kWh"
-    },
-    "detailImages": [
-      "/bz3/bz3.jpg",
-      "/bz3/bz3 (2).jpg",
-      "/bz3/bz3 (3).jpg",
-      "/bz3/bz3 (4).jpg",
-      "/bz3/bz3 (5).jpg",
-      "/bz3/bz3 (6).jpg",
-      "/bz3/bz3 (7).jpg",
-      "/bz3/bz3 (8).jpg",
-      "/bz3/bz3 (9).jpg",
-      "/bz3/bz3 (10).jpg"
-    ]
-  },
-  {
     "id": 4,
     "slug": "id4-crozz",
     "enabled": true,
@@ -392,7 +358,6 @@
     "configuration": "Premium",
     "coverImage": "/bz3x/bz3x.jpg",
     "colors": [
-      "#FFFFFF",
       "#000000"
     ],
     "description": "The TOYOTA BZ3X is a premium electric SUV that combines Toyota's legendary reliability with cutting-edge electric technology. With a range of 580 km, seating for 5 passengers, and advanced safety systems, the BZ3X represents the future of sustainable mobility.",
@@ -404,21 +369,14 @@
       "batteryCapacity": "90 kWh"
     },
     "detailImages": [
-      "/bz3x/bz3x.jpg",
-      "/bz3x/bz3x (1).jpg",
-      "/bz3x/bz3x (2).jpg",
-      "/bz3x/bz3x (3).jpg",
-      "/bz3x/bz3x (4).jpg",
-      "/bz3x/bz3x (5).jpg",
-      "/bz3x/bz3x (6).jpg",
-      "/bz3x/bz3x (7).jpg",
-      "/bz3x/bz3x (8).jpg",
-      "/bz3x/bz3x (9).jpg",
-      "/bz3x/bz3x (10).jpg",
-      "/bz3x/bz3x (11).jpg",
-      "/bz3x/bz3x (12).jpg",
-      "/bz3x/bz3x (13).jpg",
-      "/bz3x/bz3x (14).jpg"
+      "/vehicles/toyota-bz3x/1.jpg",
+      "/vehicles/toyota-bz3x/2.jpg",
+      "/vehicles/toyota-bz3x/3.jpg",
+      "/vehicles/toyota-bz3x/4.jpg",
+      "/vehicles/toyota-bz3x/5.jpg",
+      "/vehicles/toyota-bz3x/6.jpg",
+      "/vehicles/toyota-bz3x/7.jpg",
+      "/vehicles/toyota-bz3x/8.jpg"
     ]
   },
   {
@@ -460,7 +418,7 @@
   {
     "id": 15,
     "slug": "icar-03",
-    "enabled": true,
+    "enabled": false,
     "name": "2025 ICAR 03",
     "type": "SUV",
     "range": 400,
@@ -497,7 +455,7 @@
   {
     "id": 16,
     "slug": "icar-v23",
-    "enabled": true,
+    "enabled": false,
     "name": "2025 ICAR V23",
     "type": "VAN",
     "range": 380,
@@ -533,7 +491,7 @@
   {
     "id": 17,
     "slug": "jetour-shanhai-t2",
-    "enabled": false,
+    "enabled": true,
     "name": "2025 Jetour Shanhai T2",
     "type": "TRUCK",
     "range": 420,

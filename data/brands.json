@@ -1,0 +1,160 @@
+{
+  "lastUpdated": "2025-07-14",
+  "brands": [
+    {
+      "name": "比亚迪",
+      "nameEn": "BYD",
+      "models": [
+        {
+          "name": "宋PLUS EV",
+          "variants": [
+            {
+              "specName": "2025款 520km 旗舰型",
+              "year": "2025",
+              "type": "SUV",
+              "range": 520,
+              "seats": 5,
+              "batteryCapacity": "71.7 kWh"
+            },
+            {
+              "specName": "2025款 605km 旗舰PLUS",
+              "year": "2025",
+              "type": "SUV",
+              "range": 605,
+              "seats": 5,
+              "batteryCapacity": "87.04 kWh"
+            }
+          ]
+        },
+        {
+          "name": "海鸥",
+          "variants": [
+            {
+              "specName": "2024款 405km 骑士版",
+              "year": "2024",
+              "type": "SEDAN",
+              "range": 405,
+              "seats": 5,
+              "batteryCapacity": "44.93 kWh"
+            }
+          ]
+        },
+        {
+          "name": "汉EV",
+          "variants": [
+            {
+              "specName": "2024款 715km 旗舰型",
+              "year": "2024",
+              "type": "SEDAN",
+              "range": 715,
+              "seats": 5,
+              "batteryCapacity": "85.44 kWh"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "特斯拉",
+      "nameEn": "Tesla",
+      "models": [
+        {
+          "name": "Model Y",
+          "variants": [
+            {
+              "specName": "2024款 后轮驱动版",
+              "year": "2024",
+              "type": "SUV",
+              "range": 554,
+              "seats": 5,
+              "batteryCapacity": "60 kWh"
+            }
+          ]
+        },
+        {
+          "name": "Model 3",
+          "variants": [
+            {
+              "specName": "2024款 焕新版",
+              "year": "2024",
+              "type": "SEDAN",
+              "range": 606,
+              "seats": 5,
+              "batteryCapacity": "60 kWh"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "丰田",
+      "nameEn": "Toyota",
+      "models": [
+        {
+          "name": "bZ3X",
+          "variants": [
+            {
+              "specName": "2024款 615km 长续航版",
+              "year": "2024",
+              "type": "SUV",
+              "range": 615,
+              "seats": 5,
+              "batteryCapacity": "71.4 kWh"
+            }
+          ]
+        },
+        {
+          "name": "bZ3",
+          "variants": [
+            {
+              "specName": "2024款 616km 长续航PRO",
+              "year": "2024",
+              "type": "SEDAN",
+              "range": 616,
+              "seats": 5,
+              "batteryCapacity": "65.3 kWh"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "极氪",
+      "nameEn": "Zeekr",
+      "models": [
+        {
+          "name": "001",
+          "variants": [
+            {
+              "specName": "2024款 100kWh WE版",
+              "year": "2024",
+              "type": "SEDAN",
+              "range": 741,
+              "seats": 5,
+              "batteryCapacity": "100 kWh"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "吉利",
+      "nameEn": "Geely",
+      "models": [
+        {
+          "name": "银河E5",
+          "variants": [
+            {
+              "specName": "2024款 530km 旗舰版",
+              "year": "2024",
+              "type": "SUV",
+              "range": 530,
+              "seats": 5,
+              "batteryCapacity": "60.22 kWh"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
