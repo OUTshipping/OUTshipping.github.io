@@ -83,6 +83,48 @@
       <!-- 新增/编辑表单 -->
       <div v-if="showForm" class="form-container">
         <h2>{{ isEditing ? 'Edit Vehicle' : 'Add New Vehicle' }}</h2>
+
+        <!-- 品牌数据库快速填充 -->
+        <div v-if="brandsData.length > 0" class="db-selector-card">
+          <h3 class="db-selector-title">Quick Fill from Database</h3>
+          <p class="db-selector-hint">Select brand, model and variant to auto-fill the form fields below.</p>
+          <div class="db-selector-row">
+            <div class="db-selector-group">
+              <label>Brand</label>
+              <select v-model="selectedBrand" @change="onBrandChange">
+                <option value="">-- Select Brand --</option>
+                <option v-for="b in brandsData" :key="b.name" :value="b.name">
+                  {{ b.name }} ({{ b.nameEn }})
+                </option>
+              </select>
+            </div>
+            <div class="db-selector-group">
+              <label>Model</label>
+              <select v-model="selectedModel" @change="onModelChange" :disabled="!selectedBrand">
+                <option value="">-- Select Model --</option>
+                <option v-for="m in currentModels()" :key="m.name" :value="m.name">
+                  {{ m.name }}
+                </option>
+              </select>
+            </div>
+            <div class="db-selector-group">
+              <label>Variant</label>
+              <select v-model="selectedVariant" :disabled="!selectedModel">
+                <option value="">-- Select Variant --</option>
+                <option v-for="v in currentVariants()" :key="v.specName" :value="v.specName">
+                  {{ v.specName }} ({{ v.range }}km)
+                </option>
+              </select>
+            </div>
+            <button class="btn-apply-variant" @click="applyVariant" :disabled="!selectedVariant">
+              Apply
+            </button>
+          </div>
+        </div>
+        <div v-else-if="brandsLoading" class="db-selector-card">
+          <p style="text-align:center; color:#999;">Loading brands database...</p>
+        </div>
+
         <div class="form-grid">
           <div class="form-group">
             <label>Name *</label>
@@ -223,6 +265,79 @@ const statusType = ref('info')
 const pendingCoverFile = ref(null)
 const pendingDetailFiles = ref([])
 
+// 品牌数据库（级联选择器）
+const brandsData = ref([])
+const brandsLoading = ref(false)
+const selectedBrand = ref('')
+const selectedModel = ref('')
+const selectedVariant = ref('')
+
+// 计算当前选中品牌下的车系列表
+function currentModels() {
+  const brand = brandsData.value.find(b => b.name === selectedBrand.value)
+  return brand ? brand.models : []
+}
+
+// 计算当前选中车系下的配置列表
+function currentVariants() {
+  const models = currentModels()
+  const model = models.find(m => m.name === selectedModel.value)
+  return model ? model.variants : []
+}
+
+// 品牌选择变化时重置下级
+function onBrandChange() {
+  selectedModel.value = ''
+  selectedVariant.value = ''
+}
+
+// 车系选择变化时重置配置
+function onModelChange() {
+  selectedVariant.value = ''
+}
+
+// 选择配置后自动填充表单
+function applyVariant() {
+  if (!selectedVariant.value) return
+  const brand = brandsData.value.find(b => b.name === selectedBrand.value)
+  if (!brand) return
+  const model = brand.models.find(m => m.name === selectedModel.value)
+  if (!model) return
+  const variant = model.variants.find(v => v.specName === selectedVariant.value)
+  if (!variant) return
+
+  form.name = `${variant.year} ${brand.nameEn} ${model.name}`
+  form.slug = autoSlug(form.name)
+  form.type = variant.type || 'SUV'
+  form.range = variant.range || 0
+  form.seats = variant.seats || 5
+  form.specs.year = variant.year || '2025'
+  form.specs.make = brand.nameEn
+  form.specs.model = model.name
+  form.specs.batteryCapacity = variant.batteryCapacity || 'N/A'
+  form.specs.category = 'PASSENGER'
+
+  showStatus('Auto-filled from database: ' + form.name, 'success')
+}
+
+// 加载品牌数据库
+async function loadBrandsData() {
+  brandsLoading.value = true
+  try {
+    const url = 'https://raw.githubusercontent.com/OUTshipping/OUTshipping.github.io/source/public/data/brands.json'
+    const resp = await fetch(url)
+    if (resp.ok) {
+      const data = await resp.json()
+      brandsData.value = data.brands || []
+      console.log(`Loaded ${brandsData.value.length} brands from database`)
+    }
+  } catch (err) {
+    console.warn('Failed to load brands database:', err)
+  } finally {
+    brandsLoading.value = false
+  }
+}
+
 const emptyForm = () => ({
   name: '',
   slug: '',
@@ -261,6 +376,7 @@ async function handleLogin() {
       authenticated.value = true
       sessionStorage.setItem('gh_token', token)
       await loadVehicles()
+      loadBrandsData()
     } else {
       loginError.value = result.message
     }
@@ -512,6 +628,7 @@ onMounted(() => {
     token = savedToken
     authenticated.value = true
     loadVehicles()
+    loadBrandsData()
   }
 })
 </script>
@@ -801,6 +918,93 @@ input:checked + .slider:before { transform: translateX(20px); }
   padding-bottom: 8px;
 }
 
+/* 品牌数据库选择器 */
+.db-selector-card {
+  background: #e8f4fd;
+  border: 1px solid #b3d9f2;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+.db-selector-title {
+  color: #0066aa !important;
+  margin: 0 0 4px 0 !important;
+  border-bottom: none !important;
+  padding-bottom: 0 !important;
+  font-size: 16px;
+}
+
+.db-selector-hint {
+  color: #557;
+  font-size: 13px;
+  margin: 0 0 14px 0;
+}
+
+.db-selector-row {
+  display: flex;
+  gap: 12px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.db-selector-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 160px;
+}
+
+.db-selector-group label {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 6px;
+  font-size: 13px;
+}
+
+.db-selector-group select {
+  padding: 9px 10px;
+  border: 2px solid #b3d9f2;
+  border-radius: 6px;
+  font-size: 14px;
+  background: #fff;
+  transition: border-color 0.3s;
+}
+
+.db-selector-group select:focus {
+  outline: none;
+  border-color: #0074D9;
+}
+
+.db-selector-group select:disabled {
+  background: #f0f0f0;
+  color: #999;
+  cursor: not-allowed;
+}
+
+.btn-apply-variant {
+  padding: 9px 20px;
+  background: #0074D9;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+  white-space: nowrap;
+  align-self: flex-end;
+}
+
+.btn-apply-variant:hover:not(:disabled) {
+  background: #005fa3;
+}
+
+.btn-apply-variant:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
 .form-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -960,5 +1164,7 @@ input:checked + .slider:before { transform: translateX(20px); }
   .admin-header { flex-direction: column; gap: 10px; text-align: center; }
   .vehicle-table { font-size: 12px; }
   .thumb { width: 40px; height: 28px; }
+  .db-selector-row { flex-direction: column; }
+  .db-selector-group { min-width: 100%; }
 }
 </style>
