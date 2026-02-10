@@ -358,7 +358,6 @@
     "configuration": "Premium",
     "coverImage": "/bz3x/bz3x.jpg",
     "colors": [
-      "#FFFFFF",
       "#000000"
     ],
     "description": "The TOYOTA BZ3X is a premium electric SUV that combines Toyota's legendary reliability with cutting-edge electric technology. With a range of 580 km, seating for 5 passengers, and advanced safety systems, the BZ3X represents the future of sustainable mobility.",
@@ -370,21 +369,14 @@
       "batteryCapacity": "90 kWh"
     },
     "detailImages": [
-      "/bz3x/bz3x.jpg",
-      "/bz3x/bz3x (1).jpg",
-      "/bz3x/bz3x (2).jpg",
-      "/bz3x/bz3x (3).jpg",
-      "/bz3x/bz3x (4).jpg",
-      "/bz3x/bz3x (5).jpg",
-      "/bz3x/bz3x (6).jpg",
-      "/bz3x/bz3x (7).jpg",
-      "/bz3x/bz3x (8).jpg",
-      "/bz3x/bz3x (9).jpg",
-      "/bz3x/bz3x (10).jpg",
-      "/bz3x/bz3x (11).jpg",
-      "/bz3x/bz3x (12).jpg",
-      "/bz3x/bz3x (13).jpg",
-      "/bz3x/bz3x (14).jpg"
+      "/vehicles/toyota-bz3x/1.jpg",
+      "/vehicles/toyota-bz3x/2.jpg",
+      "/vehicles/toyota-bz3x/3.jpg",
+      "/vehicles/toyota-bz3x/4.jpg",
+      "/vehicles/toyota-bz3x/5.jpg",
+      "/vehicles/toyota-bz3x/6.jpg",
+      "/vehicles/toyota-bz3x/7.jpg",
+      "/vehicles/toyota-bz3x/8.jpg"
     ]
   },
   {
