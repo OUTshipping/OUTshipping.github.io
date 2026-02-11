@@ -2,26 +2,42 @@
 新能源车型数据爬虫 — 从汽车之家爬取新能源品牌/车系/配置数据
 输出：public/data/brands.json
 用法：python -u fetch_ev_brands.py
+
+优化：使用 ThreadPoolExecutor 并发请求 + Session 连接复用
+预计耗时：2-5 分钟（取决于网络）
 """
 import sys
 import re
 import json
 import os
 import time
+import threading
 import requests
+import urllib3
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from bs4 import BeautifulSoup
 from datetime import datetime
 
 # 强制 stdout 不缓冲
 sys.stdout.reconfigure(line_buffering=True)
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 # ============ 常量与配置 ============
 
-HEADERS = {
+MAX_WORKERS = 20  # 并发线程数
+OUTPUT_PATH = os.path.join(os.path.dirname(__file__), "public", "data", "brands.json")
+
+# 全局 Session — 复用 TCP/SSL 连接
+SESSION = requests.Session()
+SESSION.headers.update({
     "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
                   "(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
-}
-OUTPUT_PATH = os.path.join(os.path.dirname(__file__), "public", "data", "brands.json")
+})
+SESSION.verify = False  # 禁用 SSL 验证以兼容代理/VPN
+
+# 线程安全的进度计数器
+_lock = threading.Lock()
+_counter = {"done": 0, "total": 0}
 
 # 品牌中文→英文名映射
 BRAND_EN_MAP = {
@@ -65,22 +81,17 @@ RE_BRAND_ID = re.compile(r'/price/brand-(\d+)\.html')
 
 # ============ API 请求函数 ============
 
-import urllib3
-urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-
 def fetch(url, params=None, retries=3, timeout=15):
-    """带重试的 GET 请求（禁用 SSL 验证以兼容代理/VPN 环境）"""
+    """带重试的 GET 请求（使用全局 Session 复用连接）"""
     for attempt in range(retries):
         try:
-            r = requests.get(url, headers=HEADERS, params=params,
-                             timeout=timeout, verify=False)
+            r = SESSION.get(url, params=params, timeout=timeout)
             r.raise_for_status()
             return r
         except requests.RequestException as e:
             if attempt == retries - 1:
-                print(f"  [错误] 请求失败: {e}")
                 return None
-            time.sleep(2)
+            time.sleep(1)
     return None
 
 
@@ -234,69 +245,114 @@ def extract_ev_variants(result):
     return variants
 
 
+# ============ 并发 Worker 函数 ============
+
+def _worker_fetch_series(brand_tuple):
+    """线程 worker：获取某品牌下的所有车系"""
+    brand_id, brand_name = brand_tuple
+    series_list = get_series_for_brand(brand_id)
+    with _lock:
+        _counter["done"] += 1
+        done, total = _counter["done"], _counter["total"]
+    if done % 20 == 0 or done == total:
+        print(f"    阶段1 进度: {done}/{total} 品牌已扫描")
+    return (brand_id, brand_name, series_list)
+
+
+def _worker_fetch_config(task_tuple):
+    """线程 worker：获取某车系的配置并提取新能源变体"""
+    series_id, series_name, brand_id, brand_name = task_tuple
+    config = get_series_config(series_id)
+    variants = []
+    if config:
+        variants = extract_ev_variants(config)
+    with _lock:
+        _counter["done"] += 1
+        done, total = _counter["done"], _counter["total"]
+    if done % 50 == 0 or done == total:
+        print(f"    阶段2 进度: {done}/{total} 车系已扫描")
+    return (brand_id, brand_name, series_name, variants)
+
+
 # ============ 主流程 ============
 
 def main():
+    t_start = time.time()
     print("=" * 60)
-    print("  新能源车型数据爬虫 -- 汽车之家")
+    print("  新能源车型数据爬虫 -- 汽车之家 (并发加速版)")
     print("=" * 60)
 
     # 1. 获取全部品牌
-    print("\n[1/3] 获取品牌列表...")
+    print("\n[1/4] 获取品牌列表...")
     all_brands = get_all_brands()
     print(f"  共 {len(all_brands)} 个品牌")
+    if not all_brands:
+        print("  [错误] 无法获取品牌列表，请检查网络连接")
+        return
 
-    # 2. 遍历品牌，获取车系和配置
-    print("\n[2/3] 遍历品牌，获取新能源车系配置...")
-    brands_result = []
+    # 2. 阶段1：并发获取所有品牌的车系列表
+    print(f"\n[2/4] 并发获取所有品牌的车系列表 (线程数={MAX_WORKERS})...")
+    _counter["done"] = 0
+    _counter["total"] = len(all_brands)
+
+    brand_series_map = {}  # brand_id -> (brand_name, [(series_id, series_name), ...])
+    with ThreadPoolExecutor(max_workers=MAX_WORKERS) as pool:
+        futures = {pool.submit(_worker_fetch_series, b): b for b in all_brands}
+        for future in as_completed(futures):
+            try:
+                brand_id, brand_name, series_list = future.result()
+                if series_list:
+                    brand_series_map[brand_id] = (brand_name, series_list)
+            except Exception as e:
+                print(f"  [错误] 获取车系失败: {e}")
+
+    total_series = sum(len(v[1]) for v in brand_series_map.values())
+    print(f"  共 {len(brand_series_map)} 个品牌有车系，合计 {total_series} 个车系")
+
+    # 3. 阶段2：并发获取所有车系的配置
+    print(f"\n[3/4] 并发获取所有车系配置 (线程数={MAX_WORKERS})...")
+    all_tasks = []
+    for brand_id, (brand_name, series_list) in brand_series_map.items():
+        for series_id, series_name in series_list:
+            all_tasks.append((series_id, series_name, brand_id, brand_name))
+
+    _counter["done"] = 0
+    _counter["total"] = len(all_tasks)
+
+    # 收集结果：brand_id -> { name, nameEn, models: [...] }
+    results_by_brand = {}
     total_models = 0
     total_variants = 0
 
-    for bi, (brand_id, brand_name) in enumerate(all_brands, 1):
-        brand_en = BRAND_EN_MAP.get(brand_name, brand_name)
-        print(f"\n  [{bi}/{len(all_brands)}] {brand_name} ({brand_en})")
+    with ThreadPoolExecutor(max_workers=MAX_WORKERS) as pool:
+        futures = {pool.submit(_worker_fetch_config, t): t for t in all_tasks}
+        for future in as_completed(futures):
+            try:
+                brand_id, brand_name, series_name, variants = future.result()
+                if not variants:
+                    continue
+                if brand_id not in results_by_brand:
+                    brand_en = BRAND_EN_MAP.get(brand_name, brand_name)
+                    results_by_brand[brand_id] = {
+                        "name": brand_name,
+                        "nameEn": brand_en,
+                        "models": [],
+                    }
+                results_by_brand[brand_id]["models"].append({
+                    "name": series_name,
+                    "variants": variants,
+                })
+                total_models += 1
+                total_variants += len(variants)
+            except Exception as e:
+                print(f"  [错误] 获取配置失败: {e}")
 
-        series_list = get_series_for_brand(brand_id)
-        if not series_list:
-            print(f"    跳过 -- 无车系")
-            continue
+    brands_result = list(results_by_brand.values())
+    # 按品牌名排序
+    brands_result.sort(key=lambda b: b["name"])
 
-        models = []
-        for si, (series_id, series_name) in enumerate(series_list, 1):
-            print(f"    [{si}/{len(series_list)}] {series_name}...", end=" ")
-            config = get_series_config(series_id)
-            if not config:
-                print("无配置数据")
-                time.sleep(0.3)
-                continue
-
-            variants = extract_ev_variants(config)
-            if not variants:
-                print("非新能源/无纯电续航")
-                time.sleep(0.3)
-                continue
-
-            print(f"找到 {len(variants)} 个新能源配置")
-            models.append({
-                "name": series_name,
-                "variants": variants,
-            })
-            total_variants += len(variants)
-            time.sleep(0.5)  # 控制请求频率
-
-        if models:
-            brands_result.append({
-                "name": brand_name,
-                "nameEn": brand_en,
-                "models": models,
-            })
-            total_models += len(models)
-            print(f"  -> {brand_name}: {len(models)} 个新能源车系")
-
-        time.sleep(0.3)
-
-    # 3. 保存 JSON
-    print(f"\n[3/3] 保存数据...")
+    # 4. 保存 JSON
+    print(f"\n[4/4] 保存数据...")
     output = {
         "lastUpdated": datetime.now().strftime("%Y-%m-%d"),
         "brands": brands_result,
@@ -305,8 +361,10 @@ def main():
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
 
+    elapsed = time.time() - t_start
     print(f"\n{'=' * 60}")
     print(f"  完成! 共 {len(brands_result)} 个品牌, {total_models} 个车系, {total_variants} 个配置")
+    print(f"  耗时: {elapsed:.1f} 秒")
     print(f"  数据已保存到: {OUTPUT_PATH}")
     print(f"{'=' * 60}")
 
