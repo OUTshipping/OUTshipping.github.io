@@ -195,11 +195,19 @@
         <h3>Colors</h3>
         <div class="colors-editor">
           <div v-for="(color, idx) in form.colors" :key="idx" class="color-item">
-            <input type="color" v-model="form.colors[idx]" />
-            <span>{{ color }}</span>
+            <span class="color-swatch" :style="{ background: color }"></span>
+            <span>{{ getColorName(color) }}</span>
             <button class="btn-remove-sm" @click="form.colors.splice(idx, 1)">x</button>
           </div>
-          <button class="btn-add-color" @click="form.colors.push('#000000')">+ Add Color</button>
+          <div class="color-add-row">
+            <select v-model="selectedColorToAdd">
+              <option value="">-- Select Color --</option>
+              <option v-for="c in availableColors()" :key="c.hex" :value="c.hex">
+                {{ c.name }}
+              </option>
+            </select>
+            <button class="btn-add-color" @click="addSelectedColor" :disabled="!selectedColorToAdd">+ Add</button>
+          </div>
         </div>
 
         <h3>Cover Image</h3>
@@ -264,6 +272,52 @@ const statusType = ref('info')
 // 待上传的新文件
 const pendingCoverFile = ref(null)
 const pendingDetailFiles = ref([])
+
+// 预定义汽车颜色
+const CAR_COLORS = [
+  { name: 'White', hex: '#FFFFFF' },
+  { name: 'Black', hex: '#000000' },
+  { name: 'Silver', hex: '#C0C0C0' },
+  { name: 'Gray', hex: '#808080' },
+  { name: 'Light Gray', hex: '#D3D3D3' },
+  { name: 'Red', hex: '#FF0000' },
+  { name: 'Dark Red', hex: '#8B0000' },
+  { name: 'Blue', hex: '#0000FF' },
+  { name: 'Dark Blue', hex: '#00008B' },
+  { name: 'Navy Blue', hex: '#0011FF' },
+  { name: 'Green', hex: '#008000' },
+  { name: 'Dark Green', hex: '#006400' },
+  { name: 'Yellow', hex: '#FFD700' },
+  { name: 'Orange', hex: '#FF8C00' },
+  { name: 'Brown', hex: '#8B4513' },
+  { name: 'Beige', hex: '#F5F5DC' },
+  { name: 'Champagne', hex: '#F7E7CE' },
+  { name: 'Pearl', hex: '#FDEEF4' },
+  { name: 'Coral', hex: '#FF6B6B' },
+  { name: 'Teal', hex: '#4ECDC4' },
+  { name: 'Lemon', hex: '#FFE66D' }
+]
+
+// 根据十六进制色值返回颜色名称
+function getColorName(hex) {
+  const found = CAR_COLORS.find(c => c.hex.toUpperCase() === hex.toUpperCase())
+  return found ? found.name : hex
+}
+
+// 返回尚未被选中的可用颜色
+function availableColors() {
+  const selected = form.colors.map(c => c.toUpperCase())
+  return CAR_COLORS.filter(c => !selected.includes(c.hex.toUpperCase()))
+}
+
+// 添加选中的颜色到表单
+function addSelectedColor() {
+  if (!selectedColorToAdd.value) return
+  form.colors.push(selectedColorToAdd.value)
+  selectedColorToAdd.value = ''
+}
+
+const selectedColorToAdd = ref('')
 
 // 品牌数据库（级联选择器）
 const brandsData = ref([])
@@ -1061,11 +1115,36 @@ input:checked + .slider:before { transform: translateX(20px); }
   border-radius: 6px;
 }
 
-.color-item input[type="color"] {
-  width: 30px;
-  height: 30px;
-  border: none;
-  cursor: pointer;
+.color-swatch {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.color-add-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  width: 100%;
+  margin-top: 6px;
+}
+
+.color-add-row select {
+  flex: 1;
+  padding: 8px 10px;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 14px;
+  background: #fff;
+  transition: border-color 0.3s;
+}
+
+.color-add-row select:focus {
+  outline: none;
+  border-color: #0074D9;
 }
 
 .btn-remove-sm {
@@ -1083,13 +1162,20 @@ input:checked + .slider:before { transform: translateX(20px); }
 }
 
 .btn-add-color {
-  background: #eee;
-  border: 2px dashed #ccc;
-  padding: 6px 14px;
+  background: #27ae60;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
   border-radius: 6px;
   cursor: pointer;
-  color: #666;
+  font-weight: bold;
+  font-size: 14px;
+  white-space: nowrap;
+  transition: background 0.3s;
 }
+
+.btn-add-color:hover:not(:disabled) { background: #219a52; }
+.btn-add-color:disabled { background: #ccc; cursor: not-allowed; }
 
 /* 图片上传 */
 .image-upload-section { margin-bottom: 10px; }
