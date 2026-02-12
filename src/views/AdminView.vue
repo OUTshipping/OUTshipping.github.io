@@ -93,8 +93,8 @@
               <label>Brand</label>
               <select v-model="selectedBrand" @change="onBrandChange">
                 <option value="">-- Select Brand --</option>
-                <option v-for="b in brandsData" :key="b.name" :value="b.name">
-                  {{ b.name }} ({{ b.nameEn }})
+                <option v-for="b in brandsData" :key="b.nameEn" :value="b.nameEn">
+                  {{ b.nameEn }}
                 </option>
               </select>
             </div>
@@ -102,8 +102,8 @@
               <label>Model</label>
               <select v-model="selectedModel" @change="onModelChange" :disabled="!selectedBrand">
                 <option value="">-- Select Model --</option>
-                <option v-for="m in currentModels()" :key="m.name" :value="m.name">
-                  {{ m.name }}
+                <option v-for="m in currentModels()" :key="m.nameEn" :value="m.nameEn">
+                  {{ m.nameEn }}
                 </option>
               </select>
             </div>
@@ -111,8 +111,8 @@
               <label>Variant</label>
               <select v-model="selectedVariant" :disabled="!selectedModel">
                 <option value="">-- Select Variant --</option>
-                <option v-for="v in currentVariants()" :key="v.specName" :value="v.specName">
-                  {{ v.specName }} ({{ v.range }}km)
+                <option v-for="v in currentVariants()" :key="v.specNameEn" :value="v.specNameEn">
+                  {{ v.specNameEn }} ({{ v.range }}km)
                 </option>
               </select>
             </div>
@@ -274,14 +274,14 @@ const selectedVariant = ref('')
 
 // 计算当前选中品牌下的车系列表
 function currentModels() {
-  const brand = brandsData.value.find(b => b.name === selectedBrand.value)
+  const brand = brandsData.value.find(b => b.nameEn === selectedBrand.value)
   return brand ? brand.models : []
 }
 
 // 计算当前选中车系下的配置列表
 function currentVariants() {
   const models = currentModels()
-  const model = models.find(m => m.name === selectedModel.value)
+  const model = models.find(m => m.nameEn === selectedModel.value)
   return model ? model.variants : []
 }
 
@@ -299,21 +299,21 @@ function onModelChange() {
 // 选择配置后自动填充表单
 function applyVariant() {
   if (!selectedVariant.value) return
-  const brand = brandsData.value.find(b => b.name === selectedBrand.value)
+  const brand = brandsData.value.find(b => b.nameEn === selectedBrand.value)
   if (!brand) return
-  const model = brand.models.find(m => m.name === selectedModel.value)
+  const model = brand.models.find(m => m.nameEn === selectedModel.value)
   if (!model) return
-  const variant = model.variants.find(v => v.specName === selectedVariant.value)
+  const variant = model.variants.find(v => v.specNameEn === selectedVariant.value)
   if (!variant) return
 
-  form.name = `${variant.year} ${brand.nameEn} ${model.name}`
+  form.name = `${variant.year} ${brand.nameEn} ${model.nameEn}`
   form.slug = autoSlug(form.name)
   form.type = variant.type || 'SUV'
   form.range = variant.range || 0
   form.seats = variant.seats || 5
   form.specs.year = variant.year || '2025'
   form.specs.make = brand.nameEn
-  form.specs.model = model.name
+  form.specs.model = model.nameEn
   form.specs.batteryCapacity = variant.batteryCapacity || 'N/A'
   form.specs.category = 'PASSENGER'
 
