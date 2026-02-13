@@ -8,14 +8,14 @@
       </div>
     </router-link>
 
-    <!-- Mobile Menu Toggle -->
+    <!-- 移动端汉堡菜单按钮 -->
     <div class="menu-toggle" :class="{ active: menuOpen }" @click="toggleMenu" aria-label="Toggle Menu">
       <span></span>
       <span></span>
       <span></span>
     </div>
 
-    <!-- Main Navigation -->
+    <!-- 主导航 -->
     <nav id="nav-menu" :class="{ active: menuOpen }">
       <router-link to="/inventory" @click="closeMenu">INVENTORY</router-link>
       <router-link to="/charging" @click="closeMenu">CHARGING</router-link>
@@ -33,7 +33,7 @@
         </div>
       </div>
 
-      <!-- Mobile Socials (duplicated for better UX) -->
+      <!-- 移动端社媒图标 -->
       <div class="top-social-media mobile-only" v-if="menuOpen">
           <a href="https://www.instagram.com/tg_auto_rwanda/" class="social-icon-link" target="_blank" rel="noopener" aria-label="Instagram">
             <i class="fab fa-instagram"></i>
@@ -50,7 +50,7 @@
       </div>
     </nav>
 
-    <!-- Desktop Socials -->
+    <!-- 桌面端社媒图标 -->
     <div class="top-social-media desktop-only">
       <a href="https://www.instagram.com/tg_auto_rwanda/" class="social-icon-link" target="_blank" rel="noopener" aria-label="Instagram">
         <i class="fab fa-instagram"></i>
@@ -83,7 +83,6 @@ const closeMenu = () => {
   dropdownOpen.value = false
 }
 
-// Lock body scroll when menu is open
 watch(menuOpen, (val) => {
     if (val) {
         document.body.style.overflow = 'hidden'
@@ -93,7 +92,6 @@ watch(menuOpen, (val) => {
 })
 
 const toggleDropdown = () => {
-  // Only toggle on mobile or click interaction
   if (window.innerWidth <= 768) {
     dropdownOpen.value = !dropdownOpen.value
   }
@@ -103,12 +101,9 @@ const handleClickOutside = (event) => {
   const dropdown = document.querySelector('.dropdown')
   const nav = document.querySelector('nav')
   const menuToggle = document.querySelector('.menu-toggle')
-
   if (dropdown && !dropdown.contains(event.target) && window.innerWidth <= 768) {
     dropdownOpen.value = false
   }
-
-  // Close menu if clicking outside on mobile
   if (menuOpen.value && nav && !nav.contains(event.target) && !menuToggle.contains(event.target)) {
       menuOpen.value = false;
   }
@@ -127,6 +122,7 @@ onBeforeUnmount(() => {
 </script>
 
 <style scoped>
+/* ========== 桌面端基础样式 ========== */
 header {
     background: var(--primary-color);
     color: white;
@@ -209,7 +205,7 @@ nav a.router-link-active::after {
     width: 100%;
 }
 
-/* Dropdown */
+/* 下拉菜单 */
 .dropdown {
     position: relative;
 }
@@ -257,6 +253,7 @@ nav a.router-link-active::after {
     color: var(--accent-color);
 }
 
+/* 社媒图标 */
 .top-social-media {
     display: flex;
     gap: 0.625rem;
@@ -283,11 +280,12 @@ nav a.router-link-active::after {
     color: white;
 }
 
+/* 汉堡菜单按钮 */
 .menu-toggle {
     display: none;
     position: relative;
-    width: 32px;
-    height: 24px;
+    width: 28px;
+    height: 20px;
     cursor: pointer;
     z-index: 1002;
     background: transparent;
@@ -302,168 +300,155 @@ nav a.router-link-active::after {
     height: 2px;
     background-color: white;
     border-radius: 2px;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
     left: 0;
     transform-origin: center center;
 }
 
-.menu-toggle span:nth-child(1) {
-    top: 0;
-}
+.menu-toggle span:nth-child(1) { top: 0; }
+.menu-toggle span:nth-child(2) { top: 50%; transform: translateY(-50%); }
+.menu-toggle span:nth-child(3) { bottom: 0; }
 
-.menu-toggle span:nth-child(2) {
-    top: 50%;
-    transform: translateY(-50%);
-}
+/* 移动端默认隐藏 */
+.mobile-only { display: none; }
 
-.menu-toggle span:nth-child(3) {
-    bottom: 0;
-}
-
-/* Mobile Styles */
+/* ========== 移动端适配 ========== */
 @media (max-width: 768px) {
-    .menu-toggle {
-        display: flex;
+    header {
+        padding: 0.75rem 1rem;
     }
 
+    .logo img {
+        width: 44px;
+        height: 44px;
+    }
+
+    .logo-text h1 {
+        font-size: 1.15rem;
+    }
+
+    .logo .slogan {
+        font-size: 0.65rem;
+    }
+
+    /* 显示汉堡按钮，隐藏桌面端社媒 */
+    .menu-toggle { display: flex; }
+    .desktop-only { display: none !important; }
+
+    /* X 形动画 */
+    .menu-toggle.active span:nth-child(1) {
+        top: 50%;
+        transform: translateY(-50%) rotate(45deg);
+    }
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.active span:nth-child(3) {
+        top: 50%;
+        bottom: auto;
+        transform: translateY(-50%) rotate(-45deg);
+    }
+
+    /* 全屏导航菜单 */
     nav {
         position: fixed;
         top: 0;
         right: -100%;
         width: 100%;
         height: 100vh;
-        background-color: rgba(15, 23, 42, 0.98);
-        backdrop-filter: blur(10px);
+        background: rgba(15, 23, 42, 0.97);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
         flex-direction: column;
-        justify-content: center;
-        transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        padding: 2rem;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 5rem 2rem 2rem;
         z-index: 1001;
+        transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        overflow-y: auto;
+        gap: 0;
     }
 
-    nav.active {
-        right: 0;
-    }
+    nav.active { right: 0; }
 
+    /* 导航链接 */
     nav a {
-        font-size: 1.5rem;
-        margin: 1rem 0;
+        font-size: 1.35rem;
+        font-weight: 600;
+        margin: 0.8rem 0;
+        width: 100%;
+        text-align: center;
+        letter-spacing: 0.05em;
+        padding: 0.5rem 0;
+    }
+
+    nav a::after { display: none; }
+
+    /* 下拉菜单 */
+    .dropbtn {
+        font-size: 1.35rem;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        justify-content: center;
+        width: 100%;
+        padding: 0.8rem 0;
     }
 
     .dropdown-content {
         position: static;
-        background: transparent;
+        background: rgba(255, 255, 255, 0.05);
         box-shadow: none;
-        border: none;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 0.75rem;
         transform: none;
         text-align: center;
-        padding-top: 0;
-        margin-top: 0;
+        padding: 0.25rem 0;
+        margin: 0.25rem auto 0.5rem;
         display: none;
+        width: 80%;
     }
 
-    .dropdown.active .dropdown-content {
-        display: block;
-    }
+    .dropdown.active .dropdown-content { display: block; }
 
     .dropdown-content a {
-        font-size: 1.2rem;
-        padding: 0.5rem;
+        font-size: 1.05rem;
+        font-weight: 500;
+        padding: 0.7rem 1rem;
         color: var(--text-muted);
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     }
 
-    .top-social-media {
-        display: none; /* Consider moving inside nav for mobile */
+    .dropdown-content a:last-child { border-bottom: none; }
+
+    .dropdown-content a:hover {
+        color: var(--accent-color);
+        background: rgba(255, 255, 255, 0.03);
     }
 
-    .menu-toggle.active span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-    }
+    /* 移动端社媒图标 */
+    .top-social-media { display: none; }
 
-    .menu-toggle.active span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .menu-toggle.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(5px, -6px);
-    }
-
-    .desktop-only {
-        display: none !important;
-    }
-}
-
-.mobile-only {
-    display: none;
-}
-
-@media (max-width: 768px) {
     .mobile-only {
         display: flex;
         justify-content: center;
+        gap: 1rem;
         margin-top: 2rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        width: 80%;
     }
 
     .mobile-only .social-icon-link {
         width: 44px;
         height: 44px;
-        font-size: 1.25rem;
+        font-size: 1.2rem;
     }
 }
 
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px) translateX(-50%); }
     to { opacity: 1; transform: translateY(0) translateX(-50%); }
-}
-
-/* Fixed Mobile Styles & Animation Override */
-@media (max-width: 768px) {
-    nav {
-        justify-content: flex-start;
-        padding: 6rem 2rem 2rem;
-        backdrop-filter: blur(20px);
-        background-color: rgba(15, 23, 42, 0.95);
-        overflow-y: auto;
-    }
-
-    nav a {
-        font-weight: 600;
-        margin: 1.25rem 0;
-        width: 100%;
-        text-align: center;
-    }
-
-    .dropdown-content {
-        background: rgba(255, 255, 255, 0.05);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 0.75rem;
-        width: 90%;
-        margin: 0.5rem auto;
-    }
-
-    .dropdown-content a {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        padding: 0.75rem;
-    }
-
-    .dropdown-content a:last-child {
-        border-bottom: none;
-    }
-
-    /* Animation Fixes */
-    .menu-toggle.active span:nth-child(1) {
-        top: 50%;
-        transform: translateY(-50%) rotate(45deg);
-    }
-
-    .menu-toggle.active span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .menu-toggle.active span:nth-child(3) {
-        bottom: 50%;
-        transform: translateY(50%) rotate(-45deg);
-    }
 }
 </style>
 
