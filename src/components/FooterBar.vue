@@ -55,18 +55,18 @@
             <ul class="network-list">
                 <li>
                   <a href="https://www.zjaladin.com" target="_blank" rel="noopener">Zhejiang Aladdin Group</a>
-                  <span class="network-desc">Our parent company — global automotive supply chain headquarters in China</span>
+                  <span class="network-desc">Our China HQ — sourced directly from the factory to ensure the best price</span>
                 </li>
                 <li>
                   <a href="https://www.aladinauto.com" target="_blank" rel="noopener">AladinAuto Platform</a>
-                  <span class="network-desc">Browse and order used cars & new energy vehicles online, exported direct from China</span>
+                  <span class="network-desc">Check our global vehicle inventory — certified used cars & EVs exported from China</span>
                 </li>
             </ul>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2025 Triple Goats. All rights reserved.</p>
+        <p>&copy; 2025 Triple Goats. All rights reserved. | Located in Kigali, Rwanda — Member of <a href="https://www.zjaladin.com" target="_blank" rel="noopener" class="footer-inline-link">Zhejiang Aladdin Group</a></p>
       </div>
     </div>
   </footer>
@@ -201,6 +201,16 @@ ul li a:hover {
     padding-top: 2rem;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     font-size: 0.85rem;
+}
+
+.footer-inline-link {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-inline-link:hover {
+    color: white;
 }
 </style>
 

@@ -118,10 +118,10 @@
 > 核心策略：在所有 meta 层强化 "Used Car Export" + "China Origin" + "Global Platform"，切断与 "Aladdin lamp / car wash" 的语义关联。
 
 ```html
-<title>AladinAuto — Global Used Car & EV Export Platform | Direct from China | Zhejiang Aladdin Group</title>
+<title>AladinAuto | Global Used Car Export & Trading Platform | Certified Chinese Vehicles | Zhejiang Aladdin Group</title>
 
-<meta name="description" content="AladinAuto is a global used car and new energy vehicle export platform by Zhejiang Aladdin Group. Browse thousands of quality vehicles — sedans, SUVs, trucks, EVs — sourced and inspected in China, shipped worldwide to Africa, Middle East, and beyond. Not a lamp, not a car wash — we export real cars.">
-<meta name="keywords" content="AladinAuto, Aladin Auto, used car export China, Chinese used car platform, new energy vehicle export, EV export from China, buy car from China, global car export, vehicle shipping China to Africa, Zhejiang Aladdin, 阿啦丁汽车, 浙江阿啦丁, 中国二手车出口, 新能源汽车出口, aladinauto.com, used car marketplace, auto export platform, China car dealer online, wholesale vehicles China">
+<meta name="description" content="AladinAuto is a global used car and new energy vehicle export platform by Zhejiang Aladdin Group. Browse thousands of certified vehicles — sedans, SUVs, trucks, EVs — sourced, inspected and shipped from China to Africa, Middle East, and beyond. Not a lamp, not a car wash — we export real cars with quality inspection guarantee.">
+<meta name="keywords" content="AladinAuto, Aladin Auto, used car export China, Chinese used car platform, new energy vehicle export, EV export from China, buy car from China, global car export, vehicle shipping China to Africa, second hand car export, certified Chinese vehicles, electric vehicles export, quality inspection, Zhejiang Aladdin, 阿啦丁汽车, 浙江阿啦丁, 中国二手车出口, 新能源汽车出口, aladinauto.com, used car marketplace, auto export platform, China car dealer online, wholesale vehicles China">
 <meta name="author" content="AladinAuto — A platform by Zhejiang Aladdin Import & Export Trading Co., Ltd.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://www.aladinauto.com/">
@@ -213,19 +213,19 @@
 
 ### English Version（用于 aladinauto.com 和 tgautomobile.com 的 About Us）
 
-Zhejiang Aladdin Import & Export Trading Co., Ltd. (浙江阿啦丁进出口贸易有限责任公司) is a Chinese automotive export corporation headquartered in Zhejiang Province, specializing in new energy vehicles and quality used cars for the global market. The Group operates an integrated supply chain that spans sourcing, inspection, online sales, international shipping, and local delivery.
+Zhejiang Aladdin Import & Export Trading Co., Ltd. (浙江阿啦丁进出口贸易有限责任公司) is a leading automotive supply chain enterprise headquartered in Zhejiang, China, specializing in new energy vehicles and quality used cars for the global market. The Group operates a comprehensive "Source-to-Street" ecosystem that spans sourcing, quality inspection, certification, online sales, international shipping, and local delivery.
 
-AladinAuto (aladinauto.com) is the Group's international online platform, where buyers from Africa, the Middle East, Southeast Asia, and South America can browse thousands of vehicles — from compact EVs to heavy-duty trucks — and place orders for direct export from China. Every vehicle listed on AladinAuto undergoes a multi-point inspection before shipment.
+AladinAuto (aladinauto.com) serves as the Group's international digital platform for used car and new energy vehicle trading, connecting global buyers from Africa, the Middle East, Southeast Asia, and South America with certified Chinese vehicle resources. Every vehicle listed on AladinAuto undergoes a rigorous multi-point quality inspection before shipment, ensuring buyers receive reliable, road-ready vehicles.
 
-In Rwanda, the Group's subsidiary Triple Goats — officially San Yang (Rwanda) Automobile Sales Co., Ltd., operating as T&G Automobile (tgautomobile.com) — handles the final mile. Based in Kigali's Kicukiro district, Triple Goats provides local vehicle registration, customs clearance, after-sales maintenance, EV charging, and on-the-ground customer support. Whether you discover a vehicle on AladinAuto or visit the Kigali showroom, you are backed by the same end-to-end network: from factory floor in China to your driveway in Africa.
+To ensure localized service, the Group's subsidiary Triple Goats — officially San Yang (Rwanda) Automobile Sales Co., Ltd., operating as T&G Automobile (tgautomobile.com) — provides professional sales, customs clearance, and after-sales support in Rwanda, Africa. Based in Kigali's Kicukiro district, Triple Goats handles the final mile: local vehicle registration, after-sales maintenance, EV charging, and on-the-ground customer support. Together, we provide a seamless "Source-to-Street" solution — whether you discover a vehicle on AladinAuto or visit the Kigali showroom, you are backed by the same integrated network from factory floor in China to your driveway in Africa.
 
 ### 中文版本（用于 zjaladin.com 的关于我们）
 
-浙江阿啦丁进出口贸易有限责任公司是一家总部位于浙江省的汽车出口企业，专注于新能源汽车及优质二手车的全球供应链业务。集团构建了从车源采购、质量检测、线上销售、国际物流到本地交付的一体化服务体系。
+浙江阿啦丁进出口贸易有限责任公司是一家总部位于浙江省的汽车出口企业，专注于新能源汽车及优质二手车的全球供应链业务。集团构建了从车源采购、质量检测认证、线上销售、国际物流到本地交付的一体化"Source-to-Street"（从源头到街头）服务体系。
 
-AladinAuto（aladinauto.com）是集团旗下的国际线上交易平台，面向非洲、中东、东南亚及南美洲的买家，提供从紧凑型电动车到重型卡车的全品类车辆浏览与在线订购服务，所有上架车辆均经过多点检测后方可出口。
+AladinAuto（aladinauto.com）是集团旗下的国际线上交易平台，面向非洲、中东、东南亚及南美洲的买家，提供从紧凑型电动车到重型卡车的全品类车辆浏览与在线订购服务。所有上架车辆均经过严格的多点质量检测认证后方可出口，确保买家收到可靠的、可上路的车辆。
 
-在非洲卢旺达，集团子公司三羊汽车（Triple Goats），即 San Yang (Rwanda) Automobile Sales Co., Ltd.，以 T&G Automobile（tgautomobile.com）品牌运营，负责最后一公里的本地化服务——包括车辆上牌、海关清关、售后维保、电动车充电及基加利地区的客户支持。无论您是在 AladinAuto 平台发现心仪车辆，还是直接走进基加利展厅，背后都是同一张从中国工厂到非洲家门口的完整服务网络。
+在非洲卢旺达，集团子公司三羊汽车（Triple Goats），即 San Yang (Rwanda) Automobile Sales Co., Ltd.，以 T&G Automobile（tgautomobile.com）品牌运营，负责最后一公里的本地化服务——包括车辆上牌、海关清关、售后维保、电动车充电及基加利地区的客户支持。从中国工厂直采，确保最优价格——无论您是在 AladinAuto 平台发现心仪车辆，还是直接走进基加利展厅，背后都是同一张从源头到街头的完整服务网络。
 
 ---
 
@@ -280,3 +280,33 @@ Google 不支持在 sitemap 中直接引用其他域名的 URL。正确的做法
 2. 通过 JSON-LD 的 `@id` 互相引用建立实体关联（已在上面的代码中实现）
 3. 通过 Google Search Console 将三个站点关联到同一个 Google 账号下
 4. 在 Google Search Console 中为每个站点提交各自的 sitemap
+
+---
+
+## 七、Google Business Profile 注册指南（运营层面）
+
+TGAutomobile 在基加利的本地搜索排名严重依赖 Google 商家资料（GBP）。以下是操作步骤：
+
+1. 访问 https://business.google.com/ ，用公司 Google 账号登录
+2. 点击"添加商家"，填写以下信息：
+   - 商家名称：`Triple Goats - T&G Automobile`
+   - 类别：`Electric Vehicle Dealer`（主类别）+ `Used Car Dealer`（副类别）
+   - 地址：KK 15 Rd, Kicukiro District, Kigali, Rwanda
+   - 电话：+250 785 084 313
+   - 网站：https://tgautomobile.com
+3. 完成验证（Google 会寄明信片到卢旺达地址，或通过电话/视频验证）
+4. 验证通过后，补充以下信息：
+   - 营业时间：周一至周五 08:00-18:00，周六 09:00-13:00
+   - 商家描述：使用与 JSON-LD 一致的描述文字
+   - 上传展厅照片、车辆照片、充电站照片
+   - 添加服务项目：EV Sales, Used Car Sales, EV Charging, After-Sales Maintenance, Customs Clearance, Car Rental, Taxi Service
+   - 在"关于"中注明：`A subsidiary of Zhejiang Aladdin Group (www.zjaladin.com)`
+5. 鼓励客户在 Google Maps 上留下评价，本地排名与评价数量/质量强相关
+
+### aladinauto.com 内容策略建议
+
+在 aladinauto.com 首页或导航中增加一个 "Quality Inspection" 页面，内容包括：
+- 车辆出口前的多点检测流程（发动机、底盘、电池、外观、内饰）
+- 检测标准说明（参考中国出口检验标准）
+- 检测报告样本展示
+- 这个页面能显著提升 E-E-A-T（Experience, Expertise, Authoritativeness, Trustworthiness）信号，帮助 Google 将 AladinAuto 识别为专业汽车出口平台而非其他"Aladin"相关业务
