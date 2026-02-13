@@ -35,34 +35,34 @@
 
       <!-- Mobile Socials (duplicated for better UX) -->
       <div class="top-social-media mobile-only" v-if="menuOpen">
-          <a href="https://www.instagram.com/tg_auto_rwanda/" class="social-item" target="_blank" rel="noopener">
-            <img src="/ins.jpg" alt="Instagram">
+          <a href="https://www.instagram.com/tg_auto_rwanda/" class="social-icon-link" target="_blank" rel="noopener" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
           </a>
-          <a href="https://x.com/Triple_Goats" class="social-item" target="_blank" rel="noopener">
-            <img src="/X.jpg" alt="Twitter">
+          <a href="https://x.com/Triple_Goats" class="social-icon-link" target="_blank" rel="noopener" aria-label="Twitter">
+            <i class="fab fa-twitter"></i>
           </a>
-          <a href="https://www.facebook.com/TripleGoats" class="social-item" target="_blank" rel="noopener">
-            <img src="/facebook.jpg" alt="Facebook">
+          <a href="https://www.facebook.com/TripleGoats" class="social-icon-link" target="_blank" rel="noopener" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
           </a>
-          <a href="https://www.tiktok.com/@tg.auto.rwanda" class="social-item" target="_blank" rel="noopener">
-            <img src="/tiktok.jpg" alt="TikTok">
+          <a href="https://www.tiktok.com/@tg.auto.rwanda" class="social-icon-link" target="_blank" rel="noopener" aria-label="TikTok">
+            <i class="fab fa-tiktok"></i>
           </a>
       </div>
     </nav>
 
     <!-- Desktop Socials -->
     <div class="top-social-media desktop-only">
-      <a href="https://www.instagram.com/tg_auto_rwanda/" class="social-item" target="_blank" rel="noopener">
-        <img src="/ins.jpg" alt="Instagram" loading="lazy">
+      <a href="https://www.instagram.com/tg_auto_rwanda/" class="social-icon-link" target="_blank" rel="noopener" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
       </a>
-      <a href="https://x.com/Triple_Goats" class="social-item" target="_blank" rel="noopener">
-        <img src="/X.jpg" alt="Twitter" loading="lazy">
+      <a href="https://x.com/Triple_Goats" class="social-icon-link" target="_blank" rel="noopener" aria-label="Twitter">
+        <i class="fab fa-twitter"></i>
       </a>
-      <a href="https://www.facebook.com/TripleGoats" class="social-item" target="_blank" rel="noopener">
-        <img src="/facebook.jpg" alt="Facebook" loading="lazy">
+      <a href="https://www.facebook.com/TripleGoats" class="social-icon-link" target="_blank" rel="noopener" aria-label="Facebook">
+        <i class="fab fa-facebook-f"></i>
       </a>
-      <a href="https://www.tiktok.com/@tg.auto.rwanda" class="social-item" target="_blank" rel="noopener">
-        <img src="/tiktok.jpg" alt="TikTok" loading="lazy">
+      <a href="https://www.tiktok.com/@tg.auto.rwanda" class="social-icon-link" target="_blank" rel="noopener" aria-label="TikTok">
+        <i class="fab fa-tiktok"></i>
       </a>
     </div>
   </header>
@@ -259,20 +259,28 @@ nav a.router-link-active::after {
 
 .top-social-media {
     display: flex;
-    gap: 1rem;
+    gap: 0.625rem;
+    align-items: center;
 }
 
-.social-item img {
-    width: 24px;
-    height: 24px;
+.social-icon-link {
+    width: 36px;
+    height: 36px;
     border-radius: 50%;
-    transition: transform 0.2s;
-    background: white;
-    padding: 2px;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1rem;
+    transition: all 0.2s;
+    text-decoration: none;
 }
 
-.social-item:hover img {
-    transform: scale(1.1);
+.social-icon-link:hover {
+    background: var(--accent-color);
+    transform: translateY(-2px);
+    color: white;
 }
 
 .menu-toggle {
@@ -376,6 +384,12 @@ nav a.router-link-active::after {
         display: flex;
         justify-content: center;
         margin-top: 2rem;
+    }
+
+    .mobile-only .social-icon-link {
+        width: 44px;
+        height: 44px;
+        font-size: 1.25rem;
     }
 }
 

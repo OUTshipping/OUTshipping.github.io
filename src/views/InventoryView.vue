@@ -304,21 +304,27 @@ h2 {
 }
 
 .select-selected {
-    background-color: #0055aa;
+    background-color: var(--accent-color);
     color: white;
     padding: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
     border: none;
-    border-radius: 8px;
+    border-radius: 9999px;
     cursor: pointer;
     box-sizing: border-box;
     font-size: 14px;
-    font-weight: bold;
-    transition: all 0.3s;
+    font-weight: 600;
+    transition: all 0.2s;
     width: 100%;
     min-width: auto;
+    font-family: inherit;
+}
+
+.select-selected:hover {
+    background-color: var(--accent-color-dark);
+    transform: translateY(-1px);
 }
 
 .select-items {
@@ -326,25 +332,27 @@ h2 {
     top: calc(100% + 5px);
     left: 0;
     width: 100%;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    background-color: var(--card-bg-color);
+    border-radius: 0.75rem;
+    box-shadow: var(--shadow-lg);
     z-index: 1000;
-    border: 1px solid rgba(0,0,0,0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     box-sizing: border-box;
     max-height: 300px;
     overflow-y: auto;
 }
 
 .select-items div {
-    background-color: white;
-    color: var(--dark-color);
-    padding: 10px;
+    background-color: transparent;
+    color: var(--text-color);
+    padding: 10px 16px;
     cursor: pointer;
+    transition: background 0.2s;
 }
 
 .select-items div:hover {
-    background-color: #e7e7e7;
+    background-color: var(--card-hover-color);
+    color: var(--accent-color);
 }
 
 .filter-btn {
@@ -352,18 +360,19 @@ h2 {
     display: flex;
     padding: 12px;
     font-size: 14px;
-    font-weight: bold;
+    font-weight: 600;
     color: var(--secondary-color);
     background: linear-gradient(135deg, var(--accent-color) 30%, var(--accent-color-dark) 70%);
     border: none;
-    border-radius: 8px;
-    transition: all 0.3s;
+    border-radius: 9999px;
+    transition: all 0.2s;
     cursor: pointer;
     justify-content: center;
     align-items: center;
     white-space: nowrap;
     margin: 0;
     box-sizing: border-box;
+    font-family: inherit;
 }
 
 .filter-btn:hover {
@@ -378,7 +387,7 @@ h2 {
 .vehicle-section {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 1.5rem;
     justify-content: center;
     padding: 0 15px;
     background: var(--primary-color);
@@ -390,34 +399,30 @@ h2 {
 
 .vehicle-card {
     background: var(--secondary-color);
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
-    width: calc(33% - 30px);
-    max-width: 300px;
-    margin: 10px;
+    border-radius: 0.75rem;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: calc(33.333% - 1.5rem);
+    max-width: 340px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    padding-bottom: 15px;
     overflow: hidden;
     position: relative;
     text-align: center;
-    border: 2px solid transparent;
+    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .vehicle-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
 }
 
 .vehicle-card img {
     width: 100%;
-    height: 180px;
+    height: 200px;
     object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 10px;
     transition: transform 0.3s;
 }
 
@@ -426,85 +431,89 @@ h2 {
 }
 
 .card-content {
-    padding: 15px;
+    padding: 1rem 1.25rem 1.25rem;
     text-align: left;
     width: 100%;
+    box-sizing: border-box;
 }
 
 .vehicle-card h3 {
-    font-size: 18px;
-    color: var(--dark-color);
-    margin-bottom: 8px;
+    font-size: 1.05rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
     text-transform: uppercase;
-    font-weight: bold;
+    font-weight: 700;
+    letter-spacing: 0.02em;
 }
 
 .info-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2px;
-    margin: 5px 0;
+    gap: 0.25rem;
+    margin: 0.5rem 0;
 }
 
 .info-item {
     display: flex;
     flex-direction: row;
     align-items: center;
-    font-size: 13px;
-    margin-bottom: 2px;
-    gap: 5px;
+    font-size: 0.8rem;
+    margin-bottom: 0.125rem;
+    gap: 0.25rem;
 }
 
 .info-key {
     display: flex;
     align-items: center;
-    font-weight: bold;
+    font-weight: 600;
     color: var(--accent-color);
-    gap: 5px;
+    gap: 0.25rem;
 }
 
 .info-value {
     font-weight: normal;
-    color: var(--dark-color);
+    color: #475569;
 }
 
 .color-circle-container {
     display: flex;
-    gap: 5px;
-    margin: 10px 0;
+    gap: 0.375rem;
+    margin: 0.75rem 0;
 }
 
 .color-circle {
-    width: 15px;
-    height: 15px;
+    width: 16px;
+    height: 16px;
     border-radius: 50%;
-    border: 2px solid #001f3f;
+    border: 2px solid var(--primary-color);
     display: inline-block;
 }
 
 .btn {
     display: block;
-    margin: 20px auto;
-    width: 180px;
+    margin: 0.75rem auto 0;
+    width: 160px;
     text-align: center;
+    font-size: 0.875rem;
 }
 
 .no-vehicle-alert {
-    padding: 20px;
-    background-color: #ffcccc;
-    border-radius: 8px;
-    margin: 20px auto;
+    padding: 1.25rem;
+    background: #fef2f2;
+    border-radius: 0.75rem;
+    margin: 1.5rem auto;
     width: 80%;
     text-align: center;
-    font-weight: bold;
-    color: #660000;
+    font-weight: 600;
+    color: #991b1b;
+    border-left: 4px solid #ef4444;
 }
 
 @media (max-width: 768px) {
     .filter-buttons-container {
         flex-direction: column;
         align-items: stretch;
-        gap: 10px;
+        gap: 0.625rem;
     }
 
     .custom-select,
@@ -519,19 +528,40 @@ h2 {
     }
 
     .vehicle-section {
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        gap: 10px;
+        gap: 1rem;
+        justify-content: center;
+    }
+
+    .vehicle-card {
+        width: calc(50% - 1rem);
+        max-width: none;
+    }
+
+    main {
+        padding: 1.25rem 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .filter-title {
+        font-size: 1.1rem;
+    }
+
+    .vehicle-section {
+        gap: 0.75rem;
     }
 
     .vehicle-card {
         width: 100%;
-        max-width: 300px;
-        margin: 10px 0;
+        max-width: 340px;
+    }
+
+    .vehicle-card img {
+        height: 160px;
     }
 
     main {
-        padding: 20px 10px;
+        padding: 1rem 0.5rem;
     }
 }
 </style>
