@@ -7,22 +7,51 @@
         <p class="slogan">GREEN ENERGY GREEN LIFE</p>
       </div>
     </router-link>
-    
+
+    <!-- Mobile Menu Toggle -->
+    <div class="menu-toggle" :class="{ active: menuOpen }" @click="toggleMenu" aria-label="Toggle Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Main Navigation -->
     <nav id="nav-menu" :class="{ active: menuOpen }">
       <router-link to="/inventory" @click="closeMenu">INVENTORY</router-link>
       <router-link to="/charging" @click="closeMenu">CHARGING</router-link>
       <router-link to="/services" @click="closeMenu">SERVICES</router-link>
+
       <div class="dropdown" :class="{ active: dropdownOpen }">
-        <a href="javascript:void(0)" class="dropbtn" @click.stop="toggleDropdown">DISCOVER</a>
+        <div class="dropbtn" @click.stop="toggleDropdown">
+            DISCOVER
+            <i class="fas fa-chevron-down" style="font-size: 0.8em; margin-left: 4px;"></i>
+        </div>
         <div class="dropdown-content">
           <router-link to="/testdrive" @click="closeMenu">TEST DRIVE</router-link>
           <router-link to="/about" @click="closeMenu">ABOUT</router-link>
           <router-link to="/contact" @click="closeMenu">CONTACT</router-link>
         </div>
       </div>
+
+      <!-- Mobile Socials (duplicated for better UX) -->
+      <div class="top-social-media mobile-only" v-if="menuOpen">
+          <a href="https://www.instagram.com/tg_auto_rwanda/" class="social-item" target="_blank" rel="noopener">
+            <img src="/ins.jpg" alt="Instagram">
+          </a>
+          <a href="https://x.com/Triple_Goats" class="social-item" target="_blank" rel="noopener">
+            <img src="/X.jpg" alt="Twitter">
+          </a>
+          <a href="https://www.facebook.com/TripleGoats" class="social-item" target="_blank" rel="noopener">
+            <img src="/facebook.jpg" alt="Facebook">
+          </a>
+          <a href="https://www.tiktok.com/@tg.auto.rwanda" class="social-item" target="_blank" rel="noopener">
+            <img src="/tiktok.jpg" alt="TikTok">
+          </a>
+      </div>
     </nav>
-    
-    <div class="top-social-media">
+
+    <!-- Desktop Socials -->
+    <div class="top-social-media desktop-only">
       <a href="https://www.instagram.com/tg_auto_rwanda/" class="social-item" target="_blank" rel="noopener">
         <img src="/ins.jpg" alt="Instagram" loading="lazy">
       </a>
@@ -36,17 +65,11 @@
         <img src="/tiktok.jpg" alt="TikTok" loading="lazy">
       </a>
     </div>
-    
-    <div class="menu-toggle" :class="{ active: menuOpen }" @click="toggleMenu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
   </header>
 </template>
 
 <script setup>
-import { ref, onMounted, onBeforeUnmount } from 'vue'
+import { ref, onMounted, onBeforeUnmount, watch } from 'vue'
 
 const menuOpen = ref(false)
 const dropdownOpen = ref(false)
@@ -60,7 +83,17 @@ const closeMenu = () => {
   dropdownOpen.value = false
 }
 
+// Lock body scroll when menu is open
+watch(menuOpen, (val) => {
+    if (val) {
+        document.body.style.overflow = 'hidden'
+    } else {
+        document.body.style.overflow = ''
+    }
+})
+
 const toggleDropdown = () => {
+  // Only toggle on mobile or click interaction
   if (window.innerWidth <= 768) {
     dropdownOpen.value = !dropdownOpen.value
   }
@@ -68,8 +101,16 @@ const toggleDropdown = () => {
 
 const handleClickOutside = (event) => {
   const dropdown = document.querySelector('.dropdown')
+  const nav = document.querySelector('nav')
+  const menuToggle = document.querySelector('.menu-toggle')
+
   if (dropdown && !dropdown.contains(event.target) && window.innerWidth <= 768) {
     dropdownOpen.value = false
+  }
+
+  // Close menu if clicking outside on mobile
+  if (menuOpen.value && nav && !nav.contains(event.target) && !menuToggle.contains(event.target)) {
+      menuOpen.value = false;
   }
 }
 
@@ -81,220 +122,217 @@ onMounted(() => {
 onBeforeUnmount(() => {
   document.removeEventListener('click', handleClickOutside)
   document.removeEventListener('touchstart', handleClickOutside)
+  document.body.style.overflow = ''
 })
 </script>
 
 <style scoped>
 header {
     background: var(--primary-color);
-    color: var(--secondary-color);
-    padding: 10px 20px;
+    color: white;
+    padding: 1rem 1.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
 }
 
 .logo {
     display: flex;
     align-items: center;
-    transition: transform 0.3s, filter 0.3s;
+    gap: 1rem;
+    text-decoration: none;
+    color: white;
 }
 
 .logo img {
-    width: 80px;
-    margin-right: 10px;
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    border-radius: 50%;
+    background: white;
+    padding: 2px;
 }
 
-.logo .logo-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.logo h1 {
-    font-size: 36px;
-    margin: 0 0 3px 0;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+.logo-text h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
     color: var(--accent-color);
+    letter-spacing: -0.025em;
 }
 
 .logo .slogan {
-    font-size: 12px;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: var(--secondary-color);
-    user-select: none;
-    font-family: 'Roboto', sans-serif;
-    margin-top: 0;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
-}
-
-.menu-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    padding: 5px;
-}
-
-.menu-toggle span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background-color: var(--secondary-color);
-    margin: 4px 0;
-    transition: transform 0.3s, background-color 0.3s;
-}
-
-.menu-toggle.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-}
-
-.menu-toggle.active span:nth-child(2) {
-    opacity: 0;
-}
-
-.menu-toggle.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    letter-spacing: 0.05em;
+    margin-top: 0.25rem;
 }
 
 nav {
     display: flex;
-    gap: 15px;
-    justify-content: center;
-    flex-grow: 1;
+    align-items: center;
+    gap: 2rem;
 }
 
 nav a {
-    color: var(--secondary-color);
-    padding: 8px 15px;
-    border-radius: 5px;
-    transition: background-color 0.3s, transform 0.3s;
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 0.5rem 0;
+    position: relative;
+    transition: color 0.2s;
 }
 
 nav a:hover,
 nav a.router-link-active {
-    transform: scale(1.1);
-    background: rgba(255, 255, 255, 0.1);
+    color: var(--accent-color);
 }
 
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--accent-color);
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after,
+nav a.router-link-active::after {
+    width: 100%;
+}
+
+/* Dropdown */
 .dropdown {
     position: relative;
 }
 
-.dropdown .dropbtn {
-    color: var(--secondary-color);
-    padding: 8px 15px;
-    border-radius: 5px;
-    display: inline-block;
-    transition: background-color 0.3s, transform 0.3s;
+.dropbtn {
     cursor: pointer;
-}
-
-.dropdown:hover .dropbtn {
-    transform: scale(1.1);
-    background: rgba(255, 255, 255, 0.1);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-    width: 200px;
-    text-align: center;
-    border-radius: 5px;
     top: 100%;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--card-bg-color);
+    min-width: 180px;
+    box-shadow: var(--shadow-lg);
+    border-radius: 0.5rem;
+    padding: 0.5rem 0;
+    z-index: 1001;
+    margin-top: 0.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.dropdown:hover .dropdown-content {
+.dropdown:hover .dropdown-content,
+.dropdown.active .dropdown-content {
     display: block;
+    animation: fadeIn 0.2s ease-out;
 }
 
 .dropdown-content a {
     display: block;
-    padding: 10px;
-    text-align: center;
-    border-bottom: 1px solid #ddd;
-    font-size: 14px;
-    color: var(--dark-color);
-}
-
-.dropdown-content a:last-child {
-    border-bottom: none;
+    padding: 0.75rem 1.5rem;
+    color: var(--text-color);
+    text-align: left;
+    font-size: 0.9rem;
 }
 
 .dropdown-content a:hover {
-    background-color: #ddd;
+    background-color: var(--card-hover-color);
+    color: var(--accent-color);
 }
 
 .top-social-media {
     display: flex;
-    justify-content: center;
-    gap: 15px;
-    padding: 0;
+    gap: 1rem;
 }
 
 .social-item img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    transition: transform 0.2s;
+    background: white;
+    padding: 2px;
+}
+
+.social-item:hover img {
+    transform: scale(1.1);
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
     width: 30px;
-    height: 30px;
-    object-fit: cover;
-    transition: transform 0.3s, filter 0.3s;
+    height: 21px;
+    cursor: pointer;
+    z-index: 1002;
 }
 
-.social-item img:hover {
-    transform: scale(1.1) rotate(20deg);
-    filter: brightness(1.2);
+.menu-toggle span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 3px;
+    transition: all 0.3s ease;
 }
 
-.social-item img:active {
-    transform: scale(0.9) rotate(-15deg);
-}
-
+/* Mobile Styles */
 @media (max-width: 768px) {
     .menu-toggle {
         display: flex;
     }
 
     nav {
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
+        position: fixed;
+        top: 0;
+        right: -100%;
         width: 100%;
-        background-color: rgba(0, 0, 0, 0.8);
-        display: none;
-        transition: all 0.3s ease;
+        height: 100vh;
+        background-color: rgba(15, 23, 42, 0.98);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        justify-content: center;
+        transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        padding: 2rem;
         z-index: 1001;
     }
 
     nav.active {
-        top: 81.5px;
-        display: flex;
+        right: 0;
     }
 
     nav a {
-        padding: 15px;
-        text-align: center;
+        font-size: 1.5rem;
+        margin: 1rem 0;
     }
 
     .dropdown-content {
         position: static;
-        background-color: rgba(0, 0, 0, 0.5);
+        background: transparent;
         box-shadow: none;
-        width: 100%;
+        border: none;
+        transform: none;
         text-align: center;
-    }
-
-    .dropdown-content a {
-        padding: 15px;
-        border-bottom: 1px solid #ddd;
-        color: var(--secondary-color);
-    }
-
-    .dropdown-content {
+        padding-top: 0;
+        margin-top: 0;
         display: none;
     }
 
@@ -302,26 +340,48 @@ nav a.router-link-active {
         display: block;
     }
 
-    .dropdown .dropbtn {
-        margin-left: -15px;
-        width: 100%;
+    .dropdown-content a {
+        font-size: 1.2rem;
+        padding: 0.5rem;
+        color: var(--text-muted);
     }
 
     .top-social-media {
-        display: none;
+        display: none; /* Consider moving inside nav for mobile */
+    }
+
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -6px);
+    }
+
+    .desktop-only {
+        display: none !important;
     }
 }
 
-@media (max-width: 480px) {
-    .logo img {
-        width: 60px;
+.mobile-only {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .mobile-only {
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
     }
-    .logo h1 {
-        font-size: 24px;
-    }
-    .logo .slogan {
-        font-size: 8px;
-    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px) translateX(-50%); }
+    to { opacity: 1; transform: translateY(0) translateX(-50%); }
 }
 </style>
 

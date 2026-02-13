@@ -1,100 +1,159 @@
 <template>
   <div class="home-page">
     <HeaderNav />
-    
+
+    <!-- Hero Section -->
     <div class="hero">
-      <video autoplay muted loop preload="auto">
+      <video autoplay muted loop playsinline class="hero-video">
         <source src="/movie.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
-      <nav class="vehicle-list">
-        <router-link to="/inventory?type=sedan">SEDAN</router-link>
-        <router-link to="/inventory?type=suv">SUV</router-link>
-        <router-link to="/inventory?type=pickup">PICKUP</router-link>
-        <router-link to="/inventory?type=truck">TRUCK</router-link>
-        <router-link to="/inventory?type=refrigerated">REFRIGERATED</router-link>
-        <router-link to="/inventory?type=bus">BUS</router-link>
-        <router-link to="/inventory?type=van">VAN</router-link>
-      </nav>
+      <div class="hero-overlay"></div>
+      <div class="hero-content container">
+        <h1>Experience the Future of Mobility</h1>
+        <p>Premium Electric Vehicles for a Sustainable Tomorrow</p>
+        <div class="hero-actions">
+          <router-link to="/inventory" class="btn btn-primary">Browse Inventory</router-link>
+          <router-link to="/testdrive" class="btn btn-outline">Schedule Test Drive</router-link>
+        </div>
+      </div>
     </div>
 
-    <section class="vehicle-section">
-      <div class="vehicle-card">
-        <img src="/sedan.jpg" alt="Sedan">
-        <h3>Sedan</h3>
-        <p>Stylish and fuel-efficient sedans for everyday use.</p>
-        <router-link to="/inventory?type=sedan" class="btn">
-          <i class="fas fa-eye" style="margin-right:5px;"></i>View
+    <!-- Quick Vehicle Categories -->
+    <div class="category-strip">
+      <div class="container category-grid">
+        <router-link to="/inventory?type=sedan" class="category-item">
+            <i class="fas fa-car-side"></i> Sedan
+        </router-link>
+        <router-link to="/inventory?type=suv" class="category-item">
+            <i class="fas fa-shuttle-van"></i> SUV
+        </router-link>
+        <router-link to="/inventory?type=pickup" class="category-item">
+            <i class="fas fa-truck-pickup"></i> Pickup
+        </router-link>
+        <router-link to="/inventory?type=truck" class="category-item">
+            <i class="fas fa-truck"></i> Truck
+        </router-link>
+        <router-link to="/inventory?type=bus" class="category-item">
+            <i class="fas fa-bus"></i> Bus
+        </router-link>
+        <router-link to="/inventory?type=van" class="category-item">
+            <i class="fas fa-shipping-fast"></i> Van
         </router-link>
       </div>
-      <div class="vehicle-card">
-        <img src="/suv.jpg" alt="SUV">
-        <h3>SUV</h3>
-        <p>Explore our wide range of high-performance SUVs.</p>
-        <router-link to="/inventory?type=suv" class="btn">
-          <i class="fas fa-eye" style="margin-right:5px;"></i>View
-        </router-link>
+    </div>
+
+    <!-- Featured Vehicles -->
+    <section class="section container">
+      <div class="section-header">
+        <h2>Featured Models</h2>
+        <p>Discover our top-rated electric vehicles designed for performance and comfort.</p>
       </div>
-      <div class="vehicle-card">
-        <img src="/pickup.jpg" alt="Pickup">
-        <h3>Pickup</h3>
-        <p>Powerful and reliable pickups to meet all your needs.</p>
-        <router-link to="/inventory?type=pickup" class="btn">
-          <i class="fas fa-eye" style="margin-right:5px;"></i>View
-        </router-link>
-      </div>
-      <div class="vehicle-card">
-        <img src="/truck.jpg" alt="Truck">
-        <h3>Truck</h3>
-        <p>High-capacity trucks suitable for long-distance transportation.</p>
-        <router-link to="/inventory?type=truck" class="btn">
-          <i class="fas fa-eye" style="margin-right:5px;"></i>View
-        </router-link>
-      </div>
-      <div class="vehicle-card">
-        <img src="/refrigerated.jpg" alt="Refrigerated">
-        <h3>Refrigerated</h3>
-        <p>Refrigerated vehicles for transporting perishable goods.</p>
-        <router-link to="/inventory?type=refrigerated" class="btn">
-          <i class="fas fa-eye" style="margin-right:5px;"></i>View
-        </router-link>
-      </div>
-      <div class="vehicle-card">
-        <img src="/bus.jpg" alt="Bus">
-        <h3>Bus</h3>
-        <p>Comfortable and spacious buses for group transportation.</p>
-        <router-link to="/inventory?type=bus" class="btn">
-          <i class="fas fa-eye" style="margin-right:5px;"></i>View
-        </router-link>
-      </div>
-      <div class="vehicle-card">
-        <img src="/van.jpg" alt="Van">
-        <h3>Van</h3>
-        <p>Efficient and economical vans to support your business.</p>
-        <router-link to="/inventory?type=van" class="btn">
-          <i class="fas fa-eye" style="margin-right:5px;"></i>View
-        </router-link>
+
+      <div class="vehicle-grid">
+        <div class="vehicle-card">
+          <div class="card-image">
+            <img src="/sedan.jpg" alt="Sedan" loading="lazy">
+            <span class="badge">Best Seller</span>
+          </div>
+          <div class="card-content">
+            <h3>Sedan</h3>
+            <p>Efficient, stylish, and perfect for city driving. Experience smooth acceleration and silent comfort.</p>
+            <router-link to="/inventory?type=sedan" class="btn btn-sm">View Details</router-link>
+          </div>
+        </div>
+
+        <div class="vehicle-card">
+          <div class="card-image">
+            <img src="/suv.jpg" alt="SUV" loading="lazy">
+          </div>
+          <div class="card-content">
+            <h3>SUV</h3>
+            <p>Spacious and powerful. Ideal for families and adventure seekers with advanced safety features.</p>
+            <router-link to="/inventory?type=suv" class="btn btn-sm">View Details</router-link>
+          </div>
+        </div>
+
+        <div class="vehicle-card">
+          <div class="card-image">
+            <img src="/pickup.jpg" alt="Pickup" loading="lazy">
+          </div>
+          <div class="card-content">
+            <h3>Pickup</h3>
+            <p>Rugged capability meets electric efficiency. Built for work and play.</p>
+            <router-link to="/inventory?type=pickup" class="btn btn-sm">View Details</router-link>
+          </div>
+        </div>
+
+        <!-- Add more cards as needed -->
+         <div class="vehicle-card">
+            <div class="card-image">
+              <img src="/truck.jpg" alt="Truck" loading="lazy">
+            </div>
+            <div class="card-content">
+              <h3>Truck</h3>
+              <p>Heavy-duty performance for commercial needs. Reliable and cost-effective.</p>
+              <router-link to="/inventory?type=truck" class="btn btn-sm">View Details</router-link>
+            </div>
+          </div>
+
+          <div class="vehicle-card">
+            <div class="card-image">
+              <img src="/refrigerated.jpg" alt="Refrigerated" loading="lazy">
+            </div>
+            <div class="card-content">
+              <h3>Refrigerated</h3>
+              <p>Ensuring freshness for your perishable goods with precise temperature control.</p>
+              <router-link to="/inventory?type=refrigerated" class="btn btn-sm">View Details</router-link>
+            </div>
+          </div>
+
+          <div class="vehicle-card">
+            <div class="card-image">
+              <img src="/bus.jpg" alt="Bus" loading="lazy">
+            </div>
+            <div class="card-content">
+              <h3>Bus</h3>
+              <p>Clean public transportation solution. Comfortable seating for large groups.</p>
+              <router-link to="/inventory?type=bus" class="btn btn-sm">View Details</router-link>
+            </div>
+          </div>
+
+           <div class="vehicle-card">
+            <div class="card-image">
+              <img src="/van.jpg" alt="Van" loading="lazy">
+            </div>
+            <div class="card-content">
+              <h3>Van</h3>
+              <p>Versatile cargo space for logistics and delivery services.</p>
+              <router-link to="/inventory?type=van" class="btn btn-sm">View Details</router-link>
+            </div>
+          </div>
       </div>
     </section>
 
-    <div class="map-container">
-      <div class="map-header">
-        <h2>Find Us on the Map</h2>
-        <p class="map-subtitle">Discover Our Convenient Location</p>
+    <!-- Map Section -->
+    <section class="map-section">
+      <div class="container">
+        <div class="section-header">
+            <h2>Visit Our Showroom</h2>
+            <p>Experience our vehicles in person at our convenient location.</p>
+        </div>
+        <div class="map-container">
+            <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.418287609195!2d30.098935373674106!3d-1.9874280979946188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dcb909c976d39b%3A0x85b1db1ad0e495c5!2z5Y-B576K5rG96L2mIFRnIEVsZWN0cmljIENhciBNYXJrZXQ!5e0!3m2!1szh-CN!2srw!4v1739448007802!5m2!1szh-CN!2srw"
+            width="100%"
+            height="450"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
       </div>
-      <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.418287609195!2d30.098935373674106!3d-1.9874280979946188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dcb909c976d39b%3A0x85b1db1ad0e495c5!2z5Y-B576K5rG96L2mIFRnIEVsZWN0cmljIENhciBNYXJrZXQ!5e0!3m2!1szh-CN!2srw!4v1739448007802!5m2!1szh-CN!2srw" 
-        width="100%" 
-        height="450" 
-        style="width: 100%; border: 0;" 
-        allowfullscreen="" 
-        loading="lazy" 
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
-    </div>
+    </section>
 
     <ContactInfo />
-    <SocialMedia />
     <FooterBar />
   </div>
 </template>
@@ -102,26 +161,21 @@
 <script setup>
 import HeaderNav from '@/components/HeaderNav.vue'
 import FooterBar from '@/components/FooterBar.vue'
-import SocialMedia from '@/components/SocialMedia.vue'
 import ContactInfo from '@/components/ContactInfo.vue'
 </script>
 
 <style scoped>
 .hero {
     position: relative;
-    height: 80vh;
+    height: 90vh;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    color: var(--secondary-color);
-    text-align: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/hero-bg.jpg');
-    background-size: cover;
-    background-position: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-top: -80px; /* Offset fixed header if transparent, or just overlap */
 }
 
-.hero video {
+.hero-video {
     position: absolute;
     top: 0;
     left: 0;
@@ -129,144 +183,239 @@ import ContactInfo from '@/components/ContactInfo.vue'
     height: 100%;
     object-fit: cover;
     z-index: -1;
-    pointer-events: none;
 }
 
-.vehicle-list {
+.hero-overlay {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: rgba(0, 31, 63, 0.8);
-    padding: 20px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(15, 23, 42, 0.4), rgba(15, 23, 42, 0.8));
+    z-index: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: white;
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 2.5rem;
+    color: var(--secondary-color);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-color-dark);
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
+.btn-outline:hover {
+    background-color: white;
+    color: var(--primary-color);
+}
+
+/* Category Strip */
+.category-strip {
+    background-color: var(--card-bg-color);
+    padding: 2rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.category-grid {
     display: flex;
     justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.category-item {
+    display: flex;
     align-items: center;
-    gap: 20px;
-    flex-wrap: nowrap;
-    z-index: 1000;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.vehicle-list a {
-    color: var(--secondary-color);
-    font-size: 18px;
-    font-weight: bold;
-    padding: 10px 20px;
-    border-radius: 5px;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 0.5rem;
+    color: var(--text-color);
+    font-weight: 600;
+    transition: all 0.3s ease;
     text-decoration: none;
-    transition: background-color 0.3s, transform 0.3s;
-    margin: 0 10px;
 }
 
-.vehicle-list a:hover {
-    text-decoration: underline;
-    background: rgba(255, 255, 255, 0.2);
-    transform: scale(1.1);
-    margin: 0 5px;
+.category-item:hover {
+    background: var(--accent-color);
+    color: white;
+    transform: translateY(-2px);
 }
 
-.vehicle-section {
+/* Sections */
+.section {
+    padding: 5rem 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.section-header p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
+/* Vehicle Grid */
+.vehicle-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 20px;
+    gap: 2rem;
 }
 
 .vehicle-card {
     background: var(--card-bg-color);
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
-    padding-bottom: 20px;
+    border-radius: 1rem;
     overflow: hidden;
-    position: relative;
-    text-align: center;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
 }
 
 .vehicle-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
-    background-color: var(--card-hover-color);
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--accent-color);
 }
 
-.vehicle-card img {
+.card-image {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+}
+
+.card-image img {
     width: 100%;
-    height: 200px;
+    height: 100%;
     object-fit: cover;
-    border-radius: 10px;
-    transition: transform 0.3s;
+    transition: transform 0.5s ease;
 }
 
-.vehicle-card:hover img {
-    transform: scale(1.05);
+.vehicle-card:hover .card-image img {
+    transform: scale(1.1);
 }
 
-.vehicle-card h3 {
-    font-size: 20px;
-    color: var(--text-color);
-    margin: 10px 0;
+.badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--accent-color);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 700;
     text-transform: uppercase;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
-.vehicle-card p {
-    font-size: 14px;
+.card-content {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-content h3 {
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.card-content p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
     line-height: 1.5;
-    color: var(--text-color);
-    margin: 10px 0;
+    flex-grow: 1;
+}
+
+.btn-sm {
+    padding: 0.5rem 1.25rem;
+    font-size: 0.9rem;
+    align-self: flex-start;
+}
+
+/* Map Section */
+.map-section {
+    background: var(--primary-color);
+    padding-bottom: 5rem;
 }
 
 .map-container {
-    padding: 30px 0;
-    background: var(--primary-color);
-    text-align: center;
-    margin: 40px 0;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.map-header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.map-header h2 {
-    font-size: 24px;
-    margin-bottom: 8px;
-}
-
-.map-header .map-subtitle {
-    font-size: 16px;
-    color: var(--secondary-color);
-}
-
+/* Responsive */
 @media (max-width: 768px) {
-    .vehicle-section {
-        grid-template-columns: 1fr;
-        gap: 10px;
+    .hero h1 {
+        font-size: 2.5rem;
     }
 
-    .vehicle-card img {
-        height: 250px;
+    .hero-actions {
+        flex-direction: column;
     }
 
-    .hero {
-        height: 40vh;
+    .category-grid {
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding-bottom: 1rem;
+        flex-wrap: nowrap;
     }
 
-    .hero video {
-        height: 100%;
+    .category-item {
+        flex-shrink: 0;
     }
 
-    .vehicle-list {
-        display: none;
-    }
-
-    .map-content {
-        margin: 30px 0;
-        height: 350px;
+    .section {
+        padding: 3rem 0;
     }
 }
 </style>

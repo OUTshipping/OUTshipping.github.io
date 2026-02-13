@@ -1,62 +1,93 @@
 <template>
-  <div class="contact-info">
-    <h3>Contact Us</h3>
-    <p>
-      <a href="https://wa.me/250785084313" target="_blank" class="whatsapp-link">Phone: +250 785 084 313</a> /
-      <a href="https://wa.me/250794104908" target="_blank" class="whatsapp-link">+250 794 104 908</a>
-    </p>
-    <p>Email: tgautomobilee@gmail.com</p>
-    <p>Address: KK 15 Rd, Kicukiro, Kigali</p>
-    <router-link to="/testdrive" class="btn">Schedule a Test Drive</router-link>
-  </div>
+  <section class="cta-section">
+    <div class="container">
+        <div class="cta-content">
+            <h2>Ready to Electrify Your Journey?</h2>
+            <p>Join the green revolution today with Triple Goats. Schedule a test drive or visit our showroom.</p>
+            <div class="cta-actions">
+                <router-link to="/testdrive" class="btn btn-primary">Schedule Test Drive</router-link>
+                <router-link to="/contact" class="btn btn-outline">Contact Sales</router-link>
+            </div>
+        </div>
+    </div>
+  </section>
 </template>
 
 <script setup>
-// 联系信息组件
+// Contact Info / CTA Component
 </script>
 
 <style scoped>
-.contact-info {
+.cta-section {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, var(--primary-color), var(--card-bg-color));
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('/pattern.png') repeat; /* Optional pattern */
+    opacity: 0.05;
+}
+
+.cta-content {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+p {
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+    color: var(--text-muted);
+}
+
+.cta-actions {
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    padding: 30px 20px;
-    background: var(--primary-color);
-    text-align: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
 }
 
-.contact-info h3 {
-    font-size: 24px;
-    margin-bottom: 20px;
+.btn-primary {
+    background-color: var(--accent-color);
+    color: white;
 }
 
-.contact-info p {
-    text-align: center;
-    margin-bottom: 15px;
+.btn-outline {
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    background: transparent;
 }
 
-.contact-info .btn {
-    margin-top: 20px;
+.btn-outline:hover {
+    border-color: white;
+    background: white;
+    color: var(--primary-color);
 }
 
 @media (max-width: 768px) {
-    .contact-info {
-        padding: 10px;
+    .cta-section {
+        padding: 4rem 1rem;
     }
 
-    .contact-info h3 {
-        font-size: 20px;
-    }
-
-    .contact-info p {
-        font-size: 14px;
-    }
-
-    .contact-info .btn {
-        font-size: 14px;
-        padding: 10px 15px;
-        margin-top: 10px;
+    h2 {
+        font-size: 2rem;
     }
 }
 </style>

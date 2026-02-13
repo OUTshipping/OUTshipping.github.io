@@ -1,13 +1,17 @@
 /* 全局样式 */
 :root {
-    --primary-color: #001f3f; 
-    --secondary-color: #ffffff; 
-    --accent-color: #0074D9; 
-    --accent-color-dark: #00346e;
-    --dark-color: #000000; 
-    --card-bg-color: #002a54; 
-    --card-hover-color: #001f3f; 
-    --text-color: #ffffff; 
+    --primary-color: #0f172a; /* Slate 900 */
+    --secondary-color: #f8fafc; /* Slate 50 */
+    --accent-color: #3b82f6; /* Blue 500 */
+    --accent-color-dark: #1d4ed8; /* Blue 700 */
+    --dark-color: #020617; /* Slate 950 */
+    --card-bg-color: #1e293b; /* Slate 800 */
+    --card-hover-color: #334155; /* Slate 700 */
+    --text-color: #e2e8f0; /* Slate 200 */
+    --text-muted: #94a3b8; /* Slate 400 */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
 
 * {
@@ -17,53 +21,65 @@
 }
 
 body {
-    font-family: 'Roboto', Arial, sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
     margin: 0;
     padding: 0;
     background: var(--primary-color);
-    color: var(--secondary-color);
+    color: var(--text-color);
     line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
 }
 
 a {
     text-decoration: none;
-    color: var(--text-color);
+    color: inherit;
+    transition: color 0.2s;
 }
 
 img {
     max-width: 100%;
     height: auto;
-    transition: transform 0.3s;
-}
-
-img:hover {
-    transform: scale(1.05);
+    display: block;
 }
 
 html {
     scroll-behavior: smooth;
 }
 
-/* 按钮通用样式 */
+/* Modern Button Styles */
 .btn {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     background-color: var(--accent-color);
-    color: var(--secondary-color);
-    padding: 10px 20px;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: bold;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px; /* Pill shape */
+    font-size: 1rem;
+    font-weight: 600;
     text-decoration: none;
-    transition: background-color 0.3s, transform 0.3s;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: var(--shadow);
     border: none;
     cursor: pointer;
+    letter-spacing: 0.025em;
 }
 
 .btn:hover {
-    background-color: #0055aa;
-    transform: scale(1.05);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    background-color: var(--accent-color-dark);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-lg);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+/* Utility Classes */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
 }
 
 /* 响应式布局 */
