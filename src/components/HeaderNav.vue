@@ -28,6 +28,8 @@
         </div>
         <div class="dropdown-content">
           <router-link to="/testdrive" @click="closeMenu">TEST DRIVE</router-link>
+          <router-link to="/taxi" @click="closeMenu">TAXI SERVICE</router-link>
+          <router-link to="/rental" @click="closeMenu">CAR RENTAL</router-link>
           <router-link to="/about" @click="closeMenu">ABOUT</router-link>
           <router-link to="/contact" @click="closeMenu">CONTACT</router-link>
         </div>

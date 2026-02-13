@@ -18,6 +18,8 @@
                 <li><router-link to="/inventory">Inventory</router-link></li>
                 <li><router-link to="/charging">Charging</router-link></li>
                 <li><router-link to="/services">Services</router-link></li>
+                <li><router-link to="/taxi">Taxi Service</router-link></li>
+                <li><router-link to="/rental">Car Rental</router-link></li>
             </ul>
         </div>
 
