@@ -10,11 +10,11 @@
       </video>
       <div class="hero-overlay"></div>
       <div class="hero-content container">
-        <h1>驾驭未来出行</h1>
-        <p>优质电动汽车，驶向绿色明天</p>
+        <h1>Experience the Future of Mobility</h1>
+        <p>Premium Electric Vehicles for a Sustainable Tomorrow</p>
         <div class="hero-actions">
-          <router-link to="/inventory" class="btn btn-primary">浏览库存</router-link>
-          <router-link to="/testdrive" class="btn btn-outline">预约试驾</router-link>
+          <router-link to="/inventory" class="btn btn-primary">Browse Inventory</router-link>
+          <router-link to="/testdrive" class="btn btn-outline">Schedule Test Drive</router-link>
         </div>
       </div>
     </div>
@@ -23,22 +23,22 @@
     <div class="category-strip">
       <div class="container category-grid">
         <router-link to="/inventory?type=sedan" class="category-item">
-            <i class="fas fa-car-side"></i> 轿车
+            <i class="fas fa-car-side"></i> Sedan
         </router-link>
         <router-link to="/inventory?type=suv" class="category-item">
             <i class="fas fa-shuttle-van"></i> SUV
         </router-link>
         <router-link to="/inventory?type=pickup" class="category-item">
-            <i class="fas fa-truck-pickup"></i> 皮卡
+            <i class="fas fa-truck-pickup"></i> Pickup
         </router-link>
         <router-link to="/inventory?type=truck" class="category-item">
-            <i class="fas fa-truck"></i> 卡车
+            <i class="fas fa-truck"></i> Truck
         </router-link>
         <router-link to="/inventory?type=bus" class="category-item">
-            <i class="fas fa-bus"></i> 巴士
+            <i class="fas fa-bus"></i> Bus
         </router-link>
         <router-link to="/inventory?type=van" class="category-item">
-            <i class="fas fa-shipping-fast"></i> 厢式车
+            <i class="fas fa-shipping-fast"></i> Van
         </router-link>
       </div>
     </div>
@@ -46,20 +46,20 @@
     <!-- Featured Vehicles -->
     <section class="section container">
       <div class="section-header">
-        <h2>精选车型</h2>
-        <p>探索我们评价最高的电动汽车，兼具性能与舒适。</p>
+        <h2>Featured Models</h2>
+        <p>Discover our top-rated electric vehicles designed for performance and comfort.</p>
       </div>
 
       <div class="vehicle-grid">
         <div class="vehicle-card">
           <div class="card-image">
             <img src="/sedan.jpg" alt="Sedan" loading="lazy">
-            <span class="badge">热销</span>
+            <span class="badge">Best Seller</span>
           </div>
           <div class="card-content">
-            <h3>轿车</h3>
-            <p>高效、时尚，城市出行的完美选择。体验平稳加速与静谧舒适。</p>
-            <router-link to="/inventory?type=sedan" class="btn btn-sm">查看详情</router-link>
+            <h3>Sedan</h3>
+            <p>Efficient, stylish, and perfect for city driving. Experience smooth acceleration and silent comfort.</p>
+            <router-link to="/inventory?type=sedan" class="btn btn-sm">View Details</router-link>
           </div>
         </div>
 
@@ -69,8 +69,8 @@
           </div>
           <div class="card-content">
             <h3>SUV</h3>
-            <p>宽敞且强劲。先进安全配置，家庭与探险的理想之选。</p>
-            <router-link to="/inventory?type=suv" class="btn btn-sm">查看详情</router-link>
+            <p>Spacious and powerful. Ideal for families and adventure seekers with advanced safety features.</p>
+            <router-link to="/inventory?type=suv" class="btn btn-sm">View Details</router-link>
           </div>
         </div>
 
@@ -79,9 +79,9 @@
             <img src="/pickup.jpg" alt="Pickup" loading="lazy">
           </div>
           <div class="card-content">
-            <h3>皮卡</h3>
-            <p>强悍性能与电动效率的完美结合，工作与休闲兼备。</p>
-            <router-link to="/inventory?type=pickup" class="btn btn-sm">查看详情</router-link>
+            <h3>Pickup</h3>
+            <p>Rugged capability meets electric efficiency. Built for work and play.</p>
+            <router-link to="/inventory?type=pickup" class="btn btn-sm">View Details</router-link>
           </div>
         </div>
 
@@ -91,9 +91,9 @@
               <img src="/truck.jpg" alt="Truck" loading="lazy">
             </div>
             <div class="card-content">
-              <h3>卡车</h3>
-              <p>商用重载性能，可靠且经济高效。</p>
-              <router-link to="/inventory?type=truck" class="btn btn-sm">查看详情</router-link>
+              <h3>Truck</h3>
+              <p>Heavy-duty performance for commercial needs. Reliable and cost-effective.</p>
+              <router-link to="/inventory?type=truck" class="btn btn-sm">View Details</router-link>
             </div>
           </div>
 
@@ -102,9 +102,9 @@
               <img src="/refrigerated.jpg" alt="Refrigerated" loading="lazy">
             </div>
             <div class="card-content">
-              <h3>冷藏车</h3>
-              <p>精准温控，确保易腐货物的新鲜品质。</p>
-              <router-link to="/inventory?type=refrigerated" class="btn btn-sm">查看详情</router-link>
+              <h3>Refrigerated</h3>
+              <p>Ensuring freshness for your perishable goods with precise temperature control.</p>
+              <router-link to="/inventory?type=refrigerated" class="btn btn-sm">View Details</router-link>
             </div>
           </div>
 
@@ -113,9 +113,9 @@
               <img src="/bus.jpg" alt="Bus" loading="lazy">
             </div>
             <div class="card-content">
-              <h3>巴士</h3>
-              <p>清洁公共交通解决方案，大容量舒适座椅。</p>
-              <router-link to="/inventory?type=bus" class="btn btn-sm">查看详情</router-link>
+              <h3>Bus</h3>
+              <p>Clean public transportation solution. Comfortable seating for large groups.</p>
+              <router-link to="/inventory?type=bus" class="btn btn-sm">View Details</router-link>
             </div>
           </div>
 
@@ -124,9 +124,9 @@
               <img src="/van.jpg" alt="Van" loading="lazy">
             </div>
             <div class="card-content">
-              <h3>厢式车</h3>
-              <p>灵活货运空间，物流配送的得力助手。</p>
-              <router-link to="/inventory?type=van" class="btn btn-sm">查看详情</router-link>
+              <h3>Van</h3>
+              <p>Versatile cargo space for logistics and delivery services.</p>
+              <router-link to="/inventory?type=van" class="btn btn-sm">View Details</router-link>
             </div>
           </div>
       </div>
@@ -136,8 +136,8 @@
     <section class="map-section">
       <div class="container">
         <div class="section-header">
-            <h2>参观我们的展厅</h2>
-            <p>欢迎亲临我们的展厅，实地体验我们的车辆。</p>
+            <h2>Visit Our Showroom</h2>
+            <p>Experience our vehicles in person at our convenient location.</p>
         </div>
         <div class="map-container">
             <iframe

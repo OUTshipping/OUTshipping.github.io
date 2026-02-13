@@ -3,35 +3,35 @@
     <HeaderNav />
     
     <div class="hero">
-      <h1>关于三羊汽车</h1>
-      <p>了解我们的公司与价值观</p>
+      <h1>About T&G AUTOMOBILE</h1>
+      <p>Learn more about our company and values</p>
     </div>
 
     <main>
-      <h2>关于三羊汽车</h2>
+      <h2>About T&G AUTOMOBILE</h2>
       <div class="about-section">
         <div class="section">
           <div class="section-content">
-            <h3>我们的使命</h3>
-            <p>三羊（卢旺达）汽车销售有限公司致力于为卢旺达市场提供高品质、多元化的汽车产品及优质的售后服务。我们的使命是为客户提供从轿车、SUV到皮卡和商用车的全系列车型选择，满足个人消费者、企业和政府部门的需求。我们致力于通过可靠的产品和卓越的服务，与客户建立长期合作关系。</p>
+            <h3>Our Mission</h3>
+            <p>San Yang (Rwanda) Automobile Sales Co., Ltd. is committed to providing high-quality and diverse automobile products as well as excellent after-sales services to the Rwandan market. Our mission is to offer customers a wide range of vehicle choices, from sedans and SUVs to pickup trucks and commercial vehicles, ensuring that we meet the needs of individual consumers, businesses, and government departments. We are dedicated to building long-term relationships with our customers by providing reliable products and exceptional service.</p>
           </div>
         </div>
         <div class="section">
           <div class="section-content">
-            <h3>我们的价值观</h3>
-            <p>在三羊（卢旺达）汽车销售有限公司，我们秉持诚信、专业和以客户为中心的价值观。我们坚持以诚实和透明的方式经营业务，确保客户获得准确的信息和公正的对待。我们的专业团队致力于提供专业建议和支持，帮助客户做出明智的购车决策。我们以客户满意为首要目标，力求在每一次互动中超越期望。</p>
+            <h3>Our Values</h3>
+            <p>At San Yang (Rwanda) Automobile Sales Co., Ltd., we uphold the values of integrity, professionalism, and customer-centricity. We believe in conducting our business with honesty and transparency, ensuring that our customers receive accurate information and fair treatment. Our team of professionals is committed to providing expert advice and support, helping customers make informed decisions about their vehicle purchases. We prioritize customer satisfaction and strive to exceed expectations in every interaction.</p>
           </div>
         </div>
         <div class="section">
           <div class="section-content">
-            <h3>我们的历史</h3>
-            <p>三羊（卢旺达）汽车销售有限公司自成立以来，已发展成为卢旺达汽车行业的知名品牌。从最初的小型企业起步，我们不断扩大业务规模，如今服务于全国各地的广大客户。我们的发展历程始终以品质、创新和客户满意为核心，并将继续在业务的各个方面追求卓越。</p>
+            <h3>Our History</h3>
+            <p>Founded in [specific year of establishment], San Yang (Rwanda) Automobile Sales Co., Ltd. has grown to become a trusted name in the Rwandan automobile industry. Starting as a small venture, we have expanded our operations and now serve a wide range of customers across the country. Our journey has been marked by a commitment to quality, innovation, and customer satisfaction, and we continue to strive for excellence in all aspects of our business.</p>
           </div>
         </div>
         <div class="section">
           <div class="section-content">
-            <h3>社区参与</h3>
-            <p>我们积极参与各类社区支持活动。我们与当地组织合作，推广道路安全意识和教育，致力于为所有人创造更安全的驾驶环境。此外，我们参与关注环境可持续发展和社会进步的企业社会责任项目，体现了我们在商业运营之外产生积极影响的决心。</p>
+            <h3>Community Involvement</h3>
+            <p>We are actively involved in supporting the local community through various initiatives. We collaborate with local organizations to promote road safety awareness and education, aiming to create a safer driving environment for everyone. Additionally, we participate in corporate social responsibility programs that focus on environmental sustainability and social development, reflecting our dedication to making a positive impact beyond our business operations.</p>
           </div>
         </div>
       </div>

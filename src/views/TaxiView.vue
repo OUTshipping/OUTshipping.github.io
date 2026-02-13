@@ -3,13 +3,13 @@
     <HeaderNav />
     
     <div class="hero">
-      <h1>出租车服务</h1>
-      <p>便捷可靠的出租车服务</p>
+      <h1>Taxi Service</h1>
+      <p>Convenient and reliable taxi services</p>
     </div>
 
     <main>
-      <h2>即将推出</h2>
-      <p>我们的出租车服务即将上线，请联系我们了解更多信息。</p>
+      <h2>Coming Soon</h2>
+      <p>Our taxi service is coming soon. Please contact us for more information.</p>
     </main>
 
     <ContactInfo />
