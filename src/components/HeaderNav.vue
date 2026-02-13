@@ -17,19 +17,19 @@
 
     <!-- 主导航 -->
     <nav id="nav-menu" :class="{ active: menuOpen }">
-      <router-link to="/inventory" @click="closeMenu">INVENTORY</router-link>
-      <router-link to="/charging" @click="closeMenu">CHARGING</router-link>
-      <router-link to="/services" @click="closeMenu">SERVICES</router-link>
+      <router-link to="/inventory" @click="closeMenu">库存</router-link>
+      <router-link to="/charging" @click="closeMenu">充电</router-link>
+      <router-link to="/services" @click="closeMenu">服务</router-link>
 
       <div class="dropdown" :class="{ active: dropdownOpen }">
         <div class="dropbtn" @click.stop="toggleDropdown">
-            DISCOVER
+            发现
             <i class="fas fa-chevron-down" style="font-size: 0.8em; margin-left: 4px;"></i>
         </div>
         <div class="dropdown-content">
-          <router-link to="/testdrive" @click="closeMenu">TEST DRIVE</router-link>
-          <router-link to="/about" @click="closeMenu">ABOUT</router-link>
-          <router-link to="/contact" @click="closeMenu">CONTACT</router-link>
+          <router-link to="/testdrive" @click="closeMenu">试驾</router-link>
+          <router-link to="/about" @click="closeMenu">关于</router-link>
+          <router-link to="/contact" @click="closeMenu">联系</router-link>
         </div>
       </div>
 

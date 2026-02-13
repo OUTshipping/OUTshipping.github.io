@@ -3,19 +3,19 @@
     <HeaderNav />
     
     <div class="hero">
-      <h1>Our Services</h1>
-      <p>Discover the range of services we offer</p>
+      <h1>我们的服务</h1>
+      <p>了解我们提供的全方位服务</p>
     </div>
 
     <main>
-      <h2>Available Services</h2>
+      <h2>可用服务</h2>
       <div class="service-section">
         <div class="service-item">
           <div class="service-item-content">
             <router-link to="/inventory">
               <div>
-                <h3>Car Sales<span class="arrow">→</span></h3>
-                <p>Explore our wide range of new and used vehicles for sale. We offer a variety of cars, SUVs, trucks, and more to meet your needs.</p>
+                <h3>汽车销售<span class="arrow">→</span></h3>
+                <p>浏览我们丰富的新车库存。我们提供轿车、SUV、卡车等多种车型，满足您的各种需求。</p>
               </div>
             </router-link>
           </div>
@@ -24,8 +24,8 @@
           <div class="service-item-content">
             <router-link to="/charging">
               <div>
-                <h3>EV Charging<span class="arrow">→</span></h3>
-                <p>Fast and efficient electric vehicle charging stations. We provide convenient charging solutions for electric vehicles.</p>
+                <h3>电动车充电<span class="arrow">→</span></h3>
+                <p>快速高效的电动汽车充电站，为您提供便捷的充电解决方案。</p>
               </div>
             </router-link>
           </div>
@@ -34,8 +34,8 @@
           <div class="service-item-content">
             <router-link to="/taxi">
               <div>
-                <h3>Taxi Service<span class="arrow">→</span></h3>
-                <p>Convenient and reliable taxi services for your daily needs. Our fleet is modern and well-maintained, ensuring a comfortable ride.</p>
+                <h3>出租车服务<span class="arrow">→</span></h3>
+                <p>便捷可靠的出租车服务，满足您的日常出行需求。我们的车队现代化且维护良好，确保舒适的乘车体验。</p>
               </div>
             </router-link>
           </div>
@@ -44,8 +44,8 @@
           <div class="service-item-content">
             <router-link to="/rental">
               <div>
-                <h3>Car Rental<span class="arrow">→</span></h3>
-                <p>Flexible and secure car rental options for your convenience. Whether you need a car for a day or a week, we have you covered.</p>
+                <h3>汽车租赁<span class="arrow">→</span></h3>
+                <p>灵活安全的汽车租赁选择。无论您需要一天还是一周的用车，我们都能满足。</p>
               </div>
             </router-link>
           </div>

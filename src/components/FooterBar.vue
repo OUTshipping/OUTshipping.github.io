@@ -6,34 +6,34 @@
         <div class="footer-col">
             <h3 class="footer-logo">Triple Goats</h3>
             <p class="footer-desc">
-                Leading the green revolution in Rwanda with premium electric vehicles and sustainable energy solutions.
+                以优质电动汽车和可持续能源方案，引领卢旺达绿色出行革命。
             </p>
         </div>
 
         <!-- Quick Links -->
         <div class="footer-col">
-            <h4>Quick Links</h4>
+            <h4>快速链接</h4>
             <ul>
-                <li><router-link to="/home">Home</router-link></li>
-                <li><router-link to="/inventory">Inventory</router-link></li>
-                <li><router-link to="/charging">Charging</router-link></li>
-                <li><router-link to="/services">Services</router-link></li>
+                <li><router-link to="/home">首页</router-link></li>
+                <li><router-link to="/inventory">库存</router-link></li>
+                <li><router-link to="/charging">充电</router-link></li>
+                <li><router-link to="/services">服务</router-link></li>
             </ul>
         </div>
 
         <!-- Support -->
         <div class="footer-col">
-            <h4>Support</h4>
+            <h4>支持</h4>
             <ul>
-                <li><router-link to="/testdrive">Test Drive</router-link></li>
-                <li><router-link to="/contact">Contact Us</router-link></li>
-                <li><router-link to="/about">About Us</router-link></li>
+                <li><router-link to="/testdrive">试驾</router-link></li>
+                <li><router-link to="/contact">联系我们</router-link></li>
+                <li><router-link to="/about">关于我们</router-link></li>
             </ul>
         </div>
 
         <!-- Contact -->
         <div class="footer-col">
-            <h4>Contact</h4>
+            <h4>联系方式</h4>
             <ul class="contact-list">
                 <li><i class="fas fa-map-marker-alt"></i> KK 15 Rd, Kicukiro, Kigali</li>
                 <li><i class="fas fa-envelope"></i> tgautomobilee@gmail.com</li>
@@ -49,7 +49,7 @@
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2025 Triple Goats. All rights reserved.</p>
+        <p>&copy; 2025 三羊汽车 版权所有</p>
       </div>
     </div>
   </footer>

@@ -3,8 +3,8 @@
     <HeaderNav />
     
     <div class="hero">
-      <h1>Get in Touch</h1>
-      <p>We are here to help you with any questions or concerns</p>
+      <h1>联系我们</h1>
+      <p>我们随时为您解答任何问题</p>
     </div>
 
     <div class="info-cards">
@@ -14,7 +14,7 @@
             <img src="/phone-icon.png" alt="Phone Icon" class="card-icon">
           </div>
           <div class="card-details">
-            <h3>Contact</h3>
+            <h3>联系方式</h3>
             <p>
               <a href="https://wa.me/250785084313" target="_blank">Phone: +250 785 084 313</a> /
               <a href="https://wa.me/250794104908" target="_blank">+250 794 104 908</a>
@@ -29,10 +29,10 @@
             <img src="/location-icon.png" alt="Location Icon" class="card-icon">
           </div>
           <div class="card-details">
-            <h3>Location</h3>
-            <p>Address: KK 15 Rd, Kicukiro, Kigali</p>
-            <p>City: Kigali</p>
-            <p>Country: Rwanda</p>
+            <h3>地址</h3>
+            <p>地址：基加利 基库基罗区 KK 15 路</p>
+            <p>城市：基加利</p>
+            <p>国家：卢旺达</p>
           </div>
         </div>
       </div>
@@ -42,9 +42,9 @@
             <img src="/time-icon.png" alt="Time Icon" class="card-icon">
           </div>
           <div class="card-details">
-            <h3>Business Hours</h3>
-            <p>Monday - Friday: 9:00 AM - 6:00 PM UTC+2</p>
-            <p>Weekend: Closed</p>
+            <h3>营业时间</h3>
+            <p>周一至周五：9:00 - 18:00 (UTC+2)</p>
+            <p>周末：休息</p>
           </div>
         </div>
       </div>

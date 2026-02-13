@@ -3,14 +3,14 @@
     <HeaderNav />
     
     <div class="hero">
-      <h1>SUV Collection</h1>
-      <p>Explore our wide range of SUVs</p>
+      <h1>SUV 系列</h1>
+      <p>探索我们丰富的SUV车型</p>
     </div>
 
     <main>
-      <h2>SUV Models</h2>
-      <p>View our inventory for available SUV models.</p>
-      <router-link to="/inventory?type=suv" class="btn">View SUVs</router-link>
+      <h2>SUV 车型</h2>
+      <p>查看我们库存中的SUV车型。</p>
+      <router-link to="/inventory?type=suv" class="btn">查看SUV</router-link>
     </main>
 
     <ContactInfo />

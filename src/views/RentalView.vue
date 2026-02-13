@@ -3,13 +3,13 @@
     <HeaderNav />
     
     <div class="hero">
-      <h1>Car Rental Services</h1>
-      <p>Flexible and secure car rental options</p>
+      <h1>汽车租赁服务</h1>
+      <p>灵活安全的汽车租赁选择</p>
     </div>
 
     <main>
-      <h2>Coming Soon</h2>
-      <p>Our car rental service is coming soon. Please contact us for more information.</p>
+      <h2>即将推出</h2>
+      <p>我们的汽车租赁服务即将上线，请联系我们了解更多信息。</p>
     </main>
 
     <ContactInfo />

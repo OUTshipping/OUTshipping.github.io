@@ -3,8 +3,8 @@
     <HeaderNav />
     
     <div class="hero">
-      <h1>Schedule a Test Drive</h1>
-      <p>Experience our vehicles firsthand</p>
+      <h1>预约试驾</h1>
+      <p>亲身体验我们的车辆</p>
     </div>
 
     <main>
