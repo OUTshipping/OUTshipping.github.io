@@ -27,7 +27,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, watch } from 'vue'
+import { ref, onMounted, onUnmounted, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import VehicleDetail from '@/components/VehicleDetail.vue'
 
@@ -52,8 +52,8 @@ async function loadVehicle(slug) {
       vehicle.value = found
       // 动态更新页面 SEO 信息
       const vehicleTitle = `${found.name} — Electric ${found.specs?.category || 'Vehicle'} | Triple Goats`
-      const vehicleDesc = found.description || `View specs, photos and pricing for the ${found.name} at Triple Goats, Rwanda's premier EV dealer.`
-      const vehicleImage = found.image ? `https://tgautomobile.com${found.image}` : 'https://tgautomobile.com/companylogo.jpg'
+      const vehicleDesc = found.description || `${found.name} — ${found.range ? found.range + 'km range, ' : ''}${found.seats ? found.seats + '-seat ' : ''}electric ${found.specs?.category || 'vehicle'} available at Triple Goats, Rwanda's premier EV dealer. View specs, photos and pricing.`
+      const vehicleImage = found.coverImage ? `https://tgautomobile.com${found.coverImage}` : 'https://tgautomobile.com/companylogo.jpg'
       document.title = vehicleTitle
       const descTag = document.querySelector('meta[name="description"]')
       if (descTag) descTag.setAttribute('content', vehicleDesc)
@@ -65,6 +65,28 @@ async function loadVehicle(slug) {
       if (ogImage) ogImage.setAttribute('content', vehicleImage)
       const ogUrl = document.querySelector('meta[property="og:url"]')
       if (ogUrl) ogUrl.setAttribute('content', `https://tgautomobile.com/vehicle/${slug}`)
+      // 动态注入 Product JSON-LD 结构化数据
+      const existingLd = document.getElementById('vehicle-jsonld')
+      if (existingLd) existingLd.remove()
+      const ldScript = document.createElement('script')
+      ldScript.type = 'application/ld+json'
+      ldScript.id = 'vehicle-jsonld'
+      ldScript.textContent = JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Product',
+        'name': found.name,
+        'image': vehicleImage,
+        'description': vehicleDesc,
+        'brand': { '@type': 'Brand', 'name': found.specs?.make || 'Triple Goats' },
+        'category': 'Electric Vehicle',
+        'url': `https://tgautomobile.com/vehicle/${slug}`,
+        'offers': {
+          '@type': 'Offer',
+          'availability': 'https://schema.org/InStock',
+          'seller': { '@type': 'Organization', 'name': 'Triple Goats' }
+        }
+      })
+      document.head.appendChild(ldScript)
     }
   } catch (err) {
     error.value = err.message
@@ -75,6 +97,12 @@ async function loadVehicle(slug) {
 
 onMounted(() => {
   loadVehicle(route.params.slug)
+})
+
+// 组件卸载时清理动态注入的 JSON-LD
+onUnmounted(() => {
+  const ldScript = document.getElementById('vehicle-jsonld')
+  if (ldScript) ldScript.remove()
 })
 
 // 监听路由参数变化，支持同页面内跳转
