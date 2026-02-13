@@ -1,0 +1,8 @@
+# Triple Goats - T&G Automobile
+# https://tgautomobile.com
+
+User-agent: *
+Allow: /
+
+Sitemap: https://tgautomobile.com/sitemap.xml
+

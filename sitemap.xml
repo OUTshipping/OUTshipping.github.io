@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Main Pages -->
+  <url><loc>https://tgautomobile.com/home</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://tgautomobile.com/inventory</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://tgautomobile.com/services</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tgautomobile.com/charging</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://tgautomobile.com/about</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://tgautomobile.com/contact</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://tgautomobile.com/testdrive</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://tgautomobile.com/taxi</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tgautomobile.com/rental</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tgautomobile.com/suv</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Vehicle Detail Pages -->
+  <url><loc>https://tgautomobile.com/vehicle/song-plus</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tgautomobile.com/vehicle/farizon-v6e</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tgautomobile.com/vehicle/id4-crozz</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tgautomobile.com/vehicle/leapmotor-c16</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tgautomobile.com/vehicle/kia-ev5</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tgautomobile.com/vehicle/byd-seagull</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tgautomobile.com/vehicle/byd-yuan-plus</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tgautomobile.com/vehicle/byd-tang-l</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tgautomobile.com/vehicle/farizon-v7e</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tgautomobile.com/vehicle/geely-randa</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tgautomobile.com/vehicle/toyota-bz3x</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tgautomobile.com/vehicle/leapmotor-c10</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tgautomobile.com/vehicle/icar-03</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tgautomobile.com/vehicle/icar-v23</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tgautomobile.com/vehicle/jetour-shanhai-t2</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+</urlset>
+
