@@ -4,13 +4,13 @@
     
     <div class="hero">
       <h1>SUV Collection</h1>
-      <p>Explore our wide range of SUVs</p>
+      <p>Command the road with confidence — explore our lineup of electric SUVs built for African terrain</p>
     </div>
 
     <main>
       <h2>SUV Models</h2>
-      <p>View our inventory for available SUV models.</p>
-      <router-link to="/inventory?type=suv" class="btn">View SUVs</router-link>
+      <p>Our electric SUVs combine bold design, generous ground clearance, and advanced all-wheel-drive systems to handle everything from Kigali's urban streets to Rwanda's rolling hills. With spacious interiors, panoramic views, and cutting-edge safety features, these vehicles are built for families, businesses, and anyone who refuses to compromise between capability and sustainability. Browse our current SUV inventory below.</p>
+      <router-link to="/inventory?type=suv" class="btn">Explore SUV Inventory</router-link>
     </main>
 
     <ContactInfo />

@@ -3,7 +3,7 @@
     <div class="container">
         <div class="cta-content">
             <h2>Ready to Electrify Your Journey?</h2>
-            <p>Join the green revolution today with Triple Goats. Schedule a test drive or visit our showroom.</p>
+            <p>Whether you are looking for a personal EV, a commercial fleet, or just want to learn more about electric mobility in Rwanda — our team at Triple Goats is here to help. Book a free test drive, visit our Kigali showroom, or get in touch for a personalized quote.</p>
             <div class="cta-actions">
                 <router-link to="/testdrive" class="btn btn-primary">Schedule Test Drive</router-link>
                 <router-link to="/contact" class="btn btn-outline">Contact Sales</router-link>

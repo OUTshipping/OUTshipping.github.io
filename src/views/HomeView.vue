@@ -11,7 +11,7 @@
       <div class="hero-overlay"></div>
       <div class="hero-content container">
         <h1>Experience the Future of Mobility</h1>
-        <p>Premium Electric Vehicles for a Sustainable Tomorrow</p>
+        <p>Rwanda's trusted electric vehicle dealer — offering premium BYD, Dongfeng & more with full after-sales support in Kigali.</p>
         <div class="hero-actions">
           <router-link to="/inventory" class="btn btn-primary">Browse Inventory</router-link>
           <router-link to="/testdrive" class="btn btn-outline">Schedule Test Drive</router-link>
@@ -47,7 +47,7 @@
     <section class="section container">
       <div class="section-header">
         <h2>Featured Models</h2>
-        <p>Discover our top-rated electric vehicles designed for performance and comfort.</p>
+        <p>From compact city cars to heavy-duty commercial trucks — explore our curated lineup of new energy vehicles built for African roads.</p>
       </div>
 
       <div class="vehicle-grid">
@@ -58,7 +58,7 @@
           </div>
           <div class="card-content">
             <h3>Sedan</h3>
-            <p>Efficient, stylish, and perfect for city driving. Experience smooth acceleration and silent comfort.</p>
+            <p>Efficient, stylish, and perfect for city driving. Our sedans deliver smooth acceleration, whisper-quiet cabins, and impressive range — ideal for daily commutes and ride-hailing businesses across Kigali.</p>
             <router-link to="/inventory?type=sedan" class="btn btn-sm">View Details</router-link>
           </div>
         </div>
@@ -69,7 +69,7 @@
           </div>
           <div class="card-content">
             <h3>SUV</h3>
-            <p>Spacious and powerful. Ideal for families and adventure seekers with advanced safety features.</p>
+            <p>Spacious, powerful, and built for adventure. Our electric SUVs combine generous cabin space, advanced safety systems, and all-terrain capability — perfect for families and weekend getaways on Rwanda's scenic routes.</p>
             <router-link to="/inventory?type=suv" class="btn btn-sm">View Details</router-link>
           </div>
         </div>
@@ -80,7 +80,7 @@
           </div>
           <div class="card-content">
             <h3>Pickup</h3>
-            <p>Rugged capability meets electric efficiency. Built for work and play.</p>
+            <p>Rugged capability meets electric efficiency. Our pickup trucks handle tough terrain and heavy loads while keeping fuel costs near zero — a smart choice for agriculture, construction, and outdoor enthusiasts.</p>
             <router-link to="/inventory?type=pickup" class="btn btn-sm">View Details</router-link>
           </div>
         </div>
@@ -92,7 +92,7 @@
             </div>
             <div class="card-content">
               <h3>Truck</h3>
-              <p>Heavy-duty performance for commercial needs. Reliable and cost-effective.</p>
+              <p>Heavy-duty electric performance engineered for commercial fleets. Lower maintenance costs, zero emissions, and the torque to move serious cargo — trusted by logistics operators across East Africa.</p>
               <router-link to="/inventory?type=truck" class="btn btn-sm">View Details</router-link>
             </div>
           </div>
@@ -103,7 +103,7 @@
             </div>
             <div class="card-content">
               <h3>Refrigerated</h3>
-              <p>Ensuring freshness for your perishable goods with precise temperature control.</p>
+              <p>Keep perishable goods at the perfect temperature from warehouse to doorstep. Our refrigerated trucks feature independent cooling systems, real-time monitoring, and the reliability your cold chain demands.</p>
               <router-link to="/inventory?type=refrigerated" class="btn btn-sm">View Details</router-link>
             </div>
           </div>
@@ -114,7 +114,7 @@
             </div>
             <div class="card-content">
               <h3>Bus</h3>
-              <p>Clean public transportation solution. Comfortable seating for large groups.</p>
+              <p>Zero-emission public transit that passengers actually enjoy. Spacious interiors, air conditioning, low-floor boarding, and whisper-quiet rides — redefining urban mobility for cities ready to go green.</p>
               <router-link to="/inventory?type=bus" class="btn btn-sm">View Details</router-link>
             </div>
           </div>
@@ -125,7 +125,7 @@
             </div>
             <div class="card-content">
               <h3>Van</h3>
-              <p>Versatile cargo space for logistics and delivery services.</p>
+              <p>Maximize every delivery run with generous cargo capacity and compact maneuverability. Our electric vans are built for last-mile logistics, courier services, and urban distribution — efficient, quiet, and emission-free.</p>
               <router-link to="/inventory?type=van" class="btn btn-sm">View Details</router-link>
             </div>
           </div>
@@ -137,7 +137,7 @@
       <div class="container">
         <div class="section-header">
             <h2>Visit Our Showroom</h2>
-            <p>Experience our vehicles in person at our convenient location.</p>
+            <p>See, touch, and test drive our full lineup at our Kigali showroom. Our team is ready to walk you through every model, answer your questions, and help you find the perfect vehicle for your needs.</p>
         </div>
         <div class="map-container">
             <iframe

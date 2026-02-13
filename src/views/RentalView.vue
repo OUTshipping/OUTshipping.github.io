@@ -4,12 +4,12 @@
     
     <div class="hero">
       <h1>Car Rental Services</h1>
-      <p>Flexible and secure car rental options</p>
+      <p>Drive electric on your own schedule — short-term and long-term rentals available in Kigali</p>
     </div>
 
     <main>
       <h2>Coming Soon</h2>
-      <p>Our car rental service is coming soon. Please contact us for more information.</p>
+      <p>We are putting the finishing touches on our electric car rental program. Soon you will be able to rent a fully charged EV for a day trip to Nyungwe, a week-long business engagement, or anything in between. Our rental fleet will include compact sedans, spacious SUVs, and versatile vans — all maintained to showroom standards. In the meantime, feel free to contact us directly if you have an immediate rental need and we will do our best to accommodate you.</p>
     </main>
 
     <ContactInfo />

@@ -6,7 +6,7 @@
         <div class="footer-col">
             <h3 class="footer-logo">Triple Goats</h3>
             <p class="footer-desc">
-                Leading the green revolution in Rwanda with premium electric vehicles and sustainable energy solutions.
+                Rwanda's trusted electric vehicle dealer. We bring premium BYD, Dongfeng, and other new energy vehicles to East Africa — backed by professional after-sales service, EV charging, and a commitment to a greener future.
             </p>
         </div>
 

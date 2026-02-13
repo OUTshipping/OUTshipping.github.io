@@ -4,34 +4,34 @@
     
     <div class="hero">
       <h1>About T&G AUTOMOBILE</h1>
-      <p>Learn more about our company and values</p>
+      <p>Driving Rwanda's electric future — one vehicle at a time</p>
     </div>
 
     <main>
-      <h2>About T&G AUTOMOBILE</h2>
+      <h2>Who We Are</h2>
       <div class="about-section">
         <div class="section">
           <div class="section-content">
             <h3>Our Mission</h3>
-            <p>San Yang (Rwanda) Automobile Sales Co., Ltd. is committed to providing high-quality and diverse automobile products as well as excellent after-sales services to the Rwandan market. Our mission is to offer customers a wide range of vehicle choices, from sedans and SUVs to pickup trucks and commercial vehicles, ensuring that we meet the needs of individual consumers, businesses, and government departments. We are dedicated to building long-term relationships with our customers by providing reliable products and exceptional service.</p>
+            <p>Triple Goats — officially San Yang (Rwanda) Automobile Sales Co., Ltd. — is on a mission to make clean, affordable transportation accessible to everyone in Rwanda. We partner directly with leading Chinese EV manufacturers including BYD and Dongfeng to bring a full spectrum of new energy vehicles to East Africa: compact city sedans, family SUVs, rugged pickups, commercial trucks, refrigerated vehicles, buses, and vans. Whether you are an individual buyer, a fleet operator, or a government agency, we provide end-to-end support from vehicle selection and financing guidance to after-sales maintenance and genuine spare parts.</p>
           </div>
         </div>
         <div class="section">
           <div class="section-content">
             <h3>Our Values</h3>
-            <p>At San Yang (Rwanda) Automobile Sales Co., Ltd., we uphold the values of integrity, professionalism, and customer-centricity. We believe in conducting our business with honesty and transparency, ensuring that our customers receive accurate information and fair treatment. Our team of professionals is committed to providing expert advice and support, helping customers make informed decisions about their vehicle purchases. We prioritize customer satisfaction and strive to exceed expectations in every interaction.</p>
+            <p>Everything we do is built on three pillars: transparency, expertise, and customer-first thinking. We publish honest specifications and real-world range data so you can make confident decisions. Our bilingual sales team (English, French, Kinyarwanda, and Chinese) is trained on every model we carry, ready to explain battery technology, charging options, and total cost of ownership. We do not just sell cars — we stay with you for the lifetime of your vehicle, offering scheduled maintenance, warranty support, and 24/7 roadside assistance in the Kigali area.</p>
           </div>
         </div>
         <div class="section">
           <div class="section-content">
-            <h3>Our History</h3>
-            <p>Founded in [specific year of establishment], San Yang (Rwanda) Automobile Sales Co., Ltd. has grown to become a trusted name in the Rwandan automobile industry. Starting as a small venture, we have expanded our operations and now serve a wide range of customers across the country. Our journey has been marked by a commitment to quality, innovation, and customer satisfaction, and we continue to strive for excellence in all aspects of our business.</p>
+            <h3>Our Story</h3>
+            <p>Founded in 2023 in Kigali's Kicukiro district, Triple Goats started with a simple observation: Rwanda's ambitious green-growth targets needed a reliable local partner to supply quality electric vehicles. In just two years we have grown from a single showroom to a full-service operation with a dedicated EV charging station, a professional service center, and a growing network of satisfied customers across the country. Our rapid growth reflects both the rising demand for EVs in Africa and the trust our customers place in us.</p>
           </div>
         </div>
         <div class="section">
           <div class="section-content">
-            <h3>Community Involvement</h3>
-            <p>We are actively involved in supporting the local community through various initiatives. We collaborate with local organizations to promote road safety awareness and education, aiming to create a safer driving environment for everyone. Additionally, we participate in corporate social responsibility programs that focus on environmental sustainability and social development, reflecting our dedication to making a positive impact beyond our business operations.</p>
+            <h3>Community &amp; Sustainability</h3>
+            <p>We believe selling electric vehicles is only part of the solution. That is why we invest in EV awareness campaigns, partner with local driving schools to offer electric-vehicle training modules, and sponsor road safety programs in Kigali schools. We are also working toward installing public charging points beyond our showroom to help build the infrastructure Rwanda needs for widespread EV adoption. Every vehicle we put on the road is one less source of tailpipe emissions — and we are proud to play our part in Rwanda's vision of a cleaner, greener future.</p>
           </div>
         </div>
       </div>

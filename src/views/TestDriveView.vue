@@ -4,7 +4,7 @@
     
     <div class="hero">
       <h1>Schedule a Test Drive</h1>
-      <p>Experience our vehicles firsthand</p>
+      <p>Nothing beats getting behind the wheel. Book a free test drive at our Kigali showroom and feel the instant torque, whisper-quiet cabin, and cutting-edge tech of our electric vehicles for yourself. Fill out the form below and our team will confirm your appointment within 24 hours.</p>
     </div>
 
     <main>

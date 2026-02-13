@@ -4,18 +4,18 @@
     
     <div class="hero">
       <h1>Our Services</h1>
-      <p>Discover the range of services we offer</p>
+      <p>More than a dealership — we provide a complete ecosystem of electric mobility solutions in Kigali</p>
     </div>
 
     <main>
-      <h2>Available Services</h2>
+      <h2>What We Offer</h2>
       <div class="service-section">
         <div class="service-item">
           <div class="service-item-content">
             <router-link to="/inventory">
               <div>
                 <h3>Car Sales<span class="arrow">→</span></h3>
-                <p>Explore our wide range of new and used vehicles for sale. We offer a variety of cars, SUVs, trucks, and more to meet your needs.</p>
+                <p>Browse our full inventory of brand-new electric and hybrid vehicles from BYD, Dongfeng, and other trusted manufacturers. From compact city sedans to heavy-duty commercial trucks, every vehicle comes with a factory warranty, transparent pricing, and our dedicated after-sales support team to keep you on the road.</p>
               </div>
             </router-link>
           </div>
@@ -25,7 +25,7 @@
             <router-link to="/charging">
               <div>
                 <h3>EV Charging<span class="arrow">→</span></h3>
-                <p>Fast and efficient electric vehicle charging stations. We provide convenient charging solutions for electric vehicles.</p>
+                <p>Charge up at our on-site fast-charging station in Kicukiro, Kigali. We support multiple connector standards and offer both AC and DC charging options, so whether you are topping off during a quick visit or need a full charge, we have got you covered. Open to all EV owners — not just our customers.</p>
               </div>
             </router-link>
           </div>
@@ -35,7 +35,7 @@
             <router-link to="/taxi">
               <div>
                 <h3>Taxi Service<span class="arrow">→</span></h3>
-                <p>Convenient and reliable taxi services for your daily needs. Our fleet is modern and well-maintained, ensuring a comfortable ride.</p>
+                <p>Experience Kigali in a clean, quiet electric vehicle. Our taxi fleet features well-maintained EVs driven by professional, licensed drivers who know the city inside out. Enjoy air-conditioned comfort, cashless payment options, and the satisfaction of choosing a zero-emission ride for your daily commute or airport transfer.</p>
               </div>
             </router-link>
           </div>
@@ -45,7 +45,7 @@
             <router-link to="/rental">
               <div>
                 <h3>Car Rental<span class="arrow">→</span></h3>
-                <p>Flexible and secure car rental options for your convenience. Whether you need a car for a day or a week, we have you covered.</p>
+                <p>Need a vehicle for a day, a week, or longer? Our rental fleet includes a range of electric models suited for business trips, family vacations, or special occasions. Enjoy competitive daily rates, comprehensive insurance options, and the convenience of picking up and dropping off right at our Kigali showroom.</p>
               </div>
             </router-link>
           </div>

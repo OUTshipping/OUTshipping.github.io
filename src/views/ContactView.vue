@@ -4,7 +4,7 @@
     
     <div class="hero">
       <h1>Get in Touch</h1>
-      <p>We are here to help you with any questions or concerns</p>
+      <p>Have a question about a vehicle, need a quote, or want to schedule a visit? Our Kigali-based team is here to help — reach out anytime.</p>
     </div>
 
     <div class="info-cards">
@@ -20,6 +20,7 @@
               <a href="https://wa.me/250794104908" target="_blank">+250 794 104 908</a>
             </p>
             <p>Email: tgautomobile@gmail.com</p>
+            <p>WhatsApp available — tap the numbers above to chat directly with our sales team.</p>
           </div>
         </div>
       </div>
@@ -31,8 +32,8 @@
           <div class="card-details">
             <h3>Location</h3>
             <p>Address: KK 15 Rd, Kicukiro, Kigali</p>
-            <p>City: Kigali</p>
-            <p>Country: Rwanda</p>
+            <p>City: Kigali, Rwanda</p>
+            <p>Located near the Kicukiro center — look for the Triple Goats signage and our outdoor EV display.</p>
           </div>
         </div>
       </div>
@@ -43,8 +44,10 @@
           </div>
           <div class="card-details">
             <h3>Business Hours</h3>
-            <p>Monday - Friday: 9:00 AM - 6:00 PM UTC+2</p>
-            <p>Weekend: Closed</p>
+            <p>Monday - Friday: 9:00 AM - 6:00 PM (CAT, UTC+2)</p>
+            <p>Saturday: 9:00 AM - 1:00 PM</p>
+            <p>Sunday: Closed</p>
+            <p>Walk-ins welcome during business hours. For after-hours inquiries, leave us a WhatsApp message and we will respond first thing next morning.</p>
           </div>
         </div>
       </div>

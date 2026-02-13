@@ -4,12 +4,12 @@
     
     <div class="hero">
       <h1>Taxi Service</h1>
-      <p>Convenient and reliable taxi services</p>
+      <p>Clean, quiet, and affordable electric taxi rides across Kigali</p>
     </div>
 
     <main>
       <h2>Coming Soon</h2>
-      <p>Our taxi service is coming soon. Please contact us for more information.</p>
+      <p>We are building a fleet of fully electric taxis to serve Kigali and beyond. Expect professional drivers, air-conditioned cabins, real-time ride tracking, and cashless payment — all powered by zero-emission vehicles. Whether you need a daily commute, an airport transfer, or a ride across town, our EV taxi service will offer a greener, more comfortable alternative. Stay tuned for our official launch, or reach out to us now if you would like to be notified when bookings open.</p>
     </main>
 
     <ContactInfo />
