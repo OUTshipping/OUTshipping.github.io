@@ -48,6 +48,21 @@
                 <a href="https://www.tiktok.com/@tg.auto.rwanda" target="_blank" rel="noopener"><i class="fab fa-tiktok"></i></a>
             </div>
         </div>
+
+        <!-- Our Global Network（集团关联内链） -->
+        <div class="footer-col">
+            <h4>Our Global Network</h4>
+            <ul class="network-list">
+                <li>
+                  <a href="https://www.zjaladin.com" target="_blank" rel="noopener">Zhejiang Aladdin Group</a>
+                  <span class="network-desc">Our parent company — global automotive supply chain headquarters in China</span>
+                </li>
+                <li>
+                  <a href="https://www.aladinauto.com" target="_blank" rel="noopener">AladinAuto Platform</a>
+                  <span class="network-desc">Browse and order used cars & new energy vehicles online, exported direct from China</span>
+                </li>
+            </ul>
+        </div>
       </div>
 
       <div class="footer-bottom">
@@ -126,6 +141,36 @@ ul li a:hover {
 .contact-list i {
     color: var(--accent-color);
     margin-top: 0.25rem;
+}
+
+.network-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.network-list li {
+    margin-bottom: 1rem;
+}
+
+.network-list a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+
+.network-list a:hover {
+    color: white;
+}
+
+.network-desc {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: 0.25rem;
+    line-height: 1.4;
 }
 
 .footer-socials {

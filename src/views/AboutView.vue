@@ -34,6 +34,12 @@
             <p>We believe selling electric vehicles is only part of the solution. That is why we invest in EV awareness campaigns, partner with local driving schools to offer electric-vehicle training modules, and sponsor road safety programs in Kigali schools. We are also working toward installing public charging points beyond our showroom to help build the infrastructure Rwanda needs for widespread EV adoption. Every vehicle we put on the road is one less source of tailpipe emissions — and we are proud to play our part in Rwanda's vision of a cleaner, greener future.</p>
           </div>
         </div>
+        <div class="section">
+          <div class="section-content">
+            <h3>Our Global Network</h3>
+            <p>Triple Goats is part of the <a href="https://www.zjaladin.com" target="_blank" rel="noopener" class="inline-link">Zhejiang Aladdin Group</a> (浙江阿啦丁进出口贸易有限责任公司), a Chinese automotive export corporation headquartered in Zhejiang Province. Aladdin Group operates a complete vehicle supply chain — from sourcing new energy vehicles and quality used cars in China, to delivering them to buyers worldwide through its online platform <a href="https://www.aladinauto.com" target="_blank" rel="noopener" class="inline-link">AladinAuto</a>. As the Group's Rwanda subsidiary, Triple Goats handles the final mile: local vehicle registration, customs clearance, after-sales maintenance, EV charging, and on-the-ground customer support in Kigali. Whether you discover a vehicle on AladinAuto or walk into our Kicukiro showroom, you are backed by the same integrated network — from factory floor in China to your driveway in Rwanda.</p>
+          </div>
+        </div>
       </div>
     </main>
 
@@ -123,6 +129,18 @@ main h2 {
     color: #333333;
     font-size: 1rem;
     line-height: 1.6;
+}
+
+.inline-link {
+    color: #0074d9;
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+}
+
+.inline-link:hover {
+    border-bottom-color: #0074d9;
 }
 
 @media (max-width: 768px) {

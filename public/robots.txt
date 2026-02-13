@@ -1,8 +1,13 @@
 # Triple Goats - T&G Automobile
 # https://tgautomobile.com
+# A subsidiary of Zhejiang Aladdin Group (https://www.zjaladin.com)
 
 User-agent: *
 Allow: /
+
+# Related sites within Aladdin Group
+# Parent company: https://www.zjaladin.com
+# Online platform: https://www.aladinauto.com
 
 Sitemap: https://tgautomobile.com/sitemap.xml
 
