@@ -50,6 +50,21 @@ async function loadVehicle(slug) {
       error.value = 'The vehicle you are looking for does not exist or is currently unavailable.'
     } else {
       vehicle.value = found
+      // 动态更新页面 SEO 信息
+      const vehicleTitle = `${found.name} — Electric ${found.specs?.category || 'Vehicle'} | Triple Goats`
+      const vehicleDesc = found.description || `View specs, photos and pricing for the ${found.name} at Triple Goats, Rwanda's premier EV dealer.`
+      const vehicleImage = found.image ? `https://tgautomobile.com${found.image}` : 'https://tgautomobile.com/companylogo.jpg'
+      document.title = vehicleTitle
+      const descTag = document.querySelector('meta[name="description"]')
+      if (descTag) descTag.setAttribute('content', vehicleDesc)
+      const ogTitle = document.querySelector('meta[property="og:title"]')
+      if (ogTitle) ogTitle.setAttribute('content', vehicleTitle)
+      const ogDesc = document.querySelector('meta[property="og:description"]')
+      if (ogDesc) ogDesc.setAttribute('content', vehicleDesc)
+      const ogImage = document.querySelector('meta[property="og:image"]')
+      if (ogImage) ogImage.setAttribute('content', vehicleImage)
+      const ogUrl = document.querySelector('meta[property="og:url"]')
+      if (ogUrl) ogUrl.setAttribute('content', `https://tgautomobile.com/vehicle/${slug}`)
     }
   } catch (err) {
     error.value = err.message

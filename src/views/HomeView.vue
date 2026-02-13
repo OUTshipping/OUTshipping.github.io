@@ -53,7 +53,7 @@
       <div class="vehicle-grid">
         <div class="vehicle-card">
           <div class="card-image">
-            <img src="/sedan.jpg" alt="Sedan" loading="lazy">
+            <img src="/sedan.jpg" alt="Electric sedans for sale at Triple Goats Kigali — BYD, Leapmotor and more" loading="lazy">
             <span class="badge">Best Seller</span>
           </div>
           <div class="card-content">
@@ -65,7 +65,7 @@
 
         <div class="vehicle-card">
           <div class="card-image">
-            <img src="/suv.jpg" alt="SUV" loading="lazy">
+            <img src="/suv.jpg" alt="Electric SUVs available at Triple Goats Rwanda — spacious family EVs" loading="lazy">
           </div>
           <div class="card-content">
             <h3>SUV</h3>
@@ -76,7 +76,7 @@
 
         <div class="vehicle-card">
           <div class="card-image">
-            <img src="/pickup.jpg" alt="Pickup" loading="lazy">
+            <img src="/pickup.jpg" alt="Electric pickup trucks at Triple Goats — rugged EVs for African terrain" loading="lazy">
           </div>
           <div class="card-content">
             <h3>Pickup</h3>
@@ -88,7 +88,7 @@
         <!-- Add more cards as needed -->
          <div class="vehicle-card">
             <div class="card-image">
-              <img src="/truck.jpg" alt="Truck" loading="lazy">
+              <img src="/truck.jpg" alt="Heavy-duty electric trucks for commercial fleets — Triple Goats Rwanda" loading="lazy">
             </div>
             <div class="card-content">
               <h3>Truck</h3>
@@ -99,7 +99,7 @@
 
           <div class="vehicle-card">
             <div class="card-image">
-              <img src="/refrigerated.jpg" alt="Refrigerated" loading="lazy">
+              <img src="/refrigerated.jpg" alt="Electric refrigerated trucks for cold chain logistics — Triple Goats Kigali" loading="lazy">
             </div>
             <div class="card-content">
               <h3>Refrigerated</h3>
@@ -110,7 +110,7 @@
 
           <div class="vehicle-card">
             <div class="card-image">
-              <img src="/bus.jpg" alt="Bus" loading="lazy">
+              <img src="/bus.jpg" alt="Zero-emission electric buses for public transit — Triple Goats Rwanda" loading="lazy">
             </div>
             <div class="card-content">
               <h3>Bus</h3>
@@ -121,7 +121,7 @@
 
            <div class="vehicle-card">
             <div class="card-image">
-              <img src="/van.jpg" alt="Van" loading="lazy">
+              <img src="/van.jpg" alt="Electric cargo vans for last-mile delivery — Triple Goats Kigali" loading="lazy">
             </div>
             <div class="card-content">
               <h3>Van</h3>

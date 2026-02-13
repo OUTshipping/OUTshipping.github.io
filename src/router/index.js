@@ -115,11 +115,22 @@ const DEFAULT_TITLE = 'Triple Goats — Rwanda\'s Premier Electric Vehicle Deale
 const DEFAULT_DESC = 'Shop BYD, Dongfeng, Leapmotor & more electric vehicles in Kigali. Full after-sales support, EV charging, taxi service and car rental.'
 
 router.afterEach((to) => {
-  document.title = to.meta.title || DEFAULT_TITLE
+  const title = to.meta.title || DEFAULT_TITLE
+  const desc = to.meta.description || DEFAULT_DESC
+  document.title = title
   const descTag = document.querySelector('meta[name="description"]')
-  if (descTag) {
-    descTag.setAttribute('content', to.meta.description || DEFAULT_DESC)
-  }
+  if (descTag) descTag.setAttribute('content', desc)
+  // 同步更新 Open Graph 标签
+  const ogTitle = document.querySelector('meta[property="og:title"]')
+  if (ogTitle) ogTitle.setAttribute('content', title)
+  const ogDesc = document.querySelector('meta[property="og:description"]')
+  if (ogDesc) ogDesc.setAttribute('content', desc)
+  // 更新 canonical URL
+  const canonical = document.querySelector('link[rel="canonical"]')
+  if (canonical) canonical.setAttribute('href', `https://tgautomobile.com${to.path}`)
+  // 更新 og:url
+  const ogUrl = document.querySelector('meta[property="og:url"]')
+  if (ogUrl) ogUrl.setAttribute('content', `https://tgautomobile.com${to.path}`)
 })
 
 export default router
