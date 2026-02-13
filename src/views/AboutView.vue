@@ -60,7 +60,7 @@ import ContactInfo from '@/components/ContactInfo.vue'
     align-items: center;
     color: var(--secondary-color);
     text-align: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/about.png');
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/about.jpg');
     background-size: cover;
     background-position: center;
 }

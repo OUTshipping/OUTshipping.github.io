@@ -25,15 +25,14 @@
     },
     "detailImages": [
       "/songplus/songPLUS (1).jpg",
-      "/songplus/songPLUS (1).png",
-      "/songplus/songPLUS (2).png",
-      "/songplus/songPLUS (3).png",
-      "/songplus/songPLUS (4).png",
-      "/songplus/songPLUS (5).png",
-      "/songplus/songPLUS (6).png",
-      "/songplus/songPLUS (7).png",
-      "/songplus/songPLUS (8).png",
-      "/songplus/songPLUS (9).png"
+      "/songplus/songPLUS (2).jpg",
+      "/songplus/songPLUS (3).jpg",
+      "/songplus/songPLUS (4).jpg",
+      "/songplus/songPLUS (5).jpg",
+      "/songplus/songPLUS (6).jpg",
+      "/songplus/songPLUS (7).jpg",
+      "/songplus/songPLUS (8).jpg",
+      "/songplus/songPLUS (9).jpg"
     ]
   },
   {
@@ -76,7 +75,7 @@
     "range": 442,
     "seats": 5,
     "configuration": "Basic",
-    "coverImage": "/ID.4 CROZZ.png",
+    "coverImage": "/ID.4 CROZZ.jpg",
     "colors": [
       "#000000",
       "#0011ff"
