@@ -285,21 +285,39 @@ nav a.router-link-active::after {
 
 .menu-toggle {
     display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 21px;
+    position: relative;
+    width: 32px;
+    height: 24px;
     cursor: pointer;
     z-index: 1002;
+    background: transparent;
+    border: none;
+    padding: 0;
 }
 
 .menu-toggle span {
     display: block;
-    height: 3px;
+    position: absolute;
     width: 100%;
+    height: 2px;
     background-color: white;
-    border-radius: 3px;
-    transition: all 0.3s ease;
+    border-radius: 2px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    left: 0;
+    transform-origin: center center;
+}
+
+.menu-toggle span:nth-child(1) {
+    top: 0;
+}
+
+.menu-toggle span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.menu-toggle span:nth-child(3) {
+    bottom: 0;
 }
 
 /* Mobile Styles */
@@ -396,6 +414,56 @@ nav a.router-link-active::after {
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px) translateX(-50%); }
     to { opacity: 1; transform: translateY(0) translateX(-50%); }
+}
+
+/* Fixed Mobile Styles & Animation Override */
+@media (max-width: 768px) {
+    nav {
+        justify-content: flex-start;
+        padding: 6rem 2rem 2rem;
+        backdrop-filter: blur(20px);
+        background-color: rgba(15, 23, 42, 0.95);
+        overflow-y: auto;
+    }
+
+    nav a {
+        font-weight: 600;
+        margin: 1.25rem 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .dropdown-content {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 0.75rem;
+        width: 90%;
+        margin: 0.5rem auto;
+    }
+
+    .dropdown-content a {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        padding: 0.75rem;
+    }
+
+    .dropdown-content a:last-child {
+        border-bottom: none;
+    }
+
+    /* Animation Fixes */
+    .menu-toggle.active span:nth-child(1) {
+        top: 50%;
+        transform: translateY(-50%) rotate(45deg);
+    }
+
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active span:nth-child(3) {
+        bottom: 50%;
+        transform: translateY(50%) rotate(-45deg);
+    }
 }
 </style>
 
