@@ -1,0 +1,247 @@
+{
+  "\u0000plugin-vue:export-helper": [
+    "/assets/_plugin-vue_export-helper-DlAUqK2U.js"
+  ],
+  "\u0000vite/modulepreload-polyfill.js": [],
+  "\u0000vite/preload-helper.js": [],
+  "../../../X.jpg": [
+    "/assets/SocialMedia-DcDYeHW7.js",
+    "/assets/SocialMedia-BoC2-0Hh.css"
+  ],
+  "../../../bus.jpg": [
+    "/assets/HomeView-C8A6IXoX.js",
+    "/assets/HomeView-D9-5j_Vw.css"
+  ],
+  "../../../companylogo.jpg": [
+    "/assets/ContactInfo-khyB-_Jz.js",
+    "/assets/ContactInfo-7twjDvnY.css"
+  ],
+  "../../../facebook.jpg": [
+    "/assets/SocialMedia-DcDYeHW7.js",
+    "/assets/SocialMedia-BoC2-0Hh.css"
+  ],
+  "../../../ins.jpg": [
+    "/assets/SocialMedia-DcDYeHW7.js",
+    "/assets/SocialMedia-BoC2-0Hh.css"
+  ],
+  "../../../location-icon.png": [
+    "/assets/ContactView-r64y6O9C.js",
+    "/assets/ContactView-CJgwlXAp.css"
+  ],
+  "../../../movie.mp4": [
+    "/assets/HomeView-C8A6IXoX.js",
+    "/assets/HomeView-D9-5j_Vw.css"
+  ],
+  "../../../phone-icon.png": [
+    "/assets/ContactView-r64y6O9C.js",
+    "/assets/ContactView-CJgwlXAp.css"
+  ],
+  "../../../pickup.jpg": [
+    "/assets/HomeView-C8A6IXoX.js",
+    "/assets/HomeView-D9-5j_Vw.css"
+  ],
+  "../../../refrigerated.jpg": [
+    "/assets/HomeView-C8A6IXoX.js",
+    "/assets/HomeView-D9-5j_Vw.css"
+  ],
+  "../../../sedan.jpg": [
+    "/assets/HomeView-C8A6IXoX.js",
+    "/assets/HomeView-D9-5j_Vw.css"
+  ],
+  "../../../suv.jpg": [
+    "/assets/HomeView-C8A6IXoX.js",
+    "/assets/HomeView-D9-5j_Vw.css"
+  ],
+  "../../../taxi.jpg": [
+    "/assets/TaxiView-DTr2zx5G.js",
+    "/assets/TaxiView-BLbfmbEC.css"
+  ],
+  "../../../taxi.mp4": [
+    "/assets/TaxiView-DTr2zx5G.js",
+    "/assets/TaxiView-BLbfmbEC.css"
+  ],
+  "../../../tiktok.jpg": [
+    "/assets/SocialMedia-DcDYeHW7.js",
+    "/assets/SocialMedia-BoC2-0Hh.css"
+  ],
+  "../../../time-icon.png": [
+    "/assets/ContactView-r64y6O9C.js",
+    "/assets/ContactView-CJgwlXAp.css"
+  ],
+  "../../../truck.jpg": [
+    "/assets/HomeView-C8A6IXoX.js",
+    "/assets/HomeView-D9-5j_Vw.css"
+  ],
+  "../../../van.jpg": [
+    "/assets/HomeView-C8A6IXoX.js",
+    "/assets/HomeView-D9-5j_Vw.css"
+  ],
+  "index.html": [],
+  "node_modules/@unhead/vue/dist/client.mjs": [],
+  "node_modules/@unhead/vue/dist/shared/vue.Cr7xSEtD.mjs": [],
+  "node_modules/@unhead/vue/dist/shared/vue.N9zWjxoK.mjs": [],
+  "node_modules/@vue/reactivity/dist/reactivity.esm-bundler.js": [],
+  "node_modules/@vue/runtime-core/dist/runtime-core.esm-bundler.js": [],
+  "node_modules/@vue/runtime-dom/dist/runtime-dom.esm-bundler.js": [],
+  "node_modules/@vue/shared/dist/shared.esm-bundler.js": [],
+  "node_modules/hookable/dist/index.mjs": [],
+  "node_modules/unhead/dist/client.mjs": [],
+  "node_modules/unhead/dist/shared/unhead.BFfcxOoW.mjs": [],
+  "node_modules/unhead/dist/shared/unhead.CbpEuj3y.mjs": [],
+  "node_modules/unhead/dist/shared/unhead.eK9_7LaY.mjs": [],
+  "node_modules/unhead/dist/shared/unhead.yem5I2v_.mjs": [],
+  "node_modules/vite-ssg/dist/index.mjs": [],
+  "node_modules/vite-ssg/dist/shared/vite-ssg.C6pK7rvr.mjs": [],
+  "node_modules/vite-ssg/dist/shared/vite-ssg.ETIvV-80.mjs": [],
+  "node_modules/vue-router/dist/devtools-BLCumUwL.mjs": [],
+  "node_modules/vue-router/dist/vue-router.mjs": [],
+  "public/data/vehicles.json": [
+    "/assets/VehicleDynamicView-93PQmcUk.js",
+    "/assets/VehicleDynamicView-BKTkTlGV.css"
+  ],
+  "src/App.vue": [],
+  "src/App.vue?vue&type=style&index=0&lang.css": [],
+  "src/assets/styles/global.css": [],
+  "src/components/ContactInfo.vue": [
+    "/assets/ContactInfo-khyB-_Jz.js",
+    "/assets/ContactInfo-7twjDvnY.css"
+  ],
+  "src/components/ContactInfo.vue?vue&type=style&index=0&scoped=457db2f4&lang.css": [
+    "/assets/ContactInfo-khyB-_Jz.js",
+    "/assets/ContactInfo-7twjDvnY.css"
+  ],
+  "src/components/FooterBar.vue": [
+    "/assets/ContactInfo-khyB-_Jz.js",
+    "/assets/ContactInfo-7twjDvnY.css"
+  ],
+  "src/components/FooterBar.vue?vue&type=style&index=0&scoped=41c4e6f5&lang.css": [
+    "/assets/ContactInfo-khyB-_Jz.js",
+    "/assets/ContactInfo-7twjDvnY.css"
+  ],
+  "src/components/HeaderNav.vue": [
+    "/assets/ContactInfo-khyB-_Jz.js",
+    "/assets/ContactInfo-7twjDvnY.css"
+  ],
+  "src/components/HeaderNav.vue?vue&type=style&index=0&scoped=2213cf5f&lang.css": [
+    "/assets/ContactInfo-khyB-_Jz.js",
+    "/assets/ContactInfo-7twjDvnY.css"
+  ],
+  "src/components/SocialMedia.vue": [
+    "/assets/SocialMedia-DcDYeHW7.js",
+    "/assets/SocialMedia-BoC2-0Hh.css"
+  ],
+  "src/components/SocialMedia.vue?vue&type=style&index=0&scoped=701c6c2b&lang.css": [
+    "/assets/SocialMedia-DcDYeHW7.js",
+    "/assets/SocialMedia-BoC2-0Hh.css"
+  ],
+  "src/components/VehicleDetail.vue": [
+    "/assets/VehicleDynamicView-93PQmcUk.js",
+    "/assets/VehicleDynamicView-BKTkTlGV.css"
+  ],
+  "src/components/VehicleDetail.vue?vue&type=style&index=0&scoped=644a7c30&lang.css": [
+    "/assets/VehicleDynamicView-93PQmcUk.js",
+    "/assets/VehicleDynamicView-BKTkTlGV.css"
+  ],
+  "src/main.js": [],
+  "src/router/index.js": [],
+  "src/utils/github.js": [
+    "/assets/AdminView-BZW32OUT.js",
+    "/assets/AdminView-D_nlWRsf.css"
+  ],
+  "src/views/AboutView.vue": [
+    "/assets/AboutView-CCcWIwA-.js",
+    "/assets/AboutView-CwzzxJq4.css"
+  ],
+  "src/views/AboutView.vue?vue&type=style&index=0&scoped=011e0283&lang.css": [
+    "/assets/AboutView-CCcWIwA-.js",
+    "/assets/AboutView-CwzzxJq4.css"
+  ],
+  "src/views/AdminView.vue": [
+    "/assets/AdminView-BZW32OUT.js",
+    "/assets/AdminView-D_nlWRsf.css"
+  ],
+  "src/views/AdminView.vue?vue&type=style&index=0&scoped=d882131e&lang.css": [
+    "/assets/AdminView-BZW32OUT.js",
+    "/assets/AdminView-D_nlWRsf.css"
+  ],
+  "src/views/ChargingView.vue": [
+    "/assets/ChargingView-DTrv1mkl.js",
+    "/assets/ChargingView-U4IJ-Kf9.css"
+  ],
+  "src/views/ChargingView.vue?vue&type=style&index=0&scoped=aa227e63&lang.css": [
+    "/assets/ChargingView-DTrv1mkl.js",
+    "/assets/ChargingView-U4IJ-Kf9.css"
+  ],
+  "src/views/ContactView.vue": [
+    "/assets/ContactView-r64y6O9C.js",
+    "/assets/ContactView-CJgwlXAp.css"
+  ],
+  "src/views/ContactView.vue?vue&type=style&index=0&scoped=3f93bcd6&lang.css": [
+    "/assets/ContactView-r64y6O9C.js",
+    "/assets/ContactView-CJgwlXAp.css"
+  ],
+  "src/views/HomeView.vue": [
+    "/assets/HomeView-C8A6IXoX.js",
+    "/assets/HomeView-D9-5j_Vw.css"
+  ],
+  "src/views/HomeView.vue?vue&type=style&index=0&scoped=f9335863&lang.css": [
+    "/assets/HomeView-C8A6IXoX.js",
+    "/assets/HomeView-D9-5j_Vw.css"
+  ],
+  "src/views/InventoryView.vue": [
+    "/assets/InventoryView-xM3Kh6Zh.js",
+    "/assets/InventoryView-BNQrHVPz.css"
+  ],
+  "src/views/InventoryView.vue?vue&type=style&index=0&scoped=47e98e97&lang.css": [
+    "/assets/InventoryView-xM3Kh6Zh.js",
+    "/assets/InventoryView-BNQrHVPz.css"
+  ],
+  "src/views/RentalView.vue": [
+    "/assets/RentalView-CwJviRUP.js",
+    "/assets/RentalView-j8wMriVd.css"
+  ],
+  "src/views/RentalView.vue?vue&type=style&index=0&scoped=bd8d3e84&lang.css": [
+    "/assets/RentalView-CwJviRUP.js",
+    "/assets/RentalView-j8wMriVd.css"
+  ],
+  "src/views/SUVView.vue": [
+    "/assets/SUVView-DfwNlXU5.js",
+    "/assets/SUVView-CxpAKM20.css"
+  ],
+  "src/views/SUVView.vue?vue&type=style&index=0&scoped=d0d0862c&lang.css": [
+    "/assets/SUVView-DfwNlXU5.js",
+    "/assets/SUVView-CxpAKM20.css"
+  ],
+  "src/views/ServicesView.vue": [
+    "/assets/ServicesView-RMXUGIzC.js",
+    "/assets/ServicesView-C1NPMof2.css"
+  ],
+  "src/views/ServicesView.vue?vue&type=style&index=0&scoped=071e466a&lang.css": [
+    "/assets/ServicesView-RMXUGIzC.js",
+    "/assets/ServicesView-C1NPMof2.css"
+  ],
+  "src/views/TaxiView.vue": [
+    "/assets/TaxiView-DTr2zx5G.js",
+    "/assets/TaxiView-BLbfmbEC.css"
+  ],
+  "src/views/TaxiView.vue?vue&type=style&index=0&scoped=d1fbff12&lang.css": [
+    "/assets/TaxiView-DTr2zx5G.js",
+    "/assets/TaxiView-BLbfmbEC.css"
+  ],
+  "src/views/TestDriveView.vue": [
+    "/assets/TestDriveView-CSY8NpBy.js",
+    "/assets/TestDriveView-BlPBuxKN.css"
+  ],
+  "src/views/TestDriveView.vue?vue&type=style&index=0&scoped=e2cd49eb&lang.css": [
+    "/assets/TestDriveView-CSY8NpBy.js",
+    "/assets/TestDriveView-BlPBuxKN.css"
+  ],
+  "src/views/VehicleDynamicView.vue": [
+    "/assets/VehicleDynamicView-93PQmcUk.js",
+    "/assets/VehicleDynamicView-BKTkTlGV.css"
+  ],
+  "src/views/VehicleDynamicView.vue?vue&type=style&index=0&scoped=d875d3ab&lang.css": [
+    "/assets/VehicleDynamicView-93PQmcUk.js",
+    "/assets/VehicleDynamicView-BKTkTlGV.css"
+  ]
+}
