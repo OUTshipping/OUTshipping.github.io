@@ -159,9 +159,23 @@
 </template>
 
 <script setup>
+import { useHead } from '@unhead/vue'
 import HeaderNav from '@/components/HeaderNav.vue'
 import FooterBar from '@/components/FooterBar.vue'
 import ContactInfo from '@/components/ContactInfo.vue'
+
+useHead({
+  title: "Triple Goats — Rwanda's Premier Electric Vehicle Dealer",
+  meta: [
+    { name: 'description', content: 'Shop BYD, Dongfeng, Leapmotor & more electric vehicles in Kigali. Full after-sales support, EV charging, taxi service and car rental.' },
+    { property: 'og:title', content: "Triple Goats — Rwanda's Premier Electric Vehicle Dealer" },
+    { property: 'og:description', content: 'Shop BYD, Dongfeng, Leapmotor & more electric vehicles in Kigali. Full after-sales support, EV charging, taxi service and car rental.' },
+    { property: 'og:url', content: 'https://tgautomobile.com/home' },
+  ],
+  link: [
+    { rel: 'canonical', href: 'https://tgautomobile.com/home' }
+  ]
+})
 </script>
 
 <style scoped>

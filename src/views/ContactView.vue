@@ -90,10 +90,24 @@
 </template>
 
 <script setup>
+import { useHead } from '@unhead/vue'
 import HeaderNav from '@/components/HeaderNav.vue'
 import FooterBar from '@/components/FooterBar.vue'
 import SocialMedia from '@/components/SocialMedia.vue'
 import ContactInfo from '@/components/ContactInfo.vue'
+
+useHead({
+  title: 'Contact Us — Triple Goats Kigali Showroom',
+  meta: [
+    { name: 'description', content: 'Visit our Kigali showroom, call us, or send a WhatsApp message. Open Monday–Friday 8am–6pm, Saturday 9am–1pm.' },
+    { property: 'og:title', content: 'Contact Us — Triple Goats Kigali Showroom' },
+    { property: 'og:description', content: 'Visit our Kigali showroom, call us, or send a WhatsApp message. Open Monday–Friday 8am–6pm, Saturday 9am–1pm.' },
+    { property: 'og:url', content: 'https://tgautomobile.com/contact' },
+  ],
+  link: [
+    { rel: 'canonical', href: 'https://tgautomobile.com/contact' }
+  ]
+})
 </script>
 
 <style scoped>

@@ -20,10 +20,24 @@
 </template>
 
 <script setup>
+import { useHead } from '@unhead/vue'
 import HeaderNav from '@/components/HeaderNav.vue'
 import FooterBar from '@/components/FooterBar.vue'
 import SocialMedia from '@/components/SocialMedia.vue'
 import ContactInfo from '@/components/ContactInfo.vue'
+
+useHead({
+  title: 'Electric SUV Collection — Triple Goats',
+  meta: [
+    { name: 'description', content: 'Explore our lineup of electric SUVs built for African terrain. Bold design, generous ground clearance, and advanced safety features.' },
+    { property: 'og:title', content: 'Electric SUV Collection — Triple Goats' },
+    { property: 'og:description', content: 'Explore our lineup of electric SUVs built for African terrain. Bold design, generous ground clearance, and advanced safety features.' },
+    { property: 'og:url', content: 'https://tgautomobile.com/suv' },
+  ],
+  link: [
+    { rel: 'canonical', href: 'https://tgautomobile.com/suv' }
+  ]
+})
 </script>
 
 <style scoped>

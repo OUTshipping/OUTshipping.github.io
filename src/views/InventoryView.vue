@@ -99,10 +99,24 @@
 <script setup>
 import { ref, computed, onMounted, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
+import { useHead } from '@unhead/vue'
 import HeaderNav from '@/components/HeaderNav.vue'
 import FooterBar from '@/components/FooterBar.vue'
 import SocialMedia from '@/components/SocialMedia.vue'
 import ContactInfo from '@/components/ContactInfo.vue'
+
+useHead({
+  title: 'EV Inventory — Browse Electric Vehicles | Triple Goats',
+  meta: [
+    { name: 'description', content: 'Explore our full range of electric sedans, SUVs, vans and trucks from BYD, Dongfeng, Leapmotor, Kia, Toyota and more.' },
+    { property: 'og:title', content: 'EV Inventory — Browse Electric Vehicles | Triple Goats' },
+    { property: 'og:description', content: 'Explore our full range of electric sedans, SUVs, vans and trucks from BYD, Dongfeng, Leapmotor, Kia, Toyota and more.' },
+    { property: 'og:url', content: 'https://tgautomobile.com/inventory' },
+  ],
+  link: [
+    { rel: 'canonical', href: 'https://tgautomobile.com/inventory' }
+  ]
+})
 
 const route = useRoute()
 const router = useRouter()

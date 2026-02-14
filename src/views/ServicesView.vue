@@ -60,10 +60,24 @@
 </template>
 
 <script setup>
+import { useHead } from '@unhead/vue'
 import HeaderNav from '@/components/HeaderNav.vue'
 import FooterBar from '@/components/FooterBar.vue'
 import SocialMedia from '@/components/SocialMedia.vue'
 import ContactInfo from '@/components/ContactInfo.vue'
+
+useHead({
+  title: 'Services — Car Sales, EV Charging, Taxi & Rental | Triple Goats',
+  meta: [
+    { name: 'description', content: 'Comprehensive automotive services including EV sales, charging stations, electric taxi service and car rental in Kigali.' },
+    { property: 'og:title', content: 'Services — Car Sales, EV Charging, Taxi & Rental | Triple Goats' },
+    { property: 'og:description', content: 'Comprehensive automotive services including EV sales, charging stations, electric taxi service and car rental in Kigali.' },
+    { property: 'og:url', content: 'https://tgautomobile.com/services' },
+  ],
+  link: [
+    { rel: 'canonical', href: 'https://tgautomobile.com/services' }
+  ]
+})
 </script>
 
 <style scoped>

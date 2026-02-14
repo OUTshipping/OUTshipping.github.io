@@ -19,10 +19,24 @@
 </template>
 
 <script setup>
+import { useHead } from '@unhead/vue'
 import HeaderNav from '@/components/HeaderNav.vue'
 import FooterBar from '@/components/FooterBar.vue'
 import SocialMedia from '@/components/SocialMedia.vue'
 import ContactInfo from '@/components/ContactInfo.vue'
+
+useHead({
+  title: 'Electric Car Rental — Triple Goats Kigali',
+  meta: [
+    { name: 'description', content: 'Rent a fully charged EV for a day trip, business engagement, or anything in between. Short-term and long-term rentals available.' },
+    { property: 'og:title', content: 'Electric Car Rental — Triple Goats Kigali' },
+    { property: 'og:description', content: 'Rent a fully charged EV for a day trip, business engagement, or anything in between. Short-term and long-term rentals available.' },
+    { property: 'og:url', content: 'https://tgautomobile.com/rental' },
+  ],
+  link: [
+    { rel: 'canonical', href: 'https://tgautomobile.com/rental' }
+  ]
+})
 </script>
 
 <style scoped>

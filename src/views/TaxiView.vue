@@ -65,10 +65,24 @@
 </template>
 
 <script setup>
+import { useHead } from '@unhead/vue'
 import HeaderNav from '@/components/HeaderNav.vue'
 import FooterBar from '@/components/FooterBar.vue'
 import SocialMedia from '@/components/SocialMedia.vue'
 import ContactInfo from '@/components/ContactInfo.vue'
+
+useHead({
+  title: 'Electric Taxi Service — Triple Goats Kigali',
+  meta: [
+    { name: 'description', content: 'Clean, quiet, and affordable electric taxi rides across Kigali. Professional drivers, air-conditioned cabins, zero emissions.' },
+    { property: 'og:title', content: 'Electric Taxi Service — Triple Goats Kigali' },
+    { property: 'og:description', content: 'Clean, quiet, and affordable electric taxi rides across Kigali. Professional drivers, air-conditioned cabins, zero emissions.' },
+    { property: 'og:url', content: 'https://tgautomobile.com/taxi' },
+  ],
+  link: [
+    { rel: 'canonical', href: 'https://tgautomobile.com/taxi' }
+  ]
+})
 </script>
 
 <style scoped>

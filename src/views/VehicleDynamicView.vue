@@ -27,66 +27,29 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted, watch } from 'vue'
+import { ref, computed, onMounted, watch } from 'vue'
 import { useRoute } from 'vue-router'
+import { useHead } from '@unhead/vue'
 import VehicleDetail from '@/components/VehicleDetail.vue'
+import vehiclesData from '../../public/data/vehicles.json'
 
 const route = useRoute()
 const vehicle = ref(null)
 const loading = ref(true)
 const error = ref(null)
 
-// 加载车辆数据
-async function loadVehicle(slug) {
+// 加载车辆数据（从本地 JSON 同步查找，SSG 构建时可用）
+function loadVehicle(slug) {
+  if (!slug) return
   loading.value = true
   error.value = null
   vehicle.value = null
   try {
-    const res = await fetch('https://raw.githubusercontent.com/OUTshipping/OUTshipping.github.io/source/public/data/vehicles.json')
-    if (!res.ok) throw new Error('无法加载车辆数据')
-    const vehicles = await res.json()
-    const found = vehicles.find(v => v.slug === slug && v.enabled)
+    const found = vehiclesData.find(v => v.slug === slug && v.enabled)
     if (!found) {
       error.value = 'The vehicle you are looking for does not exist or is currently unavailable.'
     } else {
       vehicle.value = found
-      // 动态更新页面 SEO 信息
-      const vehicleTitle = `${found.name} — Electric ${found.specs?.category || 'Vehicle'} | Triple Goats`
-      const vehicleDesc = found.description || `${found.name} — ${found.range ? found.range + 'km range, ' : ''}${found.seats ? found.seats + '-seat ' : ''}electric ${found.specs?.category || 'vehicle'} available at Triple Goats, Rwanda's premier EV dealer. View specs, photos and pricing.`
-      const vehicleImage = found.coverImage ? `https://tgautomobile.com${found.coverImage}` : 'https://tgautomobile.com/companylogo.jpg'
-      document.title = vehicleTitle
-      const descTag = document.querySelector('meta[name="description"]')
-      if (descTag) descTag.setAttribute('content', vehicleDesc)
-      const ogTitle = document.querySelector('meta[property="og:title"]')
-      if (ogTitle) ogTitle.setAttribute('content', vehicleTitle)
-      const ogDesc = document.querySelector('meta[property="og:description"]')
-      if (ogDesc) ogDesc.setAttribute('content', vehicleDesc)
-      const ogImage = document.querySelector('meta[property="og:image"]')
-      if (ogImage) ogImage.setAttribute('content', vehicleImage)
-      const ogUrl = document.querySelector('meta[property="og:url"]')
-      if (ogUrl) ogUrl.setAttribute('content', `https://tgautomobile.com/vehicle/${slug}`)
-      // 动态注入 Product JSON-LD 结构化数据
-      const existingLd = document.getElementById('vehicle-jsonld')
-      if (existingLd) existingLd.remove()
-      const ldScript = document.createElement('script')
-      ldScript.type = 'application/ld+json'
-      ldScript.id = 'vehicle-jsonld'
-      ldScript.textContent = JSON.stringify({
-        '@context': 'https://schema.org',
-        '@type': 'Product',
-        'name': found.name,
-        'image': vehicleImage,
-        'description': vehicleDesc,
-        'brand': { '@type': 'Brand', 'name': found.specs?.make || 'Triple Goats' },
-        'category': 'Electric Vehicle',
-        'url': `https://tgautomobile.com/vehicle/${slug}`,
-        'offers': {
-          '@type': 'Offer',
-          'availability': 'https://schema.org/InStock',
-          'seller': { '@type': 'Organization', 'name': 'Triple Goats' }
-        }
-      })
-      document.head.appendChild(ldScript)
     }
   } catch (err) {
     error.value = err.message
@@ -95,14 +58,65 @@ async function loadVehicle(slug) {
   }
 }
 
+// SSG 构建时和客户端首次加载时立即执行
+// route.params.slug 在 SSG 渲染时可能为空，从 route.path 中提取 slug 作为 fallback
+const initialSlug = route.params.slug || route.path.split('/').filter(Boolean).pop()
+loadVehicle(initialSlug)
+
+// 动态 useHead：根据车辆数据响应式更新 head 标签
+useHead(computed(() => {
+  const v = vehicle.value
+  if (!v) {
+    return {
+      title: 'Vehicle Details — Triple Goats',
+      meta: [
+        { name: 'description', content: 'View detailed specs, photos and pricing for this electric vehicle at Triple Goats.' },
+        { property: 'og:title', content: 'Vehicle Details — Triple Goats' },
+        { property: 'og:description', content: 'View detailed specs, photos and pricing for this electric vehicle at Triple Goats.' },
+      ]
+    }
+  }
+  const vehicleTitle = `${v.name} — Electric ${v.specs?.category || 'Vehicle'} | Triple Goats`
+  const vehicleDesc = v.description || `${v.name} — ${v.range ? v.range + 'km range, ' : ''}${v.seats ? v.seats + '-seat ' : ''}electric ${v.specs?.category || 'vehicle'} available at Triple Goats, Rwanda's premier EV dealer. View specs, photos and pricing.`
+  const vehicleImage = v.coverImage ? `https://tgautomobile.com${v.coverImage}` : 'https://tgautomobile.com/companylogo.jpg'
+  const vehicleUrl = `https://tgautomobile.com/vehicle/${v.slug}`
+  return {
+    title: vehicleTitle,
+    meta: [
+      { name: 'description', content: vehicleDesc },
+      { property: 'og:title', content: vehicleTitle },
+      { property: 'og:description', content: vehicleDesc },
+      { property: 'og:image', content: vehicleImage },
+      { property: 'og:url', content: vehicleUrl },
+    ],
+    link: [
+      { rel: 'canonical', href: vehicleUrl }
+    ],
+    script: [
+      {
+        type: 'application/ld+json',
+        innerHTML: JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'Product',
+          'name': v.name,
+          'image': vehicleImage,
+          'description': vehicleDesc,
+          'brand': { '@type': 'Brand', 'name': v.specs?.make || 'Triple Goats' },
+          'category': 'Electric Vehicle',
+          'url': vehicleUrl,
+          'offers': {
+            '@type': 'Offer',
+            'availability': 'https://schema.org/InStock',
+            'seller': { '@type': 'Organization', 'name': 'Triple Goats' }
+          }
+        })
+      }
+    ]
+  }
+}))
+
 onMounted(() => {
   loadVehicle(route.params.slug)
-})
-
-// 组件卸载时清理动态注入的 JSON-LD
-onUnmounted(() => {
-  const ldScript = document.getElementById('vehicle-jsonld')
-  if (ldScript) ldScript.remove()
 })
 
 // 监听路由参数变化，支持同页面内跳转

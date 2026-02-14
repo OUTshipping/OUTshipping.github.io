@@ -28,10 +28,24 @@
 </template>
 
 <script setup>
+import { useHead } from '@unhead/vue'
 import HeaderNav from '@/components/HeaderNav.vue'
 import FooterBar from '@/components/FooterBar.vue'
 import SocialMedia from '@/components/SocialMedia.vue'
 import ContactInfo from '@/components/ContactInfo.vue'
+
+useHead({
+  title: 'Schedule a Test Drive — Triple Goats',
+  meta: [
+    { name: 'description', content: 'Book a free test drive at our Kigali showroom. Experience the instant torque and whisper-quiet cabin of our electric vehicles.' },
+    { property: 'og:title', content: 'Schedule a Test Drive — Triple Goats' },
+    { property: 'og:description', content: 'Book a free test drive at our Kigali showroom. Experience the instant torque and whisper-quiet cabin of our electric vehicles.' },
+    { property: 'og:url', content: 'https://tgautomobile.com/testdrive' },
+  ],
+  link: [
+    { rel: 'canonical', href: 'https://tgautomobile.com/testdrive' }
+  ]
+})
 </script>
 
 <style scoped>

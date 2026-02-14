@@ -50,10 +50,24 @@
 </template>
 
 <script setup>
+import { useHead } from '@unhead/vue'
 import HeaderNav from '@/components/HeaderNav.vue'
 import FooterBar from '@/components/FooterBar.vue'
 import SocialMedia from '@/components/SocialMedia.vue'
 import ContactInfo from '@/components/ContactInfo.vue'
+
+useHead({
+  title: 'About Us — Triple Goats | T&G Automobile Rwanda',
+  meta: [
+    { name: 'description', content: "Founded in 2023 in Kigali's Kicukiro district, Triple Goats is Rwanda's trusted EV dealer partnering with BYD, Dongfeng and more." },
+    { property: 'og:title', content: 'About Us — Triple Goats | T&G Automobile Rwanda' },
+    { property: 'og:description', content: "Founded in 2023 in Kigali's Kicukiro district, Triple Goats is Rwanda's trusted EV dealer partnering with BYD, Dongfeng and more." },
+    { property: 'og:url', content: 'https://tgautomobile.com/about' },
+  ],
+  link: [
+    { rel: 'canonical', href: 'https://tgautomobile.com/about' }
+  ]
+})
 </script>
 
 <style scoped>
