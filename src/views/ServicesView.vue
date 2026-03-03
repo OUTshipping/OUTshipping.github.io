@@ -1,11 +1,10 @@
 <template>
-  <div class="services-page">
-    <HeaderNav />
-    
-    <div class="hero">
-      <h1>Our Services</h1>
-      <p>More than a dealership — we provide a complete ecosystem of electric mobility solutions in Kigali</p>
-    </div>
+  <PageLayout>
+    <HeroSection
+      title="Our Services"
+      subtitle="More than a dealership — we provide a complete ecosystem of electric mobility solutions in Kigali"
+      backgroundImage="/services.jpg"
+    />
 
     <main>
       <h2>What We Offer</h2>
@@ -52,19 +51,13 @@
         </div>
       </div>
     </main>
-
-    <ContactInfo />
-    <SocialMedia />
-    <FooterBar />
-  </div>
+  </PageLayout>
 </template>
 
 <script setup>
 import { useHead } from '@unhead/vue'
-import HeaderNav from '@/components/HeaderNav.vue'
-import FooterBar from '@/components/FooterBar.vue'
-import SocialMedia from '@/components/SocialMedia.vue'
-import ContactInfo from '@/components/ContactInfo.vue'
+import PageLayout from '@/components/PageLayout.vue'
+import HeroSection from '@/components/HeroSection.vue'
 
 useHead({
   title: 'Services — Car Sales, EV Charging, Taxi & Rental | Triple Goats',
@@ -81,31 +74,6 @@ useHead({
 </script>
 
 <style scoped>
-.hero {
-    position: relative;
-    height: 60vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: var(--secondary-color);
-    text-align: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/services.jpg');
-    background-size: cover;
-    background-position: center;
-}
-
-.hero h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.hero p {
-    font-size: 24px;
-    margin-bottom: 30px;
-}
-
 main {
     padding: 50px 20px;
     background: var(--primary-color);

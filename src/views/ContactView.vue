@@ -1,11 +1,10 @@
 <template>
-  <div class="contact-page">
-    <HeaderNav />
-    
-    <div class="hero">
-      <h1>Get in Touch</h1>
-      <p>Have a question about a vehicle, need a quote, or want to schedule a visit? Our Kigali-based team is here to help — reach out anytime.</p>
-    </div>
+  <PageLayout>
+    <HeroSection
+      title="Get in Touch"
+      subtitle="Have a question about a vehicle, need a quote, or want to schedule a visit? Our Kigali-based team is here to help — reach out anytime."
+      backgroundImage="/contact.jpg"
+    />
 
     <div class="info-cards">
       <div class="card">
@@ -83,18 +82,13 @@
       </div>
     </main>
 
-    <ContactInfo />
-    <SocialMedia />
-    <FooterBar />
-  </div>
+  </PageLayout>
 </template>
 
 <script setup>
 import { useHead } from '@unhead/vue'
-import HeaderNav from '@/components/HeaderNav.vue'
-import FooterBar from '@/components/FooterBar.vue'
-import SocialMedia from '@/components/SocialMedia.vue'
-import ContactInfo from '@/components/ContactInfo.vue'
+import PageLayout from '@/components/PageLayout.vue'
+import HeroSection from '@/components/HeroSection.vue'
 
 useHead({
   title: 'Contact Us — Triple Goats Kigali Showroom',
@@ -111,31 +105,6 @@ useHead({
 </script>
 
 <style scoped>
-.hero {
-    position: relative;
-    height: 60vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: var(--secondary-color);
-    text-align: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/contact.jpg');
-    background-size: cover;
-    background-position: center;
-}
-
-.hero h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.hero p {
-    font-size: 24px;
-    margin-bottom: 30px;
-}
-
 .info-cards {
     display: flex;
     gap: 20px;

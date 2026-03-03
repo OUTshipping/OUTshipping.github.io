@@ -1,11 +1,10 @@
 <template>
-  <div class="about-page">
-    <HeaderNav />
-    
-    <div class="hero">
-      <h1>About T&G AUTOMOBILE</h1>
-      <p>Driving Rwanda's electric future — one vehicle at a time</p>
-    </div>
+  <PageLayout>
+    <HeroSection
+      title="About T&G AUTOMOBILE"
+      subtitle="Driving Rwanda's electric future — one vehicle at a time"
+      backgroundImage="/about.jpg"
+    />
 
     <main>
       <h2>Who We Are</h2>
@@ -42,19 +41,13 @@
         </div>
       </div>
     </main>
-
-    <ContactInfo />
-    <SocialMedia />
-    <FooterBar />
-  </div>
+  </PageLayout>
 </template>
 
 <script setup>
 import { useHead } from '@unhead/vue'
-import HeaderNav from '@/components/HeaderNav.vue'
-import FooterBar from '@/components/FooterBar.vue'
-import SocialMedia from '@/components/SocialMedia.vue'
-import ContactInfo from '@/components/ContactInfo.vue'
+import PageLayout from '@/components/PageLayout.vue'
+import HeroSection from '@/components/HeroSection.vue'
 
 useHead({
   title: 'About Us — Triple Goats | T&G Automobile Rwanda',
@@ -71,31 +64,6 @@ useHead({
 </script>
 
 <style scoped>
-.hero {
-    position: relative;
-    height: 60vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: var(--secondary-color);
-    text-align: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/about.jpg');
-    background-size: cover;
-    background-position: center;
-}
-
-.hero h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.hero p {
-    font-size: 24px;
-    margin-bottom: 30px;
-}
-
 main {
     padding: 50px 20px;
     background: var(--primary-color);
@@ -175,10 +143,6 @@ main h2 {
 @media (max-width: 480px) {
     .about-section {
         padding: 10px;
-    }
-
-    .hero h1 {
-        font-size: 36px;
     }
 }
 </style>

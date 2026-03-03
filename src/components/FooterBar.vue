@@ -38,8 +38,8 @@
             <h4>Contact</h4>
             <ul class="contact-list">
                 <li><i class="fas fa-map-marker-alt"></i> KK 15 Rd, Kicukiro, Kigali</li>
-                <li><i class="fas fa-envelope"></i> tgautomobilee@gmail.com</li>
-                <li><i class="fas fa-phone"></i> +250 785 084 313</li>
+                <li><i class="fas fa-envelope"></i> <a href="mailto:tgautomobile@gmail.com">tgautomobile@gmail.com</a></li>
+                <li><i class="fas fa-phone"></i> <a href="tel:+250785084313">+250 785 084 313</a></li>
             </ul>
             <div class="footer-socials">
                 <a href="https://www.instagram.com/tg_auto_rwanda/" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
@@ -141,6 +141,16 @@ ul li a:hover {
 .contact-list i {
     color: var(--accent-color);
     margin-top: 0.25rem;
+}
+
+.contact-list a {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.contact-list a:hover {
+    color: var(--accent-color);
 }
 
 .network-list {

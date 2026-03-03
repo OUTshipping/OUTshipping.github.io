@@ -34,8 +34,9 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('/pattern.png') repeat; /* Optional pattern */
-    opacity: 0.05;
+    background: radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px);
+    background-size: 20px 20px;
+    opacity: 0.5;
 }
 
 .cta-content {

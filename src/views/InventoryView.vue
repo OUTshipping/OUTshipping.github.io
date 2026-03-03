@@ -1,6 +1,5 @@
 <template>
-  <div class="inventory-page">
-    <HeaderNav />
+  <PageLayout>
     
     <main id="vehicles">
       <div class="filter-container">
@@ -89,21 +88,15 @@
         </router-link>
       </div>
     </main>
-
-    <ContactInfo />
-    <SocialMedia />
-    <FooterBar />
-  </div>
+  </PageLayout>
 </template>
 
 <script setup>
 import { ref, computed, onMounted, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { useHead } from '@unhead/vue'
-import HeaderNav from '@/components/HeaderNav.vue'
-import FooterBar from '@/components/FooterBar.vue'
-import SocialMedia from '@/components/SocialMedia.vue'
-import ContactInfo from '@/components/ContactInfo.vue'
+import PageLayout from '@/components/PageLayout.vue'
+import vehiclesData from '../../public/data/vehicles.json'
 
 useHead({
   title: 'EV Inventory — Browse Electric Vehicles | Triple Goats',
@@ -133,8 +126,24 @@ const sortFilters = [
   { value: 'seats-descending', label: 'Seats Descending' }
 ]
 
-// 车辆数据从 JSON 文件动态加载
-const vehicles = ref([])
+// 车辆数据：SSG 构建时从本地 JSON 静态加载，客户端挂载后可选远程更新
+function mapVehicles(data) {
+  return data
+    .filter(v => v.enabled)
+    .map(v => ({
+      id: v.id,
+      name: v.name,
+      type: v.type,
+      range: v.range,
+      seats: v.seats,
+      configuration: v.configuration,
+      colors: v.colors,
+      image: v.coverImage,
+      link: `/vehicle/${v.slug}`
+    }))
+}
+
+const vehicles = ref(mapVehicles(vehiclesData))
 
 const selectedTypeLabel = computed(() => selectedType.value)
 
@@ -197,26 +206,16 @@ watch(() => route.query.type, (newType) => {
 }, { immediate: true })
 
 onMounted(async () => {
-  // 从 JSON 文件加载车辆数据
+  // 客户端挂载后尝试从远程获取最新数据（静默更新，不影响 SSG 预渲染）
   try {
     const res = await fetch('https://raw.githubusercontent.com/OUTshipping/OUTshipping.github.io/source/public/data/vehicles.json')
-    const data = await res.json()
-    // 过滤已启用的车辆，并映射字段以兼容模板
-    vehicles.value = data
-      .filter(v => v.enabled)
-      .map(v => ({
-        id: v.id,
-        name: v.name,
-        type: v.type,
-        range: v.range,
-        seats: v.seats,
-        configuration: v.configuration,
-        colors: v.colors,
-        image: v.coverImage,
-        link: `/vehicle/${v.slug}`
-      }))
+    if (res.ok) {
+      const data = await res.json()
+      vehicles.value = mapVehicles(data)
+    }
   } catch (err) {
-    console.error('加载车辆数据失败:', err)
+    // 远程更新失败时使用已有的本地数据，不影响页面展示
+    console.warn('远程更新车辆数据失败，使用本地数据:', err)
   }
 
   // 处理URL参数

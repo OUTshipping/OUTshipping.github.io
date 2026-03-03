@@ -1,6 +1,5 @@
 <template>
-  <div class="taxi-page">
-    <HeaderNav />
+  <PageLayout>
     
     <div class="hero">
       <video autoplay muted loop playsinline class="hero-video">
@@ -20,7 +19,7 @@
         </div>
         <div class="intro-text">
           <h2>Your Ride, Electrified</h2>
-          <p>We are building a fleet of fully electric taxis to serve Kigali and beyond. Expect professional drivers, air-conditioned cabins, real-time ride tracking, and cashless payment — all powered by zero-emission vehicles.</p>
+          <p>Our fleet of fully electric taxis is now serving Kigali and beyond. Enjoy professional drivers, air-conditioned cabins, real-time ride tracking, and cashless payment — all powered by zero-emission vehicles.</p>
           <p>Whether you need a daily commute, an airport transfer, or a ride across town, our EV taxi service offers a greener, more comfortable alternative to traditional transport.</p>
         </div>
       </section>
@@ -51,25 +50,14 @@
         </div>
       </section>
 
-      <section class="taxi-cta">
-        <h2>Coming Soon</h2>
-        <p>Our taxi service is launching soon. Reach out to us now if you would like to be notified when bookings open, or contact us directly for special ride arrangements.</p>
-        <router-link to="/contact" class="btn">Contact Us</router-link>
-      </section>
-    </main>
 
-    <ContactInfo />
-    <SocialMedia />
-    <FooterBar />
-  </div>
+    </main>
+  </PageLayout>
 </template>
 
 <script setup>
 import { useHead } from '@unhead/vue'
-import HeaderNav from '@/components/HeaderNav.vue'
-import FooterBar from '@/components/FooterBar.vue'
-import SocialMedia from '@/components/SocialMedia.vue'
-import ContactInfo from '@/components/ContactInfo.vue'
+import PageLayout from '@/components/PageLayout.vue'
 
 useHead({
   title: 'Electric Taxi Service — Triple Goats Kigali',
@@ -230,41 +218,7 @@ useHead({
     color: var(--text-muted);
 }
 
-/* CTA section */
-.taxi-cta {
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 60px 20px;
-    text-align: center;
-}
 
-.taxi-cta h2 {
-    font-size: 32px;
-    margin-bottom: 15px;
-    color: var(--accent-color);
-}
-
-.taxi-cta p {
-    font-size: 17px;
-    line-height: 1.7;
-    color: var(--text-muted);
-    margin-bottom: 25px;
-}
-
-.btn {
-    display: inline-block;
-    padding: 12px 30px;
-    background: var(--accent-color);
-    color: var(--primary-color);
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: opacity 0.3s;
-}
-
-.btn:hover {
-    opacity: 0.9;
-}
 
 main {
     background: var(--primary-color);
@@ -292,9 +246,6 @@ main {
         padding: 40px 15px;
     }
 
-    .taxi-cta {
-        padding: 40px 15px;
-    }
 }
 </style>
 

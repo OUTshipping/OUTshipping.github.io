@@ -23,6 +23,7 @@
 
   <!-- Web App Manifest -->
   <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#0f172a">
 
   <!-- SEO: 通用默认 meta（各页面由 useHead 覆盖） -->
   <meta name="description" content="Triple Goats (T&G Automobile) — Rwanda's trusted used car and electric vehicle dealer in Kigali, a subsidiary of Zhejiang Aladdin Group.">
@@ -92,7 +93,21 @@
       "longitude": 30.1044
     },
     "telephone": "+250 785 084 313",
-    "email": "tgautomobilee@gmail.com",
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "telephone": "+250 785 084 313",
+        "contactType": "sales",
+        "availableLanguage": ["English", "French", "Chinese", "Kinyarwanda"]
+      },
+      {
+        "@type": "ContactPoint",
+        "telephone": "+250 794 104 908",
+        "contactType": "sales",
+        "availableLanguage": ["English", "French", "Chinese", "Kinyarwanda"]
+      }
+    ],
+    "email": "tgautomobile@gmail.com",
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",

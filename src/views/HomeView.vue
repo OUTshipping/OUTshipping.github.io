@@ -1,6 +1,5 @@
 <template>
-  <div class="home-page">
-    <HeaderNav />
+  <PageLayout>
 
     <!-- Hero Section -->
     <div class="hero">
@@ -152,17 +151,12 @@
         </div>
       </div>
     </section>
-
-    <ContactInfo />
-    <FooterBar />
-  </div>
+  </PageLayout>
 </template>
 
 <script setup>
 import { useHead } from '@unhead/vue'
-import HeaderNav from '@/components/HeaderNav.vue'
-import FooterBar from '@/components/FooterBar.vue'
-import ContactInfo from '@/components/ContactInfo.vue'
+import PageLayout from '@/components/PageLayout.vue'
 
 useHead({
   title: "Triple Goats — Rwanda's Premier Electric Vehicle Dealer",

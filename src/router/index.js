@@ -84,7 +84,13 @@ const routes = [
   { path: '/leapmotor-c10', redirect: '/vehicle/leapmotor-c10' },
   { path: '/icar-03', redirect: '/vehicle/icar-03' },
   { path: '/icar-v23', redirect: '/vehicle/icar-v23' },
-  { path: '/jetour-shanhai-t2', redirect: '/vehicle/jetour-shanhai-t2' }
+  { path: '/jetour-shanhai-t2', redirect: '/vehicle/jetour-shanhai-t2' },
+  // 404 兜底路由（必须放在最后）
+  {
+    path: '/:pathMatch(.*)*',
+    name: 'NotFound',
+    component: () => import('@/views/NotFoundView.vue')
+  }
 ]
 
 export default routes

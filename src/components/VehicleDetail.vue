@@ -1,6 +1,5 @@
 <template>
-  <div class="vehicle-detail">
-    <HeaderNav />
+  <PageLayout>
     
     <main>
       <router-link to="/inventory" class="back-link">＜ back</router-link>
@@ -77,19 +76,12 @@
         </div>
       </div>
     </main>
-
-    <ContactInfo />
-    <SocialMedia />
-    <FooterBar />
-  </div>
+  </PageLayout>
 </template>
 
 <script setup>
 import { ref } from 'vue'
-import HeaderNav from './HeaderNav.vue'
-import FooterBar from './FooterBar.vue'
-import SocialMedia from './SocialMedia.vue'
-import ContactInfo from './ContactInfo.vue'
+import PageLayout from './PageLayout.vue'
 
 const props = defineProps({
   vehicleName: {

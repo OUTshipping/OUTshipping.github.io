@@ -169,7 +169,7 @@
     "slug": "byd-seagull",
     "enabled": true,
     "name": "2025 BYD Seagull",
-    "type": "SUV",
+    "type": "SEDAN",
     "range": 300,
     "seats": 5,
     "configuration": "Basic",
@@ -177,7 +177,7 @@
     "colors": [
       "#000000"
     ],
-    "description": "The BYD SEAGULL is a compact SUV designed for urban driving. It offers a range of 300 km, seating for up to 5 passengers, and a basic configuration. With its efficient electric motor and modern design, the SEAGULL is perfect for city commuters looking for a reliable and eco-friendly vehicle.",
+    "description": "The BYD SEAGULL is a compact city car designed for urban driving. It offers a range of 300 km, seating for up to 5 passengers, and a basic configuration. With its efficient electric motor and modern design, the SEAGULL is perfect for city commuters looking for a reliable and eco-friendly vehicle.",
     "specs": {
       "year": "2025",
       "make": "BYD",
@@ -492,7 +492,7 @@
     "slug": "jetour-shanhai-t2",
     "enabled": true,
     "name": "2025 Jetour Shanhai T2",
-    "type": "TRUCK",
+    "type": "PICKUP",
     "range": 420,
     "seats": 5,
     "configuration": "Commercial",

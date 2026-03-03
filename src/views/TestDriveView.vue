@@ -1,11 +1,10 @@
 <template>
-  <div class="testdrive-page">
-    <HeaderNav />
-    
-    <div class="hero">
-      <h1>Schedule a Test Drive</h1>
-      <p>Nothing beats getting behind the wheel. Book a free test drive at our Kigali showroom and feel the instant torque, whisper-quiet cabin, and cutting-edge tech of our electric vehicles for yourself. Fill out the form below and our team will confirm your appointment within 24 hours.</p>
-    </div>
+  <PageLayout>
+    <HeroSection
+      title="Schedule a Test Drive"
+      subtitle="Nothing beats getting behind the wheel. Book a free test drive at our Kigali showroom and feel the instant torque, whisper-quiet cabin, and cutting-edge tech of our electric vehicles for yourself. Fill out the form below and our team will confirm your appointment within 24 hours."
+      backgroundImage="/testdrive.jpg"
+    />
 
     <main>
       <div class="form-container">
@@ -20,19 +19,13 @@
         </iframe>
       </div>
     </main>
-
-    <ContactInfo />
-    <SocialMedia />
-    <FooterBar />
-  </div>
+  </PageLayout>
 </template>
 
 <script setup>
 import { useHead } from '@unhead/vue'
-import HeaderNav from '@/components/HeaderNav.vue'
-import FooterBar from '@/components/FooterBar.vue'
-import SocialMedia from '@/components/SocialMedia.vue'
-import ContactInfo from '@/components/ContactInfo.vue'
+import PageLayout from '@/components/PageLayout.vue'
+import HeroSection from '@/components/HeroSection.vue'
 
 useHead({
   title: 'Schedule a Test Drive — Triple Goats',
@@ -49,31 +42,6 @@ useHead({
 </script>
 
 <style scoped>
-.hero {
-    position: relative;
-    height: 60vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: var(--secondary-color);
-    text-align: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/testdrive.jpg');
-    background-size: cover;
-    background-position: center;
-}
-
-.hero h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.hero p {
-    font-size: 24px;
-    margin-bottom: 30px;
-}
-
 main {
     padding: 50px 20px;
     background: var(--primary-color);
