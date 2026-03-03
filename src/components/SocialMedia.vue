@@ -1,16 +1,16 @@
 <template>
   <div class="bottom-social-media">
     <a href="https://www.instagram.com/tg_auto_rwanda/" class="social-item" target="_blank" rel="noopener">
-      <img src="/ins.jpg" alt="Instagram" loading="lazy">
+      <img src="/images/social/ins.jpg" alt="Instagram" loading="lazy">
     </a>
     <a href="https://x.com/Triple_Goats" class="social-item" target="_blank" rel="noopener">
-      <img src="/X.jpg" alt="Twitter" loading="lazy">
+      <img src="/images/categories/X.jpg" alt="Twitter" loading="lazy">
     </a>
     <a href="https://www.facebook.com/TripleGoats" class="social-item" target="_blank" rel="noopener">
-      <img src="/facebook.jpg" alt="Facebook" loading="lazy">
+      <img src="/images/social/facebook.jpg" alt="Facebook" loading="lazy">
     </a>
     <a href="https://www.tiktok.com/@tg.auto.rwanda" class="social-item" target="_blank" rel="noopener">
-      <img src="/tiktok.jpg" alt="TikTok" loading="lazy">
+      <img src="/images/social/tiktok.jpg" alt="TikTok" loading="lazy">
     </a>
   </div>
 </template>

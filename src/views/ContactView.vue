@@ -3,14 +3,14 @@
     <HeroSection
       title="Get in Touch"
       subtitle="Have a question about a vehicle, need a quote, or want to schedule a visit? Our Kigali-based team is here to help — reach out anytime."
-      backgroundImage="/contact.jpg"
+      backgroundImage="/images/pages/contact.jpg"
     />
 
     <div class="info-cards">
       <div class="card">
         <div class="card-content">
           <div class="card-icon">
-            <img src="/phone-icon.png" alt="Phone Icon" class="card-icon">
+            <img src="/images/icons/phone-icon.png" alt="Phone Icon" class="card-icon">
           </div>
           <div class="card-details">
             <h3>Contact</h3>
@@ -26,7 +26,7 @@
       <div class="card">
         <div class="card-content">
           <div class="card-icon">
-            <img src="/location-icon.png" alt="Location Icon" class="card-icon">
+            <img src="/images/icons/location-icon.png" alt="Location Icon" class="card-icon">
           </div>
           <div class="card-details">
             <h3>Location</h3>
@@ -39,7 +39,7 @@
       <div class="card">
         <div class="card-content">
           <div class="card-icon">
-            <img src="/time-icon.png" alt="Time Icon" class="card-icon">
+            <img src="/images/icons/time-icon.png" alt="Time Icon" class="card-icon">
           </div>
           <div class="card-details">
             <h3>Business Hours</h3>

@@ -3,7 +3,7 @@
     
     <div class="hero">
       <video autoplay muted loop playsinline class="hero-video">
-        <source src="/taxi.mp4" type="video/mp4">
+        <source src="/video/taxi.mp4" type="video/mp4">
       </video>
       <div class="hero-overlay"></div>
       <div class="hero-content">
@@ -15,7 +15,7 @@
     <main>
       <section class="taxi-intro">
         <div class="intro-image">
-          <img src="/taxi.jpg" alt="Triple Goats Electric Taxi" loading="lazy">
+          <img src="/images/pages/taxi.jpg" alt="Triple Goats Electric Taxi" loading="lazy">
         </div>
         <div class="intro-text">
           <h2>Your Ride, Electrified</h2>

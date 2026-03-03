@@ -3,7 +3,7 @@
     <HeroSection
       title="Our Services"
       subtitle="More than a dealership — we provide a complete ecosystem of electric mobility solutions in Kigali"
-      backgroundImage="/services.jpg"
+      backgroundImage="/images/pages/services.jpg"
     />
 
     <main>

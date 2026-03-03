@@ -3,7 +3,7 @@
     <HeroSection
       title="SUV Collection"
       subtitle="Command the road with confidence — explore our lineup of electric SUVs built for African terrain"
-      backgroundImage="/suv.jpg"
+      backgroundImage="/images/pages/suv.jpg"
     />
 
     <main>

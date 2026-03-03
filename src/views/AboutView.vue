@@ -3,7 +3,7 @@
     <HeroSection
       title="About T&G AUTOMOBILE"
       subtitle="Driving Rwanda's electric future — one vehicle at a time"
-      backgroundImage="/about.jpg"
+      backgroundImage="/images/pages/about.jpg"
     />
 
     <main>
