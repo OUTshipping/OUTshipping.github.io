@@ -8,13 +8,14 @@
 
     <main>
       <div class="form-container">
-        <iframe 
-          src="https://docs.google.com/forms/d/e/1FAIpQLSdGsQemQKBRHJn9ODs3DbSn4E9PFRtMUwcW2boTwIPgcnfJQA/viewform?embedded=true" 
-          width="100%" 
-          height="800" 
-          frameborder="0" 
-          marginheight="0" 
-          marginwidth="0">
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSdGsQemQKBRHJn9ODs3DbSn4E9PFRtMUwcW2boTwIPgcnfJQA/viewform?embedded=true"
+          width="100%"
+          height="800"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0"
+          title="Test Drive Booking Form">
           Your browser does not support iframes.
         </iframe>
       </div>
@@ -34,6 +35,7 @@ useHead({
     { property: 'og:title', content: 'Schedule a Test Drive — Triple Goats' },
     { property: 'og:description', content: 'Book a free test drive at our Kigali showroom. Experience the instant torque and whisper-quiet cabin of our electric vehicles.' },
     { property: 'og:url', content: 'https://tgautomobile.com/testdrive' },
+    { property: 'og:image', content: 'https://tgautomobile.com/images/pages/testdrive.jpg' },
   ],
   link: [
     { rel: 'canonical', href: 'https://tgautomobile.com/testdrive' }

@@ -105,6 +105,7 @@ useHead({
     { property: 'og:title', content: 'EV Inventory — Browse Electric Vehicles | Triple Goats' },
     { property: 'og:description', content: 'Explore our full range of electric sedans, SUVs, vans and trucks from BYD, Dongfeng, Leapmotor, Kia, Toyota and more.' },
     { property: 'og:url', content: 'https://tgautomobile.com/inventory' },
+    { property: 'og:image', content: 'https://tgautomobile.com/companylogo.jpg' },
   ],
   link: [
     { rel: 'canonical', href: 'https://tgautomobile.com/inventory' }

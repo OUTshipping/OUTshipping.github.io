@@ -120,7 +120,7 @@ const prevSlide = () => {
 <style scoped>
 main {
     padding: 60px 30px;
-    background: var(--bg-color);
+    background: var(--primary-color);
     text-align: center;
     min-height: 60vh;
 }

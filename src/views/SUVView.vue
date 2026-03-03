@@ -26,6 +26,7 @@ useHead({
     { property: 'og:title', content: 'Electric SUV Collection — Triple Goats' },
     { property: 'og:description', content: 'Explore our lineup of electric SUVs built for African terrain. Bold design, generous ground clearance, and advanced safety features.' },
     { property: 'og:url', content: 'https://tgautomobile.com/suv' },
+    { property: 'og:image', content: 'https://tgautomobile.com/images/pages/suv.jpg' },
   ],
   link: [
     { rel: 'canonical', href: 'https://tgautomobile.com/suv' }

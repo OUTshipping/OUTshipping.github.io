@@ -84,8 +84,7 @@
           </div>
         </div>
 
-        <!-- Add more cards as needed -->
-         <div class="vehicle-card">
+        <div class="vehicle-card">
             <div class="card-image">
               <img src="/images/categories/truck.jpg" alt="Heavy-duty electric trucks for commercial fleets — Triple Goats Rwanda" loading="lazy">
             </div>
@@ -146,7 +145,8 @@
             style="border:0;"
             allowfullscreen=""
             loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Triple Goats Showroom Location">
             </iframe>
         </div>
       </div>
@@ -165,6 +165,7 @@ useHead({
     { property: 'og:title', content: "Triple Goats — Rwanda's Premier Electric Vehicle Dealer" },
     { property: 'og:description', content: 'Shop BYD, Dongfeng, Leapmotor & more electric vehicles in Kigali. Full after-sales support, EV charging, taxi service and car rental.' },
     { property: 'og:url', content: 'https://tgautomobile.com/home' },
+    { property: 'og:image', content: 'https://tgautomobile.com/companylogo.jpg' },
   ],
   link: [
     { rel: 'canonical', href: 'https://tgautomobile.com/home' }

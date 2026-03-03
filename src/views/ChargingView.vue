@@ -79,7 +79,8 @@
           style="border:0;"
           allowfullscreen=""
           loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Triple Goats Charging Station Location">
         </iframe>
       </div>
     </section>

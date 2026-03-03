@@ -61,7 +61,8 @@
             height="600" 
             frameborder="0" 
             marginheight="0" 
-            marginwidth="0">
+            marginwidth="0"
+            title="Contact Form">
             Your browser does not support iframes.
           </iframe>
         </div>
@@ -76,7 +77,8 @@
             style="border:0;" 
             allowfullscreen="" 
             loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade">
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Triple Goats Showroom Location">
           </iframe>
         </div>
       </div>

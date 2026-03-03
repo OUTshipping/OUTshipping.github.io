@@ -169,18 +169,6 @@ main {
 }
 
 @media (max-width: 768px) {
-    .hero {
-        height: 50vh;
-    }
-
-    .hero h1 {
-        font-size: 32px;
-    }
-
-    .hero p {
-        font-size: 18px;
-    }
-
     .taxi-intro {
         flex-direction: column;
         padding: 40px 15px;
@@ -189,7 +177,6 @@ main {
     .taxi-features {
         padding: 40px 15px;
     }
-
 }
 </style>
 
