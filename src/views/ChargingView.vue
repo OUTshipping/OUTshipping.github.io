@@ -3,7 +3,6 @@
     <HeroSection
       title="EV Charging Station"
       subtitle="Power up at our on-site fast-charging station in Kicukiro, Kigali — open to all EV owners"
-      backgroundImage="/charging.jpg"
     />
 
     <main>
@@ -37,7 +36,7 @@
             <i class="fas fa-clock"></i>
             <h3>Operating Hours</h3>
             <p>Our charging station is open during showroom hours. Drive in anytime during business hours — no appointment or membership required.</p>
-            <div class="spec-tag">Mon-Sat: 8:00 AM - 6:00 PM</div>
+            <div class="spec-tag">Mon-Fri: 9:00 AM - 6:00 PM / Sat: 9:00 AM - 1:00 PM</div>
           </div>
         </div>
       </section>
@@ -99,6 +98,7 @@ useHead({
     { property: 'og:title', content: 'EV Charging Stations — Triple Goats Kigali' },
     { property: 'og:description', content: 'Find EV charging stations in Kigali. Fast and reliable charging for all electric vehicle brands.' },
     { property: 'og:url', content: 'https://tgautomobile.com/charging' },
+    { property: 'og:image', content: 'https://tgautomobile.com/companylogo.jpg' },
   ],
   link: [
     { rel: 'canonical', href: 'https://tgautomobile.com/charging' }

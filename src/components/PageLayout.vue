@@ -28,7 +28,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted, onBeforeUnmount } from 'vue'
 import HeaderNav from '@/components/HeaderNav.vue'
 import FooterBar from '@/components/FooterBar.vue'
 import SocialMedia from '@/components/SocialMedia.vue'
@@ -50,6 +50,21 @@ defineProps({
 })
 
 const waMenuOpen = ref(false)
+
+// 点击外部关闭 WhatsApp 弹窗
+function handleClickOutsideWa(e) {
+  if (waMenuOpen.value && !e.target.closest('.whatsapp-widget')) {
+    waMenuOpen.value = false
+  }
+}
+
+onMounted(() => {
+  document.addEventListener('click', handleClickOutsideWa)
+})
+
+onBeforeUnmount(() => {
+  document.removeEventListener('click', handleClickOutsideWa)
+})
 </script>
 
 <style scoped>

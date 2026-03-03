@@ -56,6 +56,7 @@ useHead({
     { property: 'og:title', content: 'About Us — Triple Goats | T&G Automobile Rwanda' },
     { property: 'og:description', content: "Founded in 2023 in Kigali's Kicukiro district, Triple Goats is Rwanda's trusted EV dealer partnering with BYD, Dongfeng and more." },
     { property: 'og:url', content: 'https://tgautomobile.com/about' },
+    { property: 'og:image', content: 'https://tgautomobile.com/images/pages/about.jpg' },
   ],
   link: [
     { rel: 'canonical', href: 'https://tgautomobile.com/about' }

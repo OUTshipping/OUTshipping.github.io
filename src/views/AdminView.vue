@@ -232,10 +232,10 @@ async function handleFormSave({ formData, pendingCoverFile, pendingDetailFiles }
     // 上传封面图
     if (pendingCoverFile) {
       const ext = pendingCoverFile.name.split('.').pop()
-      const coverPath = `public/vehicles/${slug}/cover.${ext}`
+      const coverPath = `public/images/vehicles/${slug}/cover.${ext}`
       const b64 = await fileToBase64(pendingCoverFile)
       await uploadImage(token, coverPath, b64, `Upload cover for ${formData.name}`)
-      formData.coverImage = `/vehicles/${slug}/cover.${ext}`
+      formData.coverImage = `/images/vehicles/${slug}/cover.${ext}`
     }
 
     // 上传详情图
@@ -243,10 +243,10 @@ async function handleFormSave({ formData, pendingCoverFile, pendingDetailFiles }
     for (let i = 0; i < pendingDetailFiles.length; i++) {
       const file = pendingDetailFiles[i]
       const ext = file.name.split('.').pop()
-      const imgPath = `public/vehicles/${slug}/${existingCount + i + 1}.${ext}`
+      const imgPath = `public/images/vehicles/${slug}/${existingCount + i + 1}.${ext}`
       const b64 = await fileToBase64(file)
       await uploadImage(token, imgPath, b64, `Upload image for ${formData.name}`)
-      formData.detailImages[existingCount + i] = `/vehicles/${slug}/${existingCount + i + 1}.${ext}`
+      formData.detailImages[existingCount + i] = `/images/vehicles/${slug}/${existingCount + i + 1}.${ext}`
     }
 
     // 构建车辆对象

@@ -3,7 +3,6 @@
     <HeroSection
       title="Car Rental Services"
       subtitle="Drive electric on your own schedule — short-term and long-term rentals available in Kigali"
-      backgroundImage="/rental.png"
     />
 
     <main>
@@ -63,6 +62,7 @@ useHead({
     { property: 'og:title', content: 'Electric Car Rental — Triple Goats Kigali' },
     { property: 'og:description', content: 'Rent a fully charged EV for a day trip, business engagement, or anything in between. Short-term and long-term rentals available.' },
     { property: 'og:url', content: 'https://tgautomobile.com/rental' },
+    { property: 'og:image', content: 'https://tgautomobile.com/companylogo.jpg' },
   ],
   link: [
     { rel: 'canonical', href: 'https://tgautomobile.com/rental' }

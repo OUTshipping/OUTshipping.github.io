@@ -81,7 +81,7 @@
 
 <script setup>
 import { ref } from 'vue'
-import PageLayout from './PageLayout.vue'
+import PageLayout from '@/components/PageLayout.vue'
 
 const props = defineProps({
   vehicleName: {

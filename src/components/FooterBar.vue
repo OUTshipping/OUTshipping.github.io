@@ -42,10 +42,10 @@
                 <li><i class="fas fa-phone"></i> <a href="tel:+250785084313">+250 785 084 313</a></li>
             </ul>
             <div class="footer-socials">
-                <a href="https://www.instagram.com/tg_auto_rwanda/" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
-                <a href="https://x.com/Triple_Goats" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.facebook.com/TripleGoats" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://www.tiktok.com/@tg.auto.rwanda" target="_blank" rel="noopener"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.instagram.com/tg_auto_rwanda/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://x.com/Triple_Goats" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.facebook.com/TripleGoats" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.tiktok.com/@tg.auto.rwanda" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
             </div>
         </div>
 

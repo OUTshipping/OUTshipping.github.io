@@ -4,7 +4,7 @@
       <img src="/images/social/ins.jpg" alt="Instagram" loading="lazy">
     </a>
     <a href="https://x.com/Triple_Goats" class="social-item" target="_blank" rel="noopener">
-      <img src="/images/categories/X.jpg" alt="Twitter" loading="lazy">
+      <img src="/images/social/X.jpg" alt="Twitter" loading="lazy">
     </a>
     <a href="https://www.facebook.com/TripleGoats" class="social-item" target="_blank" rel="noopener">
       <img src="/images/social/facebook.jpg" alt="Facebook" loading="lazy">

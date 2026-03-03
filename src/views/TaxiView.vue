@@ -1,16 +1,11 @@
 <template>
   <PageLayout>
-    
-    <div class="hero">
-      <video autoplay muted loop playsinline class="hero-video">
-        <source src="/video/taxi.mp4" type="video/mp4">
-      </video>
-      <div class="hero-overlay"></div>
-      <div class="hero-content">
-        <h1>Taxi Service</h1>
-        <p>Clean, quiet, and affordable electric taxi rides across Kigali</p>
-      </div>
-    </div>
+
+    <HeroSection
+      title="Taxi Service"
+      subtitle="Clean, quiet, and affordable electric taxi rides across Kigali"
+      backgroundVideo="/video/taxi.mp4"
+    />
 
     <main>
       <section class="taxi-intro">
@@ -58,6 +53,7 @@
 <script setup>
 import { useHead } from '@unhead/vue'
 import PageLayout from '@/components/PageLayout.vue'
+import HeroSection from '@/components/HeroSection.vue'
 
 useHead({
   title: 'Electric Taxi Service — Triple Goats Kigali',
@@ -66,6 +62,7 @@ useHead({
     { property: 'og:title', content: 'Electric Taxi Service — Triple Goats Kigali' },
     { property: 'og:description', content: 'Clean, quiet, and affordable electric taxi rides across Kigali. Professional drivers, air-conditioned cabins, zero emissions.' },
     { property: 'og:url', content: 'https://tgautomobile.com/taxi' },
+    { property: 'og:image', content: 'https://tgautomobile.com/images/pages/taxi.jpg' },
   ],
   link: [
     { rel: 'canonical', href: 'https://tgautomobile.com/taxi' }
@@ -74,59 +71,6 @@ useHead({
 </script>
 
 <style scoped>
-/* Hero with video background */
-.hero {
-    position: relative;
-    height: 70vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: var(--secondary-color);
-    text-align: center;
-    overflow: hidden;
-}
-
-.hero-video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    transform: translate(-50%, -50%);
-    object-fit: cover;
-    z-index: 0;
-}
-
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 1;
-}
-
-.hero-content {
-    position: relative;
-    z-index: 2;
-    max-width: 800px;
-    padding: 0 20px;
-}
-
-.hero h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.hero p {
-    font-size: 24px;
-    margin-bottom: 30px;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
-}
-
 /* Intro section */
 .taxi-intro {
     display: flex;

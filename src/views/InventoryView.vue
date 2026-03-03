@@ -92,7 +92,7 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted, watch } from 'vue'
+import { ref, computed, onMounted, onBeforeUnmount, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { useHead } from '@unhead/vue'
 import PageLayout from '@/components/PageLayout.vue'
@@ -224,12 +224,19 @@ onMounted(async () => {
   }
 
   // 点击外部关闭下拉菜单
-  document.addEventListener('click', (e) => {
-    if (!e.target.closest('.custom-select')) {
-      typeSelectOpen.value = false
-    }
-  })
+  document.addEventListener('click', handleClickOutsideSelect)
 })
+
+onBeforeUnmount(() => {
+  document.removeEventListener('click', handleClickOutsideSelect)
+})
+
+// 点击外部关闭下拉菜单
+function handleClickOutsideSelect(e) {
+  if (!e.target.closest('.custom-select')) {
+    typeSelectOpen.value = false
+  }
+}
 </script>
 
 <style scoped>

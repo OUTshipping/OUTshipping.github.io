@@ -9,23 +9,23 @@
     </router-link>
 
     <!-- 移动端汉堡菜单按钮 -->
-    <div class="menu-toggle" :class="{ active: menuOpen }" @click="toggleMenu" aria-label="Toggle Menu">
+    <div ref="menuToggleRef" class="menu-toggle" :class="{ active: menuOpen }" @click="toggleMenu" aria-label="Toggle Menu">
       <span></span>
       <span></span>
       <span></span>
     </div>
 
     <!-- 主导航 -->
-    <nav id="nav-menu" :class="{ active: menuOpen }">
+    <nav ref="navRef" id="nav-menu" :class="{ active: menuOpen }">
       <router-link to="/inventory" @click="closeMenu">INVENTORY</router-link>
       <router-link to="/charging" @click="closeMenu">CHARGING</router-link>
       <router-link to="/services" @click="closeMenu">SERVICES</router-link>
 
-      <div class="dropdown" :class="{ active: dropdownOpen }">
-        <div class="dropbtn" @click.stop="toggleDropdown">
+      <div ref="dropdownRef" class="dropdown" :class="{ active: dropdownOpen }">
+        <button class="dropbtn" @click.stop="toggleDropdown" :aria-expanded="dropdownOpen" aria-haspopup="true">
             DISCOVER
             <i class="fas fa-chevron-down" style="font-size: 0.8em; margin-left: 4px;"></i>
-        </div>
+        </button>
         <div class="dropdown-content">
           <router-link to="/testdrive" @click="closeMenu">TEST DRIVE</router-link>
           <router-link to="/taxi" @click="closeMenu">TAXI SERVICE</router-link>
@@ -37,34 +37,16 @@
 
       <!-- 移动端社媒图标 -->
       <div class="top-social-media mobile-only" v-if="menuOpen">
-          <a href="https://www.instagram.com/tg_auto_rwanda/" class="social-icon-link" target="_blank" rel="noopener" aria-label="Instagram">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="https://x.com/Triple_Goats" class="social-icon-link" target="_blank" rel="noopener" aria-label="Twitter">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a href="https://www.facebook.com/TripleGoats" class="social-icon-link" target="_blank" rel="noopener" aria-label="Facebook">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a href="https://www.tiktok.com/@tg.auto.rwanda" class="social-icon-link" target="_blank" rel="noopener" aria-label="TikTok">
-            <i class="fab fa-tiktok"></i>
+          <a v-for="link in socialLinks" :key="link.label" :href="link.url" class="social-icon-link" target="_blank" rel="noopener" :aria-label="link.label">
+            <i :class="link.icon"></i>
           </a>
       </div>
     </nav>
 
     <!-- 桌面端社媒图标 -->
     <div class="top-social-media desktop-only">
-      <a href="https://www.instagram.com/tg_auto_rwanda/" class="social-icon-link" target="_blank" rel="noopener" aria-label="Instagram">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="https://x.com/Triple_Goats" class="social-icon-link" target="_blank" rel="noopener" aria-label="Twitter">
-        <i class="fab fa-twitter"></i>
-      </a>
-      <a href="https://www.facebook.com/TripleGoats" class="social-icon-link" target="_blank" rel="noopener" aria-label="Facebook">
-        <i class="fab fa-facebook-f"></i>
-      </a>
-      <a href="https://www.tiktok.com/@tg.auto.rwanda" class="social-icon-link" target="_blank" rel="noopener" aria-label="TikTok">
-        <i class="fab fa-tiktok"></i>
+      <a v-for="link in socialLinks" :key="link.label" :href="link.url" class="social-icon-link" target="_blank" rel="noopener" :aria-label="link.label">
+        <i :class="link.icon"></i>
       </a>
     </div>
   </header>
@@ -73,8 +55,21 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount, watch } from 'vue'
 
+// 社媒链接数据（桌面端和移动端共享）
+const socialLinks = [
+  { label: 'Instagram', url: 'https://www.instagram.com/tg_auto_rwanda/', icon: 'fab fa-instagram' },
+  { label: 'Twitter', url: 'https://x.com/Triple_Goats', icon: 'fab fa-twitter' },
+  { label: 'Facebook', url: 'https://www.facebook.com/TripleGoats', icon: 'fab fa-facebook-f' },
+  { label: 'TikTok', url: 'https://www.tiktok.com/@tg.auto.rwanda', icon: 'fab fa-tiktok' }
+]
+
 const menuOpen = ref(false)
 const dropdownOpen = ref(false)
+
+// Vue template refs
+const navRef = ref(null)
+const menuToggleRef = ref(null)
+const dropdownRef = ref(null)
 
 const toggleMenu = () => {
   menuOpen.value = !menuOpen.value
@@ -99,14 +94,11 @@ const toggleDropdown = () => {
   }
 }
 
-const handleClickOutside = (event) => {
-  const dropdown = document.querySelector('.dropdown')
-  const nav = document.querySelector('nav')
-  const menuToggle = document.querySelector('.menu-toggle')
-  if (dropdown && !dropdown.contains(event.target) && window.innerWidth <= 768) {
+function handleClickOutside(event) {
+  if (dropdownRef.value && !dropdownRef.value.contains(event.target) && window.innerWidth <= 768) {
     dropdownOpen.value = false
   }
-  if (menuOpen.value && nav && !nav.contains(event.target) && !menuToggle.contains(event.target)) {
+  if (menuOpen.value && navRef.value && !navRef.value.contains(event.target) && menuToggleRef.value && !menuToggleRef.value.contains(event.target)) {
       menuOpen.value = false;
   }
 }
@@ -218,6 +210,12 @@ nav a.router-link-active::after {
     display: flex;
     align-items: center;
     gap: 0.25rem;
+    background: none;
+    border: none;
+    color: inherit;
+    font-family: inherit;
+    font-size: 0.95rem;
+    padding: 0.5rem 0;
 }
 
 .dropdown-content {

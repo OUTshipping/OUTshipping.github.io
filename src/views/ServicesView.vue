@@ -66,6 +66,7 @@ useHead({
     { property: 'og:title', content: 'Services — Car Sales, EV Charging, Taxi & Rental | Triple Goats' },
     { property: 'og:description', content: 'Comprehensive automotive services including EV sales, charging stations, electric taxi service and car rental in Kigali.' },
     { property: 'og:url', content: 'https://tgautomobile.com/services' },
+    { property: 'og:image', content: 'https://tgautomobile.com/images/pages/services.jpg' },
   ],
   link: [
     { rel: 'canonical', href: 'https://tgautomobile.com/services' }
