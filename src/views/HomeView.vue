@@ -3,7 +3,7 @@
 
     <!-- Hero Section -->
     <div class="hero">
-      <video autoplay muted loop playsinline class="hero-video" poster="/images/categories/sedan.jpg">
+      <video autoplay muted loop playsinline class="hero-video">
         <source src="/video/movie.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
