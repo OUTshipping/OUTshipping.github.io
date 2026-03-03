@@ -40,31 +40,44 @@ Triple Goats (T&G Automobile) is a Kigali-based automotive dealer specializing i
 
 ```
 ├── .github/workflows/
-│   └── deploy.yml          # GitHub Actions: build & deploy
+│   └── deploy.yml              # GitHub Actions: build & deploy
 ├── public/
 │   ├── data/
-│   │   ├── vehicles.json   # Vehicle inventory data
-│   │   └── brands.json     # Brand configuration
-│   ├── companylogo.jpg     # Company logo
-│   ├── sitemap.xml         # SEO sitemap
-│   └── robots.txt          # Crawler directives
+│   │   ├── vehicles.json       # Vehicle inventory data
+│   │   └── brands.json         # Brand configuration
+│   ├── images/
+│   │   ├── pages/              # Page background images (about, contact, etc.)
+│   │   ├── icons/              # UI icons (location, phone, time)
+│   │   ├── social/             # Social media icons (facebook, ins, tiktok)
+│   │   ├── categories/         # Vehicle category images (sedan, suv, truck, etc.)
+│   │   └── vehicles/           # Vehicle photos (cover + detail per model)
+│   │       ├── songplus/
+│   │       ├── v6e/
+│   │       ├── ev5/
+│   │       └── ...             # 16 vehicle folders
+│   ├── video/
+│   │   ├── movie.mp4           # Homepage hero video
+│   │   └── taxi.mp4            # Taxi page video
+│   ├── companylogo.jpg         # Company logo
+│   ├── sitemap.xml             # SEO sitemap
+│   └── robots.txt              # Crawler directives
 ├── src/
 │   ├── assets/styles/
-│   │   └── global.css      # CSS variables & global styles
+│   │   └── global.css          # CSS variables & global styles
 │   ├── components/
-│   │   ├── HeaderNav.vue   # Navigation (desktop + mobile)
-│   │   ├── PageLayout.vue  # Layout wrapper + WhatsApp FAB
-│   │   ├── FooterBar.vue   # Footer with contact & links
-│   │   ├── HeroSection.vue # Reusable hero banner
-│   │   ├── ContactInfo.vue # CTA section
-│   │   ├── SocialMedia.vue # Social media links
-│   │   └── VehicleDetail.vue
-│   ├── views/              # Page components
-│   ├── router/index.js     # Route definitions
-│   ├── main.js             # Entry point (vite-ssg)
-│   └── App.vue             # Root component
-├── index.html              # HTML entry with SEO & JSON-LD
-├── vite.config.js          # Vite configuration
+│   │   ├── HeaderNav.vue       # Navigation (desktop + mobile)
+│   │   ├── PageLayout.vue      # Layout wrapper + WhatsApp FAB
+│   │   ├── FooterBar.vue       # Footer with contact & links
+│   │   ├── HeroSection.vue     # Reusable hero banner
+│   │   ├── ContactInfo.vue     # CTA section
+│   │   ├── SocialMedia.vue     # Social media links
+│   │   └── VehicleDetail.vue   # Vehicle detail component
+│   ├── views/                  # Page components
+│   ├── router/index.js         # Route definitions
+│   ├── main.js                 # Entry point (vite-ssg)
+│   └── App.vue                 # Root component
+├── index.html                  # HTML entry with SEO & JSON-LD
+├── vite.config.js              # Vite configuration
 └── package.json
 ```
 
@@ -74,8 +87,8 @@ Triple Goats (T&G Automobile) is a Kigali-based automotive dealer specializing i
 
 ### Prerequisites
 
-- [Node.js](https://nodejs.org/) >= 18
-- npm >= 9
+- [Node.js](https://nodejs.org/) >= 20
+- npm >= 10
 
 ### Development
 
