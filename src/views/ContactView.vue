@@ -2,7 +2,7 @@
   <PageLayout>
     <HeroSection
       title="Get in Touch"
-      subtitle="Have a question about a vehicle, need a quote, or want to schedule a visit? Our Kigali-based team is here to help — reach out anytime."
+      subtitle="Have a question about a vehicle, need a quote, or want to schedule a visit? Our teams in Kigali and Gisenyi are here to help — reach out anytime."
       backgroundImage="/images/pages/contact.jpg"
     />
 
@@ -29,10 +29,10 @@
             <img src="/images/icons/location-icon.png" alt="Location Icon" class="card-icon">
           </div>
           <div class="card-details">
-            <h3>Location</h3>
-            <p>Address: KK 15 Rd, Kicukiro, Kigali</p>
-            <p>City: Kigali, Rwanda</p>
-            <p>Located near the Kicukiro center — look for the Triple Goats signage and our outdoor EV display.</p>
+            <h3>Locations</h3>
+            <p><strong>Kigali:</strong> KK 15 Rd, Kicukiro, Kigali</p>
+            <p><strong>Gisenyi:</strong> 8754+JCC, Rubavu</p>
+            <p>Two showrooms across Rwanda — visit the one nearest to you. Look for the Triple Goats signage and our outdoor EV display.</p>
           </div>
         </div>
       </div>
@@ -68,18 +68,36 @@
         </div>
       </div>
 
-      <div class="map-container">
-        <div id="map">
-          <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15949.673151412455!2d30.08305617980293!3d-1.9874279969959143!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dcb909c976d39b%3A0x85b1db1ad0e495c5!2z5Y-B576K5rG96L2mIFRnIEVsZWN0cmljIENhciBNYXJrZXQ!5e0!3m2!1szh-CN!2srw!4v1739439963365!5m2!1szh-CN!2srw" 
-            width="100%" 
-            height="100%" 
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade"
-            title="Triple Goats Showroom Location">
-          </iframe>
+      <div class="map-grid">
+        <div class="map-container">
+          <h3 class="map-label">Kigali Showroom</h3>
+          <div id="map-kigali">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15949.673151412455!2d30.08305617980293!3d-1.9874279969959143!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dcb909c976d39b%3A0x85b1db1ad0e495c5!2z5Y-B576K5rG96L2mIFRnIEVsZWN0cmljIENhciBNYXJrZXQ!5e0!3m2!1szh-CN!2srw!4v1739439963365!5m2!1szh-CN!2srw"
+              width="100%"
+              height="100%"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Triple Goats Kigali Showroom Location">
+            </iframe>
+          </div>
+        </div>
+        <div class="map-container">
+          <h3 class="map-label">Gisenyi Showroom</h3>
+          <div id="map-gisenyi">
+            <iframe
+              src="https://www.google.com/maps?q=8754%2BJCC+Rubavu+Rwanda&output=embed"
+              width="100%"
+              height="100%"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Triple Goats Gisenyi Showroom Location">
+            </iframe>
+          </div>
         </div>
       </div>
     </main>
@@ -93,11 +111,11 @@ import PageLayout from '@/components/PageLayout.vue'
 import HeroSection from '@/components/HeroSection.vue'
 
 useHead({
-  title: 'Contact Us — Triple Goats Kigali Showroom',
+  title: 'Contact Us — Triple Goats Kigali & Gisenyi Showrooms',
   meta: [
-    { name: 'description', content: 'Visit our Kigali showroom, call us, or send a WhatsApp message. Open Monday–Friday 9am–6pm, Saturday 9am–1pm.' },
-    { property: 'og:title', content: 'Contact Us — Triple Goats Kigali Showroom' },
-    { property: 'og:description', content: 'Visit our Kigali showroom, call us, or send a WhatsApp message. Open Monday–Friday 9am–6pm, Saturday 9am–1pm.' },
+    { name: 'description', content: 'Visit our showrooms in Kigali and Gisenyi, call us, or send a WhatsApp message. Open Monday–Friday 9am–6pm, Saturday 9am–1pm.' },
+    { property: 'og:title', content: 'Contact Us — Triple Goats Kigali & Gisenyi Showrooms' },
+    { property: 'og:description', content: 'Visit our showrooms in Kigali and Gisenyi, call us, or send a WhatsApp message. Open Monday–Friday 9am–6pm, Saturday 9am–1pm.' },
     { property: 'og:url', content: 'https://tgautomobile.com/contact' },
     { property: 'og:image', content: 'https://tgautomobile.com/images/pages/contact.jpg' },
   ],
@@ -180,22 +198,42 @@ main {
     padding: 50px 20px;
     background: var(--primary-color);
     display: flex;
+    flex-direction: column;
     gap: 40px;
-    flex-wrap: wrap;
 }
 
-.form-container,
-.map-container {
-    flex: 1;
+.form-container {
     background: var(--secondary-color);
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-#map {
+.map-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.map-container {
+    background: var(--secondary-color);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.map-label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--accent-color);
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+#map-kigali,
+#map-gisenyi {
     width: 100%;
-    height: 100%;
+    height: 350px;
 }
 
 .embedded-form {
@@ -213,8 +251,8 @@ main {
         border-radius: 15px;
     }
 
-    main {
-        flex-direction: column;
+    .map-grid {
+        grid-template-columns: 1fr;
     }
 
     .form-container,

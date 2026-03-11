@@ -1,7 +1,9 @@
 <template>
   <header>
     <router-link to="/home" class="logo">
-      <img src="/companylogo.jpg" alt="Triple Goats Logo" loading="lazy">
+      <div class="logo-img-wrapper">
+        <img src="/companylogo.jpg" alt="Triple Goats Logo" loading="lazy">
+      </div>
       <div class="logo-text">
         <h1>Triple Goats</h1>
         <p class="slogan">GREEN ENERGY GREEN LIFE</p>
@@ -138,17 +140,24 @@ header {
     color: white;
 }
 
-.logo img {
-    width: 60px;
-    height: 60px;
-    object-fit: contain;
+.logo-img-wrapper {
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
     background: white;
-    padding: 2px;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.1);
 }
 
 .logo-text h1 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: 700;
     margin: 0;
     color: var(--accent-color);
@@ -156,7 +165,7 @@ header {
 }
 
 .logo .slogan {
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     font-weight: 600;
     color: var(--text-muted);
     letter-spacing: 0.05em;
@@ -318,17 +327,17 @@ nav a.router-link-active::after {
         padding: 0.75rem 1rem;
     }
 
-    .logo img {
-        width: 44px;
-        height: 44px;
+    .logo-img-wrapper {
+        width: 56px;
+        height: 56px;
     }
 
     .logo-text h1 {
-        font-size: 1.15rem;
+        font-size: 1.3rem;
     }
 
     .logo .slogan {
-        font-size: 0.65rem;
+        font-size: 0.7rem;
     }
 
     /* 显示汉堡按钮，隐藏桌面端社媒 */

@@ -15,28 +15,62 @@
             <p>Triple Goats — officially San Yang (Rwanda) Automobile Sales Co., Ltd. — is on a mission to make clean, affordable transportation accessible to everyone in Rwanda. We partner directly with leading Chinese EV manufacturers including BYD and Dongfeng to bring a full spectrum of new energy vehicles to East Africa: compact city sedans, family SUVs, rugged pickups, commercial trucks, refrigerated vehicles, buses, and vans. Whether you are an individual buyer, a fleet operator, or a government agency, we provide end-to-end support from vehicle selection and financing guidance to after-sales maintenance and genuine spare parts.</p>
           </div>
         </div>
-        <div class="section">
+        <div class="section section-with-image">
+          <div class="section-image">
+            <img src="/images/stores/team-1.jpg" alt="Triple Goats team — dedicated EV professionals in Rwanda" loading="lazy">
+          </div>
           <div class="section-content">
             <h3>Our Values</h3>
-            <p>Everything we do is built on three pillars: transparency, expertise, and customer-first thinking. We publish honest specifications and real-world range data so you can make confident decisions. Our bilingual sales team (English, French, Kinyarwanda, and Chinese) is trained on every model we carry, ready to explain battery technology, charging options, and total cost of ownership. We do not just sell cars — we stay with you for the lifetime of your vehicle, offering scheduled maintenance, warranty support, and 24/7 roadside assistance in the Kigali area.</p>
+            <p>Everything we do is built on three pillars: transparency, expertise, and customer-first thinking. We publish honest specifications and real-world range data so you can make confident decisions. Our bilingual sales team (English, French, Kinyarwanda, and Chinese) is trained on every model we carry, ready to explain battery technology, charging options, and total cost of ownership. We do not just sell cars — we stay with you for the lifetime of your vehicle, offering scheduled maintenance, warranty support, and 24/7 roadside assistance across Kigali and Gisenyi.</p>
           </div>
         </div>
-        <div class="section">
+        <div class="section section-with-image section-reverse">
+          <div class="section-image">
+            <img src="/images/stores/team-2.jpg" alt="Triple Goats team at work — growing Rwanda's EV future" loading="lazy">
+          </div>
           <div class="section-content">
             <h3>Our Story</h3>
-            <p>Founded in 2023 in Kigali's Kicukiro district, Triple Goats started with a simple observation: Rwanda's ambitious green-growth targets needed a reliable local partner to supply quality electric vehicles. In just two years we have grown from a single showroom to a full-service operation with a dedicated EV charging station, a professional service center, and a growing network of satisfied customers across the country. Our rapid growth reflects both the rising demand for EVs in Africa and the trust our customers place in us.</p>
+            <p>Founded in 2023 in Kigali's Kicukiro district, Triple Goats started with a simple observation: Rwanda's ambitious green-growth targets needed a reliable local partner to supply quality electric vehicles. In just two years we have grown from a single showroom to two locations — our flagship Kigali showroom and a new branch in Gisenyi — along with a dedicated EV charging station, a professional service center, and a growing network of satisfied customers across the country. Our rapid growth reflects both the rising demand for EVs in Africa and the trust our customers place in us.</p>
           </div>
         </div>
         <div class="section">
           <div class="section-content">
             <h3>Community &amp; Sustainability</h3>
-            <p>We believe selling electric vehicles is only part of the solution. That is why we invest in EV awareness campaigns, partner with local driving schools to offer electric-vehicle training modules, and sponsor road safety programs in Kigali schools. We are also working toward installing public charging points beyond our showroom to help build the infrastructure Rwanda needs for widespread EV adoption. Every vehicle we put on the road is one less source of tailpipe emissions — and we are proud to play our part in Rwanda's vision of a cleaner, greener future.</p>
+            <p>We believe selling electric vehicles is only part of the solution. That is why we invest in EV awareness campaigns, partner with local driving schools to offer electric-vehicle training modules, and sponsor road safety programs in Kigali schools. We are also working toward installing public charging points beyond our showrooms to help build the infrastructure Rwanda needs for widespread EV adoption. Every vehicle we put on the road is one less source of tailpipe emissions — and we are proud to play our part in Rwanda's vision of a cleaner, greener future.</p>
+          </div>
+        </div>
+        <div class="section">
+          <div class="section-content">
+            <h3>Our Showrooms</h3>
+            <p>Visit us at either of our two locations across Rwanda.</p>
+            <div class="showroom-gallery">
+              <div class="showroom-item">
+                <div class="showroom-images">
+                  <img src="/images/stores/kigali-1.jpg" alt="Triple Goats Kigali showroom exterior — Kicukiro district" loading="lazy">
+                  <img src="/images/stores/kigali-2.jpg" alt="Triple Goats Kigali showroom interior — EV display area" loading="lazy">
+                </div>
+                <div class="showroom-label">
+                  <h4>Kigali Showroom</h4>
+                  <p><i class="fas fa-map-marker-alt"></i> KK 15 Rd, Kicukiro, Kigali</p>
+                </div>
+              </div>
+              <div class="showroom-item">
+                <div class="showroom-images">
+                  <img src="/images/stores/gisenyi-1.jpg" alt="Triple Goats Gisenyi showroom exterior — Rubavu" loading="lazy">
+                  <img src="/images/stores/gisenyi-2.jpg" alt="Triple Goats Gisenyi showroom interior — EV display area" loading="lazy">
+                </div>
+                <div class="showroom-label">
+                  <h4>Gisenyi Showroom</h4>
+                  <p><i class="fas fa-map-marker-alt"></i> 8754+JCC, Rubavu</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="section">
           <div class="section-content">
             <h3>Our Global Network</h3>
-            <p>Triple Goats is part of the <a href="https://www.zjaladin.com" target="_blank" rel="noopener" class="inline-link">Zhejiang Aladdin Group</a> (浙江阿啦丁进出口贸易有限责任公司), a Chinese automotive export corporation headquartered in Zhejiang Province. Aladdin Group operates a complete "Source-to-Street" vehicle supply chain — from sourcing new energy vehicles and quality used cars in China, through rigorous quality inspection and certification, to delivering them to buyers worldwide through its online platform <a href="https://www.aladinauto.com" target="_blank" rel="noopener" class="inline-link">AladinAuto</a>. As the Group's Rwanda subsidiary, Triple Goats handles the final mile: local vehicle registration, customs clearance, after-sales maintenance, EV charging, and on-the-ground customer support in Kigali. Sourced directly from our China HQ to ensure the best price — whether you discover a vehicle on AladinAuto or walk into our Kicukiro showroom, you are backed by the same integrated network from factory floor in China to your driveway in Rwanda.</p>
+            <p>Triple Goats is part of the <a href="https://www.zjaladin.com" target="_blank" rel="noopener" class="inline-link">Zhejiang Aladdin Group</a> (浙江阿啦丁进出口贸易有限责任公司), a Chinese automotive export corporation headquartered in Zhejiang Province. Aladdin Group operates a complete "Source-to-Street" vehicle supply chain — from sourcing new energy vehicles and quality used cars in China, through rigorous quality inspection and certification, to delivering them to buyers worldwide through its online platform <a href="https://www.aladinauto.com" target="_blank" rel="noopener" class="inline-link">AladinAuto</a>. As the Group's Rwanda subsidiary, Triple Goats handles the final mile: local vehicle registration, customs clearance, after-sales maintenance, EV charging, and on-the-ground customer support across Kigali and Gisenyi. Sourced directly from our China HQ to ensure the best price — whether you discover a vehicle on AladinAuto or walk into our Kicukiro or Gisenyi showroom, you are backed by the same integrated network from factory floor in China to your driveway in Rwanda.</p>
           </div>
         </div>
       </div>
@@ -52,9 +86,9 @@ import HeroSection from '@/components/HeroSection.vue'
 useHead({
   title: 'About Us — Triple Goats | T&G Automobile Rwanda',
   meta: [
-    { name: 'description', content: "Founded in 2023 in Kigali's Kicukiro district, Triple Goats is Rwanda's trusted EV dealer partnering with BYD, Dongfeng and more." },
+    { name: 'description', content: "Founded in 2023 in Kigali's Kicukiro district, Triple Goats now operates showrooms in Kigali and Gisenyi — Rwanda's trusted EV dealer partnering with BYD, Dongfeng and more." },
     { property: 'og:title', content: 'About Us — Triple Goats | T&G Automobile Rwanda' },
-    { property: 'og:description', content: "Founded in 2023 in Kigali's Kicukiro district, Triple Goats is Rwanda's trusted EV dealer partnering with BYD, Dongfeng and more." },
+    { property: 'og:description', content: "Founded in 2023 in Kigali's Kicukiro district, Triple Goats now operates showrooms in Kigali and Gisenyi — Rwanda's trusted EV dealer partnering with BYD, Dongfeng and more." },
     { property: 'og:url', content: 'https://tgautomobile.com/about' },
     { property: 'og:image', content: 'https://tgautomobile.com/images/pages/about.jpg' },
   ],
@@ -126,6 +160,106 @@ main h2 {
     border-bottom-color: #0074d9;
 }
 
+/* 图文并排布局 */
+.section-with-image {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.section-with-image .section-image {
+    flex: 0 0 40%;
+    min-height: 300px;
+    overflow: hidden;
+}
+
+.section-with-image .section-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.section-with-image:hover .section-image img {
+    transform: scale(1.05);
+}
+
+.section-with-image .section-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem 2.5rem;
+}
+
+.section-reverse {
+    flex-direction: row-reverse;
+}
+
+/* Showroom Gallery */
+.showroom-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.showroom-item {
+    border-radius: 10px;
+    overflow: hidden;
+    background: #f5f5f5;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.showroom-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.showroom-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4px;
+}
+
+.showroom-images img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.showroom-item:hover .showroom-images img {
+    transform: scale(1.03);
+}
+
+.showroom-label {
+    padding: 1rem 1.25rem;
+    text-align: left;
+}
+
+.showroom-label h4 {
+    font-size: 1.15rem;
+    color: #2c3e50;
+    margin: 0 0 0.4rem;
+}
+
+.showroom-label p {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.showroom-label i {
+    color: #0074d9;
+}
+
 @media (max-width: 768px) {
     .about-section {
         padding: 20px 10px;
@@ -138,6 +272,27 @@ main h2 {
 
     main {
         padding: 20px 10px;
+    }
+
+    .section-with-image {
+        flex-direction: column;
+    }
+
+    .section-reverse {
+        flex-direction: column;
+    }
+
+    .section-with-image .section-image {
+        flex: none;
+        min-height: 200px;
+    }
+
+    .showroom-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .showroom-images img {
+        height: 150px;
     }
 }
 

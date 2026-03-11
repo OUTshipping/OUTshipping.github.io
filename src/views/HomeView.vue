@@ -10,7 +10,7 @@
       <div class="hero-overlay"></div>
       <div class="hero-content container">
         <h1>Experience the Future of Mobility</h1>
-        <p>Rwanda's trusted electric vehicle dealer — offering premium BYD, Dongfeng & more with full after-sales support in Kigali.</p>
+        <p>Rwanda's trusted electric vehicle dealer — offering premium BYD, Dongfeng & more with full after-sales support in Kigali & Gisenyi.</p>
         <div class="hero-actions">
           <router-link to="/inventory" class="btn btn-primary">Browse Inventory</router-link>
           <router-link to="/testdrive" class="btn btn-outline">Schedule Test Drive</router-link>
@@ -130,24 +130,78 @@
       </div>
     </section>
 
-    <!-- Map Section -->
+    <!-- Our Team Section -->
+    <section class="team-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Meet Our Team</h2>
+          <p>A passionate, multilingual team dedicated to bringing the best electric vehicles to Rwanda — and keeping them on the road.</p>
+        </div>
+        <div class="team-gallery">
+          <div class="team-photo">
+            <img src="/images/stores/team-1.jpg" alt="Triple Goats Rwanda team — professional EV sales and service staff" loading="lazy">
+          </div>
+          <div class="team-photo">
+            <img src="/images/stores/team-2.jpg" alt="Triple Goats team at work — dedicated to Rwanda's electric future" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Showrooms Section -->
     <section class="map-section">
       <div class="container">
         <div class="section-header">
-            <h2>Visit Our Showroom</h2>
-            <p>See, touch, and test drive our full lineup at our Kigali showroom. Our team is ready to walk you through every model, answer your questions, and help you find the perfect vehicle for your needs.</p>
+            <h2>Visit Our Showrooms</h2>
+            <p>See, touch, and test drive our full lineup at our showrooms in Kigali and Gisenyi. Our team is ready to walk you through every model, answer your questions, and help you find the perfect vehicle for your needs.</p>
         </div>
-        <div class="map-container">
-            <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.418287609195!2d30.098935373674106!3d-1.9874280979946188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dcb909c976d39b%3A0x85b1db1ad0e495c5!2z5Y-B576K5rG96L2mIFRnIEVsZWN0cmljIENhciBNYXJrZXQ!5e0!3m2!1szh-CN!2srw!4v1739448007802!5m2!1szh-CN!2srw"
-            width="100%"
-            height="450"
-            style="border:0;"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            title="Triple Goats Showroom Location">
-            </iframe>
+        <div class="showroom-grid">
+          <!-- Kigali Showroom -->
+          <div class="showroom-card">
+            <div class="showroom-photo">
+              <img src="/images/stores/kigali-1.jpg" alt="Triple Goats Kigali showroom exterior — Kicukiro district" loading="lazy">
+              <img src="/images/stores/kigali-2.jpg" alt="Triple Goats Kigali showroom interior — EV display" loading="lazy">
+            </div>
+            <div class="showroom-info">
+              <h3>Kigali Showroom</h3>
+              <p><i class="fas fa-map-marker-alt"></i> KK 15 Rd, Kicukiro, Kigali</p>
+            </div>
+            <div class="showroom-map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.418287609195!2d30.098935373674106!3d-1.9874280979946188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dcb909c976d39b%3A0x85b1db1ad0e495c5!2z5Y-B576K5rG96L2mIFRnIEVsZWN0cmljIENhciBNYXJrZXQ!5e0!3m2!1szh-CN!2srw!4v1739448007802!5m2!1szh-CN!2srw"
+                width="100%"
+                height="250"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Triple Goats Kigali Showroom Location">
+              </iframe>
+            </div>
+          </div>
+          <!-- Gisenyi Showroom -->
+          <div class="showroom-card">
+            <div class="showroom-photo">
+              <img src="/images/stores/gisenyi-1.jpg" alt="Triple Goats Gisenyi showroom exterior — Rubavu" loading="lazy">
+              <img src="/images/stores/gisenyi-2.jpg" alt="Triple Goats Gisenyi showroom interior — EV display" loading="lazy">
+            </div>
+            <div class="showroom-info">
+              <h3>Gisenyi Showroom</h3>
+              <p><i class="fas fa-map-marker-alt"></i> 8754+JCC, Rubavu, Gisenyi</p>
+            </div>
+            <div class="showroom-map">
+              <iframe
+                src="https://www.google.com/maps?q=8754%2BJCC+Rubavu+Rwanda&output=embed"
+                width="100%"
+                height="250"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Triple Goats Gisenyi Showroom Location">
+              </iframe>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -389,10 +443,110 @@ useHead({
     align-self: flex-start;
 }
 
+/* Team Section */
+.team-section {
+    background: var(--primary-color);
+    padding: 4rem 0;
+}
+
+.team-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.team-photo {
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.team-photo img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.team-photo:hover img {
+    transform: scale(1.05);
+}
+
 /* Map Section */
 .map-section {
     background: var(--primary-color);
     padding-bottom: 5rem;
+}
+
+.showroom-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.showroom-card {
+    background: var(--card-bg-color);
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.showroom-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--accent-color);
+}
+
+.showroom-photo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3px;
+    height: 220px;
+    overflow: hidden;
+}
+
+.showroom-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.showroom-card:hover .showroom-photo img {
+    transform: scale(1.05);
+}
+
+.showroom-info {
+    padding: 1.25rem 1.5rem;
+}
+
+.showroom-info h3 {
+    font-size: 1.4rem;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.showroom-info p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.showroom-info i {
+    color: var(--accent-color);
+}
+
+.showroom-map {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.showroom-map iframe {
+    display: block;
 }
 
 .map-container {
@@ -425,6 +579,18 @@ useHead({
 
     .section {
         padding: 3rem 0;
+    }
+
+    .showroom-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .team-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .team-photo img {
+        height: 220px;
     }
 }
 </style>

@@ -37,7 +37,8 @@
         <div class="footer-col">
             <h4>Contact</h4>
             <ul class="contact-list">
-                <li><i class="fas fa-map-marker-alt"></i> KK 15 Rd, Kicukiro, Kigali</li>
+                <li><i class="fas fa-map-marker-alt"></i> Kigali: KK 15 Rd, Kicukiro</li>
+                <li><i class="fas fa-map-marker-alt"></i> Gisenyi: 8754+JCC, Rubavu</li>
                 <li><i class="fas fa-envelope"></i> <a href="mailto:tgautomobile@gmail.com">tgautomobile@gmail.com</a></li>
                 <li><i class="fas fa-phone"></i> <a href="tel:+250785084313">+250 785 084 313</a></li>
             </ul>
@@ -66,7 +67,7 @@
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2025 Triple Goats. All rights reserved. | Located in Kigali, Rwanda — Member of <a href="https://www.zjaladin.com" target="_blank" rel="noopener" class="footer-inline-link">Zhejiang Aladdin Group</a></p>
+        <p>&copy; 2025 Triple Goats. All rights reserved. | Kigali & Gisenyi, Rwanda — Member of <a href="https://www.zjaladin.com" target="_blank" rel="noopener" class="footer-inline-link">Zhejiang Aladdin Group</a></p>
       </div>
     </div>
   </footer>
