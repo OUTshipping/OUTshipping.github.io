@@ -180,8 +180,9 @@ nav {
 
 nav a {
     color: var(--text-color);
-    font-weight: 500;
-    font-size: 0.95rem;
+    font-weight: 600;
+    font-size: 1.05rem;
+    letter-spacing: 0.03em;
     padding: 0.5rem 0;
     position: relative;
     transition: color 0.2s;
@@ -215,7 +216,7 @@ nav a.router-link-active::after {
 
 .dropbtn {
     cursor: pointer;
-    font-weight: 500;
+    font-weight: 600;
     display: flex;
     align-items: center;
     gap: 0.25rem;
@@ -223,7 +224,8 @@ nav a.router-link-active::after {
     border: none;
     color: inherit;
     font-family: inherit;
-    font-size: 0.95rem;
+    font-size: 1.05rem;
+    letter-spacing: 0.03em;
     padding: 0.5rem 0;
 }
 
