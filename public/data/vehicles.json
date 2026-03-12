@@ -8,7 +8,7 @@
     "range": 520,
     "seats": 5,
     "configuration": "Basic",
-    "coverImage": "/images/vehicles/songplus/songplus.jpg",
+    "coverImage": "/images/vehicles/songplus/songPLUS.jpg",
     "colors": [
       "#FFFFFF",
       "#000000",
@@ -23,17 +23,43 @@
       "category": "PASSENGER",
       "batteryCapacity": "71.7 kWh"
     },
-    "detailImages": [
-      "/images/vehicles/songplus/songPLUS (1).jpg",
-      "/images/vehicles/songplus/songPLUS (2).jpg",
-      "/images/vehicles/songplus/songPLUS (3).jpg",
-      "/images/vehicles/songplus/songPLUS (4).jpg",
-      "/images/vehicles/songplus/songPLUS (5).jpg",
-      "/images/vehicles/songplus/songPLUS (6).jpg",
-      "/images/vehicles/songplus/songPLUS (7).jpg",
-      "/images/vehicles/songplus/songPLUS (8).jpg",
-      "/images/vehicles/songplus/songPLUS (9).jpg"
-    ]
+    "detailImages": {
+      "exterior": [
+        "/images/vehicles/songplus/songPLUS (1).jpg",
+        "/images/vehicles/songplus/songPLUS (2).jpg",
+        "/images/vehicles/songplus/songPLUS (3).jpg",
+        "/images/vehicles/songplus/songPLUS (4).jpg",
+        "/images/vehicles/songplus/songPLUS (5).jpg",
+        "/images/vehicles/songplus/songPLUS (6).jpg",
+        "/images/vehicles/songplus/songPLUS (7).jpg",
+        "/images/vehicles/songplus/songPLUS (8).jpg",
+        "/images/vehicles/songplus/songPLUS (9).jpg",
+        "/images/vehicles/songplus/songPLUS (10).jpg"
+      ],
+      "interior": [
+        "/images/vehicles/songplus/songPLUS (11).jpg",
+        "/images/vehicles/songplus/songPLUS (12).jpg",
+        "/images/vehicles/songplus/songPLUS (13).jpg",
+        "/images/vehicles/songplus/songPLUS (14).jpg",
+        "/images/vehicles/songplus/songPLUS (15).jpg",
+        "/images/vehicles/songplus/songPLUS (16).jpg",
+        "/images/vehicles/songplus/songPLUS (17).jpg",
+        "/images/vehicles/songplus/songPLUS (18).jpg",
+        "/images/vehicles/songplus/songPLUS (19).jpg",
+        "/images/vehicles/songplus/songPLUS (20).jpg"
+      ],
+      "details": [
+        "/images/vehicles/songplus/songPLUS (21).jpg",
+        "/images/vehicles/songplus/songPLUS (22).jpg",
+        "/images/vehicles/songplus/songPLUS (23).jpg",
+        "/images/vehicles/songplus/songPLUS (24).jpg",
+        "/images/vehicles/songplus/songPLUS (25).jpg",
+        "/images/vehicles/songplus/songPLUS (26).jpg",
+        "/images/vehicles/songplus/songPLUS (27).jpg",
+        "/images/vehicles/songplus/songPLUS (28).jpg",
+        "/images/vehicles/songplus/songPLUS (29).jpg"
+      ]
+    }
   },
   {
     "id": 2,
@@ -44,7 +70,7 @@
     "range": 305,
     "seats": 6,
     "configuration": "Basic",
-    "coverImage": "/images/vehicles/v6e/v6e.jpg",
+    "coverImage": "/images/vehicles/v6e/V6E.jpg",
     "colors": [
       "#FFFFFF"
     ],
@@ -56,15 +82,43 @@
       "category": "COMMERCIAL",
       "batteryCapacity": "72 kWh"
     },
-    "detailImages": [
-      "/images/vehicles/v6e/V6E (1).jpg",
-      "/images/vehicles/v6e/V6E (2).jpg",
-      "/images/vehicles/v6e/V6E (3).jpg",
-      "/images/vehicles/v6e/V6E (4).jpg",
-      "/images/vehicles/v6e/V6E (5).jpg",
-      "/images/vehicles/v6e/V6E (6).jpg",
-      "/images/vehicles/v6e/V6E (7).jpg"
-    ]
+    "detailImages": {
+      "exterior": [
+        "/images/vehicles/v6e/V6E (1).jpg",
+        "/images/vehicles/v6e/V6E (2).jpg",
+        "/images/vehicles/v6e/V6E (3).jpg",
+        "/images/vehicles/v6e/V6E (4).jpg",
+        "/images/vehicles/v6e/V6E (5).jpg",
+        "/images/vehicles/v6e/V6E (6).jpg",
+        "/images/vehicles/v6e/V6E (7).jpg",
+        "/images/vehicles/v6e/V6E (8).jpg",
+        "/images/vehicles/v6e/V6E (9).jpg",
+        "/images/vehicles/v6e/V6E (10).jpg"
+      ],
+      "interior": [
+        "/images/vehicles/v6e/V6E (11).jpg",
+        "/images/vehicles/v6e/V6E (12).jpg",
+        "/images/vehicles/v6e/V6E (13).jpg",
+        "/images/vehicles/v6e/V6E (14).jpg",
+        "/images/vehicles/v6e/V6E (15).jpg",
+        "/images/vehicles/v6e/V6E (16).jpg",
+        "/images/vehicles/v6e/V6E (17).jpg",
+        "/images/vehicles/v6e/V6E (18).jpg",
+        "/images/vehicles/v6e/V6E (19).jpg",
+        "/images/vehicles/v6e/V6E (20).jpg"
+      ],
+      "details": [
+        "/images/vehicles/v6e/V6E (21).jpg",
+        "/images/vehicles/v6e/V6E (22).jpg",
+        "/images/vehicles/v6e/V6E (23).jpg",
+        "/images/vehicles/v6e/V6E (24).jpg",
+        "/images/vehicles/v6e/V6E (25).jpg",
+        "/images/vehicles/v6e/V6E (26).jpg",
+        "/images/vehicles/v6e/V6E (27).jpg",
+        "/images/vehicles/v6e/V6E (28).jpg",
+        "/images/vehicles/v6e/V6E (29).jpg"
+      ]
+    }
   },
   {
     "id": 4,
@@ -75,7 +129,7 @@
     "range": 442,
     "seats": 5,
     "configuration": "Basic",
-    "coverImage": "/images/vehicles/id4crozz/id4crozz.jpg",
+    "coverImage": "/images/vehicles/id4crozz/ID4.jpg",
     "colors": [
       "#000000",
       "#0011ff"
@@ -88,16 +142,43 @@
       "category": "PASSENGER",
       "batteryCapacity": "62.6 kWh"
     },
-    "detailImages": [
-      "/images/vehicles/id4crozz/ID4 (1).jpg",
-      "/images/vehicles/id4crozz/ID4 (2).jpg",
-      "/images/vehicles/id4crozz/ID4 (3).jpg",
-      "/images/vehicles/id4crozz/ID4 (4).jpg",
-      "/images/vehicles/id4crozz/ID4 (5).jpg",
-      "/images/vehicles/id4crozz/ID4 (6).jpg",
-      "/images/vehicles/id4crozz/ID4 (7).jpg",
-      "/images/vehicles/id4crozz/ID4 (8).jpg"
-    ]
+    "detailImages": {
+      "exterior": [
+        "/images/vehicles/id4crozz/ID4 (1).jpg",
+        "/images/vehicles/id4crozz/ID4 (2).jpg",
+        "/images/vehicles/id4crozz/ID4 (3).jpg",
+        "/images/vehicles/id4crozz/ID4 (4).jpg",
+        "/images/vehicles/id4crozz/ID4 (5).jpg",
+        "/images/vehicles/id4crozz/ID4 (6).jpg",
+        "/images/vehicles/id4crozz/ID4 (7).jpg",
+        "/images/vehicles/id4crozz/ID4 (8).jpg",
+        "/images/vehicles/id4crozz/ID4 (9).jpg",
+        "/images/vehicles/id4crozz/ID4 (10).jpg"
+      ],
+      "interior": [
+        "/images/vehicles/id4crozz/ID4 (11).jpg",
+        "/images/vehicles/id4crozz/ID4 (12).jpg",
+        "/images/vehicles/id4crozz/ID4 (13).jpg",
+        "/images/vehicles/id4crozz/ID4 (14).jpg",
+        "/images/vehicles/id4crozz/ID4 (15).jpg",
+        "/images/vehicles/id4crozz/ID4 (16).jpg",
+        "/images/vehicles/id4crozz/ID4 (17).jpg",
+        "/images/vehicles/id4crozz/ID4 (18).jpg",
+        "/images/vehicles/id4crozz/ID4 (19).jpg",
+        "/images/vehicles/id4crozz/ID4 (20).jpg"
+      ],
+      "details": [
+        "/images/vehicles/id4crozz/id4crozz.jpg",
+        "/images/vehicles/id4crozz/ID4 (21).jpg",
+        "/images/vehicles/id4crozz/ID4 (22).jpg",
+        "/images/vehicles/id4crozz/ID4 (23).jpg",
+        "/images/vehicles/id4crozz/ID4 (24).jpg",
+        "/images/vehicles/id4crozz/ID4 (25).jpg",
+        "/images/vehicles/id4crozz/ID4 (26).jpg",
+        "/images/vehicles/id4crozz/ID4 (27).jpg",
+        "/images/vehicles/id4crozz/ID4 (28).jpg"
+      ]
+    }
   },
   {
     "id": 5,
@@ -108,7 +189,7 @@
     "range": 910,
     "seats": 6,
     "configuration": "Basic",
-    "coverImage": "/images/vehicles/c16/c16.jpg",
+    "coverImage": "/images/vehicles/c16/C16.jpg",
     "colors": [
       "#000000"
     ],
@@ -120,15 +201,43 @@
       "category": "Premium",
       "batteryCapacity": "N/A"
     },
-    "detailImages": [
-      "/images/vehicles/c16/C16 (1).jpg",
-      "/images/vehicles/c16/C16 (2).jpg",
-      "/images/vehicles/c16/C16 (3).jpg",
-      "/images/vehicles/c16/C16 (4).jpg",
-      "/images/vehicles/c16/C16 (5).jpg",
-      "/images/vehicles/c16/C16 (6).jpg",
-      "/images/vehicles/c16/C16 (7).jpg"
-    ]
+    "detailImages": {
+      "exterior": [
+        "/images/vehicles/c16/C16 (1).jpg",
+        "/images/vehicles/c16/C16 (2).jpg",
+        "/images/vehicles/c16/C16 (3).jpg",
+        "/images/vehicles/c16/C16 (4).jpg",
+        "/images/vehicles/c16/C16 (5).jpg",
+        "/images/vehicles/c16/C16 (6).jpg",
+        "/images/vehicles/c16/C16 (7).jpg",
+        "/images/vehicles/c16/C16 (8).jpg",
+        "/images/vehicles/c16/C16 (9).jpg",
+        "/images/vehicles/c16/C16 (10).jpg"
+      ],
+      "interior": [
+        "/images/vehicles/c16/C16 (11).jpg",
+        "/images/vehicles/c16/C16 (12).jpg",
+        "/images/vehicles/c16/C16 (13).jpg",
+        "/images/vehicles/c16/C16 (14).jpg",
+        "/images/vehicles/c16/C16 (15).jpg",
+        "/images/vehicles/c16/C16 (16).jpg",
+        "/images/vehicles/c16/C16 (17).jpg",
+        "/images/vehicles/c16/C16 (18).jpg",
+        "/images/vehicles/c16/C16 (19).jpg",
+        "/images/vehicles/c16/C16 (20).jpg"
+      ],
+      "details": [
+        "/images/vehicles/c16/C16 (21).jpg",
+        "/images/vehicles/c16/C16 (22).jpg",
+        "/images/vehicles/c16/C16 (23).jpg",
+        "/images/vehicles/c16/C16 (24).jpg",
+        "/images/vehicles/c16/C16 (25).jpg",
+        "/images/vehicles/c16/C16 (26).jpg",
+        "/images/vehicles/c16/C16 (27).jpg",
+        "/images/vehicles/c16/C16 (28).jpg",
+        "/images/vehicles/c16/C16 (29).jpg"
+      ]
+    }
   },
   {
     "id": 6,
@@ -139,7 +248,7 @@
     "range": 530,
     "seats": 5,
     "configuration": "Basic",
-    "coverImage": "/images/vehicles/ev5/ev5.jpg",
+    "coverImage": "/images/vehicles/ev5/EV5.jpg",
     "colors": [
       "#808080"
     ],
@@ -151,18 +260,43 @@
       "category": "Basic",
       "batteryCapacity": "N/A"
     },
-    "detailImages": [
-      "/images/vehicles/ev5/EV5 (1).jpg",
-      "/images/vehicles/ev5/EV5 (2).jpg",
-      "/images/vehicles/ev5/EV5 (3).jpg",
-      "/images/vehicles/ev5/EV5 (4).jpg",
-      "/images/vehicles/ev5/EV5 (5).jpg",
-      "/images/vehicles/ev5/EV5 (6).jpg",
-      "/images/vehicles/ev5/EV5 (7).jpg",
-      "/images/vehicles/ev5/EV5 (8).jpg",
-      "/images/vehicles/ev5/EV5 (9).jpg",
-      "/images/vehicles/ev5/EV5 (10).jpg"
-    ]
+    "detailImages": {
+      "exterior": [
+        "/images/vehicles/ev5/EV5 (1).jpg",
+        "/images/vehicles/ev5/EV5 (2).jpg",
+        "/images/vehicles/ev5/EV5 (3).jpg",
+        "/images/vehicles/ev5/EV5 (4).jpg",
+        "/images/vehicles/ev5/EV5 (5).jpg",
+        "/images/vehicles/ev5/EV5 (6).jpg",
+        "/images/vehicles/ev5/EV5 (7).jpg",
+        "/images/vehicles/ev5/EV5 (8).jpg",
+        "/images/vehicles/ev5/EV5 (9).jpg",
+        "/images/vehicles/ev5/EV5 (10).jpg"
+      ],
+      "interior": [
+        "/images/vehicles/ev5/EV5 (11).jpg",
+        "/images/vehicles/ev5/EV5 (12).jpg",
+        "/images/vehicles/ev5/EV5 (13).jpg",
+        "/images/vehicles/ev5/EV5 (14).jpg",
+        "/images/vehicles/ev5/EV5 (15).jpg",
+        "/images/vehicles/ev5/EV5 (16).jpg",
+        "/images/vehicles/ev5/EV5 (17).jpg",
+        "/images/vehicles/ev5/EV5 (18).jpg",
+        "/images/vehicles/ev5/EV5 (19).jpg",
+        "/images/vehicles/ev5/EV5 (20).jpg"
+      ],
+      "details": [
+        "/images/vehicles/ev5/EV5 (21).jpg",
+        "/images/vehicles/ev5/EV5 (22).jpg",
+        "/images/vehicles/ev5/EV5 (23).jpg",
+        "/images/vehicles/ev5/EV5 (24).jpg",
+        "/images/vehicles/ev5/EV5 (25).jpg",
+        "/images/vehicles/ev5/EV5 (26).jpg",
+        "/images/vehicles/ev5/EV5 (27).jpg",
+        "/images/vehicles/ev5/EV5 (28).jpg",
+        "/images/vehicles/ev5/EV5 (29).jpg"
+      ]
+    }
   },
   {
     "id": 7,
@@ -173,7 +307,7 @@
     "range": 300,
     "seats": 5,
     "configuration": "Basic",
-    "coverImage": "/images/vehicles/seagull/seagull.jpg",
+    "coverImage": "/images/vehicles/seagull/SEAGULL.jpg",
     "colors": [
       "#000000"
     ],
@@ -185,15 +319,43 @@
       "category": "Basic",
       "batteryCapacity": "N/A"
     },
-    "detailImages": [
-      "/images/vehicles/seagull/SEAGULL (1).jpg",
-      "/images/vehicles/seagull/SEAGULL (2).jpg",
-      "/images/vehicles/seagull/SEAGULL (3).jpg",
-      "/images/vehicles/seagull/SEAGULL (4).jpg",
-      "/images/vehicles/seagull/SEAGULL (5).jpg",
-      "/images/vehicles/seagull/SEAGULL (6).jpg",
-      "/images/vehicles/seagull/SEAGULL (7).jpg"
-    ]
+    "detailImages": {
+      "exterior": [
+        "/images/vehicles/seagull/SEAGULL (1).jpg",
+        "/images/vehicles/seagull/SEAGULL (2).jpg",
+        "/images/vehicles/seagull/SEAGULL (3).jpg",
+        "/images/vehicles/seagull/SEAGULL (4).jpg",
+        "/images/vehicles/seagull/SEAGULL (5).jpg",
+        "/images/vehicles/seagull/SEAGULL (6).jpg",
+        "/images/vehicles/seagull/SEAGULL (7).jpg",
+        "/images/vehicles/seagull/SEAGULL (8).jpg",
+        "/images/vehicles/seagull/SEAGULL (9).jpg",
+        "/images/vehicles/seagull/SEAGULL (10).jpg"
+      ],
+      "interior": [
+        "/images/vehicles/seagull/SEAGULL (11).jpg",
+        "/images/vehicles/seagull/SEAGULL (12).jpg",
+        "/images/vehicles/seagull/SEAGULL (13).jpg",
+        "/images/vehicles/seagull/SEAGULL (14).jpg",
+        "/images/vehicles/seagull/SEAGULL (15).jpg",
+        "/images/vehicles/seagull/SEAGULL (16).jpg",
+        "/images/vehicles/seagull/SEAGULL (17).jpg",
+        "/images/vehicles/seagull/SEAGULL (18).jpg",
+        "/images/vehicles/seagull/SEAGULL (19).jpg",
+        "/images/vehicles/seagull/SEAGULL (20).jpg"
+      ],
+      "details": [
+        "/images/vehicles/seagull/SEAGULL (21).jpg",
+        "/images/vehicles/seagull/SEAGULL (22).jpg",
+        "/images/vehicles/seagull/SEAGULL (23).jpg",
+        "/images/vehicles/seagull/SEAGULL (24).jpg",
+        "/images/vehicles/seagull/SEAGULL (25).jpg",
+        "/images/vehicles/seagull/SEAGULL (26).jpg",
+        "/images/vehicles/seagull/SEAGULL (27).jpg",
+        "/images/vehicles/seagull/SEAGULL (28).jpg",
+        "/images/vehicles/seagull/SEAGULL (29).jpg"
+      ]
+    }
   },
   {
     "id": 8,
@@ -216,15 +378,43 @@
       "category": "Basic",
       "batteryCapacity": "N/A"
     },
-    "detailImages": [
-      "/images/vehicles/yuanplus/yuanplus (1).jpg",
-      "/images/vehicles/yuanplus/yuanplus (2).jpg",
-      "/images/vehicles/yuanplus/yuanplus (3).jpg",
-      "/images/vehicles/yuanplus/yuanplus (4).jpg",
-      "/images/vehicles/yuanplus/yuanplus (5).jpg",
-      "/images/vehicles/yuanplus/yuanplus (6).jpg",
-      "/images/vehicles/yuanplus/yuanplus (7).jpg"
-    ]
+    "detailImages": {
+      "exterior": [
+        "/images/vehicles/yuanplus/yuanplus (1).jpg",
+        "/images/vehicles/yuanplus/yuanplus (2).jpg",
+        "/images/vehicles/yuanplus/yuanplus (3).jpg",
+        "/images/vehicles/yuanplus/yuanplus (4).jpg",
+        "/images/vehicles/yuanplus/yuanplus (5).jpg",
+        "/images/vehicles/yuanplus/yuanplus (6).jpg",
+        "/images/vehicles/yuanplus/yuanplus (7).jpg",
+        "/images/vehicles/yuanplus/yuanplus (8).jpg",
+        "/images/vehicles/yuanplus/yuanplus (9).jpg",
+        "/images/vehicles/yuanplus/yuanplus (10).jpg"
+      ],
+      "interior": [
+        "/images/vehicles/yuanplus/yuanplus (11).jpg",
+        "/images/vehicles/yuanplus/yuanplus (12).jpg",
+        "/images/vehicles/yuanplus/yuanplus (13).jpg",
+        "/images/vehicles/yuanplus/yuanplus (14).jpg",
+        "/images/vehicles/yuanplus/yuanplus (15).jpg",
+        "/images/vehicles/yuanplus/yuanplus (16).jpg",
+        "/images/vehicles/yuanplus/yuanplus (17).jpg",
+        "/images/vehicles/yuanplus/yuanplus (18).jpg",
+        "/images/vehicles/yuanplus/yuanplus (19).jpg",
+        "/images/vehicles/yuanplus/yuanplus (20).jpg"
+      ],
+      "details": [
+        "/images/vehicles/yuanplus/yuanplus (21).jpg",
+        "/images/vehicles/yuanplus/yuanplus (22).jpg",
+        "/images/vehicles/yuanplus/yuanplus (23).jpg",
+        "/images/vehicles/yuanplus/yuanplus (24).jpg",
+        "/images/vehicles/yuanplus/yuanplus (25).jpg",
+        "/images/vehicles/yuanplus/yuanplus (26).jpg",
+        "/images/vehicles/yuanplus/yuanplus (27).jpg",
+        "/images/vehicles/yuanplus/yuanplus (28).jpg",
+        "/images/vehicles/yuanplus/yuanplus (29).jpg"
+      ]
+    }
   },
   {
     "id": 10,
@@ -249,23 +439,43 @@
       "category": "Premium SUV",
       "batteryCapacity": "108.8 kWh"
     },
-    "detailImages": [
-      "/images/vehicles/tangl/tangl.jpg",
-      "/images/vehicles/tangl/tangl (1).jpg",
-      "/images/vehicles/tangl/tangl (2).jpg",
-      "/images/vehicles/tangl/tangl (3).jpg",
-      "/images/vehicles/tangl/tangl (4).jpg",
-      "/images/vehicles/tangl/tangl (5).jpg",
-      "/images/vehicles/tangl/tangl (6).jpg",
-      "/images/vehicles/tangl/tangl (7).jpg",
-      "/images/vehicles/tangl/tangl (8).jpg",
-      "/images/vehicles/tangl/tangl (9).jpg",
-      "/images/vehicles/tangl/tangl (10).jpg",
-      "/images/vehicles/tangl/tangl (11).jpg",
-      "/images/vehicles/tangl/tangl (12).jpg",
-      "/images/vehicles/tangl/tangl (13).jpg",
-      "/images/vehicles/tangl/tangl (14).jpg"
-    ]
+    "detailImages": {
+      "exterior": [
+        "/images/vehicles/tangl/tangl (1).jpg",
+        "/images/vehicles/tangl/tangl (2).jpg",
+        "/images/vehicles/tangl/tangl (3).jpg",
+        "/images/vehicles/tangl/tangl (4).jpg",
+        "/images/vehicles/tangl/tangl (5).jpg",
+        "/images/vehicles/tangl/tangl (6).jpg",
+        "/images/vehicles/tangl/tangl (7).jpg",
+        "/images/vehicles/tangl/tangl (8).jpg",
+        "/images/vehicles/tangl/tangl (9).jpg",
+        "/images/vehicles/tangl/tangl (10).jpg"
+      ],
+      "interior": [
+        "/images/vehicles/tangl/tangl (11).jpg",
+        "/images/vehicles/tangl/tangl (12).jpg",
+        "/images/vehicles/tangl/tangl (13).jpg",
+        "/images/vehicles/tangl/tangl (14).jpg",
+        "/images/vehicles/tangl/tangl (15).jpg",
+        "/images/vehicles/tangl/tangl (16).jpg",
+        "/images/vehicles/tangl/tangl (17).jpg",
+        "/images/vehicles/tangl/tangl (18).jpg",
+        "/images/vehicles/tangl/tangl (19).jpg",
+        "/images/vehicles/tangl/tangl (20).jpg"
+      ],
+      "details": [
+        "/images/vehicles/tangl/tangl (21).jpg",
+        "/images/vehicles/tangl/tangl (22).jpg",
+        "/images/vehicles/tangl/tangl (23).jpg",
+        "/images/vehicles/tangl/tangl (24).jpg",
+        "/images/vehicles/tangl/tangl (25).jpg",
+        "/images/vehicles/tangl/tangl (26).jpg",
+        "/images/vehicles/tangl/tangl (27).jpg",
+        "/images/vehicles/tangl/tangl (28).jpg",
+        "/images/vehicles/tangl/tangl (29).jpg"
+      ]
+    }
   },
   {
     "id": 11,
@@ -288,23 +498,43 @@
       "category": "Commercial Van",
       "batteryCapacity": "80 kWh"
     },
-    "detailImages": [
-      "/images/vehicles/v7e/v7e.jpg",
-      "/images/vehicles/v7e/v7e (1).jpg",
-      "/images/vehicles/v7e/v7e (2).jpg",
-      "/images/vehicles/v7e/v7e (3).jpg",
-      "/images/vehicles/v7e/v7e (4).jpg",
-      "/images/vehicles/v7e/v7e (5).jpg",
-      "/images/vehicles/v7e/v7e (6).jpg",
-      "/images/vehicles/v7e/v7e (7).jpg",
-      "/images/vehicles/v7e/v7e (8).jpg",
-      "/images/vehicles/v7e/v7e (9).jpg",
-      "/images/vehicles/v7e/v7e (10).jpg",
-      "/images/vehicles/v7e/v7e (11).jpg",
-      "/images/vehicles/v7e/v7e (12).jpg",
-      "/images/vehicles/v7e/v7e (13).jpg",
-      "/images/vehicles/v7e/v7e (14).jpg"
-    ]
+    "detailImages": {
+      "exterior": [
+        "/images/vehicles/v7e/v7e (1).jpg",
+        "/images/vehicles/v7e/v7e (2).jpg",
+        "/images/vehicles/v7e/v7e (3).jpg",
+        "/images/vehicles/v7e/v7e (4).jpg",
+        "/images/vehicles/v7e/v7e (5).jpg",
+        "/images/vehicles/v7e/v7e (6).jpg",
+        "/images/vehicles/v7e/v7e (7).jpg",
+        "/images/vehicles/v7e/v7e (8).jpg",
+        "/images/vehicles/v7e/v7e (9).jpg",
+        "/images/vehicles/v7e/v7e (10).jpg"
+      ],
+      "interior": [
+        "/images/vehicles/v7e/v7e (11).jpg",
+        "/images/vehicles/v7e/v7e (12).jpg",
+        "/images/vehicles/v7e/v7e (13).jpg",
+        "/images/vehicles/v7e/v7e (14).jpg",
+        "/images/vehicles/v7e/v7e (15).jpg",
+        "/images/vehicles/v7e/v7e (16).jpg",
+        "/images/vehicles/v7e/v7e (17).jpg",
+        "/images/vehicles/v7e/v7e (18).jpg",
+        "/images/vehicles/v7e/v7e (19).jpg",
+        "/images/vehicles/v7e/v7e (20).jpg"
+      ],
+      "details": [
+        "/images/vehicles/v7e/v7e (21).jpg",
+        "/images/vehicles/v7e/v7e (22).jpg",
+        "/images/vehicles/v7e/v7e (23).jpg",
+        "/images/vehicles/v7e/v7e (24).jpg",
+        "/images/vehicles/v7e/v7e (25).jpg",
+        "/images/vehicles/v7e/v7e (26).jpg",
+        "/images/vehicles/v7e/v7e (27).jpg",
+        "/images/vehicles/v7e/v7e (28).jpg",
+        "/images/vehicles/v7e/v7e (29).jpg"
+      ]
+    }
   },
   {
     "id": 12,
@@ -329,22 +559,43 @@
       "category": "Premium Pickup",
       "batteryCapacity": "85 kWh"
     },
-    "detailImages": [
-      "/images/vehicles/randa/randa.jpg",
-      "/images/vehicles/randa/randa (1).jpg",
-      "/images/vehicles/randa/randa (2).jpg",
-      "/images/vehicles/randa/randa (3).jpg",
-      "/images/vehicles/randa/randa (4).jpg",
-      "/images/vehicles/randa/randa (5).jpg",
-      "/images/vehicles/randa/randa (6).jpg",
-      "/images/vehicles/randa/randa (7).jpg",
-      "/images/vehicles/randa/randa (8).jpg",
-      "/images/vehicles/randa/randa (9).jpg",
-      "/images/vehicles/randa/randa (10).jpg",
-      "/images/vehicles/randa/randa (11).jpg",
-      "/images/vehicles/randa/randa (12).jpg",
-      "/images/vehicles/randa/randa (13).jpg"
-    ]
+    "detailImages": {
+      "exterior": [
+        "/images/vehicles/randa/randa (1).jpg",
+        "/images/vehicles/randa/randa (2).jpg",
+        "/images/vehicles/randa/randa (3).jpg",
+        "/images/vehicles/randa/randa (4).jpg",
+        "/images/vehicles/randa/randa (5).jpg",
+        "/images/vehicles/randa/randa (6).jpg",
+        "/images/vehicles/randa/randa (7).jpg",
+        "/images/vehicles/randa/randa (8).jpg",
+        "/images/vehicles/randa/randa (9).jpg",
+        "/images/vehicles/randa/randa (10).jpg"
+      ],
+      "interior": [
+        "/images/vehicles/randa/randa (11).jpg",
+        "/images/vehicles/randa/randa (12).jpg",
+        "/images/vehicles/randa/randa (13).jpg",
+        "/images/vehicles/randa/randa (14).jpg",
+        "/images/vehicles/randa/randa (15).jpg",
+        "/images/vehicles/randa/randa (16).jpg",
+        "/images/vehicles/randa/randa (17).jpg",
+        "/images/vehicles/randa/randa (18).jpg",
+        "/images/vehicles/randa/randa (19).jpg",
+        "/images/vehicles/randa/randa (20).jpg"
+      ],
+      "details": [
+        "/images/vehicles/randa/randa (21).jpg",
+        "/images/vehicles/randa/randa (22).jpg",
+        "/images/vehicles/randa/randa (23).jpg",
+        "/images/vehicles/randa/randa (24).jpg",
+        "/images/vehicles/randa/randa (25).jpg",
+        "/images/vehicles/randa/randa (26).jpg",
+        "/images/vehicles/randa/randa (27).jpg",
+        "/images/vehicles/randa/randa (28).jpg",
+        "/images/vehicles/randa/randa (29).jpg"
+      ]
+    }
   },
   {
     "id": 13,
@@ -367,16 +618,43 @@
       "category": "Premium SUV",
       "batteryCapacity": "90 kWh"
     },
-    "detailImages": [
-      "/images/vehicles/toyota-bz3x/1.jpg",
-      "/images/vehicles/toyota-bz3x/2.jpg",
-      "/images/vehicles/toyota-bz3x/3.jpg",
-      "/images/vehicles/toyota-bz3x/4.jpg",
-      "/images/vehicles/toyota-bz3x/5.jpg",
-      "/images/vehicles/toyota-bz3x/6.jpg",
-      "/images/vehicles/toyota-bz3x/7.jpg",
-      "/images/vehicles/toyota-bz3x/8.jpg"
-    ]
+    "detailImages": {
+      "exterior": [
+        "/images/vehicles/bz3x/bz3x (1).jpg",
+        "/images/vehicles/bz3x/bz3x (2).jpg",
+        "/images/vehicles/bz3x/bz3x (3).jpg",
+        "/images/vehicles/bz3x/bz3x (4).jpg",
+        "/images/vehicles/bz3x/bz3x (5).jpg",
+        "/images/vehicles/bz3x/bz3x (6).jpg",
+        "/images/vehicles/bz3x/bz3x (7).jpg",
+        "/images/vehicles/bz3x/bz3x (8).jpg",
+        "/images/vehicles/bz3x/bz3x (9).jpg",
+        "/images/vehicles/bz3x/bz3x (10).jpg"
+      ],
+      "interior": [
+        "/images/vehicles/bz3x/bz3x (11).jpg",
+        "/images/vehicles/bz3x/bz3x (12).jpg",
+        "/images/vehicles/bz3x/bz3x (13).jpg",
+        "/images/vehicles/bz3x/bz3x (14).jpg",
+        "/images/vehicles/bz3x/bz3x (15).jpg",
+        "/images/vehicles/bz3x/bz3x (16).jpg",
+        "/images/vehicles/bz3x/bz3x (17).jpg",
+        "/images/vehicles/bz3x/bz3x (18).jpg",
+        "/images/vehicles/bz3x/bz3x (19).jpg",
+        "/images/vehicles/bz3x/bz3x (20).jpg"
+      ],
+      "details": [
+        "/images/vehicles/bz3x/bz3x (21).jpg",
+        "/images/vehicles/bz3x/bz3x (22).jpg",
+        "/images/vehicles/bz3x/bz3x (23).jpg",
+        "/images/vehicles/bz3x/bz3x (24).jpg",
+        "/images/vehicles/bz3x/bz3x (25).jpg",
+        "/images/vehicles/bz3x/bz3x (26).jpg",
+        "/images/vehicles/bz3x/bz3x (27).jpg",
+        "/images/vehicles/bz3x/bz3x (28).jpg",
+        "/images/vehicles/bz3x/bz3x (29).jpg"
+      ]
+    }
   },
   {
     "id": 14,
@@ -400,19 +678,43 @@
       "category": "Smart SUV",
       "batteryCapacity": "69.9 kWh"
     },
-    "detailImages": [
-      "/images/vehicles/c10/c10.jpg",
-      "/images/vehicles/c10/c10 (1).jpg",
-      "/images/vehicles/c10/c10 (2).jpg",
-      "/images/vehicles/c10/c10 (3).jpg",
-      "/images/vehicles/c10/c10 (4).jpg",
-      "/images/vehicles/c10/c10 (5).jpg",
-      "/images/vehicles/c10/c10 (6).jpg",
-      "/images/vehicles/c10/c10 (7).jpg",
-      "/images/vehicles/c10/c10 (8).jpg",
-      "/images/vehicles/c10/c10 (9).jpg",
-      "/images/vehicles/c10/c10 (10).jpg"
-    ]
+    "detailImages": {
+      "exterior": [
+        "/images/vehicles/c10/c10 (1).jpg",
+        "/images/vehicles/c10/c10 (2).jpg",
+        "/images/vehicles/c10/c10 (3).jpg",
+        "/images/vehicles/c10/c10 (4).jpg",
+        "/images/vehicles/c10/c10 (5).jpg",
+        "/images/vehicles/c10/c10 (6).jpg",
+        "/images/vehicles/c10/c10 (7).jpg",
+        "/images/vehicles/c10/c10 (8).jpg",
+        "/images/vehicles/c10/c10 (9).jpg",
+        "/images/vehicles/c10/c10 (10).jpg"
+      ],
+      "interior": [
+        "/images/vehicles/c10/c10 (11).jpg",
+        "/images/vehicles/c10/c10 (12).jpg",
+        "/images/vehicles/c10/c10 (13).jpg",
+        "/images/vehicles/c10/c10 (14).jpg",
+        "/images/vehicles/c10/c10 (15).jpg",
+        "/images/vehicles/c10/c10 (16).jpg",
+        "/images/vehicles/c10/c10 (17).jpg",
+        "/images/vehicles/c10/c10 (18).jpg",
+        "/images/vehicles/c10/c10 (19).jpg",
+        "/images/vehicles/c10/c10 (20).jpg"
+      ],
+      "details": [
+        "/images/vehicles/c10/c10 (21).jpg",
+        "/images/vehicles/c10/c10 (22).jpg",
+        "/images/vehicles/c10/c10 (23).jpg",
+        "/images/vehicles/c10/c10 (24).jpg",
+        "/images/vehicles/c10/c10 (25).jpg",
+        "/images/vehicles/c10/c10 (26).jpg",
+        "/images/vehicles/c10/c10 (27).jpg",
+        "/images/vehicles/c10/c10 (28).jpg",
+        "/images/vehicles/c10/c10 (29).jpg"
+      ]
+    }
   },
   {
     "id": 15,
@@ -437,19 +739,43 @@
       "category": "Compact SUV",
       "batteryCapacity": "50.6 kWh"
     },
-    "detailImages": [
-      "/images/vehicles/icar03/icar03.jpg",
-      "/images/vehicles/icar03/icar03 (1).jpg",
-      "/images/vehicles/icar03/icar03 (2).jpg",
-      "/images/vehicles/icar03/icar03 (3).jpg",
-      "/images/vehicles/icar03/icar03 (4).jpg",
-      "/images/vehicles/icar03/icar03 (5).jpg",
-      "/images/vehicles/icar03/icar03 (6).jpg",
-      "/images/vehicles/icar03/icar03 (7).jpg",
-      "/images/vehicles/icar03/icar03 (8).jpg",
-      "/images/vehicles/icar03/icar03 (9).jpg",
-      "/images/vehicles/icar03/icar03 (10).jpg"
-    ]
+    "detailImages": {
+      "exterior": [
+        "/images/vehicles/icar03/icar03 (1).jpg",
+        "/images/vehicles/icar03/icar03 (2).jpg",
+        "/images/vehicles/icar03/icar03 (3).jpg",
+        "/images/vehicles/icar03/icar03 (4).jpg",
+        "/images/vehicles/icar03/icar03 (5).jpg",
+        "/images/vehicles/icar03/icar03 (6).jpg",
+        "/images/vehicles/icar03/icar03 (7).jpg",
+        "/images/vehicles/icar03/icar03 (8).jpg",
+        "/images/vehicles/icar03/icar03 (9).jpg",
+        "/images/vehicles/icar03/icar03 (10).jpg"
+      ],
+      "interior": [
+        "/images/vehicles/icar03/icar03 (11).jpg",
+        "/images/vehicles/icar03/icar03 (12).jpg",
+        "/images/vehicles/icar03/icar03 (13).jpg",
+        "/images/vehicles/icar03/icar03 (14).jpg",
+        "/images/vehicles/icar03/icar03 (15).jpg",
+        "/images/vehicles/icar03/icar03 (16).jpg",
+        "/images/vehicles/icar03/icar03 (17).jpg",
+        "/images/vehicles/icar03/icar03 (18).jpg",
+        "/images/vehicles/icar03/icar03 (19).jpg",
+        "/images/vehicles/icar03/icar03 (20).jpg"
+      ],
+      "details": [
+        "/images/vehicles/icar03/icar03 (21).jpg",
+        "/images/vehicles/icar03/icar03 (22).jpg",
+        "/images/vehicles/icar03/icar03 (23).jpg",
+        "/images/vehicles/icar03/icar03 (24).jpg",
+        "/images/vehicles/icar03/icar03 (25).jpg",
+        "/images/vehicles/icar03/icar03 (26).jpg",
+        "/images/vehicles/icar03/icar03 (27).jpg",
+        "/images/vehicles/icar03/icar03 (28).jpg",
+        "/images/vehicles/icar03/icar03 (29).jpg"
+      ]
+    }
   },
   {
     "id": 16,
@@ -473,19 +799,43 @@
       "category": "Multi-purpose Van",
       "batteryCapacity": "65 kWh"
     },
-    "detailImages": [
-      "/images/vehicles/icarv23/icarv23.jpg",
-      "/images/vehicles/icarv23/icarv23 (1).jpg",
-      "/images/vehicles/icarv23/icarv23 (2).jpg",
-      "/images/vehicles/icarv23/icarv23 (3).jpg",
-      "/images/vehicles/icarv23/icarv23 (4).jpg",
-      "/images/vehicles/icarv23/icarv23 (5).jpg",
-      "/images/vehicles/icarv23/icarv23 (6).jpg",
-      "/images/vehicles/icarv23/icarv23 (7).jpg",
-      "/images/vehicles/icarv23/icarv23 (8).jpg",
-      "/images/vehicles/icarv23/icarv23 (9).jpg",
-      "/images/vehicles/icarv23/icarv23 (10).jpg"
-    ]
+    "detailImages": {
+      "exterior": [
+        "/images/vehicles/icarv23/icarv23 (1).jpg",
+        "/images/vehicles/icarv23/icarv23 (2).jpg",
+        "/images/vehicles/icarv23/icarv23 (3).jpg",
+        "/images/vehicles/icarv23/icarv23 (4).jpg",
+        "/images/vehicles/icarv23/icarv23 (5).jpg",
+        "/images/vehicles/icarv23/icarv23 (6).jpg",
+        "/images/vehicles/icarv23/icarv23 (7).jpg",
+        "/images/vehicles/icarv23/icarv23 (8).jpg",
+        "/images/vehicles/icarv23/icarv23 (9).jpg",
+        "/images/vehicles/icarv23/icarv23 (10).jpg"
+      ],
+      "interior": [
+        "/images/vehicles/icarv23/icarv23 (11).jpg",
+        "/images/vehicles/icarv23/icarv23 (12).jpg",
+        "/images/vehicles/icarv23/icarv23 (13).jpg",
+        "/images/vehicles/icarv23/icarv23 (14).jpg",
+        "/images/vehicles/icarv23/icarv23 (15).jpg",
+        "/images/vehicles/icarv23/icarv23 (16).jpg",
+        "/images/vehicles/icarv23/icarv23 (17).jpg",
+        "/images/vehicles/icarv23/icarv23 (18).jpg",
+        "/images/vehicles/icarv23/icarv23 (19).jpg",
+        "/images/vehicles/icarv23/icarv23 (20).jpg"
+      ],
+      "details": [
+        "/images/vehicles/icarv23/icarv23 (21).jpg",
+        "/images/vehicles/icarv23/icarv23 (22).jpg",
+        "/images/vehicles/icarv23/icarv23 (23).jpg",
+        "/images/vehicles/icarv23/icarv23 (24).jpg",
+        "/images/vehicles/icarv23/icarv23 (25).jpg",
+        "/images/vehicles/icarv23/icarv23 (26).jpg",
+        "/images/vehicles/icarv23/icarv23 (27).jpg",
+        "/images/vehicles/icarv23/icarv23 (28).jpg",
+        "/images/vehicles/icarv23/icarv23 (29).jpg"
+      ]
+    }
   },
   {
     "id": 17,
@@ -509,20 +859,591 @@
       "category": "Electric Pickup",
       "batteryCapacity": "75 kWh"
     },
-    "detailImages": [
-      "/images/vehicles/shanhait2/shanhait2.jpg",
-      "/images/vehicles/shanhait2/shanhait2 (1).jpg",
-      "/images/vehicles/shanhait2/shanhait2 (2).jpg",
-      "/images/vehicles/shanhait2/shanhait2 (3).jpg",
-      "/images/vehicles/shanhait2/shanhait2 (4).jpg",
-      "/images/vehicles/shanhait2/shanhait2 (5).jpg",
-      "/images/vehicles/shanhait2/shanhait2 (6).jpg",
-      "/images/vehicles/shanhait2/shanhait2 (7).jpg",
-      "/images/vehicles/shanhait2/shanhait2 (8).jpg",
-      "/images/vehicles/shanhait2/shanhait2 (9).jpg",
-      "/images/vehicles/shanhait2/shanhait2 (10).jpg",
-      "/images/vehicles/shanhait2/shanhait2 (11).jpg",
-      "/images/vehicles/shanhait2/shanhait2 (12).jpg"
-    ]
+    "detailImages": {
+      "exterior": [
+        "/images/vehicles/shanhait2/shanhait2 (1).jpg",
+        "/images/vehicles/shanhait2/shanhait2 (2).jpg",
+        "/images/vehicles/shanhait2/shanhait2 (3).jpg",
+        "/images/vehicles/shanhait2/shanhait2 (4).jpg",
+        "/images/vehicles/shanhait2/shanhait2 (5).jpg",
+        "/images/vehicles/shanhait2/shanhait2 (6).jpg",
+        "/images/vehicles/shanhait2/shanhait2 (7).jpg",
+        "/images/vehicles/shanhait2/shanhait2 (8).jpg",
+        "/images/vehicles/shanhait2/shanhait2 (9).jpg",
+        "/images/vehicles/shanhait2/shanhait2 (10).jpg"
+      ],
+      "interior": [
+        "/images/vehicles/shanhait2/shanhait2 (11).jpg",
+        "/images/vehicles/shanhait2/shanhait2 (12).jpg",
+        "/images/vehicles/shanhait2/shanhait2 (13).jpg",
+        "/images/vehicles/shanhait2/shanhait2 (14).jpg",
+        "/images/vehicles/shanhait2/shanhait2 (15).jpg",
+        "/images/vehicles/shanhait2/shanhait2 (16).jpg",
+        "/images/vehicles/shanhait2/shanhait2 (17).jpg",
+        "/images/vehicles/shanhait2/shanhait2 (18).jpg",
+        "/images/vehicles/shanhait2/shanhait2 (19).jpg",
+        "/images/vehicles/shanhait2/shanhait2 (20).jpg"
+      ],
+      "details": [
+        "/images/vehicles/shanhait2/shanhait2 (21).jpg",
+        "/images/vehicles/shanhait2/shanhait2 (22).jpg",
+        "/images/vehicles/shanhait2/shanhait2 (23).jpg",
+        "/images/vehicles/shanhait2/shanhait2 (24).jpg",
+        "/images/vehicles/shanhait2/shanhait2 (25).jpg",
+        "/images/vehicles/shanhait2/shanhait2 (26).jpg",
+        "/images/vehicles/shanhait2/shanhait2 (27).jpg",
+        "/images/vehicles/shanhait2/shanhait2 (28).jpg",
+        "/images/vehicles/shanhait2/shanhait2 (29).jpg"
+      ]
+    }
+  },
+  {
+    "id": 18,
+    "slug": "byd-yuan-up",
+    "enabled": true,
+    "name": "2025 BYD Yuan UP",
+    "type": "SUV",
+    "range": 401,
+    "seats": 5,
+    "configuration": "Leading",
+    "coverImage": "/images/vehicles/yuanup/yuanup.jpg",
+    "colors": [
+      "#FFFFFF",
+      "#000000",
+      "#808080",
+      "#87CEEB"
+    ],
+    "description": "The BYD Yuan UP is a compact electric SUV designed for urban commuters. The 2025 Leading Edition features a 70kW motor, a range of up to 401 km, and a spacious interior for 5 passengers. With its modern design and advanced features, the Yuan UP offers excellent value for eco-conscious city drivers.",
+    "specs": {
+      "year": "2025",
+      "make": "BYD",
+      "model": "Yuan UP Leading",
+      "category": "Compact SUV",
+      "batteryCapacity": "45.1 kWh"
+    },
+    "detailImages": {
+      "exterior": [
+        "/images/vehicles/yuanup/yuanup (1).jpg",
+        "/images/vehicles/yuanup/yuanup (2).jpg",
+        "/images/vehicles/yuanup/yuanup (3).jpg",
+        "/images/vehicles/yuanup/yuanup (4).jpg",
+        "/images/vehicles/yuanup/yuanup (5).jpg",
+        "/images/vehicles/yuanup/yuanup (6).jpg",
+        "/images/vehicles/yuanup/yuanup (7).jpg",
+        "/images/vehicles/yuanup/yuanup (8).jpg",
+        "/images/vehicles/yuanup/yuanup (9).jpg",
+        "/images/vehicles/yuanup/yuanup (10).jpg"
+      ],
+      "interior": [
+        "/images/vehicles/yuanup/yuanup (11).jpg",
+        "/images/vehicles/yuanup/yuanup (12).jpg",
+        "/images/vehicles/yuanup/yuanup (13).jpg",
+        "/images/vehicles/yuanup/yuanup (14).jpg",
+        "/images/vehicles/yuanup/yuanup (15).jpg",
+        "/images/vehicles/yuanup/yuanup (16).jpg",
+        "/images/vehicles/yuanup/yuanup (17).jpg",
+        "/images/vehicles/yuanup/yuanup (18).jpg",
+        "/images/vehicles/yuanup/yuanup (19).jpg",
+        "/images/vehicles/yuanup/yuanup (20).jpg"
+      ],
+      "details": [
+        "/images/vehicles/yuanup/yuanup (21).jpg",
+        "/images/vehicles/yuanup/yuanup (22).jpg",
+        "/images/vehicles/yuanup/yuanup (23).jpg",
+        "/images/vehicles/yuanup/yuanup (24).jpg",
+        "/images/vehicles/yuanup/yuanup (25).jpg",
+        "/images/vehicles/yuanup/yuanup (26).jpg",
+        "/images/vehicles/yuanup/yuanup (27).jpg",
+        "/images/vehicles/yuanup/yuanup (28).jpg",
+        "/images/vehicles/yuanup/yuanup (29).jpg"
+      ]
+    }
+  },
+  {
+    "id": 19,
+    "slug": "byd-e2",
+    "enabled": true,
+    "name": "2024 BYD e2",
+    "type": "SEDAN",
+    "range": 405,
+    "seats": 5,
+    "configuration": "Luxury",
+    "coverImage": "/images/vehicles/e2/e2.jpg",
+    "colors": [
+      "#FFFFFF",
+      "#FF0000",
+      "#808080",
+      "#4169E1"
+    ],
+    "description": "The BYD e2 is a compact electric hatchback designed for efficient urban transportation. The 2024 Glory Luxury Edition features a 70kW motor, a 43.2kWh battery, and a CLTC range of up to 405 km. With comfortable seating for 5 passengers, practical design, and affordable pricing, the e2 is an excellent choice for daily commuting and ride-sharing services.",
+    "specs": {
+      "year": "2024",
+      "make": "BYD",
+      "model": "e2 Glory Luxury",
+      "category": "Compact Hatchback",
+      "batteryCapacity": "43.2 kWh"
+    },
+    "detailImages": {
+      "exterior": [
+        "/images/vehicles/e2/e2 (1).jpg",
+        "/images/vehicles/e2/e2 (2).jpg",
+        "/images/vehicles/e2/e2 (3).jpg",
+        "/images/vehicles/e2/e2 (4).jpg",
+        "/images/vehicles/e2/e2 (5).jpg",
+        "/images/vehicles/e2/e2 (6).jpg",
+        "/images/vehicles/e2/e2 (7).jpg",
+        "/images/vehicles/e2/e2 (8).jpg",
+        "/images/vehicles/e2/e2 (9).jpg",
+        "/images/vehicles/e2/e2 (10).jpg"
+      ],
+      "interior": [
+        "/images/vehicles/e2/e2 (11).jpg",
+        "/images/vehicles/e2/e2 (12).jpg",
+        "/images/vehicles/e2/e2 (13).jpg",
+        "/images/vehicles/e2/e2 (14).jpg",
+        "/images/vehicles/e2/e2 (15).jpg",
+        "/images/vehicles/e2/e2 (16).jpg",
+        "/images/vehicles/e2/e2 (17).jpg",
+        "/images/vehicles/e2/e2 (18).jpg",
+        "/images/vehicles/e2/e2 (19).jpg",
+        "/images/vehicles/e2/e2 (20).jpg"
+      ],
+      "details": [
+        "/images/vehicles/e2/e2 (21).jpg",
+        "/images/vehicles/e2/e2 (22).jpg",
+        "/images/vehicles/e2/e2 (23).jpg",
+        "/images/vehicles/e2/e2 (24).jpg",
+        "/images/vehicles/e2/e2 (25).jpg",
+        "/images/vehicles/e2/e2 (26).jpg",
+        "/images/vehicles/e2/e2 (27).jpg",
+        "/images/vehicles/e2/e2 (28).jpg",
+        "/images/vehicles/e2/e2 (29).jpg"
+      ]
+    }
+  },
+  {
+    "id": 20,
+    "slug": "haishi-06",
+    "enabled": true,
+    "name": "2026 BYD HAISHI 06",
+    "type": "SUV",
+    "range": 605,
+    "seats": 5,
+    "configuration": "Basic",
+    "coverImage": "/images/vehicles/haishi06/haishi06.jpg",
+    "colors": [
+      "#808080",
+      "#000000",
+      "#FFFFFF"
+    ],
+    "description": "The BYD Haishi 06 is a mid-size electric SUV with a sleek design and advanced technology. It offers a maximum range of 605 km and spacious interior for 5 passengers.",
+    "specs": {
+      "year": "2026",
+      "make": "BYD",
+      "model": "Haishi 06",
+      "category": "PASSENGER",
+      "batteryCapacity": "71.7 kWh"
+    },
+    "detailImages": {
+      "exterior": [
+        "/images/vehicles/haishi06/haishi06 (1).jpg",
+        "/images/vehicles/haishi06/haishi06 (2).jpg",
+        "/images/vehicles/haishi06/haishi06 (3).jpg",
+        "/images/vehicles/haishi06/haishi06 (4).jpg",
+        "/images/vehicles/haishi06/haishi06 (5).jpg",
+        "/images/vehicles/haishi06/haishi06 (6).jpg",
+        "/images/vehicles/haishi06/haishi06 (7).jpg",
+        "/images/vehicles/haishi06/haishi06 (8).jpg",
+        "/images/vehicles/haishi06/haishi06 (9).jpg",
+        "/images/vehicles/haishi06/haishi06 (10).jpg"
+      ],
+      "interior": [
+        "/images/vehicles/haishi06/haishi06 (11).jpg",
+        "/images/vehicles/haishi06/haishi06 (12).jpg",
+        "/images/vehicles/haishi06/haishi06 (13).jpg",
+        "/images/vehicles/haishi06/haishi06 (14).jpg",
+        "/images/vehicles/haishi06/haishi06 (15).jpg",
+        "/images/vehicles/haishi06/haishi06 (16).jpg",
+        "/images/vehicles/haishi06/haishi06 (17).jpg",
+        "/images/vehicles/haishi06/haishi06 (18).jpg",
+        "/images/vehicles/haishi06/haishi06 (19).jpg",
+        "/images/vehicles/haishi06/haishi06 (20).jpg"
+      ],
+      "details": [
+        "/images/vehicles/haishi06/haishi06 (21).jpg",
+        "/images/vehicles/haishi06/haishi06 (22).jpg",
+        "/images/vehicles/haishi06/haishi06 (23).jpg",
+        "/images/vehicles/haishi06/haishi06 (24).jpg",
+        "/images/vehicles/haishi06/haishi06 (25).jpg",
+        "/images/vehicles/haishi06/haishi06 (26).jpg",
+        "/images/vehicles/haishi06/haishi06 (27).jpg",
+        "/images/vehicles/haishi06/haishi06 (28).jpg",
+        "/images/vehicles/haishi06/haishi06 (29).jpg"
+      ]
+    }
+  },
+  {
+    "id": 21,
+    "slug": "frontlander",
+    "enabled": true,
+    "name": "2026 Toyota Frontlander",
+    "type": "SUV",
+    "range": 106,
+    "seats": 5,
+    "configuration": "Basic",
+    "coverImage": "/images/vehicles/frontlander/frontlander.jpg",
+    "colors": [
+      "#808080",
+      "#FFFFFF",
+      "#000000"
+    ],
+    "description": "The Toyota Frontlander is a compact hybrid SUV combining fuel efficiency with reliability. It features Toyota's proven hybrid system and practical interior design.",
+    "specs": {
+      "year": "2026",
+      "make": "Toyota",
+      "model": "Frontlander",
+      "category": "PASSENGER",
+      "batteryCapacity": "N/A"
+    },
+    "detailImages": {
+      "exterior": [
+        "/images/vehicles/frontlander/frontlander (1).jpg",
+        "/images/vehicles/frontlander/frontlander (2).jpg",
+        "/images/vehicles/frontlander/frontlander (3).jpg",
+        "/images/vehicles/frontlander/frontlander (4).jpg",
+        "/images/vehicles/frontlander/frontlander (5).jpg",
+        "/images/vehicles/frontlander/frontlander (6).jpg",
+        "/images/vehicles/frontlander/frontlander (7).jpg",
+        "/images/vehicles/frontlander/frontlander (8).jpg",
+        "/images/vehicles/frontlander/frontlander (9).jpg",
+        "/images/vehicles/frontlander/frontlander (10).jpg"
+      ],
+      "interior": [
+        "/images/vehicles/frontlander/frontlander (11).jpg",
+        "/images/vehicles/frontlander/frontlander (12).jpg",
+        "/images/vehicles/frontlander/frontlander (13).jpg",
+        "/images/vehicles/frontlander/frontlander (14).jpg",
+        "/images/vehicles/frontlander/frontlander (15).jpg",
+        "/images/vehicles/frontlander/frontlander (16).jpg",
+        "/images/vehicles/frontlander/frontlander (17).jpg",
+        "/images/vehicles/frontlander/frontlander (18).jpg",
+        "/images/vehicles/frontlander/frontlander (19).jpg",
+        "/images/vehicles/frontlander/frontlander (20).jpg"
+      ],
+      "details": [
+        "/images/vehicles/frontlander/frontlander (21).jpg",
+        "/images/vehicles/frontlander/frontlander (22).jpg",
+        "/images/vehicles/frontlander/frontlander (23).jpg",
+        "/images/vehicles/frontlander/frontlander (24).jpg",
+        "/images/vehicles/frontlander/frontlander (25).jpg",
+        "/images/vehicles/frontlander/frontlander (26).jpg",
+        "/images/vehicles/frontlander/frontlander (27).jpg",
+        "/images/vehicles/frontlander/frontlander (28).jpg",
+        "/images/vehicles/frontlander/frontlander (29).jpg"
+      ]
+    }
+  },
+  {
+    "id": 22,
+    "slug": "byd-e5",
+    "enabled": true,
+    "name": "2018 BYD e5",
+    "type": "SEDAN",
+    "range": 400,
+    "seats": 5,
+    "configuration": "Basic",
+    "coverImage": "/images/vehicles/byde5/byde5.jpg",
+    "colors": [
+      "#FFFFFF",
+      "#000000"
+    ],
+    "description": "The BYD e5 is a practical electric sedan designed for daily commuting and commercial use. With a range of 400 km, it offers reliable and efficient electric mobility.",
+    "specs": {
+      "year": "2018",
+      "make": "BYD",
+      "model": "e5",
+      "category": "PASSENGER",
+      "batteryCapacity": "60.48 kWh"
+    },
+    "detailImages": {
+      "exterior": [
+        "/images/vehicles/byde5/byde5 (1).jpg",
+        "/images/vehicles/byde5/byde5 (2).jpg",
+        "/images/vehicles/byde5/byde5 (3).jpg",
+        "/images/vehicles/byde5/byde5 (4).jpg",
+        "/images/vehicles/byde5/byde5 (5).jpg",
+        "/images/vehicles/byde5/byde5 (6).jpg",
+        "/images/vehicles/byde5/byde5 (7).jpg",
+        "/images/vehicles/byde5/byde5 (8).jpg",
+        "/images/vehicles/byde5/byde5 (9).jpg",
+        "/images/vehicles/byde5/byde5 (10).jpg"
+      ],
+      "interior": [
+        "/images/vehicles/byde5/byde5 (11).jpg",
+        "/images/vehicles/byde5/byde5 (12).jpg",
+        "/images/vehicles/byde5/byde5 (13).jpg",
+        "/images/vehicles/byde5/byde5 (14).jpg",
+        "/images/vehicles/byde5/byde5 (15).jpg",
+        "/images/vehicles/byde5/byde5 (16).jpg",
+        "/images/vehicles/byde5/byde5 (17).jpg",
+        "/images/vehicles/byde5/byde5 (18).jpg",
+        "/images/vehicles/byde5/byde5 (19).jpg",
+        "/images/vehicles/byde5/byde5 (20).jpg"
+      ],
+      "details": [
+        "/images/vehicles/byde5/byde5 (21).jpg",
+        "/images/vehicles/byde5/byde5 (22).jpg",
+        "/images/vehicles/byde5/byde5 (23).jpg",
+        "/images/vehicles/byde5/byde5 (24).jpg",
+        "/images/vehicles/byde5/byde5 (25).jpg",
+        "/images/vehicles/byde5/byde5 (26).jpg",
+        "/images/vehicles/byde5/byde5 (27).jpg",
+        "/images/vehicles/byde5/byde5 (28).jpg",
+        "/images/vehicles/byde5/byde5 (29).jpg"
+      ]
+    }
+  },
+  {
+    "id": 23,
+    "slug": "fangchengbao-t3",
+    "enabled": true,
+    "name": "2025 Fangchengbao T3",
+    "type": "SUV",
+    "range": 501,
+    "seats": 5,
+    "configuration": "Basic",
+    "coverImage": "/images/vehicles/t3/t3.jpg",
+    "colors": [
+      "#C0C0C0",
+      "#000000",
+      "#FFFFFF"
+    ],
+    "description": "The Fangchengbao T3 (Titan 3) is a rugged electric SUV with off-road capability. It delivers 501 km of range and features a bold, adventure-ready design.",
+    "specs": {
+      "year": "2025",
+      "make": "Fangchengbao",
+      "model": "T3",
+      "category": "PASSENGER",
+      "batteryCapacity": "71.8 kWh"
+    },
+    "detailImages": {
+      "exterior": [
+        "/images/vehicles/t3/t3 (1).jpg",
+        "/images/vehicles/t3/t3 (2).jpg",
+        "/images/vehicles/t3/t3 (3).jpg",
+        "/images/vehicles/t3/t3 (4).jpg",
+        "/images/vehicles/t3/t3 (5).jpg",
+        "/images/vehicles/t3/t3 (6).jpg",
+        "/images/vehicles/t3/t3 (7).jpg",
+        "/images/vehicles/t3/t3 (8).jpg",
+        "/images/vehicles/t3/t3 (9).jpg",
+        "/images/vehicles/t3/t3 (10).jpg"
+      ],
+      "interior": [
+        "/images/vehicles/t3/t3 (11).jpg",
+        "/images/vehicles/t3/t3 (12).jpg",
+        "/images/vehicles/t3/t3 (13).jpg",
+        "/images/vehicles/t3/t3 (14).jpg",
+        "/images/vehicles/t3/t3 (15).jpg",
+        "/images/vehicles/t3/t3 (16).jpg",
+        "/images/vehicles/t3/t3 (17).jpg",
+        "/images/vehicles/t3/t3 (18).jpg",
+        "/images/vehicles/t3/t3 (19).jpg",
+        "/images/vehicles/t3/t3 (20).jpg"
+      ],
+      "details": [
+        "/images/vehicles/t3/t3 (21).jpg",
+        "/images/vehicles/t3/t3 (22).jpg",
+        "/images/vehicles/t3/t3 (23).jpg",
+        "/images/vehicles/t3/t3 (24).jpg",
+        "/images/vehicles/t3/t3 (25).jpg",
+        "/images/vehicles/t3/t3 (26).jpg",
+        "/images/vehicles/t3/t3 (27).jpg",
+        "/images/vehicles/t3/t3 (28).jpg",
+        "/images/vehicles/t3/t3 (29).jpg"
+      ]
+    }
+  },
+  {
+    "id": 24,
+    "slug": "wuling-ev",
+    "enabled": true,
+    "name": "2025 Wuling Hongguang Mini EV",
+    "type": "HATCHBACK",
+    "range": 170,
+    "seats": 4,
+    "configuration": "Basic",
+    "coverImage": "/images/vehicles/wulingev/wulingev.jpg",
+    "colors": [
+      "#FFFFFF",
+      "#87CEEB",
+      "#FFB6C1"
+    ],
+    "description": "The Wuling Hongguang Mini EV is an ultra-compact and affordable electric vehicle, perfect for urban commuting. Its small footprint makes it ideal for city driving.",
+    "specs": {
+      "year": "2025",
+      "make": "Wuling",
+      "model": "Hongguang Mini EV",
+      "category": "PASSENGER",
+      "batteryCapacity": "17.3 kWh"
+    },
+    "detailImages": {
+      "exterior": [
+        "/images/vehicles/wulingev/wulingev (1).jpg",
+        "/images/vehicles/wulingev/wulingev (2).jpg",
+        "/images/vehicles/wulingev/wulingev (3).jpg",
+        "/images/vehicles/wulingev/wulingev (4).jpg",
+        "/images/vehicles/wulingev/wulingev (5).jpg",
+        "/images/vehicles/wulingev/wulingev (6).jpg",
+        "/images/vehicles/wulingev/wulingev (7).jpg",
+        "/images/vehicles/wulingev/wulingev (8).jpg",
+        "/images/vehicles/wulingev/wulingev (9).jpg",
+        "/images/vehicles/wulingev/wulingev (10).jpg"
+      ],
+      "interior": [
+        "/images/vehicles/wulingev/wulingev (11).jpg",
+        "/images/vehicles/wulingev/wulingev (12).jpg",
+        "/images/vehicles/wulingev/wulingev (13).jpg",
+        "/images/vehicles/wulingev/wulingev (14).jpg",
+        "/images/vehicles/wulingev/wulingev (15).jpg",
+        "/images/vehicles/wulingev/wulingev (16).jpg",
+        "/images/vehicles/wulingev/wulingev (17).jpg",
+        "/images/vehicles/wulingev/wulingev (18).jpg",
+        "/images/vehicles/wulingev/wulingev (19).jpg",
+        "/images/vehicles/wulingev/wulingev (20).jpg"
+      ],
+      "details": [
+        "/images/vehicles/wulingev/wulingev (21).jpg",
+        "/images/vehicles/wulingev/wulingev (22).jpg",
+        "/images/vehicles/wulingev/wulingev (23).jpg",
+        "/images/vehicles/wulingev/wulingev (24).jpg",
+        "/images/vehicles/wulingev/wulingev (25).jpg",
+        "/images/vehicles/wulingev/wulingev (26).jpg",
+        "/images/vehicles/wulingev/wulingev (27).jpg",
+        "/images/vehicles/wulingev/wulingev (28).jpg",
+        "/images/vehicles/wulingev/wulingev (29).jpg"
+      ]
+    }
+  },
+  {
+    "id": 25,
+    "slug": "byd-tang-dmi",
+    "enabled": true,
+    "name": "2025 BYD Tang DM-i",
+    "type": "SUV",
+    "range": 115,
+    "seats": 7,
+    "configuration": "Basic",
+    "coverImage": "/images/vehicles/tangdmi/tangdmi.jpg",
+    "colors": [
+      "#000000",
+      "#FFFFFF",
+      "#808080"
+    ],
+    "description": "The BYD Tang DM-i is a full-size plug-in hybrid SUV with 7 seats. It combines electric efficiency with extended range capability for long-distance travel.",
+    "specs": {
+      "year": "2025",
+      "make": "BYD",
+      "model": "Tang DM-i",
+      "category": "PASSENGER",
+      "batteryCapacity": "21.5 kWh"
+    },
+    "detailImages": {
+      "exterior": [
+        "/images/vehicles/tangdmi/tangdmi (1).jpg",
+        "/images/vehicles/tangdmi/tangdmi (2).jpg",
+        "/images/vehicles/tangdmi/tangdmi (3).jpg",
+        "/images/vehicles/tangdmi/tangdmi (4).jpg",
+        "/images/vehicles/tangdmi/tangdmi (5).jpg",
+        "/images/vehicles/tangdmi/tangdmi (6).jpg",
+        "/images/vehicles/tangdmi/tangdmi (7).jpg",
+        "/images/vehicles/tangdmi/tangdmi (8).jpg",
+        "/images/vehicles/tangdmi/tangdmi (9).jpg",
+        "/images/vehicles/tangdmi/tangdmi (10).jpg"
+      ],
+      "interior": [
+        "/images/vehicles/tangdmi/tangdmi (11).jpg",
+        "/images/vehicles/tangdmi/tangdmi (12).jpg",
+        "/images/vehicles/tangdmi/tangdmi (13).jpg",
+        "/images/vehicles/tangdmi/tangdmi (14).jpg",
+        "/images/vehicles/tangdmi/tangdmi (15).jpg",
+        "/images/vehicles/tangdmi/tangdmi (16).jpg",
+        "/images/vehicles/tangdmi/tangdmi (17).jpg",
+        "/images/vehicles/tangdmi/tangdmi (18).jpg",
+        "/images/vehicles/tangdmi/tangdmi (19).jpg",
+        "/images/vehicles/tangdmi/tangdmi (20).jpg"
+      ],
+      "details": [
+        "/images/vehicles/tangdmi/tangdmi (21).jpg",
+        "/images/vehicles/tangdmi/tangdmi (22).jpg",
+        "/images/vehicles/tangdmi/tangdmi (23).jpg",
+        "/images/vehicles/tangdmi/tangdmi (24).jpg",
+        "/images/vehicles/tangdmi/tangdmi (25).jpg",
+        "/images/vehicles/tangdmi/tangdmi (26).jpg",
+        "/images/vehicles/tangdmi/tangdmi (27).jpg",
+        "/images/vehicles/tangdmi/tangdmi (28).jpg",
+        "/images/vehicles/tangdmi/tangdmi (29).jpg"
+      ]
+    }
+  },
+  {
+    "id": 26,
+    "slug": "wuling-yangguang",
+    "enabled": true,
+    "name": "2025 Wuling Yangguang",
+    "type": "TRUCK",
+    "range": 260,
+    "seats": 2,
+    "configuration": "Basic",
+    "coverImage": "/images/vehicles/yangguang/yangguang.jpg",
+    "colors": [
+      "#FFFFFF",
+      "#87CEEB"
+    ],
+    "description": "The Wuling Yangguang is an electric light truck designed for commercial and logistics use. With 260 km range, it provides efficient last-mile delivery solutions.",
+    "specs": {
+      "year": "2025",
+      "make": "Wuling",
+      "model": "Yangguang",
+      "category": "COMMERCIAL",
+      "batteryCapacity": "41.9 kWh"
+    },
+    "detailImages": {
+      "exterior": [
+        "/images/vehicles/yangguang/yangguang (1).jpg",
+        "/images/vehicles/yangguang/yangguang (2).jpg",
+        "/images/vehicles/yangguang/yangguang (3).jpg",
+        "/images/vehicles/yangguang/yangguang (4).jpg",
+        "/images/vehicles/yangguang/yangguang (5).jpg",
+        "/images/vehicles/yangguang/yangguang (6).jpg",
+        "/images/vehicles/yangguang/yangguang (7).jpg",
+        "/images/vehicles/yangguang/yangguang (8).jpg",
+        "/images/vehicles/yangguang/yangguang (9).jpg",
+        "/images/vehicles/yangguang/yangguang (10).jpg"
+      ],
+      "interior": [
+        "/images/vehicles/yangguang/yangguang (11).jpg",
+        "/images/vehicles/yangguang/yangguang (12).jpg",
+        "/images/vehicles/yangguang/yangguang (13).jpg",
+        "/images/vehicles/yangguang/yangguang (14).jpg",
+        "/images/vehicles/yangguang/yangguang (15).jpg",
+        "/images/vehicles/yangguang/yangguang (16).jpg",
+        "/images/vehicles/yangguang/yangguang (17).jpg",
+        "/images/vehicles/yangguang/yangguang (18).jpg",
+        "/images/vehicles/yangguang/yangguang (19).jpg",
+        "/images/vehicles/yangguang/yangguang (20).jpg"
+      ],
+      "details": [
+        "/images/vehicles/yangguang/yangguang (21).jpg",
+        "/images/vehicles/yangguang/yangguang (22).jpg",
+        "/images/vehicles/yangguang/yangguang (23).jpg",
+        "/images/vehicles/yangguang/yangguang (24).jpg",
+        "/images/vehicles/yangguang/yangguang (25).jpg",
+        "/images/vehicles/yangguang/yangguang (26).jpg",
+        "/images/vehicles/yangguang/yangguang (27).jpg",
+        "/images/vehicles/yangguang/yangguang (28).jpg",
+        "/images/vehicles/yangguang/yangguang (29).jpg"
+      ]
+    }
   }
 ]
