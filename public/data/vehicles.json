@@ -8,7 +8,7 @@
     "range": 520,
     "seats": 5,
     "configuration": "Basic",
-    "coverImage": "/images/vehicles/songplus/songPLUS.jpg",
+    "coverImage": "/images/vehicles/songplus/songplus.jpg",
     "colors": [
       "#FFFFFF",
       "#000000",
@@ -70,7 +70,7 @@
     "range": 305,
     "seats": 6,
     "configuration": "Basic",
-    "coverImage": "/images/vehicles/v6e/V6E.jpg",
+    "coverImage": "/images/vehicles/v6e/v6e.jpg",
     "colors": [
       "#FFFFFF"
     ],
@@ -189,7 +189,7 @@
     "range": 910,
     "seats": 6,
     "configuration": "Basic",
-    "coverImage": "/images/vehicles/c16/C16.jpg",
+    "coverImage": "/images/vehicles/c16/c16.jpg",
     "colors": [
       "#000000"
     ],
@@ -248,7 +248,7 @@
     "range": 530,
     "seats": 5,
     "configuration": "Basic",
-    "coverImage": "/images/vehicles/ev5/EV5.jpg",
+    "coverImage": "/images/vehicles/ev5/ev5.jpg",
     "colors": [
       "#808080"
     ],
@@ -307,7 +307,7 @@
     "range": 300,
     "seats": 5,
     "configuration": "Basic",
-    "coverImage": "/images/vehicles/seagull/SEAGULL.jpg",
+    "coverImage": "/images/vehicles/seagull/seagull.jpg",
     "colors": [
       "#000000"
     ],
@@ -1267,7 +1267,7 @@
   {
     "id": 24,
     "slug": "wuling-ev",
-    "enabled": true,
+    "enabled": false,
     "name": "2025 Wuling Hongguang Mini EV",
     "type": "HATCHBACK",
     "range": 170,
