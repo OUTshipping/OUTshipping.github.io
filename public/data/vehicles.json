@@ -1024,7 +1024,7 @@
   {
     "id": 20,
     "slug": "haishi-06",
-    "enabled": true,
+    "enabled": false,
     "name": "2026 BYD HAISHI 06",
     "type": "SUV",
     "range": 605,
