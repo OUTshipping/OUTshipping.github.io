@@ -1146,7 +1146,7 @@
   {
     "id": 22,
     "slug": "byd-e5",
-    "enabled": true,
+    "enabled": false,
     "name": "2018 BYD e5",
     "type": "SEDAN",
     "range": 400,
