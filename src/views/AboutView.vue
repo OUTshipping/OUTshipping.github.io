@@ -39,6 +39,25 @@
             <p>We believe selling electric vehicles is only part of the solution. That is why we invest in EV awareness campaigns, partner with local driving schools to offer electric-vehicle training modules, and sponsor road safety programs in Kigali schools. We are also working toward installing public charging points beyond our showrooms to help build the infrastructure Rwanda needs for widespread EV adoption. Every vehicle we put on the road is one less source of tailpipe emissions — and we are proud to play our part in Rwanda's vision of a cleaner, greener future.</p>
           </div>
         </div>
+        <div id="sponsorship" class="section sponsorship-section">
+          <div class="section-content">
+            <h3>Official Sponsor — World Tennis Tour M25 Kigali</h3>
+            <p>Triple Goats is proud to be an official sponsor of the <strong>World Tennis Tour M25 Kigali</strong>, hosted right here in Rwanda's capital. This international tournament brings top-tier professional tennis to Kigali, and our sponsorship reflects our commitment to supporting world-class sporting events, promoting healthy lifestyles, and putting Rwanda on the global stage. We believe that sport, like clean energy, has the power to unite communities and inspire a brighter future.</p>
+            <div class="sponsorship-gallery">
+              <img src="/images/sponsorship/tennis-1.jpg" alt="World Tennis Tour M25 Kigali — sponsored by Triple Goats" loading="lazy">
+              <img src="/images/sponsorship/tennis-2.jpg" alt="World Tennis Tour M25 Kigali — Triple Goats brand presence" loading="lazy">
+              <img src="/images/sponsorship/tennis-3.jpg" alt="World Tennis Tour M25 Kigali — match in progress" loading="lazy">
+              <img src="/images/sponsorship/tennis-4.jpg" alt="World Tennis Tour M25 Kigali — tournament venue" loading="lazy">
+              <img src="/images/sponsorship/tennis-5.jpg" alt="World Tennis Tour M25 Kigali — court side view" loading="lazy">
+            </div>
+            <div class="sponsorship-video">
+              <video controls preload="metadata" playsinline poster="/images/sponsorship/tennis-1.jpg">
+                <source src="/video/tennis-m25.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </div>
         <div class="section">
           <div class="section-content">
             <h3>Our Showrooms</h3>
@@ -294,12 +313,70 @@ main h2 {
     .showroom-images img {
         height: 150px;
     }
+
+    .sponsorship-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sponsorship-gallery img {
+        height: 180px;
+    }
+
+    .sponsorship-video video {
+        max-height: 280px;
+    }
 }
 
 @media (max-width: 480px) {
     .about-section {
         padding: 10px;
     }
+
+    .sponsorship-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .sponsorship-gallery img {
+        height: 200px;
+    }
+}
+
+/* Sponsorship Section */
+.sponsorship-section .section-content > p {
+    margin-bottom: 1.5rem;
+}
+
+.sponsorship-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.sponsorship-gallery img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.4s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.sponsorship-gallery img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.sponsorship-video {
+    margin-top: 0.5rem;
+}
+
+.sponsorship-video video {
+    width: 100%;
+    max-height: 400px;
+    border-radius: 8px;
+    background: #000;
+    object-fit: contain;
 }
 </style>
 

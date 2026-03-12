@@ -53,7 +53,6 @@
         <div class="vehicle-card">
           <div class="card-image">
             <img src="/images/categories/sedan.jpg" alt="Electric sedans for sale at Triple Goats Kigali — BYD, Leapmotor and more" loading="lazy">
-            <span class="badge">Best Seller</span>
           </div>
           <div class="card-content">
             <h3>Sedan</h3>
@@ -65,6 +64,7 @@
         <div class="vehicle-card">
           <div class="card-image">
             <img src="/images/pages/suv.jpg" alt="Electric SUVs available at Triple Goats Rwanda — spacious family EVs" loading="lazy">
+            <span class="badge">Best Seller</span>
           </div>
           <div class="card-content">
             <h3>SUV</h3>
@@ -143,6 +143,24 @@
           </div>
           <div class="team-photo">
             <img src="/images/stores/team-2.jpg" alt="Triple Goats team at work — dedicated to Rwanda's electric future" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sponsorship Highlight -->
+    <section class="sponsorship-highlight">
+      <div class="container">
+        <div class="sponsorship-highlight-inner">
+          <div class="sponsorship-highlight-images">
+            <img src="/images/sponsorship/tennis-1.jpg" alt="World Tennis Tour M25 Kigali — sponsored by Triple Goats" loading="lazy">
+            <img src="/images/sponsorship/tennis-3.jpg" alt="World Tennis Tour M25 Kigali — match in progress" loading="lazy">
+          </div>
+          <div class="sponsorship-highlight-content">
+            <span class="sponsorship-tag">Official Sponsor</span>
+            <h2>World Tennis Tour M25 Kigali</h2>
+            <p>Triple Goats is proud to sponsor the World Tennis Tour M25 in Kigali — bringing world-class professional tennis to Rwanda and championing sport, community, and a greener future.</p>
+            <router-link to="/about#sponsorship" class="btn btn-accent">Learn More</router-link>
           </div>
         </div>
       </div>
@@ -473,6 +491,90 @@ useHead({
     transform: scale(1.05);
 }
 
+/* Sponsorship Highlight */
+.sponsorship-highlight {
+    background: var(--card-bg-color);
+    padding: 5rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.sponsorship-highlight-inner {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.sponsorship-highlight-images {
+    flex: 0 0 50%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.sponsorship-highlight-images img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 0.75rem;
+    transition: transform 0.5s ease;
+}
+
+.sponsorship-highlight-images img:hover {
+    transform: scale(1.05);
+}
+
+.sponsorship-highlight-content {
+    flex: 1;
+}
+
+.sponsorship-tag {
+    display: inline-block;
+    background: var(--accent-color);
+    color: white;
+    padding: 0.3rem 1rem;
+    border-radius: 9999px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+}
+
+.sponsorship-highlight-content h2 {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+.sponsorship-highlight-content p {
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+.btn-accent {
+    display: inline-block;
+    background: var(--accent-color);
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-accent:hover {
+    background: var(--accent-color-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
 /* Map Section */
 .map-section {
     background: var(--primary-color);
@@ -591,6 +693,28 @@ useHead({
 
     .team-photo img {
         height: 220px;
+    }
+
+    .sponsorship-highlight-inner {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .sponsorship-highlight-images {
+        flex: none;
+        width: 100%;
+    }
+
+    .sponsorship-highlight-images img {
+        height: 200px;
+    }
+
+    .sponsorship-highlight-content {
+        text-align: center;
+    }
+
+    .sponsorship-highlight-content h2 {
+        font-size: 1.6rem;
     }
 }
 </style>
