@@ -1,0 +1,1 @@
+const s="/images/stores/team-1.jpg",i="/images/stores/team-2.jpg",o="/images/sponsorship/tennis-1.jpg",t="/images/sponsorship/tennis-3.jpg",e="/images/stores/kigali-1.jpg",a="/images/stores/kigali-2.jpg",g="/images/stores/gisenyi-1.jpg",p="/images/stores/gisenyi-2.jpg";export{s as _,i as a,o as b,t as c,e as d,a as e,g as f,p as g};
